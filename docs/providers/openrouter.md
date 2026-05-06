@@ -1,7 +1,7 @@
 ---
-description: Configure OpenRouter in Roo Code to access 100+ language models from various providers through a single API with automatic model discovery.
+description: Configure OpenRouter in Zoo Code to access 100+ language models from various providers through a single API with automatic model discovery.
 keywords:
-  - roo code
+  - zoo code
   - openrouter
   - ai provider
   - language models
@@ -12,7 +12,7 @@ keywords:
 sidebar_label: OpenRouter
 ---
 
-# Using OpenRouter With Roo Code
+# Using OpenRouter With Zoo Code
 
 OpenRouter is an AI platform that provides access to a wide variety of language models from different providers, all through a single API.  This can simplify setup and allow you to easily experiment with different models.
 
@@ -30,15 +30,15 @@ OpenRouter is an AI platform that provides access to a wide variety of language 
 
 ## Available Models
 
-Roo Code automatically fetches all available models from OpenRouter's API (100+ models from various providers).
+Zoo Code automatically fetches all available models from OpenRouter's API (100+ models from various providers).
 
 For the complete, up-to-date model list with pricing and capabilities, see [OpenRouter's models page](https://openrouter.ai/models).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "OpenRouter" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your OpenRouter API key into the "OpenRouter API Key" field.
 4.  **Select Model:** Choose your desired model from the "Model" dropdown.
@@ -60,4 +60,4 @@ For the complete, up-to-date model list with pricing and capabilities, see [Open
         *   Google Gemini models (with manual activation - see below)
     *   **Exception for Gemini Models via OpenRouter:** Due to potential response delays sometimes observed with Google's caching mechanism when accessed via OpenRouter, a manual activation step is required *specifically for Gemini models*.
     *   If using a **Gemini model** via OpenRouter, you **must manually check** the "Enable Prompt Caching" box in the provider settings to activate caching for that model. This checkbox serves as a temporary workaround. For non-Gemini models on OpenRouter, this checkbox is not necessary for caching.
-*   **Bring Your Own Key (BYOK):** If you use your own key for the underlying service, OpenRouter charges 5% of what it normally would. Roo Code automatically adjusts the cost calculation to reflect this.
+*   **Bring Your Own Key (BYOK):** If you use your own key for the underlying service, OpenRouter charges 5% of what it normally would. Zoo Code automatically adjusts the cost calculation to reflect this.

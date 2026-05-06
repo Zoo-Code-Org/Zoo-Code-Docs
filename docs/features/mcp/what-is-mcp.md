@@ -41,9 +41,9 @@ For example, an AI using MCP can perform tasks like "search our company database
 
 ---
 
-## MCP in Roo Code
+## MCP in Zoo Code
 
-Roo Code implements the Model Context Protocol to:
+Zoo Code implements the Model Context Protocol to:
 
 - Connect to both local and remote MCP servers
 - Provide a consistent interface for accessing tools
@@ -59,6 +59,6 @@ MCP provides a standardized way for AI systems to interact with external tools a
 Ready to dig deeper? Check out these guides:
 
 - [MCP Overview](/features/mcp/overview) - A quick glance at the MCP documentation structure
-- [Using MCP in Roo Code](/features/mcp/using-mcp-in-roo) - Get started with MCP in Roo, including creating simple servers
+- [Using MCP in Zoo Code](/features/mcp/using-mcp-in-roo) - Get started with MCP in Zoo, including creating simple servers
 - [MCP vs API](/features/mcp/mcp-vs-api) - Technical advantages compared to traditional APIs
 - [STDIO & Streamable HTTP & SSE Transports](/features/mcp/server-transports) - Local vs. hosted deployment models

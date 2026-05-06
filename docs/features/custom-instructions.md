@@ -1,5 +1,5 @@
 ---
-description: Learn how to use custom instructions to tailor Roo Code's behavior to your preferences, coding style, and project requirements.
+description: Learn how to use custom instructions to tailor Zoo Code's behavior to your preferences, coding style, and project requirements.
 keywords:
   - custom instructions
   - personalization
@@ -10,7 +10,7 @@ keywords:
 
 # Custom Instructions
 
-Custom Instructions allow you to personalize how Roo behaves, providing specific guidance that shapes responses, coding style, and decision-making processes.
+Custom Instructions allow you to personalize how Zoo behaves, providing specific guidance that shapes responses, coding style, and decision-making processes.
 
 :::info Instruction File Locations
 You can provide custom instructions using global rules (applied across all projects), workspace rules (project-specific), or through the Prompts tab interface.
@@ -60,7 +60,7 @@ Rules are loaded in order: Global rules first, then workspace rules. If there's 
 
 ## What Are Custom Instructions?
 
-Custom Instructions define specific behaviors, preferences, and constraints beyond Roo's basic role definition. Examples include coding style, documentation standards, testing requirements, and workflow guidelines.
+Custom Instructions define specific behaviors, preferences, and constraints beyond Zoo's basic role definition. Examples include coding style, documentation standards, testing requirements, and workflow guidelines.
 
 ---
 
@@ -72,8 +72,8 @@ These instructions apply across all workspaces and maintain your preferences reg
 
 **How to set them:**
 
-<img src="/img/custom-instructions/custom-instructions.png" alt="Roo Code Prompts tab showing global custom instructions interface" width="600" />
-1.  **Open Prompts Tab:** Click the <Codicon name="notebook" /> icon in the Roo Code top menu bar
+<img src="/img/custom-instructions/custom-instructions.png" alt="Zoo Code Prompts tab showing global custom instructions interface" width="600" />
+1.  **Open Prompts Tab:** Click the <Codicon name="notebook" /> icon in the Zoo Code top menu bar
 2.  **Find Section:** Find the "Custom Instructions for All Modes" section
 3.  **Enter Instructions:** Enter your instructions in the text area
 4.  **Save Changes:** Click "Done" to save your changes
@@ -101,7 +101,7 @@ The global rules directory location is fixed and cannot be customized:
 
 **Linux/macOS:**
 ```
-~/.roo/                           # Your global Roo configuration
+~/.roo/                           # Your global Zoo configuration
 ├── rules/                        # General rules applied to all projects
 │   ├── coding-standards.md
 │   ├── formatting-rules.md
@@ -117,7 +117,7 @@ The global rules directory location is fixed and cannot be customized:
 
 **Windows:**
 ```
-%USERPROFILE%\.roo\               # Your global Roo configuration
+%USERPROFILE%\.roo\               # Your global Zoo configuration
 ├── rules\                        # General rules applied to all projects
 │   ├── coding-standards.md
 │   ├── formatting-rules.md
@@ -182,7 +182,7 @@ Within each level, mode-specific rules are loaded before general rules.
 
 ### Workspace-Level Instructions
 
-These instructions only apply within your current workspace, allowing you to customize Roo Code's behavior for specific projects.
+These instructions only apply within your current workspace, allowing you to customize Zoo Code's behavior for specific projects.
 
 #### Workspace-Wide Instructions via Files/Directories
 
@@ -190,11 +190,11 @@ Workspace-wide instructions apply to all modes within the current project and ca
 
 *   **Preferred Method: Directory-Based (`.roo/rules/`)**
     *   Create a directory named `.roo/rules/` in your workspace root.
-    *   Place instruction files (e.g., `.md`, `.txt`) inside. Roo Code reads files recursively (including subdirectories), appending their content to the system prompt in **alphabetical order** based on filename.
+    *   Place instruction files (e.g., `.md`, `.txt`) inside. Zoo Code reads files recursively (including subdirectories), appending their content to the system prompt in **alphabetical order** based on filename.
     *   When this directory exists and contains files, its contents are loaded along with any global rules directories.
-    *   Note: If the `.roo/rules/` directory exists but is empty, Roo Code will fall back to using the `.roorules` file instead.
+    *   Note: If the `.roo/rules/` directory exists but is empty, Zoo Code will fall back to using the `.roorules` file instead.
 *   **Fallback Method: File-Based (`.roorules`)**
-    *   If `.roo/rules/` doesn't exist or is empty, Roo Code looks for a single `.roorules` file in the workspace root.
+    *   If `.roo/rules/` doesn't exist or is empty, Zoo Code looks for a single `.roorules` file in the workspace root.
     *   If found, its content is loaded.
 
 #### Mode-Specific Instructions
@@ -203,8 +203,8 @@ Mode-specific instructions can be set in two independent ways that can be used s
 
 1.  **Using the Prompts Tab:**
 
-    <img src="/img/custom-instructions/custom-instructions-2.png" alt="Roo Code Prompts tab showing mode-specific custom instructions interface" width="600" />
-    * **Open Tab:** Click the <Codicon name="notebook" /> icon in the Roo Code top menu bar
+    <img src="/img/custom-instructions/custom-instructions-2.png" alt="Zoo Code Prompts tab showing mode-specific custom instructions interface" width="600" />
+    * **Open Tab:** Click the <Codicon name="notebook" /> icon in the Zoo Code top menu bar
     * **Select Mode:** Under the Modes heading, click the button for the mode you want to customize
     * **Enter Instructions:** Enter your instructions in the text area under "Mode-specific Custom Instructions (optional)"
     * **Save Changes:** Click "Done" to save your changes
@@ -219,7 +219,7 @@ Mode-specific instructions can be set in two independent ways that can be used s
         *   Place instruction files inside (recursive loading, including subdirectories). Files are read and appended to the system prompt in **alphabetical order** by filename.
         *   This method takes precedence over the fallback file method for the specific mode if the directory exists and contains files.
     *   **Fallback Method: File-Based (`.roorules-{modeSlug}`)**
-        *   If `.roo/rules-{modeSlug}/` doesn't exist or is empty, Roo Code looks for a single `.roorules-{modeSlug}` file (e.g., `.roorules-code`) in the workspace root.
+        *   If `.roo/rules-{modeSlug}/` doesn't exist or is empty, Zoo Code looks for a single `.roorules-{modeSlug}` file (e.g., `.roorules-code`) in the workspace root.
         *   If found, its content is loaded for that mode.
 
 Instructions from the Prompts tab, global rules, workspace rules, and mode-specific rules are all combined. See the section below for the exact order.
@@ -289,7 +289,7 @@ Rules:
 
 ## AGENTS.md Support
 
-Roo Code also supports loading rules from an `AGENTS.md` (or `AGENT.md` as fallback) file in your workspace root:
+Zoo Code also supports loading rules from an `AGENTS.md` (or `AGENT.md` as fallback) file in your workspace root:
 
 * **Purpose:** Provides agent-specific rules and guidelines for AI behavior
 * **Location:** Must be in the workspace root directory
@@ -318,7 +318,7 @@ This feature allows teams to maintain standardized AI agent behavior rules that 
 :::tip Pro Tip: Team Standardization
 For team environments, consider these approaches:
 
-**Project Standards**: Use workspace `.roo/rules/` directories under version control to standardize Roo's behavior for specific projects. This ensures consistent code style and development workflows across team members.
+**Project Standards**: Use workspace `.roo/rules/` directories under version control to standardize Zoo's behavior for specific projects. This ensures consistent code style and development workflows across team members.
 
 **Organization Standards**: Use global rules (`~/.roo/rules/`) to establish organization-wide coding standards that apply to all projects. Team members can set up identical global rules for consistency across all work.
 

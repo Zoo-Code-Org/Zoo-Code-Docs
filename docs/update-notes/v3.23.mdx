@@ -1,7 +1,7 @@
 ---
-description: Roo Code 3.23 graduates codebase indexing to stable, introduces task todo lists, command denylist, and Windows support for Claude Code.
+description: Zoo Code 3.23 graduates codebase indexing to stable, introduces task todo lists, command denylist, and Windows support for Claude Code.
 keywords:
-  - Roo Code 3.23
+  - Zoo Code 3.23
   - release notes
   - codebase indexing
   - todo list
@@ -11,13 +11,13 @@ keywords:
 
 import Codicon from '@site/src/components/Codicon';
 
-# Roo Code 3.23 Release Notes
+# Zoo Code 3.23 Release Notes
 
 This release graduates codebase indexing to a stable feature, introduces a powerful new todo list for managing complex tasks, and includes critical performance improvements and bug fixes!
 
 ## Codebase Indexing: Always On, Always Ready
 
-Codebase indexing has graduated from an experimental feature and is now a core part of Roo Code, available directly from your chat input. Once configured, the indexer runs automatically in the background, ensuring Roo always has an up-to-date semantic understanding of your project. To get started FREE, see the [Codebase Indexing quick start guide](/features/codebase-indexing#quick-start-guide).
+Codebase indexing has graduated from an experimental feature and is now a core part of Zoo Code, available directly from your chat input. Once configured, the indexer runs automatically in the background, ensuring Zoo always has an up-to-date semantic understanding of your project. To get started FREE, see the [Codebase Indexing quick start guide](/features/codebase-indexing#quick-start-guide).
 
 <img src="/img/v3.23/v3.23-1.png" alt="Codebase Indexing Status Icon" width="600" />
 
@@ -25,9 +25,9 @@ Thank you to MuriloFP, OleynikAleksandr, sxueck, CW-B-W, WAcry, bughaver, daniel
 
 ## New: Task Todo List
 
-This release introduces a new todo list feature to help you keep track of complex tasks. Roo Code will now display a checklist of steps for your task, ensuring that no step is missed. You can view and manage the todo list directly in the chat interface.
+This release introduces a new todo list feature to help you keep track of complex tasks. Zoo Code will now display a checklist of steps for your task, ensuring that no step is missed. You can view and manage the todo list directly in the chat interface.
 
-<img src="/img/task-todo-list/task-todo-list-3.png" alt="Task Todo List overview showing interactive checklist in Roo Code" width="600" />
+<img src="/img/task-todo-list/task-todo-list-3.png" alt="Task Todo List overview showing interactive checklist in Zoo Code" width="600" />
 
 Thank you to qdaxb for this feature! ([#5182](https://github.com/RooCodeInc/Roo-Code/pull/5182), [#5472](https://github.com/RooCodeInc/Roo-Code/pull/5472), [#5473](https://github.com/RooCodeInc/Roo-Code/pull/5473), [#5482](https://github.com/RooCodeInc/Roo-Code/pull/5482))
 
@@ -79,7 +79,7 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **Indexing Status**: The code indexing indicator is now always visible in the chat area, making it easier to track indexing progress ([#5505](https://github.com/RooCodeInc/Roo-Code/pull/5505))
 - **Chat Interface**: Removed outdated feature announcement for a cleaner chat experience ([#5510](https://github.com/RooCodeInc/Roo-Code/pull/5510))
 - **Chat Interface**: Improved tooltip consistency across chat interface buttons for a more polished experience (thanks daniel-lxs!) ([#5528](https://github.com/RooCodeInc/Roo-Code/pull/5528))
-- **Interface Organization**: Cleaner Roo Code view header with reduced visual clutter - less frequently used actions moved to VS Code's overflow menu (thanks dlab-anton!) ([#3060](https://github.com/RooCodeInc/Roo-Code/pull/3060))
+- **Interface Organization**: Cleaner Zoo Code view header with reduced visual clutter - less frequently used actions moved to VS Code's overflow menu (thanks dlab-anton!) ([#3060](https://github.com/RooCodeInc/Roo-Code/pull/3060))
 - **Command Organization**: Better organized VS Code extension interface with commands properly grouped in overflow menus ([#5525](https://github.com/RooCodeInc/Roo-Code/pull/5525))
 - **Indexing Status**: Improved visual alignment and consistency of the indexing status indicator ([#5523](https://github.com/RooCodeInc/Roo-Code/pull/5523))
 - **Interface Icons**: More consistent and clearer icons throughout the interface for better visibility of codebase indexing status ([#5520](https://github.com/RooCodeInc/Roo-Code/pull/5520))
@@ -106,8 +106,8 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **Go Diagnostics**: Configurable delay prevents false error reports about unused imports (thanks mmhobi7!)
 - **Marketplace Access**: Marketplace icon moved to top navigation for easier access
 - **Custom Modes**: Added helpful descriptions and usage guidance to custom modes (thanks RandalSchwartz!)
-- **YouTube Footer**: Quick access to Roo Code's YouTube channel from the website (thanks thill2323!)
-- **PR Templates**: Issue-fixer mode now uses the official Roo Code PR template (thanks MuriloFP!)
+- **YouTube Footer**: Quick access to Zoo Code's YouTube channel from the website (thanks thill2323!)
+- **PR Templates**: Issue-fixer mode now uses the official Zoo Code PR template (thanks MuriloFP!)
 - **Jump to New Files**: Added jump icon for newly created files, matching the experience of edited files (thanks mkdir700!)
 - **Apply Diff Error Messages**: Added case sensitivity reminder when apply_diff fails, helping users understand matching requirements (thanks maskelihileci!)
 - **Context Condensing Prompt Location**: Moved to Prompts section for better discoverability and persistent visibility (thanks SannidhyaSah, notadamking!)
@@ -120,9 +120,9 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 
 - **Todo List Toggle**: Fixed the todo list toggle in provider advanced settings that wasn't working properly (thanks chrarnoldus!)
 - **Command Parsing**: Fixed crashes when running complex bash commands with special syntax like arithmetic expressions and array variables, allowing users to create advanced GitHub CLI aliases and other sophisticated shell scripts (thanks daniel-lxs, KJ7LNW!)
-- **Error Handling**: Added error boundaries to prevent the entire Roo Code interface from crashing when errors occur. Instead of seeing a blank screen, users now see helpful error messages with debugging information, allowing them to continue using other parts of the extension (thanks KJ7LNW, elianiva!)
+- **Error Handling**: Added error boundaries to prevent the entire Zoo Code interface from crashing when errors occur. Instead of seeing a blank screen, users now see helpful error messages with debugging information, allowing them to continue using other parts of the extension (thanks KJ7LNW, elianiva!)
 - **`apply_diff` Tool**: Fixed an issue where the `apply_diff` tool would hang indefinitely on an error (thanks lhish!) ([#5391](https://github.com/RooCodeInc/Roo-Code/pull/5391))
-- **Chat Focus**: Prevents the chat from losing focus during automated workflows, stopping user input from being accidentally redirected to files being edited by Roo (thanks ColbySerpa!) ([#5349](https://github.com/RooCodeInc/Roo-Code/pull/5349))
+- **Chat Focus**: Prevents the chat from losing focus during automated workflows, stopping user input from being accidentally redirected to files being edited by Zoo (thanks ColbySerpa!) ([#5349](https://github.com/RooCodeInc/Roo-Code/pull/5349))
 - **Architect Mode File Restrictions**: Fixed an issue where Architect mode was not properly enforcing file restrictions (thanks shanemmattner!) ([#5447](https://github.com/RooCodeInc/Roo-Code/pull/5447))
 - **Slash Command Descriptions**: Standardizes mode descriptions in slash commands for a more consistent user experience ([#5388](https://github.com/RooCodeInc/Roo-Code/pull/5388))
 - **Follow-up Question Timer**: Fixed an issue where the auto-approval timer for follow-up questions would continue even after a user responded (thanks liwilliam2021!) ([#5368](https://github.com/RooCodeInc/Roo-Code/pull/5368))
@@ -143,7 +143,7 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **Embedding Model Switching**: Fixed issues when switching between embedding models with different vector dimensions, allowing use of models beyond 1536 dimensions like Google Gemini's text-embedding-004 (thanks daniel-lxs, mkdir700!) ([#5565](https://github.com/RooCodeInc/Roo-Code/pull/5565))
 - **Mermaid Diagrams**: Fixed Mermaid diagram rendering issues in architect mode by preventing common syntax errors (thanks MuriloFP, joshmouch!) ([#5530](https://github.com/RooCodeInc/Roo-Code/pull/5530))
 - **UI Button Overlap**: Fixed overlapping enhancement and text-to-speech buttons, making both features accessible when text-to-speech is enabled (thanks sensei-woo!) ([#5586](https://github.com/RooCodeInc/Roo-Code/pull/5586))
-- **Directory Tracking**: Fixed command execution directory tracking - Roo Code now properly maintains awareness of the current working directory when executing commands, preventing issues where subsequent commands would run in the wrong location after using `cd` commands (thanks chris-garrett!) ([#5667](https://github.com/RooCodeInc/Roo-Code/pull/5667))
+- **Directory Tracking**: Fixed command execution directory tracking - Zoo Code now properly maintains awareness of the current working directory when executing commands, preventing issues where subsequent commands would run in the wrong location after using `cd` commands (thanks chris-garrett!) ([#5667](https://github.com/RooCodeInc/Roo-Code/pull/5667))
 - **Embedding Model Switching**: Fixed vector dimension mismatch errors when switching between embedding models with different dimensions, allowing successful transitions from high-dimensional models to lower-dimensional models like Google Gemini (thanks hubeizys!) ([#5617](https://github.com/RooCodeInc/Roo-Code/pull/5617))
 - **Code Indexing**: Fixed code indexing to use optimal model dimensions, improving indexing reliability and performance (thanks daniel-lxs!) ([#5705](https://github.com/RooCodeInc/Roo-Code/pull/5705))
 - **Custom Mode Names**: Fixed an issue where clearing a custom mode name would corrupt the YAML file and make all custom modes disappear (thanks daniel-lxs, kfxmvp!) ([#5794](https://github.com/RooCodeInc/Roo-Code/pull/5794))
@@ -181,7 +181,7 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 
 ## Misc Improvements
 
-- **Process Termination**: Roo Code now more reliably terminates unresponsive processes, preventing hanging commands from blocking your workflow
+- **Process Termination**: Zoo Code now more reliably terminates unresponsive processes, preventing hanging commands from blocking your workflow
 - **Code Indexing**: Added memory-safe batch limiting to prevent overflow when scanning large codebases (thanks daniel-lxs!)
 - **API Rate Limiting**: Implemented global rate limiting with exponential backoff for OpenAI-compatible embeddings, preventing API overload and improving reliability (thanks daniel-lxs!)
 - **Release Engineering**: Enhanced release notes generation to include issue numbers and reporters for better attribution (thanks roomote!)

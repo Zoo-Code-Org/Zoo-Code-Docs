@@ -1,5 +1,5 @@
 ---
-description: Comprehensive guide to MCP transport mechanisms in Roo Code. Compare STDIO, Streamable HTTP, and SSE transports for local and remote server deployments.
+description: Comprehensive guide to MCP transport mechanisms in Zoo Code. Compare STDIO, Streamable HTTP, and SSE transports for local and remote server deployments.
 keywords:
   - MCP transports
   - STDIO transport
@@ -12,7 +12,7 @@ sidebar_label: STDIO, Streamable HTTP & SSE Transports
 
 # MCP Server Transports: STDIO, Streamable HTTP & SSE
 
-Model Context Protocol (MCP) supports three primary transport mechanisms for communication between Roo Code and MCP servers: Standard Input/Output (STDIO), Streamable HTTP (the modern standard), and Server-Sent Events (SSE) (for legacy use). Each has distinct characteristics, advantages, and use cases.
+Model Context Protocol (MCP) supports three primary transport mechanisms for communication between Zoo Code and MCP servers: Standard Input/Output (STDIO), Streamable HTTP (the modern standard), and Server-Sent Events (SSE) (for legacy use). Each has distinct characteristics, advantages, and use cases.
 
 ---
 
@@ -22,7 +22,7 @@ STDIO transport runs locally on your machine and communicates via standard input
 
 ### How STDIO Transport Works
 
-1. The client (Roo Code) spawns an MCP server as a child process
+1. The client (Zoo Code) spawns an MCP server as a child process
 2. Communication happens through process streams: client writes to server's STDIN, server responds to STDOUT
 3. Each message is delimited by a newline character
 4. Messages are formatted as JSON-RPC 2.0
@@ -38,7 +38,7 @@ Client                    Server
 
 ### STDIO Characteristics
 
-* **Locality**: Runs on the same machine as Roo Code
+* **Locality**: Runs on the same machine as Zoo Code
 * **Performance**: Very low latency and overhead (no network stack involved)
 * **Simplicity**: Direct process communication without network configuration
 * **Relationship**: One-to-one relationship between client and server
@@ -51,7 +51,7 @@ STDIO transport is ideal for:
 * Local integrations and tools running on the same machine
 * Security-sensitive operations
 * Low-latency requirements
-* Single-client scenarios (one Roo Code instance per server)
+* Single-client scenarios (one Zoo Code instance per server)
 * Command-line tools or IDE extensions
 
 ### STDIO Implementation Example
@@ -76,7 +76,7 @@ Streamable HTTP transport is the modern standard for remote MCP server communica
 ### How Streamable HTTP Transport Works
 
 1. The server provides a single HTTP endpoint (MCP endpoint) that supports both POST and GET methods.
-2. The client (Roo Code) sends requests to this MCP endpoint using HTTP POST.
+2. The client (Zoo Code) sends requests to this MCP endpoint using HTTP POST.
 3. The server processes the request and sends back a response.
 4. Optionally, the server can use Server-Sent Events (SSE) over the same connection to stream multiple messages or notifications to the client. This allows for basic request-response interactions as well as more advanced streaming and server-initiated communication.
 
@@ -92,7 +92,7 @@ Client                             Server
 ### Streamable HTTP Characteristics
 
 * **Modern Standard**: Preferred method for new remote MCP server implementations.
-* **Remote Access**: Can be hosted on a different machine from Roo Code.
+* **Remote Access**: Can be hosted on a different machine from Zoo Code.
 * **Scalability**: Can handle multiple client connections concurrently.
 * **Protocol**: Works over standard HTTP/HTTPS.
 * **Flexibility**: Supports simple request-response and advanced streaming.
@@ -141,7 +141,7 @@ Server-Sent Events (SSE) transport is a legacy method for remote server communic
 
 ### How SSE Transport Works
 
-1. The client (Roo Code) connects to the server's SSE endpoint via HTTP GET request
+1. The client (Zoo Code) connects to the server's SSE endpoint via HTTP GET request
 2. This establishes a persistent connection where the server can push events to the client
 3. For client-to-server communication, the client makes HTTP POST requests to a separate endpoint
 4. Communication happens over two channels:
@@ -161,7 +161,7 @@ Client                             Server
 
 ### SSE Characteristics
 
-* **Remote Access**: Can be hosted on a different machine from Roo Code
+* **Remote Access**: Can be hosted on a different machine from Zoo Code
 * **Scalability**: Can handle multiple client connections concurrently
 * **Protocol**: Works over standard HTTP (no special protocols needed)
 * **Persistence**: Maintains a persistent connection for server-to-client messages
@@ -203,7 +203,7 @@ The choice between STDIO and SSE transports directly impacts how you'll deploy a
 
 ### STDIO: Local Deployment Model
 
-STDIO servers run locally on the same machine as Roo Code, which has several important implications:
+STDIO servers run locally on the same machine as Zoo Code, which has several important implications:
 
 * **Installation**: The server executable must be installed on each user's machine
 * **Distribution**: You need to provide installation packages for different operating systems
@@ -211,7 +211,7 @@ STDIO servers run locally on the same machine as Roo Code, which has several imp
 * **Resources**: Uses the local machine's CPU, memory, and disk
 * **Access Control**: Relies on the local machine's filesystem permissions
 * **Integration**: Easy integration with local system resources (files, processes)
-* **Execution**: Starts and stops with Roo Code (child process lifecycle)
+* **Execution**: Starts and stops with Zoo Code (child process lifecycle)
 * **Dependencies**: Any dependencies must be installed on the user's machine
 
 #### Practical Example
@@ -219,9 +219,9 @@ STDIO servers run locally on the same machine as Roo Code, which has several imp
 A local file search tool using STDIO would:
 * Run on the user's machine
 * Have direct access to the local filesystem
-* Start when needed by Roo Code
+* Start when needed by Zoo Code
 * Not require network configuration
-* Need to be installed alongside Roo Code or via a package manager
+* Need to be installed alongside Zoo Code or via a package manager
 
 ### Streamable HTTP / SSE (Legacy): Hosted Deployment Model
 
@@ -274,6 +274,6 @@ Some scenarios benefit from a hybrid approach:
 
 ---
 
-## Configuring Transports in Roo Code
+## Configuring Transports in Zoo Code
 
-For detailed information on configuring STDIO, Streamable HTTP, and SSE (Legacy) transports in Roo Code, including example configurations, see the [Understanding Transport Types](/features/mcp/using-mcp-in-roo#understanding-transport-types) section in the Using MCP in Roo Code guide.
+For detailed information on configuring STDIO, Streamable HTTP, and SSE (Legacy) transports in Zoo Code, including example configurations, see the [Understanding Transport Types](/features/mcp/using-mcp-in-roo#understanding-transport-types) section in the Using MCP in Zoo Code guide.

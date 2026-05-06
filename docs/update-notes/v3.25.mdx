@@ -1,7 +1,7 @@
 ---
-description: Roo Code 3.25 introduces Sonic stealth model with 262K context, custom slash commands, Gemini web tools, image support, message queueing, Cerebras AI provider, cost limits, Vertex AI grounding, subtask todo lists, and many quality-of-life improvements.
+description: Zoo Code 3.25 introduces Sonic stealth model with 262K context, custom slash commands, Gemini web tools, image support, message queueing, Cerebras AI provider, cost limits, Vertex AI grounding, subtask todo lists, and many quality-of-life improvements.
 keywords:
-  - roo code 3.25
+  - zoo code 3.25
   - sonic model
   - custom slash commands
   - gemini tools
@@ -13,9 +13,9 @@ keywords:
   - subtask todos
 ---
 
-# Roo Code 3.25 Release Notes
+# Zoo Code 3.25 Release Notes
 
-This release brings powerful new capabilities to Roo Code, including the Sonic stealth model with 262,144-token context and 72-hour free access, custom slash commands for workflow automation, enhanced Gemini models with web access, comprehensive image support, seamless message queueing for uninterrupted conversations, the new Cerebras AI provider, auto-approved cost limits for budget control, Vertex AI grounding features, and subtask todo list support.
+This release brings new capabilities to Zoo Code, including the Sonic stealth model with 262,144-token context and 72-hour free access, custom slash commands for workflow automation, enhanced Gemini models with web access, comprehensive image support, seamless message queueing for uninterrupted conversations, the new Cerebras AI provider, auto-approved cost limits for budget control, Vertex AI grounding features, and subtask todo list support.
 
 ### Vertex AI Grounding Features
 
@@ -60,9 +60,9 @@ Turn complex workflows into simple commands like `/deploy` or `/review` for fast
 
 ### Message Queueing
 
-Continue typing while Roo processes your requests with the new message queueing system ([#6167](https://github.com/RooCodeInc/Roo-Code/pull/6167)):
+Continue typing while Zoo processes your requests with the new message queueing system ([#6167](https://github.com/RooCodeInc/Roo-Code/pull/6167)):
 
-- **Non-Blocking Input**: Type and send messages even while Roo is processing previous requests
+- **Non-Blocking Input**: Type and send messages even while Zoo is processing previous requests
 - **Sequential Processing**: Messages are queued and processed in the order they were sent
 - **Visual Feedback**: See queued messages clearly displayed in the interface
 - **Maintained Context**: Each message maintains proper context from the conversation
@@ -113,7 +113,7 @@ To enable this feature: Settings → Prompts tab → Select "ENHANCE" → Check 
 We've introduced a new cost control feature in the auto-approve settings to help manage API spending:
 
 - **Budget Protection**: Set a maximum cost limit in your auto-approve settings to control total API spending
-- **Automatic Prompting**: Roo Code will prompt for approval when approaching your cost limit
+- **Automatic Prompting**: Zoo Code will prompt for approval when approaching your cost limit
 - **Complements Request Limits**: Works alongside existing request count limits for comprehensive control
 
 <img src="/img/v3.25.5/v3.25.5.png" alt="Auto-approve settings showing the new Max Cost field" width="600" />
@@ -131,7 +131,7 @@ Small changes that make a big difference in your daily workflow:
 * **DeepSeek Context**: Updated DeepSeek models to support 128k context window ([#7269](https://github.com/RooCodeInc/Roo-Code/pull/7269))
 * **Sonnet 1M Context Support**: Enable 1M token context window for Claude 3.5 Sonnet and Claude Sonnet 4 when using AWS Bedrock, allowing you to process much larger documents and have longer conversations ([#7032](https://github.com/RooCodeInc/Roo-Code/pull/7032))
 * **Internationalization**: The Account button now displays in your selected language instead of always showing in English (thanks zhangtony239!) ([#6978](https://github.com/RooCodeInc/Roo-Code/pull/6978))
-* **Agent File Flexibility**: Roo Code now recognizes both AGENT.md and AGENTS.md files for agent rules, with AGENTS.md checked first for compatibility (thanks Brendan-Z!) ([#6913](https://github.com/RooCodeInc/Roo-Code/pull/6913))
+* **Agent File Flexibility**: Zoo Code now recognizes both AGENT.md and AGENTS.md files for agent rules, with AGENTS.md checked first for compatibility (thanks Brendan-Z!) ([#6913](https://github.com/RooCodeInc/Roo-Code/pull/6913))
 * **SEO Improvements**: Enhanced website discoverability with proper metadata and social media preview cards (thanks elianiva, abumalick!) ([#7096](https://github.com/RooCodeInc/Roo-Code/pull/7096))
 * **Sitemap Generation**: Implemented TypeScript-based sitemap generation for better search engine indexing (thanks abumalick!) ([#6206](https://github.com/RooCodeInc/Roo-Code/pull/6206))
 * **Chat Input Focus**: The chat input now automatically focuses when creating a new chat via the + button, allowing you to start typing immediately ([#6689](https://github.com/RooCodeInc/Roo-Code/pull/6689))
@@ -146,7 +146,7 @@ Small changes that make a big difference in your daily workflow:
 * **Smart Todo List Reminder**: Todo list reminder now respects configuration settings (thanks NaccOll!) ([#6411](https://github.com/RooCodeInc/Roo-Code/pull/6411))
 * **Cleaner Task History**: Improved task history display showing more content (3 lines), up to 5 tasks in preview, and simplified footer ([#6687](https://github.com/RooCodeInc/Roo-Code/pull/6687))
 * **Markdown Table Rendering**: Tables now display with proper formatting instead of raw markdown for better readability ([#6252](https://github.com/RooCodeInc/Roo-Code/pull/6252))
-  <img src="/img/v3.25.0/v3.25.0-2.png" alt="Markdown table rendering in Roo Code" width="600" />
+  <img src="/img/v3.25.0/v3.25.0-2.png" alt="Markdown table rendering in Zoo Code" width="600" />
 * **Mode Selector Popover Redesign**: Improved layout with search functionality when you have many modes installed ([#6140](https://github.com/RooCodeInc/Roo-Code/pull/6140))
   <img src="/img/v3.25.0/v3.25.0.png" alt="Mode Selector Popover with Search" width="600" />
 * **API Selector Popover Redesign**: Updated to match the new mode selector design with improved layout ([#6148](https://github.com/RooCodeInc/Roo-Code/pull/6148))
@@ -288,7 +288,7 @@ Critical fixes that improve stability and compatibility:
 * **Linter Coverage**: Applied to locale README files (thanks liwilliam2021!) ([#6477](https://github.com/RooCodeInc/Roo-Code/pull/6477))
 * **Cloud Service Events**: Migrated from callbacks to event-based architecture ([#6519](https://github.com/RooCodeInc/Roo-Code/pull/6519))
 * **Website Updates**: Phase 1 improvements (thanks thill2323!) ([#6085](https://github.com/RooCodeInc/Roo-Code/pull/6085))
-* **Background Editing (Experimental)**: Work uninterrupted while Roo edits files in the background—no more losing focus from automatic diff views ([#6214](https://github.com/RooCodeInc/Roo-Code/pull/6214)). Files change silently while you keep coding, with diagnostics and error checking still active. See [Background Editing](/features/experimental/background-editing) for details.
+* **Background Editing (Experimental)**: Work uninterrupted while Zoo edits files in the background—no more losing focus from automatic diff views ([#6214](https://github.com/RooCodeInc/Roo-Code/pull/6214)). Files change silently while you keep coding, with diagnostics and error checking still active. See [Background Editing](/features/experimental/background-editing) for details.
 * **Security Update**: Updated form-data dependency to address security vulnerability ([#6332](https://github.com/RooCodeInc/Roo-Code/pull/6332))
 * **Contributor Updates**: Refreshed contributor acknowledgments across all localizations ([#6302](https://github.com/RooCodeInc/Roo-Code/pull/6302))
 * **Release Engineering**: Converted release engineer role to slash command for easier releases ([#6333](https://github.com/RooCodeInc/Roo-Code/pull/6333))

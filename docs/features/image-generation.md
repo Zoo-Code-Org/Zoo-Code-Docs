@@ -1,5 +1,5 @@
 ---
-description: Generate new images from text prompts or edit existing images in Roo Code using OpenRouter API. Transform, enhance, and save AI-processed images to your workspace with preview support.
+description: Generate new images from text prompts or edit existing images in Zoo Code using OpenRouter API. Transform, enhance, and save AI-processed images to your workspace with preview support.
 keywords:
   - image generation
   - image editing
@@ -41,18 +41,18 @@ Image Generation is an experimental feature that requires enabling in settings a
 ### Image Generation
 **Before:** You had to copy prompts to an external site, download the result, then move it into your workspace.
 
-**With this feature:** Ask Roo to generate an image, approve, pick a save location, and continue editing with the image already in your project.
+**With this feature:** Ask Zoo to generate an image, approve, pick a save location, and continue editing with the image already in your project.
 
 ### Image Editing
 **Before:** Export image, upload to external editor, make changes, download, import back to project.
 
-**With this feature:** Ask Roo to transform your existing image directly - it reads the file, applies your edits, and saves the result in your project.
+**With this feature:** Ask Zoo to transform your existing image directly - it reads the file, applies your edits, and saves the result in your project.
 
 ---
 
 ## How It Works
 
-When enabled, Roo sends your prompt (and optionally an existing image) to an image-capable model through OpenRouter. The generated or edited image returned by OpenRouter is saved to the path you specify inside your current workspace. Roo shows a preview in the chat and the file appears in your file explorer.
+When enabled, Zoo sends your prompt (and optionally an existing image) to an image-capable model through OpenRouter. The generated or edited image returned by OpenRouter is saved to the path you specify inside your current workspace. Zoo shows a preview in the chat and the file appears in your file explorer.
 
 ---
 
@@ -67,7 +67,7 @@ When enabled, Roo sends your prompt (and optionally an existing image) to an ima
 ## Configuration
 
 ### 1. Enable Image Generation (Experimental)
-- **Purpose:** Turns the feature on so Roo can create images on request
+- **Purpose:** Turns the feature on so Zoo can create images on request
 - **Default:** Off
 - **Location:** Settings > Experimental
 
@@ -85,20 +85,20 @@ When enabled, Roo sends your prompt (and optionally an existing image) to an ima
 
 ## Using Image Generation
 
-1. In chat, ask Roo to generate an image and describe what you want (subject, style, lighting, composition).
-2. Confirm the action when prompted. Roo may ask you to choose a save path (for example: `images/sunset.png`).
-3. Roo generates the image and saves it. If you don't include an extension, the appropriate extension (.png or .jpg) is added based on the output format.
+1. In chat, ask Zoo to generate an image and describe what you want (subject, style, lighting, composition).
+2. Confirm the action when prompted. Zoo may ask you to choose a save path (for example: `images/sunset.png`).
+3. Zoo generates the image and saves it. If you don't include an extension, the appropriate extension (.png or .jpg) is added based on the output format.
 4. See the image preview in the chat and locate the file in your workspace.
 
 ---
 
 ## Editing Existing Images
 
-Roo can also transform and edit existing images in your workspace:
+Zoo can also transform and edit existing images in your workspace:
 
-1. Ask Roo to edit an image, describing the transformation you want
+1. Ask Zoo to edit an image, describing the transformation you want
 2. Specify both the input image path and where to save the result
-3. Roo will apply your requested edits to the existing image
+3. Zoo will apply your requested edits to the existing image
 
 **Supported Input Formats**: PNG, JPG, JPEG, GIF, WEBP
 

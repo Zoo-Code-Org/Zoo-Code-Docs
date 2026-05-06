@@ -1,5 +1,5 @@
 ---
-description: Leverage Roo Code's integration with VSCode's Problems panel to automatically detect, understand, and fix code errors, warnings, and linting issues.
+description: Leverage Zoo Code's integration with VSCode's Problems panel to automatically detect, understand, and fix code errors, warnings, and linting issues.
 keywords:
   - diagnostics integration
   - error detection
@@ -12,13 +12,13 @@ keywords:
 
 # Diagnostics Integration
 
-Roo Code provides intelligent integration with VSCode's Problems panel, allowing the AI assistant to understand and help fix code errors, warnings, and other issues detected by language servers, linters, and other diagnostic providers.
+Zoo Code provides intelligent integration with VSCode's Problems panel, allowing the AI assistant to understand and help fix code errors, warnings, and other issues detected by language servers, linters, and other diagnostic providers.
 
 ---
 
 ## Overview
 
-The diagnostics feature seamlessly integrates with VSCode's diagnostic system to provide context-aware assistance for code issues. When you make edits or encounter problems in your code, Roo Code can automatically detect and help resolve them.
+The diagnostics feature seamlessly integrates with VSCode's diagnostic system to provide context-aware assistance for code issues. When you make edits or encounter problems in your code, Zoo Code can automatically detect and help resolve them.
 
 ### Key Capabilities
 - **Automatic Error Detection**: Captures new errors introduced during code edits
@@ -31,7 +31,7 @@ The diagnostics feature seamlessly integrates with VSCode's diagnostic system to
 ## Key Features
 
 ### 1. Automatic Error Detection
-When Roo Code makes edits to files, it automatically:
+When Zoo Code makes edits to files, it automatically:
 - Captures diagnostics before editing
 - Waits for diagnostics to update after editing
 - Detects new problems introduced by the changes
@@ -54,7 +54,7 @@ For more details on using `@problems`, see [Context Mentions](/basic-usage/conte
 
 ### 3. Code Actions Integration
 When diagnostics exist at a cursor position:
-- "Fix with Roo Code" action appears in quick fix menu
+- "Fix with Zoo Code" action appears in quick fix menu
 - Includes diagnostic details in the fix request
 - Provides targeted solutions based on error context
 
@@ -89,7 +89,7 @@ The diagnostics system recognizes four severity levels from VSCode:
 ## Using Diagnostics Effectively
 
 ### For Debugging Sessions
-When starting a debugging session, include `@problems` to give Roo Code full context:
+When starting a debugging session, include `@problems` to give Zoo Code full context:
 ```
 @problems Help me debug why my application is crashing
 ```
@@ -117,13 +117,13 @@ Diagnostics power the context-aware [Code Actions](/features/code-actions) that 
 The [`@problems` mention](/basic-usage/context-mentions#problems-mention) provides a convenient way to include all workspace diagnostics in your conversation without manually copying error messages.
 
 ### Automatic Error Reporting
-When Roo Code edits files, any new errors introduced are automatically reported in the response, helping maintain code quality throughout the editing process.
+When Zoo Code edits files, any new errors introduced are automatically reported in the response, helping maintain code quality throughout the editing process.
 
 ---
 
 ## Best Practices
 
-1. **Use `@problems` for Context**: When debugging, always include `@problems` to give Roo Code full visibility into current issues
+1. **Use `@problems` for Context**: When debugging, always include `@problems` to give Zoo Code full visibility into current issues
 
 2. **Address Errors First**: Focus on fixing errors before warnings, as errors typically prevent code from running
 
@@ -131,7 +131,7 @@ When Roo Code edits files, any new errors introduced are automatically reported 
 
 4. **Monitor Auto-Detection**: Pay attention to new errors reported after edits to catch issues early
 
-5. **Combine with Other Tools**: Use diagnostics alongside other Roo Code features like codebase search and file mentions for comprehensive problem-solving
+5. **Combine with Other Tools**: Use diagnostics alongside other Zoo Code features like codebase search and file mentions for comprehensive problem-solving
 
 ---
 

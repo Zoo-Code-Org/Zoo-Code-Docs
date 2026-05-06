@@ -1,7 +1,7 @@
 ---
-description: Discover and install community-contributed MCP servers and custom modes from the Roo Code Marketplace to extend your AI coding assistant's capabilities.
+description: Discover and install community-contributed MCP servers and custom modes from the Zoo Code Marketplace to extend your AI coding assistant's capabilities.
 keywords:
-  - Roo Code Marketplace
+  - Zoo Code Marketplace
   - MCP servers
   - custom modes
   - extensions
@@ -10,7 +10,7 @@ keywords:
 ---
 import Codicon from '@site/src/components/Codicon';
 
-# Roo Code Marketplace
+# Zoo Code Marketplace
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
@@ -34,19 +34,19 @@ import Codicon from '@site/src/components/Codicon';
 
 ## Overview
 
-The Roo Code Marketplace is a central hub for discovering and installing community-contributed extensions, known as MCPs (Model Context Protocol) and Modes. It allows you to easily extend the functionality of Roo Code to fit your specific needs and workflows.
+The Zoo Code Marketplace is a central hub for discovering and installing community-contributed extensions, known as MCPs (Model Context Protocol) and Modes. It allows you to extend the functionality of Zoo Code to fit your specific needs and workflows.
 
 ### Key Features
 - **Discoverability**: Browse a curated list of MCPs and Modes.
 - **Simple Installation**: Install and remove items with a single click.
-- **Community-Driven**: Access a growing collection of extensions from the Roo Code community.
+- **Community-Driven**: Access a growing collection of extensions from the Zoo Code community.
 - **Project & Global Scopes**: Install items for a specific project or for all your projects.
 
 ---
 
 ## Getting Started
 
-The Roo Code Marketplace is available directly within the Roo Code extension in VS Code. Access it by clicking the marketplace icon <Codicon name="extensions" /> in the top menu bar.
+The Zoo Code Marketplace is available directly within the Zoo Code extension in VS Code. Access it by clicking the marketplace icon <Codicon name="extensions" /> in the top menu bar.
 
 ---
 
@@ -57,12 +57,12 @@ The Roo Code Marketplace is available directly within the Roo Code extension in 
 The marketplace offers two types of items:
 
 ### MCPs (Model Context Protocol)
-MCPs allow Roo Code to connect to and interact with various AI models, APIs, and other external tools. By installing an MCP, you can configure Roo Code to use different language models (like those from OpenAI, Anthropic, or others) or to integrate with other services. Learn more about [What is MCP?](/features/mcp/what-is-mcp) and [how to use MCP in Roo Code](/features/mcp/using-mcp-in-roo).
+MCPs allow Zoo Code to connect to and interact with various AI models, APIs, and other external tools. By installing an MCP, you can configure Zoo Code to use different language models (like those from OpenAI, Anthropic, or others) or to integrate with other services. Learn more about [What is MCP?](/features/mcp/what-is-mcp) and [how to use MCP in Zoo Code](/features/mcp/using-mcp-in-roo).
 
 <img src="/img/marketplace/marketplace-1.png" alt="MCP tab showing available MCPs with install and remove buttons" width="500" />
 
 ### Modes
-Modes are custom sets of instructions and rules that tailor Roo Code's behavior for specific tasks. For example, you might find a "React Component" mode that is optimized for creating React components, or a "Documentation Writer" mode for writing technical documentation. Learn more about [using modes](/basic-usage/using-modes) and [creating custom modes](/features/custom-modes).
+Modes are custom sets of instructions and rules that tailor Zoo Code's behavior for specific tasks. For example, you might find a "React Component" mode that is optimized for creating React components, or a "Documentation Writer" mode for writing technical documentation. Learn more about [using modes](/basic-usage/using-modes) and [creating custom modes](/features/custom-modes).
 
 <img src="/img/marketplace/marketplace-4.png" alt="Modes tab showing available modes" width="500" />
 
@@ -82,8 +82,8 @@ When you install an item from the marketplace, you can choose to install it at t
 ### Global Installation
 - **Scope**: The item is available across all your VS Code workspaces.
 - **Configuration File**:
-    - **MCPs**: [`mcp_settings.json`](/features/mcp/using-mcp-in-roo#configuring-mcp-servers) in the Roo Code extension's global settings directory.
-    - **Modes**: [`custom_modes.yaml`](/features/custom-modes) in the Roo Code extension's global settings directory.
+    - **MCPs**: [`mcp_settings.json`](/features/mcp/using-mcp-in-roo#configuring-mcp-servers) in the Zoo Code extension's global settings directory.
+    - **Modes**: [`custom_modes.yaml`](/features/custom-modes) in the Zoo Code extension's global settings directory.
 - **Use Case**: This is ideal for items that you want to use in all your projects, such as a favorite Mode or a commonly used MCP.
 
 ---
@@ -121,14 +121,14 @@ For MCPs, you may also need to:
 
 For Modes, simply select the installation scope and click Install.
 
-5. Roo Code automatically adds the item to the appropriate configuration file. If the file doesn't exist, Roo Code will create it for you. The file is then opened for your review.
+5. Zoo Code automatically adds the item to the appropriate configuration file. If the file doesn't exist, Zoo Code will create it for you. The file is then opened for your review.
 
 ### Removing an Item
 
 1. Find the installed item in the marketplace view (installed items show a "Remove" button).
 2. Click the "Remove" button.
 3. If the item is installed in both scopes, choose to remove from the current project or remove globally.
-4. Roo Code removes the item from the corresponding configuration file.
+4. Zoo Code removes the item from the corresponding configuration file.
 
 **Note:** The "Remove" button is context-aware. If an item is installed in only one scope (e.g., just for the project), it will be a single-action button. The dropdown menu with "Remove from Project" and "Remove Globally" options only appears if the item is installed in both scopes.
 
@@ -150,15 +150,15 @@ This keeps sensitive information secure and makes configuration more flexible.
 ## Troubleshooting
 
 ### Installation Errors
-- **Invalid YAML/JSON**: The configuration file (`.roomodes`, `.roo/mcp.json`, etc.) has a syntax error. To prevent data loss, Roo Code will not modify a corrupted configuration file. Please fix the syntax error before installing or removing items.
-- **File Not Found**: Rare error - Roo Code automatically creates necessary configuration files.
+- **Invalid YAML/JSON**: The configuration file (`.roomodes`, `.roo/mcp.json`, etc.) has a syntax error. To prevent data loss, Zoo Code will not modify a corrupted configuration file. Please fix the syntax error before installing or removing items.
+- **File Not Found**: Rare error - Zoo Code automatically creates necessary configuration files.
 
 ### Item Not Working
 If an installed item isn't working:
 1. **Check the configuration file**: Verify the item was added correctly.
 2. **Restart VS Code**: New configurations sometimes require a restart.
 3. **Check prerequisites**: Review the item's description for any requirements.
-4. **Check Roo Code logs**: Look for error messages in the Roo Code output panel.
+4. **Check Zoo Code logs**: Look for error messages in the Zoo Code output panel.
 
 ---
 
@@ -167,7 +167,7 @@ If an installed item isn't working:
 ### For MCPs
 - [MCP Overview](/features/mcp/overview) - Comprehensive guide to Model Context Protocol
 - [What is MCP?](/features/mcp/what-is-mcp) - Understanding the fundamentals
-- [Using MCP in Roo Code](/features/mcp/using-mcp-in-roo) - Detailed configuration and usage guide
+- [Using MCP in Zoo Code](/features/mcp/using-mcp-in-roo) - Detailed configuration and usage guide
 - [Recommended MCP Servers](/features/mcp/recommended-mcp-servers) - Curated list of tested servers
 
 ### For Modes

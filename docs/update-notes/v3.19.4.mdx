@@ -2,7 +2,7 @@
 description: This patch release delivers critical memory leak fixes, new Gemini 2.5 Pro Preview 06-05 model support, improved infrastructure for evals, and several quality-of-life and workflow enhancements.
 ---
 
-# Roo Code 3.19.4 Release Notes (2025-06-05)
+# Zoo Code 3.19.4 Release Notes (2025-06-05)
 
 This patch release delivers critical memory leak fixes, new Gemini 2.5 Pro Preview 06-05 model support, improved infrastructure for evals, and several quality-of-life and workflow enhancements.
 
@@ -45,7 +45,7 @@ We've resolved multiple memory leaks across the extension, resulting in improved
 ## Misc Improvements
 
 *   **OpenAI Compatible Embedder**: Added a new embedder for codebase indexing that is compatible with the OpenAI API, expanding options for local and custom embedding models (thanks SannidhyaSah!)
-*   **Enforce [`codebase_search`](/advanced-usage/available-tools/codebase-search) as primary tool**: Roo Code now always uses codebase_search as the first step for code understanding tasks, improving accuracy and consistency (thanks hannesrudolph!)
+*   **Enforce [`codebase_search`](/advanced-usage/available-tools/codebase-search) as primary tool**: Zoo Code now always uses codebase_search as the first step for code understanding tasks, improving accuracy and consistency (thanks hannesrudolph!)
 *   **Improved Docker setup for evals**: Dockerfile and docker-compose updated for better isolation, real-time monitoring, and streamlined configuration
 *   **Move evals into pnpm workspace, switch from SQLite to Postgres**: Evals are now managed in a pnpm workspace and use PostgreSQL for improved scalability
 *   **Refactor [MCP](/features/mcp/overview) to use getDefaultEnvironment for stdio client transport**: Simplifies MCP client setup and improves maintainability (thanks samhvw8!)

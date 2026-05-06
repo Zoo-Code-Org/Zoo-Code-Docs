@@ -1,7 +1,7 @@
 ---
 description: Bedrock Global Inference, expanded model support and limits, and QOL fixes for UI clarity and provider reliability.
 keywords:
-  - roo code 3.30.2
+  - zoo code 3.30.2
   - new features
   - bug fixes
   - provider updates
@@ -12,11 +12,11 @@ keywords:
 image: /img/v3.30.2/v3.30.2.png
 ---
 
-# Roo Code 3.30.2 Release Notes (2025-11-06)
+# Zoo Code 3.30.2 Release Notes (2025-11-06)
 
 This patch adds Bedrock Global Inference, expands model options and limits, improves UI clarity, and fixes provider selection and auditing issues.
 
-<img src="/img/v3.30.2/v3.30.2.png" alt="Roo Code v3.30.2 Release" width="600" />
+<img src="/img/v3.30.2/v3.30.2.png" alt="Zoo Code v3.30.2 Release" width="600" />
 
 ## QOL Improvements
 
@@ -26,7 +26,7 @@ This patch adds Bedrock Global Inference, expands model options and limits, impr
 
 * Eliminates brief UI flicker when cancelling a task; the task view remains stable ([#9037](https://github.com/RooCodeInc/Roo-Code/pull/9037))
 * Pinned models remain visible at the top while scrolling long lists for quicker access (thanks XiaoYingYo!) ([#8813](https://github.com/RooCodeInc/Roo-Code/pull/8813))
-* Checkpoints always commit to Roo’s shadow repository even when GIT_DIR is set in Dev Containers, preventing leaks to external repos (thanks heyseth, nonsleepr!) ([#8811](https://github.com/RooCodeInc/Roo-Code/pull/8811))
+* Checkpoints always commit to Zoo’s shadow repository even when GIT_DIR is set in Dev Containers, preventing leaks to external repos (thanks heyseth, nonsleepr!) ([#8811](https://github.com/RooCodeInc/Roo-Code/pull/8811))
 * Restores correct 32K maxTokens for Claude Opus 4.1 to avoid premature truncation on long generations (thanks kaveh-deriv!) ([#9046](https://github.com/RooCodeInc/Roo-Code/pull/9046))
 * Fixes dynamic provider model validation so switching providers uses a valid default model and avoids TypeErrors (thanks NotADev137!) ([#9054](https://github.com/RooCodeInc/Roo-Code/pull/9054))
 * AWS Bedrock requests now report full user agent details in CloudTrail for better auditing and troubleshooting (thanks ajjuaire!) ([#9043](https://github.com/RooCodeInc/Roo-Code/pull/9043))

@@ -1,7 +1,7 @@
 ---
-description: Combined release notes for Roo Code v3.28, featuring the Supernova model, Task Sync for mobile task management, Roo Code Cloud integration, improved chat editing, and various bug fixes.
+description: Combined release notes for Zoo Code v3.28, featuring the Supernova model, Task Sync for mobile task management, Roo Code Cloud integration, improved chat editing, and various bug fixes.
 keywords:
-  - roo code 3.28
+  - zoo code 3.28
   - supernova model
   - task sync
   - cloud integration
@@ -9,7 +9,7 @@ keywords:
 image: /img/v3.28.0/v3.28.0.png
 ---
 
-# Roo Code 3.28 Combined Release Notes
+# Zoo Code 3.28 Combined Release Notes
 
 This version introduces the Supernova model to Roo Code Cloud, Task Sync for monitoring tasks from your phone, plus Roo Code Cloud integration features, enhanced chat editing, conversation preservation improvements, and multiple bug fixes.
 
@@ -23,7 +23,7 @@ We've added the new **roo/code-supernova** stealth model to the Roo Code Cloud p
 - **Stealth Performance**: Experience cutting-edge model performance with the code-supernova variant
 - **Zero Setup**: Just select it from your Roo Code Cloud provider - no configuration needed
 
-Select the **FREE** code-supernova model from the Roo provider to start using this powerful new capability at **no cost**.
+Select the **FREE** code-supernova model from the Zoo provider to start using this powerful new capability at **no cost**.
 
 > **Documentation**: See the [Roo Code Router guide](/providers/roo-code-router) for model selection details.
 
@@ -31,7 +31,7 @@ Select the **FREE** code-supernova model from the Roo provider to start using th
 
 Introducing our new cloud connectivity feature that lets you **monitor long-running tasks from your phone** - no more waiting at your desk! ([#7799](https://github.com/RooCodeInc/Roo-Code/pull/7799), [#7805](https://github.com/RooCodeInc/Roo-Code/pull/7805), [#7850](https://github.com/RooCodeInc/Roo-Code/pull/7850)):
 
-> **Important**: Roo Code remains **completely free and open source**. Task Sync is an optional supplementary service that connects your local VS Code to the cloud - all processing still happens in your VS Code instance.
+> **Important**: Zoo Code remains **completely free and open source**. Task Sync is an optional supplementary service that connects your local VS Code to the cloud - all processing still happens in your VS Code instance.
 
 <img src="/img/v3.28.0/v3.28.0.png" alt="Task Sync interface showing real-time task monitoring from browser" width="300" />
 
@@ -57,7 +57,7 @@ This gives teams a higher-capacity OpenAI option without extra configuration.[#8
 
 * **Cloud Account Management**: Added account switcher and "Create Team Account" option for logged-in users, making it easier to manage multiple accounts ([#8291](https://github.com/RooCodeInc/Roo-Code/pull/8291))
 * **Chat Icon Sizing**: Chat interface icons now maintain consistent size in limited space ([#8343](https://github.com/RooCodeInc/Roo-Code/pull/8343))
-* **Social Media Sharing**: Improved OpenGraph images for better preview cards when sharing Roo Code links on Slack, Twitter, and Facebook ([#8285](https://github.com/RooCodeInc/Roo-Code/pull/8285))
+* **Social Media Sharing**: Improved OpenGraph images for better preview cards when sharing Zoo Code links on Slack, Twitter, and Facebook ([#8285](https://github.com/RooCodeInc/Roo-Code/pull/8285))
 * **Auto-approve keyboard shortcut**: Toggle approvals with Cmd/Ctrl+Alt+A from anywhere in the editor so you can stay in the flow while reviewing changes (via [#8214](https://github.com/RooCodeInc/Roo-Code/pull/8214))
 * **Click-to-Edit Chat Messages**: Click directly on any message text to edit it, with ESC to cancel and improved padding consistency ([#7790](https://github.com/RooCodeInc/Roo-Code/pull/7790))
 * **Enhanced Reasoning Display**: The AI's thinking process now shows a persistent timer and displays reasoning content in clean italic text ([#7752](https://github.com/RooCodeInc/Roo-Code/pull/7752))
@@ -84,7 +84,7 @@ This gives teams a higher-capacity OpenAI option without extra configuration.[#8
 
 * **Reset logs you out of Roo Code Cloud**: Reset now also logs you out of Roo Code Cloud for a truly clean slate; the reset still completes even if logout fails. ([#8312](https://github.com/RooCodeInc/Roo-Code/pull/8312))
 * **Measure engagement with upsell messages**: Telemetry for DismissibleUpsell tracks dismiss vs click (upsellId only) to tune messaging and reduce noise; no user-facing behavior change. ([#8309](https://github.com/RooCodeInc/Roo-Code/pull/8309))
-* **Welcome screen Roo provider experiment**: Surfaces the Roo provider on the welcome screen (localized, with click telemetry) to speed up setup. ([#8317](https://github.com/RooCodeInc/Roo-Code/pull/8317))
+* **Welcome screen Zoo provider experiment**: Surfaces the Zoo provider on the welcome screen (localized, with click telemetry) to speed up setup. ([#8317](https://github.com/RooCodeInc/Roo-Code/pull/8317))
 * **Cleaner prompts (no “thinking” tags)**: Removes `<thinking>` tags for cleaner output, fewer tokens, and better model compatibility; preserves the plain‑language rule to confirm tool success. ([#8319](https://github.com/RooCodeInc/Roo-Code/pull/8319))
 * **Simpler Requesty model refresh**: Removes an unnecessary warning when refreshing the Requesty models list so you can fetch new policies without leaving the screen. ([#7710](https://github.com/RooCodeInc/Roo-Code/pull/7710))
 * **Bedrock 1M Context Checkbox**: Adds checkbox to enable 1M context window support for Claude Sonnet 4 and 4.5 on Bedrock, providing more flexibility for large-scale projects ([#8384](https://github.com/RooCodeInc/Roo-Code/pull/8384))
@@ -101,11 +101,11 @@ This gives teams a higher-capacity OpenAI option without extra configuration.[#8
 * **AWS Bedrock Claude Sonnet 4.5**: Corrected model identifier for Claude Sonnet 4.5 on AWS Bedrock (thanks sunhyung!) ([#8371](https://github.com/RooCodeInc/Roo-Code/pull/8371))
 * **OpenRouter Claude Sonnet 4.5**: Corrected model ID format to align with naming and prevent selection/API mismatches ([#8373](https://github.com/RooCodeInc/Roo-Code/pull/8373))
 * **GPT-5 LiteLLM Compatibility**: Fixed GPT-5 models failing with LiteLLM provider by using correct `max_completion_tokens` parameter (thanks lx1054331851!) ([#6980](https://github.com/RooCodeInc/Roo-Code/pull/6980))
-* **Fixed "No tool used" Errors**: Resolved the situation where LLMs would sometimes not make tool calls in their response which improves Roo's overall flow. ([#8292](https://github.com/RooCodeInc/Roo-Code/pull/8292))
-* **Context Condensing**: Fixed an issue where the initial task request was being lost during context condensing, causing Roo to try to re-answer the original task ask when resuming after condensing ([#8298](https://github.com/RooCodeInc/Roo-Code/pull/8298))
-* **Roo provider stays signed in**: Roo provider tokens refresh automatically and the local evals app binds to port 3446 for predictable scripts (via [#8224](https://github.com/RooCodeInc/Roo-Code/pull/8224))
+* **Fixed "No tool used" Errors**: Resolved the situation where LLMs would sometimes not make tool calls in their response which improves Zoo Code's overall flow. ([#8292](https://github.com/RooCodeInc/Roo-Code/pull/8292))
+* **Context Condensing**: Fixed an issue where the initial task request was being lost during context condensing, causing Zoo Code to try to re-answer the original task ask when resuming after condensing ([#8298](https://github.com/RooCodeInc/Roo-Code/pull/8298))
+* **Zoo provider stays signed in**: Zoo provider tokens refresh automatically and the local evals app binds to port 3446 for predictable scripts (via [#8224](https://github.com/RooCodeInc/Roo-Code/pull/8224))
 * **Checkpoint text stays on one line**: Prevented multi-line wrapping in languages such as Chinese, Korean, Japanese, and Russian so the checkpoint UI stays compact (via [#8207](https://github.com/RooCodeInc/Roo-Code/pull/8207); reported in [#8206](https://github.com/RooCodeInc/Roo-Code/issues/8206))
-* **Ollama respects Modelfile num_ctx**: Roo now defers to your Modelfile’s context window to avoid GPU OOMs while still allowing explicit overrides when needed (via [#7798](https://github.com/RooCodeInc/Roo-Code/pull/7798); reported in [#7797](https://github.com/RooCodeInc/Roo-Code/issues/7797))
+* **Ollama respects Modelfile num_ctx**: Zoo Code now defers to your Modelfile’s context window to avoid GPU OOMs while still allowing explicit overrides when needed (via [#7798](https://github.com/RooCodeInc/Roo-Code/pull/7798); reported in [#7797](https://github.com/RooCodeInc/Roo-Code/issues/7797))
 * **Groq Context Window**: Fixed incorrect display of cached tokens in context window ([#7839](https://github.com/RooCodeInc/Roo-Code/pull/7839))
 * **Chat Message Operations**: Resolved duplication issues when editing messages and "Couldn't find timestamp" errors when deleting ([#7793](https://github.com/RooCodeInc/Roo-Code/pull/7793))
 * **UI Overlap**: Fixed CodeBlock button z-index to prevent overlap with popovers and configuration panels (thanks A0nameless0man!) ([#7783](https://github.com/RooCodeInc/Roo-Code/pull/7783))
@@ -146,7 +146,7 @@ This gives teams a higher-capacity OpenAI option without extra configuration.[#8
 ## Provider Updates
 
 * **Claude 4.5 Sonnet**: Added support for Anthropic's latest Claude 4.5 Sonnet model across all providers (Anthropic, AWS Bedrock, Claude Code, Google Vertex AI, and OpenRouter) with 1M context window support ([#8368](https://github.com/RooCodeInc/Roo-Code/pull/8368))
-* **New Free Models**: Added two more free models to the Roo provider - xai/grok-4-fast and deepseek/deepseek-chat-v3.1 ([#8304](https://github.com/RooCodeInc/Roo-Code/pull/8304))
+* **New Free Models**: Added two more free models to the Zoo provider - xai/grok-4-fast and deepseek/deepseek-chat-v3.1 ([#8304](https://github.com/RooCodeInc/Roo-Code/pull/8304))
 * **Vertex AI Models**: Added support for 6 new models including DeepSeek-V3, GPT-OSS, and Qwen models, plus the us-south1 region (thanks ssweens!) ([#7727](https://github.com/RooCodeInc/Roo-Code/pull/7727))
 * **DeepSeek Pricing**: Updated to new unified rates effective September 5, 2025 - $0.56/M input tokens, $1.68/M output tokens (thanks NaccOll!) ([#7687](https://github.com/RooCodeInc/Roo-Code/pull/7687))
 

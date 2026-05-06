@@ -1,10 +1,10 @@
 ---
-description: Access Google Gemini and Anthropic Claude models through GCP Vertex AI in Roo Code. Configure authentication and start using enterprise AI.
+description: Access Google Gemini and Anthropic Claude models through GCP Vertex AI in Zoo Code. Configure authentication and start using enterprise AI.
 keywords:
   - Vertex AI
   - GCP
   - Google Cloud
-  - Roo Code
+  - Zoo Code
   - Gemini
   - Claude
   - AI models
@@ -13,9 +13,9 @@ keywords:
 sidebar_label: GCP Vertex AI
 ---
 
-# Using GCP Vertex AI With Roo Code
+# Using GCP Vertex AI With Zoo Code
 
-Roo Code supports accessing models through Google Cloud Platform's Vertex AI, a managed machine learning platform that provides access to various foundation models, including Anthropic's Claude family.
+Zoo Code supports accessing models through Google Cloud Platform's Vertex AI, a managed machine learning platform that provides access to various foundation models, including Anthropic's Claude family.
 
 **Website:** [https://cloud.google.com/vertex-ai](https://cloud.google.com/vertex-ai)
 
@@ -26,7 +26,7 @@ Roo Code supports accessing models through Google Cloud Platform's Vertex AI, a 
 *   **Google Cloud Account:** You need an active Google Cloud Platform (GCP) account.
 *   **Project:** You need a GCP project with the Vertex AI API enabled.
 *   **Model Access:** You must request and be granted access to the specific Claude models on Vertex AI you want to use. See the [Google Cloud documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/partner-models/use-claude#before_you_begin) for instructions.
-*   **Application Default Credentials (ADC):**  Roo Code uses Application Default Credentials to authenticate with Vertex AI. The easiest way to set this up is to:
+*   **Application Default Credentials (ADC):**  Zoo Code uses Application Default Credentials to authenticate with Vertex AI. The easiest way to set this up is to:
     1.  Install the Google Cloud CLI: [https://cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install)
     2.  Authenticate using: `gcloud auth application-default login`
 *   **Service Account Key (Alternative):** Alternatively, you can authenticate using a Google Cloud Service Account key file. You'll need to generate this key in your GCP project. See the [Google Cloud documentation on creating service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys).
@@ -35,26 +35,26 @@ Roo Code supports accessing models through Google Cloud Platform's Vertex AI, a 
 
 ## Available Models
 
-Roo Code supports all models available through Google Cloud Vertex AI, including Anthropic Claude, Google Gemini, and MAAS (Model as a Service) offerings.
+Zoo Code supports all models available through Google Cloud Vertex AI, including Anthropic Claude, Google Gemini, and MAAS (Model as a Service) offerings.
 
 For the complete, up-to-date model list and IDs, see [Vertex AI's models documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "GCP Vertex AI" from the "API Provider" dropdown.
 3.  **Configure Authentication:**
     
-    Roo Code uses the following authentication priority:
+    Zoo Code uses the following authentication priority:
     1. **Google Cloud Credentials (JSON):** If provided, this takes precedence
     2. **Google Cloud Key File Path:** If provided and no JSON credentials, this is used
     3. **Application Default Credentials (ADC):** Used as fallback when neither above is provided
     
     **Option 1 - Using ADC (Simplest):**
     *   Install the Google Cloud CLI and run `gcloud auth application-default login`
-    *   No further configuration needed in Roo Code
+    *   No further configuration needed in Zoo Code
     
     **Option 2 - Using Service Account Key:**
     *   Either paste the JSON content directly into **Google Cloud Credentials** field
@@ -74,7 +74,7 @@ When using Gemini models through Vertex AI, additional grounding features become
 
 #### URL Context
 
-Enable URL context to allow Gemini models to access and analyze web content directly. This feature allows Roo to:
+Enable URL context to allow Gemini models to access and analyze web content directly. This feature allows Zoo to:
 
 - Read and understand web pages in real-time
 - Analyze documentation from URLs

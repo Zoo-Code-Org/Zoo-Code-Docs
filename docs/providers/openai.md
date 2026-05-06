@@ -1,11 +1,11 @@
 ---
 sidebar_label: OpenAI
-description: Connect Roo Code to OpenAI's official API for access to GPT and reasoning models with advanced capabilities and verbosity control.
+description: Connect Zoo Code to OpenAI's official API for access to GPT and reasoning models with advanced capabilities and verbosity control.
 keywords:
   - OpenAI
   - GPT models
   - reasoning models
-  - Roo Code
+  - Zoo Code
   - AI integration
   - API key
   - official OpenAI API
@@ -13,9 +13,9 @@ keywords:
   - reasoning effort
 ---
 
-# Using OpenAI With Roo Code
+# Using OpenAI With Zoo Code
 
-Roo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 family with advanced features like reasoning effort control and verbosity settings.
+Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 family with advanced features like reasoning effort control and verbosity settings.
 
 :::info Want to use a ChatGPT Plus/Pro subscription instead?
 Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API key): [OpenAI – ChatGPT Plus/Pro](/providers/openai-chatgpt-plus-pro).
@@ -29,24 +29,24 @@ Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API ke
 
 1.  **Sign Up/Sign In:** Go to the [OpenAI Platform](https://platform.openai.com/). Create an account or sign in.
 2.  **Navigate to API Keys:** Go to the [API keys](https://platform.openai.com/api-keys) page.
-3.  **Create a Key:** Click "Create new secret key". Give your key a descriptive name (e.g., "Roo Code").
+3.  **Create a Key:** Click "Create new secret key". Give your key a descriptive name (e.g., "Zoo Code").
 4.  **Copy the Key:** **Important:** Copy the API key *immediately*. You will not be able to see it again. Store it securely.
 
 ---
 
 ## Available Models
 
-Roo Code supports all models available through OpenAI's API.
+Zoo Code supports all models available through OpenAI's API.
 
 For the complete, up-to-date model list and capabilities, see [OpenAI's models documentation](https://platform.openai.com/docs/models).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
 ### Setup
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "OpenAI" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your OpenAI API key into the "OpenAI API Key" field.
 4.  **Select Model:** Choose your desired model from the "Model" dropdown.

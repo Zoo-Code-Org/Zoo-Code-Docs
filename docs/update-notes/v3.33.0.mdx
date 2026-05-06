@@ -1,24 +1,24 @@
 ---
-description: Roo Code 3.33.0 adds Gemini 3 Pro Preview, improves Gemini defaults and cost reporting, and enables native tool calling for the OpenAI-native provider.
+description: Zoo Code 3.33.0 adds Gemini 3 Pro Preview, improves Gemini defaults and cost reporting, and enables native tool calling for the OpenAI-native provider.
 keywords:
-  - roo code 3.33.0
+  - zoo code 3.33.0
   - new features
   - bug fixes
 image: /img/v3.33.0/v3.33.0.png
 ---
 
-# Roo Code 3.33.0 Release Notes (2025-11-18)
+# Zoo Code 3.33.0 Release Notes (2025-11-18)
 
-Gemini 3 Pro Preview is now available in Roo Code and already performing extremely well in real-world coding tasks, alongside 16 tweaks and fixes—thanks to everyone in the Roo Code community who helped shape this release.
+Gemini 3 Pro Preview is now available in Zoo Code and already performing extremely well in real-world coding tasks, alongside 16 tweaks and fixes—thanks to everyone in the Zoo Code community who helped shape this release.
 
-<img src="/img/v3.33.0/v3.33.0.png" alt="Roo Code v3.33.0 Release" width="600" />
+<img src="/img/v3.33.0/v3.33.0.png" alt="Zoo Code v3.33.0 Release" width="600" />
 
 ## Gemini 3 Pro Preview
 
-Roo Code now supports Google’s Gemini 3 Pro Preview model through direct Gemini, Vertex AI, and aggregator providers like OpenRouter and Requesty ([#9357](https://github.com/RooCodeInc/Roo-Code/pull/9357), [#9327](https://github.com/RooCodeInc/Roo-Code/pull/9327)):
+Zoo Code now supports Google’s Gemini 3 Pro Preview model through direct Gemini, Vertex AI, and aggregator providers like OpenRouter and Requesty ([#9357](https://github.com/RooCodeInc/Roo-Code/pull/9357), [#9327](https://github.com/RooCodeInc/Roo-Code/pull/9327)):
  
 - **1M-token, reasoning-capable model**: Handles very large conversations while providing higher-quality multi-step reasoning on complex coding and refactoring tasks.
-- **Strong eval performance**: Achieves a 100% score on internal Roo Code evals and 76.2% on SWE-bench Verified, giving more consistent solutions on real-world coding tasks.
+- **Strong eval performance**: Achieves a 100% score on internal Zoo Code evals and 76.2% on SWE-bench Verified, giving more consistent solutions on real-world coding tasks.
 - **Reliable tool usage**: Executes complex multi-step tool workflows without getting stuck or losing track, especially in long, tool-heavy tasks.
 - **Better out-of-the-box defaults**: Uses `gemini-2.5-pro` by default where supported, sets a more natural temperature of 1, cleans up the Gemini model list, and includes reasoning / “thought” tokens in cost reporting so usage numbers better match provider billing.
 

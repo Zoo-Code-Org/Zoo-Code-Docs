@@ -3,7 +3,7 @@ description: Learn about context poisoning in AI coding assistants, its symptoms
 keywords:
   - context poisoning
   - AI accuracy
-  - Roo Code troubleshooting
+  - Zoo Code troubleshooting
   - LLM context management
   - session recovery
 ---
@@ -11,7 +11,7 @@ keywords:
 # Context Poisoning
 
 :::info
-Context poisoning is a persistent issue within a given session. Once a chat session's context is compromised, treat that session as disposable. Starting fresh with a clean context is crucial for maintaining the accuracy and effectiveness of your Roo Code agent.
+Context poisoning is a persistent issue within a given session. Once a chat session's context is compromised, treat that session as disposable. Starting fresh with a clean context is crucial for maintaining the accuracy and effectiveness of your Zoo Code agent.
 :::
 
 Context poisoning occurs when inaccurate or irrelevant data contaminates the language model's active context. This leads the model to draw incorrect conclusions, provide erroneous information to tools, and progressively deviate from the intended task with each interaction.

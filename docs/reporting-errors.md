@@ -1,5 +1,5 @@
 ---
-description: Learn how to report errors in Roo Code by accessing error details, copying diagnostic information, and sharing it with the support team.
+description: Learn how to report errors in Zoo Code by accessing error details, copying diagnostic information, and sharing it with the support team.
 keywords:
   - error reporting
   - error details
@@ -11,7 +11,7 @@ keywords:
 
 # Reporting Errors
 
-When Roo Code encounters an error, you can export detailed diagnostic information to share with the support team. This helps resolve issues faster by providing complete context about what went wrong.
+When Zoo Code encounters an error, you can export detailed diagnostic information to share with the support team. This helps resolve issues faster by providing complete context about what went wrong.
 
 ---
 

@@ -2,7 +2,7 @@
 description: This release introduces free Gemini access via OAuth, fixes several bugs, and improves the overall user experience.
 ---
 
-# Roo Code 3.23.9 Release Notes (2025-07-14)
+# Zoo Code 3.23.9 Release Notes (2025-07-14)
 
 This release adds Windows support for Claude Code, introduces configurable command timeouts, and fixes critical workflow issues.
 
@@ -24,7 +24,7 @@ We've added configurable timeout settings for command execution:
 
 ## Bug Fixes
 
-* **Directory Tracking**: Fixed command execution directory tracking - Roo Code now properly maintains awareness of the current working directory when executing commands, preventing issues where subsequent commands would run in the wrong location after using `cd` commands (thanks chris-garrett!) ([#5667](https://github.com/RooCodeInc/Roo-Code/pull/5667))
+* **Directory Tracking**: Fixed command execution directory tracking - Zoo Code now properly maintains awareness of the current working directory when executing commands, preventing issues where subsequent commands would run in the wrong location after using `cd` commands (thanks chris-garrett!) ([#5667](https://github.com/RooCodeInc/Roo-Code/pull/5667))
 * **Embedding Model Switching**: Fixed vector dimension mismatch errors when switching between embedding models with different dimensions, allowing successful transitions from high-dimensional models to lower-dimensional models like Google Gemini (thanks hubeizys!) ([#5617](https://github.com/RooCodeInc/Roo-Code/pull/5617))
 
 ## Provider Updates

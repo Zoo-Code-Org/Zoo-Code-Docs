@@ -1,7 +1,7 @@
 ---
-description: Learn how to use context mentions (@) in Roo Code to reference files, folders, problems, terminal output, and Git commits for more accurate AI assistance.
+description: Learn how to use context mentions (@) in Zoo Code to reference files, folders, problems, terminal output, and Git commits for more accurate AI assistance.
 keywords:
-  - "Roo Code context mentions"
+  - "Zoo Code context mentions"
   - "@ mentions"
   - "file references"
   - "folder mentions"
@@ -12,7 +12,7 @@ keywords:
 
 # Context Mentions
 
-Context mentions are a powerful way to provide Roo Code with specific information about your project, allowing it to perform tasks more accurately and efficiently. You can use mentions to refer to files, folders, problems, and Git commits. Context mentions start with the `@` symbol.
+Context mentions are a powerful way to provide Zoo Code with specific information about your project, allowing it to perform tasks more accurately and efficiently. You can use mentions to refer to files, folders, problems, and Git commits. Context mentions start with the `@` symbol.
 
 <img src="/img/context-mentions/context-mentions.png" alt="Context Mentions Overview - showing the @ symbol dropdown menu in the chat interface" width="600" />
 
@@ -90,10 +90,10 @@ Image mentions are file mentions with special visual processing. When you mentio
 | **Groups** | Problems organized by file for better clarity |
 | **Best for** | Fixing errors without manual copying |
 
-For comprehensive details on how Roo Code integrates with VSCode's diagnostics system, see [Diagnostics Integration](/features/diagnostics-integration).
+For comprehensive details on how Zoo Code integrates with VSCode's diagnostics system, see [Diagnostics Integration](/features/diagnostics-integration).
 
 ### Terminal Mention
-<img src="/img/context-mentions/context-mentions-4.png" alt="Terminal mention example showing terminal output being included in Roo's context" width="600" />
+<img src="/img/context-mentions/context-mentions-4.png" alt="Terminal mention example showing terminal output being included in Zoo's context" width="600" />
 
 *Terminal mentions capture recent command output for debugging and analysis.*
 
@@ -107,7 +107,7 @@ For comprehensive details on how Roo Code integrates with VSCode's diagnostics s
 
 ### Git Mentions
 
-<img src="/img/context-mentions/context-mentions-5.png" alt="Git commit mention example showing commit details being analyzed by Roo" width="600" />
+<img src="/img/context-mentions/context-mentions-5.png" alt="Git commit mention example showing commit details being analyzed by Zoo" width="600" />
 
 *Git mentions provide commit details and diffs for context-aware version analysis.*
 | Type | Format | Provides | Limitations |
@@ -180,4 +180,3 @@ The dropdown respects `.rooignore` by default, hiding ignored files from suggest
 - [Diagnostics Integration](/features/diagnostics-integration) - Learn about automatic error detection and smart severity filtering
 - [Code Actions](/features/code-actions) - Discover quick fixes and AI assistance directly in your editor
 - [Shell Integration](/features/shell-integration) - Understand how terminal mentions work with shell integration
-

@@ -1,5 +1,5 @@
 ---
-description: The Roo Code Cloud is the easiest way to use Roo Code without additional accounts and dealing with API keys
+description: Learn how credits work across Zoo Code, Roo Code Router, and Roo Code Cloud Agents.
 keywords:
   - Credits
   - Tokens
@@ -7,10 +7,10 @@ keywords:
   - Prepaid
 ---
 
-# Roo Code Credits Overview
+# Zoo Code Credits Overview
 
-Roo Code is composed of a few products:
-- **Roo Code VS Code** (the extension) is 100% free
+Zoo Code is composed of a few products:
+- **Zoo Code VS Code** (the extension) is 100% free
 - **Roo Code Router** (the model provider) offers both free and paid models
 - **Roo Code Cloud Agents** (the automous agents) are a paid feature as they incur infrastructure costs
 
@@ -23,7 +23,7 @@ You can see the plans we offer and the most up-to-date pricing on our [pricing p
 
 ## What are credits?
 
-Credits are just pre-paid dollar amounts you can optionally buy to use the paid parts of the Roo Code suite. If you stick to free features and use free models, you don't have to buy any credits.
+Credits are just pre-paid dollar amounts you can optionally buy to use the paid parts of the Zoo Code suite. If you stick to free features and use free models, you don't have to buy any credits.
 
 Credits are shown in dollars, there's no shenanigans in converting it to obscure currencies you can't calculate.
 

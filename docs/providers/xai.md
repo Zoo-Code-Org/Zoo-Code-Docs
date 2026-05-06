@@ -1,9 +1,9 @@
 ---
-description: Configure xAI's Grok models in Roo Code. Access Grok-4, Grok-3, Grok-2, and vision models with large context windows, reasoning capabilities, and prompt caching.
+description: Configure xAI's Grok models in Zoo Code. Access Grok-4, Grok-3, Grok-2, and vision models with large context windows, reasoning capabilities, and prompt caching.
 keywords:
   - xAI
   - Grok
-  - Roo Code
+  - Zoo Code
   - AI models
   - reasoning AI
   - vision models
@@ -16,7 +16,7 @@ keywords:
 sidebar_label: xAI (Grok)
 ---
 
-# Using xAI (Grok) With Roo Code
+# Using xAI (Grok) With Zoo Code
 
 xAI is the company behind Grok, a large language model known for its conversational abilities and large context window. Grok models are designed to provide helpful, informative, and contextually relevant responses.
 
@@ -28,23 +28,23 @@ xAI is the company behind Grok, a large language model known for its conversatio
 
 1.  **Sign Up/Sign In:** Go to the [xAI Console](https://console.x.ai/). Create an account or sign in.
 2.  **Navigate to API Keys:** Go to the API keys section in your dashboard.
-3.  **Create a Key:** Click to create a new API key. Give your key a descriptive name (e.g., "Roo Code").
+3.  **Create a Key:** Click to create a new API key. Give your key a descriptive name (e.g., "Zoo Code").
 4.  **Copy the Key:** **Important:** Copy the API key *immediately*. You will not be able to see it again. Store it securely.
 
 ---
 
 ## Available Models
 
-Roo Code supports all Grok models available through xAI's API.
+Zoo Code supports all Grok models available through xAI's API.
 
 For the complete, up-to-date model list and capabilities, see [xAI's documentation](https://docs.x.ai/docs).
 
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "xAI" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your xAI API key into the "xAI API Key" field.
 4.  **Select Model:** Choose your desired Grok model from the "Model" dropdown.

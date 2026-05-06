@@ -1,8 +1,8 @@
 ---
 sidebar_label: Your First Task
-description: Learn how to start your first task with Roo Code AI assistant. Step-by-step guide for beginners to understand the approval workflow and iterative process.
+description: Learn how to start your first task with Zoo Code AI assistant. Step-by-step guide for beginners to understand the approval workflow and iterative process.
 keywords:
-  - Roo Code tutorial
+  - Zoo Code tutorial
   - first task
   - getting started
   - AI coding assistant tutorial
@@ -12,31 +12,31 @@ import KangarooIcon from '@site/src/components/KangarooIcon';
 
 # Your first task
 
-Now that you've [configured your AI provider and model](/getting-started/connecting-api-provider), you're ready to start using Roo Code! This guide walks you through your first interaction.
+Now that you've [configured your AI provider and model](/getting-started/connecting-api-provider), you're ready to start using Zoo Code. This guide walks you through your first interaction.
 
 ---
 
-## Step 1: Open the Roo Code Panel
+## Step 1: Open the Zoo Code Panel
 
-Click the Roo Code icon (<KangarooIcon />) in the VS Code Activity Bar (vertical bar on the side of the window) to open the chat interface. If you don't see the icon, verify the extension is installed and enabled.
+Click the Zoo Code icon (<KangarooIcon />) in the VS Code Activity Bar (vertical bar on the side of the window) to open the chat interface. If you don't see the icon, verify the extension is installed and enabled.
 
 <figure>
-  <img src="/img/your-first-task/your-first-task.png" alt="Roo Code icon in VS Code Activity Bar" width="600" />
-  <figcaption>The Roo Code icon in the Activity Bar opens the chat interface. You can drag it to position Roo elsewhere.</figcaption>
+  <img src="/img/your-first-task/your-first-task.png" alt="Zoo Code icon in VS Code Activity Bar" width="600" />
+  <figcaption>The Zoo Code icon in the Activity Bar opens the chat interface. You can drag it to position Zoo elsewhere.</figcaption>
 </figure>
 
 ## Step 2: Type Your Task
 
-Type a clear, concise description of what you want Roo Code to do in the chat box at the bottom of the panel. Examples of effective tasks:
+Type a clear, concise description of what you want Zoo Code to do in the chat box at the bottom of the panel. Examples of effective tasks:
 
 * "Create a file named `hello.txt` containing 'Hello, world!'."
 * "Write a Python function that adds two numbers."
-* "Create an HTML file for a simple website with the title 'Roo test'"
+* "Create an HTML file for a simple website with the title 'Zoo test'"
 
 No special commands or syntax needed—just use plain English.
 
 <figure>
-  <img src="/img/your-first-task/your-first-task-6.png" alt="Typing a task in the Roo Code chat interface" width="400" />
+  <img src="/img/your-first-task/your-first-task-6.png" alt="Typing a task in the Zoo Code chat interface" width="400" />
   <figcaption>Enter your task in natural language - no special syntax required.</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ Press Enter or click the Send icon (<Codicon name="send" />) to the right of the
 
 ## Step 4: Review and Approve Actions
 
-Roo Code analyzes your request and proposes specific actions. These may include:
+Zoo Code analyzes your request and proposes specific actions. These may include:
 
 * **Reading files:** Shows file contents it needs to access
 * **Writing to files:** Displays a diff with proposed changes (added lines in green, removed in red)
@@ -57,7 +57,7 @@ Roo Code analyzes your request and proposes specific actions. These may include:
 
 <figure>
   <img src="/img/your-first-task/your-first-task-7.png" alt="Reviewing a proposed file creation action" width="800" />
-  <figcaption>Roo Code shows exactly what action it wants to perform and waits for your approval.</figcaption>
+  <figcaption>Zoo Code shows exactly what action it wants to perform and waits for your approval.</figcaption>
 </figure>
 
 **Each action requires your explicit approval** (unless auto-approval is enabled):
@@ -68,21 +68,21 @@ Roo Code analyzes your request and proposes specific actions. These may include:
 
 ## Step 5: Iterate
 
-Roo Code works iteratively. After each action, it waits for your feedback before proposing the next step. Continue this review-approve cycle until your task is complete.
+Zoo Code works iteratively. After each action, it waits for your feedback before proposing the next step. Continue this review-approve cycle until your task is complete.
 
 <figure>
   <img src="/img/your-first-task/your-first-task-8.png" alt="Final result of a completed task showing the iteration process" width="500" />
-  <figcaption>After completing the task, Roo Code shows the final result and awaits your next instruction.</figcaption>
+  <figcaption>After completing the task, Zoo Code shows the final result and awaits your next instruction.</figcaption>
 </figure>
 
 ---
 
 ## Conclusion
 
-You've now completed your first task with Roo Code! Through this process, you've learned:
+You've now completed your first task with Zoo Code. Through this process, you've learned:
 
-* How to interact with Roo Code using natural language
+* How to interact with Zoo Code using natural language
 * The approval-based workflow that keeps you in control
-* The iterative approach Roo Code uses to solve problems step-by-step
+* The iterative approach Zoo Code uses to solve problems step-by-step
 
-This iterative, approval-based workflow is at the core of how Roo Code works—letting AI handle the tedious parts of coding while you maintain complete oversight. Now that you understand the basics, you're ready to tackle more complex tasks, explore different [modes](/basic-usage/using-modes) for specialized workflows, or try the [auto-approval feature](/features/auto-approving-actions) to speed up repetitive tasks.
+This iterative, approval-based workflow is at the core of how Zoo Code works—letting AI handle the tedious parts of coding while you maintain complete oversight. Now that you understand the basics, you're ready to tackle more complex tasks, explore different [modes](/basic-usage/using-modes) for specialized workflows, or try the [auto-approval feature](/features/auto-approving-actions) to speed up repetitive tasks.

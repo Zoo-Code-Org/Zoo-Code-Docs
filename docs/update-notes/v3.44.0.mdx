@@ -1,17 +1,17 @@
 ---
 description: This release improves worktree workflows, adds MCP configuration flexibility, and fixes context condensing issues.
 keywords:
-  - roo code 3.44.0
+  - zoo code 3.44.0
   - new features
   - bug fixes
 image: /img/v3.44.0/v3.44.0.png
 ---
 
-# Roo Code 3.44.0 Release Notes (2026-01-27)
+# Zoo Code 3.44.0 Release Notes (2026-01-27)
 
 This release improves worktree workflows, adds MCP configuration flexibility, and fixes context condensing issues.
 
-<img src="/img/v3.44.0/v3.44.0.png" alt="Roo Code v3.44.0 Release" width="600" />
+<img src="/img/v3.44.0/v3.44.0.png" alt="Zoo Code v3.44.0 Release" width="600" />
 
 ## Worktrees
 
@@ -30,7 +30,7 @@ Worktrees are easier to work with in chat. The Worktree selector is more promine
 
 * Fixes an issue where context condensing could accidentally pull in content that was already condensed earlier, which could reduce the effectiveness of long-conversation summaries. ([#10985](https://github.com/RooCodeInc/Roo-Code/pull/10985))
 * Fixes an issue where automatic context condensing could silently fail for VS Code LM API users when token counting returned 0 outside active requests, which could lead to unexpected context-limit errors. (thanks srulyt!) ([#10983](https://github.com/RooCodeInc/Roo-Code/pull/10983))
-* Fixes an issue where Roo didn’t record a successful truncation fallback when condensation failed, which could make Rewind restores unreliable after a condensing error. ([#10984](https://github.com/RooCodeInc/Roo-Code/pull/10984))
+* Fixes an issue where Zoo didn’t record a successful truncation fallback when condensation failed, which could make Rewind restores unreliable after a condensing error. ([#10984](https://github.com/RooCodeInc/Roo-Code/pull/10984))
 * Fixes an issue where MCP tools with hyphens in their names could fail to resolve in native tool calling (for example when a provider/model rewrites `-` as `_`). (thanks hori-so!) ([#10775](https://github.com/RooCodeInc/Roo-Code/pull/10775))
 * Fixes an issue where tool calls could fail validation through AWS Bedrock when `toolUseId` exceeded Bedrock’s 64-character limit, improving reliability for longer tool-heavy sessions. ([#10902](https://github.com/RooCodeInc/Roo-Code/pull/10902))
 * Fixes an issue where Settings section headers could look transparent while scrolling, restoring an opaque background so the UI stays legible. ([#10951](https://github.com/RooCodeInc/Roo-Code/pull/10951))

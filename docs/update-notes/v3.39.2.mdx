@@ -1,12 +1,12 @@
 ---
 description: Adds a debug toggle, improves provider error messaging, and fixes tool calling issues.
 keywords:
-  - roo code 3.39.2
+  - zoo code 3.39.2
   - new features
   - bug fixes
 ---
 
-# Roo Code 3.39.2 Release Notes (2026-01-09)
+# Zoo Code 3.39.2 Release Notes (2026-01-09)
 
 This release adds a new debug toggle in settings, improves provider error messaging, and fixes multiple tool-calling issues.
 
@@ -22,12 +22,12 @@ This release adds a new debug toggle in settings, improves provider error messag
 
 ## Provider Updates
 
-* Improves file-edit reliability for Gemini and Vertex models by disabling the `edit_file` tool for those providers so Roo can route edits through the more appropriate patch-based flow when available ([#10594](https://github.com/RooCodeInc/Roo-Code/pull/10594))
-* Improves Gemini tool selection behavior by no longer overriding tool allow/deny lists, letting Roo’s routing decide more consistently ([#10592](https://github.com/RooCodeInc/Roo-Code/pull/10592))
+* Improves file-edit reliability for Gemini and Vertex models by disabling the `edit_file` tool for those providers so Zoo Code can route edits through the more appropriate patch-based flow when available ([#10594](https://github.com/RooCodeInc/Roo-Code/pull/10594))
+* Improves Gemini tool selection behavior by no longer overriding tool allow/deny lists, letting Zoo Code’s routing decide more consistently ([#10592](https://github.com/RooCodeInc/Roo-Code/pull/10592))
 
 ## QOL Improvements
 
-* Adds an **Enable debug mode** toggle in Roo Code settings (About Roo Code) so you can turn debug logging on/off from the extension UI ([#10580](https://github.com/RooCodeInc/Roo-Code/pull/10580))
+* Adds an **Enable debug mode** toggle in Zoo Code settings (About Zoo Code) so you can turn debug logging on/off from the extension UI ([#10580](https://github.com/RooCodeInc/Roo-Code/pull/10580))
 * Improves the error message shown when a provider terminates a streaming response early (for example timeouts or rate limits), making it clearer the interruption came from the provider ([#10548](https://github.com/RooCodeInc/Roo-Code/pull/10548))
 
 ## Misc Improvements

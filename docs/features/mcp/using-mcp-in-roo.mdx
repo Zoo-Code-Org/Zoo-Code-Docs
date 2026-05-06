@@ -1,25 +1,25 @@
 ---
-description: Complete guide to using Model Context Protocol (MCP) in Roo Code. Learn how to configure MCP servers, manage tools, and extend Roo Code's capabilities.
+description: Complete guide to using Model Context Protocol (MCP) in Zoo Code. Learn how to configure MCP servers, manage tools, and extend Zoo Code's capabilities.
 keywords:
   - MCP
   - Model Context Protocol
   - MCP servers
-  - Roo Code integration
+  - Zoo Code integration
   - external tools
   - API integration
-sidebar_label: Using MCP in Roo Code
+sidebar_label: Using MCP in Zoo Code
 ---
 
-# Using MCP in Roo Code
+# Using MCP in Zoo Code
 
 :::info Confused about MCP Servers?
 
-An MCP (Model Context Protocol) server acts as a bridge, giving Roo Code access to a wider range of **tools** and external services like databases, APIs, or custom scripts. It uses a standard communication method, allowing Roo to leverage these external capabilities.
+An MCP (Model Context Protocol) server acts as a bridge, giving Zoo Code access to a wider range of **tools** and external services like databases, APIs, or custom scripts. It uses a standard communication method, allowing Zoo to leverage these external capabilities.
 
 For a deeper dive, check out [What is MCP?](/features/mcp/what-is-mcp).
 :::
 
-Model Context Protocol (MCP) extends Roo Code's capabilities by connecting to external tools and services. This guide covers everything you need to know about using MCP with Roo Code.
+Model Context Protocol (MCP) extends Zoo Code's capabilities by connecting to external tools and services. This guide covers everything you need to know about using MCP with Zoo Code.
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
@@ -45,22 +45,22 @@ Model Context Protocol (MCP) extends Roo Code's capabilities by connecting to ex
 MCP server configurations can be managed at two levels:
 
 1.  **Global Configuration**: Stored in the `mcp_settings.json` file, accessible via VS Code settings (see below). These settings apply across all your workspaces unless overridden by a project-level configuration.
-2.  **Project-level Configuration**: Defined in a `.roo/mcp.json` file within your project's root directory. This allows you to set up project-specific servers and share configurations with your team by committing the file to version control. Roo Code automatically detects and loads this file if it exists.
+2.  **Project-level Configuration**: Defined in a `.roo/mcp.json` file within your project's root directory. This allows you to set up project-specific servers and share configurations with your team by committing the file to version control. Zoo Code automatically detects and loads this file if it exists.
 
 **Precedence**: If a server name exists in both global and project configurations, the **project-level configuration takes precedence**.
 
 ### Editing MCP Settings Files
 
-You can edit both global and project-level MCP configuration files directly from the Roo Code MCP settings view:
+You can edit both global and project-level MCP configuration files directly from the Zoo Code MCP settings view:
 
-1. Click the <Codicon name="server" /> icon in the top navigation of the Roo Code pane.
+1. Click the <Codicon name="server" /> icon in the top navigation of the Zoo Code pane.
 
-  <img src="/img/using-mcp-in-roo/using-mcp-in-roo-10.png" alt="MCP Servers interface in Roo Code" width="400" />
+  <img src="/img/using-mcp-in-roo/using-mcp-in-roo-10.png" alt="MCP Servers interface in Zoo Code" width="400" />
 
 2. Scroll to the bottom of the MCP settings view.
 3. Click the appropriate button:
     *   **`Edit Global MCP`**: Opens the global `mcp_settings.json` file.
-    *   **`Edit Project MCP`**: Opens the project-specific `.roo/mcp.json` file. If this file doesn't exist, Roo Code will create it for you.
+    *   **`Edit Project MCP`**: Opens the project-specific `.roo/mcp.json` file. If this file doesn't exist, Zoo Code will create it for you.
 
   <img src="/img/using-mcp-in-roo/using-mcp-in-roo-9.png" alt="Edit Global MCP and Edit Project MCP buttons" width="600" />
 
@@ -81,7 +81,7 @@ Both files use a JSON format with a `mcpServers` object containing named server 
     }
   }
     ```
-    *Example of MCP Server config in Roo Code (STDIO Transport)*
+    *Example of MCP server config in Zoo Code (STDIO transport)*
 
   ### Understanding Transport Types
 
@@ -214,7 +214,7 @@ Streamable HTTP configuration example:
 
   SSE (Legacy) configuration parameters:
 
-  *   `type` (required for URL-based configs): Must be set to `"sse"` when using a `url` for an SSE server. For stdio configs (those using `command`), `type` defaults to `"stdio"` and can be omitted. For any URL-based config, omitting `type` will cause an immediate error—Roo Code cannot infer the transport type from a `url` alone.
+  *   `type` (required for URL-based configs): Must be set to `"sse"` when using a `url` for an SSE server. For stdio configs (those using `command`), `type` defaults to `"stdio"` and can be omitted. For any URL-based config, omitting `type` will cause an immediate error—Zoo Code cannot infer the transport type from a `url` alone.
   *   `url` (required): The base URL for the remote MCP server. For legacy SSE, this usually implies separate paths like `/events` (for SSE stream) and `/message` (for POST requests) will be derived or expected by the server.
   *   `headers` (optional): An object containing custom HTTP headers to send with requests (e.g., for authentication tokens).
   *   `alwaysAllow` (optional): An array of tool names from this server to automatically approve.
@@ -241,9 +241,9 @@ Streamable HTTP configuration example:
 
   ## Enabling or Disabling MCP Servers
 
-Disabling your MCP Servers here will remove all MCP related logic and definitions from your system prompt, reducing your token usage. This will prevent Roo Code from connecting to any MCP servers, and the `use_mcp_tool` and `access_mcp_resource` tools will not be available. Check this off if you don't intend to use MCP Servers. This is on by default.
+Disabling your MCP Servers here will remove all MCP related logic and definitions from your system prompt, reducing your token usage. This will prevent Zoo Code from connecting to any MCP servers, and the `use_mcp_tool` and `access_mcp_resource` tools will not be available. Check this off if you don't intend to use MCP Servers. This is on by default.
 
-1. Click the <Codicon name="server" /> icon in the top navigation of the Roo Code pane
+1. Click the <Codicon name="server" /> icon in the top navigation of the Zoo Code pane
 2. Check/Uncheck `Enable MCP Servers`
 
   <img src="/img/using-mcp-in-roo/using-mcp-in-roo-2.png" alt="Enable MCP Servers toggle" width="400" />
@@ -252,39 +252,39 @@ Disabling your MCP Servers here will remove all MCP related logic and definition
 
 ## Enabling or Disabling MCP Server Creation
 
-Disabling your MCP Server Creation here will just remove the instructions from your system prompt that Roo Code uses to write MCP servers while not removing the context related to operating them. This reduces token usage. This is on by default.
+Disabling your MCP Server Creation here will just remove the instructions from your system prompt that Zoo Code uses to write MCP servers while not removing the context related to operating them. This reduces token usage. This is on by default.
 
-1. Click the <Codicon name="server" /> icon in the top navigation of the Roo Code pane
+1. Click the <Codicon name="server" /> icon in the top navigation of the Zoo Code pane
 2. Check/Uncheck `Enable MCP Server Creation`
 
   <img src="/img/using-mcp-in-roo/using-mcp-in-roo-3.png" alt="Enable MCP Server Creation toggle" width="400" />
 
 ---
 
-## How to Use Roo to Create an MCP Server
+## How to Use Zoo to Create an MCP Server
 
-If you need a specific tool or capability that isn't available through existing MCP servers, you can ask Roo Code to build a new one for you.
+If you need a specific tool or capability that isn't available through existing MCP servers, you can ask Zoo Code to build a new one for you.
 
-**Prerequisite:** Ensure the **[Enable MCP Server Creation](#enabling-or-disabling-mcp-server-creation)** setting is checked ON in the MCP settings panel. If this is disabled, Roo will not have the necessary instructions to build a server.
+**Prerequisite:** Ensure the **[Enable MCP Server Creation](#enabling-or-disabling-mcp-server-creation)** setting is checked ON in the MCP settings panel. If this is disabled, Zoo will not have the necessary instructions to build a server.
 
 **How to Initiate:**
 
-1.  **Make a Request:** Clearly ask Roo for the new tool or capability. For example:
+1.  **Make a Request:** Clearly ask Zoo for the new tool or capability. For example:
     *   "Create an MCP tool that gets the current price of Bitcoin."
     *   "I need a tool that connects to my company's internal user database via its API."
     *   "Build an MCP server to interact with the GitHub Gist API."
 
-2.  **Roo's Process (Simplified):** Once you make the request (and the setting is enabled), Roo will:
+2.  **Zoo's Process (Simplified):** Once you make the request (and the setting is enabled), Zoo will:
     *   Fetch internal instructions for server creation.
     *   Scaffold a basic server project (usually TypeScript) in the default MCP directory (e.g., `~/Documents/Cline/MCP` on macOS) unless you specify otherwise.
     *   Write the code to implement the requested tool, including handling necessary API calls.
-    *   **Handle Secrets:** If the tool requires API keys or other credentials, Roo will ask you for them using the [`ask_followup_question`](/advanced-usage/available-tools/ask-followup-question) tool to ensure they are configured securely as environment variables for the server.
+    *   **Handle Secrets:** If the tool requires API keys or other credentials, Zoo will ask you for them using the [`ask_followup_question`](/advanced-usage/available-tools/ask-followup-question) tool to ensure they are configured securely as environment variables for the server.
     *   **Configure:** Automatically add the new server's configuration to your global `mcp_settings.json` or project `.roo/mcp.json` file.
     *   **Activate:** Attempt to connect to the newly configured server so its tools are immediately available.
 
-3.  **Outcome:** If successful, Roo will confirm the creation, and the new server and its tools will appear in your MCP server list, ready for use.
+3.  **Outcome:** If successful, Zoo will confirm the creation, and the new server and its tools will appear in your MCP server list, ready for use.
 
-This feature allows you to tailor Roo's capabilities by having it build the specific integrations you need directly from your requests. For a deeper look into the internal mechanics, see the [Tool Calling Mechanism](/advanced-usage/available-tools/tool-use-overview#tool-calling-mechanism).
+This feature allows you to tailor Zoo's capabilities by having it build the specific integrations you need directly from your requests. For a deeper look into the internal mechanics, see the [Tool Calling Mechanism](/advanced-usage/available-tools/tool-use-overview#tool-calling-mechanism).
 
 ---
 
@@ -294,7 +294,7 @@ This feature allows you to tailor Roo's capabilities by having it build the spec
 
 Each MCP server has its own configuration panel where you can modify settings, manage tools, and control its operation. To access these settings:
 
-1. Click the <Codicon name="server" /> icon in the top navigation of the Roo Code pane
+1. Click the <Codicon name="server" /> icon in the top navigation of the Zoo Code pane
 2. Locate the MCP server you want to manage in the list
    <img src="/img/using-mcp-in-roo/using-mcp-in-roo-4.png" alt="List of MCP Servers" width="400" />
 
@@ -331,17 +331,17 @@ MCP tool auto-approval works on a per-tool basis and is disabled by default. To 
 
 <img src="/img/using-mcp-in-roo/using-mcp-in-roo-7.png" alt="Always allow checkbox for MCP tools" width="120" />
 
-When enabled, Roo Code will automatically approve this specific tool without prompting. Note that the global "Use MCP servers" setting takes precedence - if it's disabled, no MCP tools will be auto-approved.
+When enabled, Zoo Code will automatically approve this specific tool without prompting. Note that the global "Use MCP servers" setting takes precedence - if it's disabled, no MCP tools will be auto-approved.
 
 ---
 
 ## Finding and Installing MCP Servers
 
-Roo Code does not come with any pre-installed MCP servers. You'll need to find and install them separately.
+Zoo Code does not come with any pre-installed MCP servers. You'll need to find and install them separately.
 
 * **Community Repositories:** Check for community-maintained lists of MCP servers on GitHub
-* **Ask Roo:** You can ask Roo Code to help you find or even create MCP servers (when "[Enable MCP Server Creation](#enabling-or-disabling-mcp-server-creation)" is enabled)
-* **Build Your Own:** Create custom MCP servers using the SDK to extend Roo Code with your own tools
+* **Ask Zoo:** You can ask Zoo Code to help you find or even create MCP servers (when "[Enable MCP Server Creation](#enabling-or-disabling-mcp-server-creation)" is enabled)
+* **Build Your Own:** Create custom MCP servers using the SDK to extend Zoo Code with your own tools
 
 For full SDK documentation, visit the [MCP GitHub repository](https://github.com/modelcontextprotocol/).
 
@@ -349,29 +349,29 @@ For full SDK documentation, visit the [MCP GitHub repository](https://github.com
 
 ## Using MCP Tools in Your Workflow
 
-After configuring an MCP server, Roo automatically detects its available tools and resources. Effectively leveraging these tools involves understanding the core interaction steps and, crucially, how Roo interprets the tools you provide.
+After configuring an MCP server, Zoo automatically detects its available tools and resources. Effectively leveraging these tools involves understanding the core interaction steps and, crucially, how Zoo interprets the tools you provide.
 
 ### Core Workflow Steps
 
 Your interaction with MCP tools typically follows this sequence:
 
 #### 1. Initiate a Task
-Begin by typing your request in the Roo Code chat interface.
+Begin by typing your request in the Zoo Code chat interface.
 
-#### 2. Tool Identification by Roo
-Roo analyzes your request to determine if an available MCP tool can assist. This stage is highly dependent on the quality of your MCP tool definitions.
+#### 2. Tool Identification by Zoo
+Zoo analyzes your request to determine if an available MCP tool can assist. This stage is highly dependent on the quality of your MCP tool definitions.
 
 ##### The Critical Role of Descriptions
-Roo's ability to:
+Zoo's ability to:
 *   Identify the *correct* tool for the job,
 *   Understand how to structure the necessary parameters, and
 *   Avoid misinterpreting a tool's capabilities,
-all hinge on clear, concise, and informative descriptions for both the tools themselves and their parameters. Vague or missing information, especially for parameters, can significantly hinder Roo's ability to select or use a tool effectively.
+all hinge on clear, concise, and informative descriptions for both the tools themselves and their parameters. Vague or missing information, especially for parameters, can significantly hinder Zoo's ability to select or use a tool effectively.
 
-For instance, a request like "Analyze the performance of my API" might lead Roo to consider an MCP tool designed for API endpoint testing. Whether Roo successfully identifies and utilizes this tool as intended is directly influenced by the quality of its description.
+For instance, a request like "Analyze the performance of my API" might lead Zoo to consider an MCP tool designed for API endpoint testing. Whether Zoo successfully identifies and utilizes this tool as intended is directly influenced by the quality of its description.
 
 ##### Best Practices for Defining MCP Tools
-To ensure Roo can leverage your MCP tools efficiently, consider the following when defining them in your server:
+To ensure Zoo can leverage your MCP tools efficiently, consider the following when defining them in your server:
 
 *   **Tool Name:** Choose a descriptive and unambiguous name that clearly indicates the tool's primary function.
 *   **Tool Description:** Provide a comprehensive summary of what the tool does, its purpose, and any important context or prerequisites for its use. Explain the outcome or result of using the tool.
@@ -379,14 +379,14 @@ To ensure Roo can leverage your MCP tools efficiently, consider the following wh
     *   Clearly state its purpose and what kind of data it expects (e.g., "User ID for lookup," "File path to process," "Search query string").
     *   Specify any formatting requirements, constraints, or an example of a valid value if applicable.
     *   Indicate if the parameter is optional or required (though the MCP schema usually handles this, a note can be helpful).
-*   **Clarity for the AI:** Write descriptions as if you are explaining the tool to another developer (or an AI). The more context Roo has, the better it can integrate the tool into its problem-solving workflows. If a tool is intended to be used in a specific sequence or in conjunction with other tools, mentioning this can also be beneficial.
-*   **Augment with Custom Instructions:** Beyond the descriptions embedded in the MCP server, you can further guide Roo's usage of specific MCP tools by providing [Custom Instructions](/features/custom-instructions). This allows you to define preferred approaches, outline complex workflows involving multiple tools, or specify when a particular MCP tool should be prioritized or avoided.
+*   **Clarity for the AI:** Write descriptions as if you are explaining the tool to another developer (or an AI). The more context Zoo has, the better it can integrate the tool into its problem-solving workflows. If a tool is intended to be used in a specific sequence or in conjunction with other tools, mentioning this can also be beneficial.
+*   **Augment with Custom Instructions:** Beyond the descriptions embedded in the MCP server, you can further guide Zoo's usage of specific MCP tools by providing [Custom Instructions](/features/custom-instructions). This allows you to define preferred approaches, outline complex workflows involving multiple tools, or specify when a particular MCP tool should be prioritized or avoided.
 
 #### 3. Tool Invocation
-If Roo, guided by the tool descriptions, identifies a suitable tool, it will propose its use. You then approve this (unless [auto-approval](#auto-approve-tools) is configured for trusted tools).
+If Zoo, guided by the tool descriptions, identifies a suitable tool, it will propose its use. You then approve this (unless [auto-approval](#auto-approve-tools) is configured for trusted tools).
 
 ### Maximizing Synergy with MCP Servers
-By investing effort in crafting detailed descriptions and potentially augmenting them with custom instructions, you significantly improve the synergy between Roo Code and your MCP servers. This unlocks their full potential for more reliable and efficient task completion.
+By investing effort in crafting detailed descriptions and potentially augmenting them with custom instructions, you significantly improve the synergy between Zoo Code and your MCP servers. This unlocks their full potential for more reliable and efficient task completion.
 
 ---
 

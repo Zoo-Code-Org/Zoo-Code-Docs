@@ -1,22 +1,22 @@
 ---
-description: Master the art of writing effective prompts for Roo Code. Learn principles, techniques, and examples to get better AI coding assistance results.
+description: Master the art of writing effective prompts for Zoo Code. Learn principles, techniques, and examples to get better AI coding assistance results.
 keywords:
   - prompt engineering
   - AI prompts
   - effective communication
-  - Roo Code tips
+  - Zoo Code tips
   - custom instructions
 ---
 
 # Prompt Engineering Tips
 
-Prompt engineering is the art of crafting effective instructions for AI models like Roo Code.  Well-written prompts lead to better results, fewer errors, and a more efficient workflow.
+Prompt engineering is the art of crafting effective instructions for AI models like Zoo Code.  Well-written prompts lead to better results, fewer errors, and a more efficient workflow.
 
 ---
 
 ## General Principles
 
-*   **Be Clear and Specific:** Clearly state what you want Roo Code to do. Avoid ambiguity.
+*   **Be Clear and Specific:** Clearly state what you want Zoo Code to do. Avoid ambiguity.
     *   **Bad:** Fix the code.
     *   **Good:** Fix the bug in the `calculateTotal` function that causes it to return incorrect results.
 
@@ -35,18 +35,18 @@ Prompt engineering is the art of crafting effective instructions for AI models l
 
 ## Thinking vs. Doing
 
-It's often helpful to guide Roo Code through a "think-then-do" process:
+It's often helpful to guide Zoo Code through a "think-then-do" process:
 
-1.  **Analyze:** Ask Roo Code to analyze the current code, identify problems, or plan the approach.
-2.  **Plan:**  Have Roo Code outline the steps it will take to complete the task.
-3.  **Execute:**  Instruct Roo Code to implement the plan, one step at a time.
+1.  **Analyze:** Ask Zoo Code to analyze the current code, identify problems, or plan the approach.
+2.  **Plan:**  Have Zoo Code outline the steps it will take to complete the task.
+3.  **Execute:**  Instruct Zoo Code to implement the plan, one step at a time.
 4.  **Review:**  Carefully review the results of each step before proceeding.
 
 ---
 
 ## Using Custom Instructions
 
-You can provide custom instructions to further tailor Roo Code's behavior. There are two types of custom instructions:
+You can provide custom instructions to further tailor Zoo Code's behavior. There are two types of custom instructions:
 
 *   **Global Custom Instructions:** Apply to all modes.
 *   **Mode-Specific Custom Instructions:** Apply only to a specific mode (e.g., Code, Architect, Ask, Debug, or a custom mode).
@@ -56,7 +56,7 @@ Custom instructions are added to the system prompt, providing persistent guidanc
 *   Enforce coding style guidelines.
 *   Specify preferred libraries or frameworks.
 *   Define project-specific conventions.
-*   Adjust Roo Code's tone or personality.
+*   Adjust Zoo Code's tone or personality.
 
 See the [Custom Instructions](/features/custom-instructions) section for more details.
 
@@ -64,7 +64,7 @@ See the [Custom Instructions](/features/custom-instructions) section for more de
 
 ## Handling Ambiguity
 
-If your request is ambiguous or lacks sufficient detail, Roo Code might:
+If your request is ambiguous or lacks sufficient detail, Zoo Code might:
 
 *   **Make Assumptions:**  It might proceed based on its best guess, which may not be what you intended.
 *   **Ask Follow-Up Questions:** It might use the `ask_followup_question` tool to clarify your request.
@@ -75,10 +75,10 @@ It's generally better to provide clear and specific instructions from the start 
 
 ## Providing Feedback
 
-If Roo Code doesn't produce the desired results, you can provide feedback by:
+If Zoo Code doesn't produce the desired results, you can provide feedback by:
 
-*   **Rejecting Actions:** Click the "Reject" button when Roo Code proposes an action you don't want.
-*   **Providing Explanations:** When rejecting, explain *why* you're rejecting the action.  This helps Roo Code learn from its mistakes.
+*   **Rejecting Actions:** Click the "Reject" button when Zoo Code proposes an action you don't want.
+*   **Providing Explanations:** When rejecting, explain *why* you're rejecting the action.  This helps Zoo Code learn from its mistakes.
 *   **Rewording Your Request:** Try rephrasing your initial task or providing more specific instructions.
 *   **Manually Correcting:** If there are a few small issues, you can also directly modify the code before accepting the changes.
 
@@ -110,4 +110,4 @@ If Roo Code doesn't produce the desired results, you can provide feedback by:
 
 > Fix everything.
 
-By following these tips, you can write effective prompts that get the most out of Roo Code's capabilities.
+By following these tips, you can write effective prompts that get the most out of Zoo Code's capabilities.

@@ -1,7 +1,7 @@
 ---
 title: Baseten
 sidebar_label: Baseten
-description: Learn how to configure and use Baseten's Model APIs with Roo Code. Access frontier open-source models with enterprise-grade performance, reliability, and competitive pricing.
+description: Learn how to configure and use Baseten's Model APIs with Zoo Code. Access frontier open-source models with enterprise-grade performance, reliability, and competitive pricing.
 keywords:
   - Baseten
   - Model APIs
@@ -9,13 +9,13 @@ keywords:
   - DeepSeek
   - Kimi K2
   - Qwen
-  - Roo Code
+  - Zoo Code
   - AI integration
   - API key
   - enterprise inference
 ---
 
-# Using Baseten With Roo Code
+# Using Baseten With Zoo Code
 
 Baseten provides on-demand frontier model APIs designed for production applications, not just experimentation. Built on the Baseten Inference Stack, these APIs deliver optimized inference for leading open-source models from OpenAI, DeepSeek, Moonshot AI, and Alibaba Cloud.
 
@@ -29,7 +29,7 @@ Baseten provides on-demand frontier model APIs designed for production applicati
 
 2. **Navigate to API Keys:** Access your dashboard and go to the API Keys section at [https://app.baseten.co/settings/api_keys](https://app.baseten.co/settings/api_keys).
 
-3. **Create a Key:** Generate a new API key. Give it a descriptive name (e.g., "Roo Code").
+3. **Create a Key:** Generate a new API key. Give it a descriptive name (e.g., "Zoo Code").
 
 4. **Copy the Key:** Copy the API key immediately and store it securely.
 
@@ -37,15 +37,15 @@ Baseten provides on-demand frontier model APIs designed for production applicati
 
 ## Available Models
 
-Roo Code supports all models available through Baseten's Model APIs.
+Zoo Code supports all models available through Baseten's Model APIs.
 
 For the complete, up-to-date model list and pricing, see [Baseten's Model APIs page](https://www.baseten.co/products/model-apis/).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1. **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1. **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 
 2. **Select Provider:** Choose "Baseten" from the "API Provider" dropdown.
 
@@ -54,7 +54,7 @@ For the complete, up-to-date model list and pricing, see [Baseten's Model APIs p
 4. **Select Model:** Choose your desired model from the "Model" dropdown.
 
 :::warning Kimi K2 Thinking Model
-To use the `moonshotai/Kimi-K2-Thinking` model, you must enable native tool calling in the Roo Code settings. This setting allows Roo Code to call the model's tools through their native tool processor and is required for this reasoning model to function properly.
+To use the `moonshotai/Kimi-K2-Thinking` model, you must enable native tool calling in the Zoo Code settings. This setting allows Zoo Code to call the model's tools through their native tool processor and is required for this reasoning model to function properly.
 :::
 
 ---

@@ -1,8 +1,8 @@
 ---
-description: Learn how to create custom modes in Roo Code to tailor AI behavior for specific tasks. Configure tool access, file permissions, and specialized instructions.
+description: Learn how to create custom modes in Zoo Code to tailor AI behavior for specific tasks. Configure tool access, file permissions, and specialized instructions.
 keywords:
   - custom modes
-  - Roo Code customization
+  - Zoo Code customization
   - AI assistant configuration
   - mode creation
   - tool permissions
@@ -11,7 +11,7 @@ keywords:
 
 # Customizing Modes
 
-Roo Code allows you to create **custom modes** to tailor Roo's behavior to specific tasks or workflows. Custom modes can be either **global** (available across all projects) or **project-specific** (defined within a single project).
+Zoo Code allows you to create **custom modes** to tailor Zoo's behavior to specific tasks or workflows. Custom modes can be either **global** (available across all projects) or **project-specific** (defined within a single project).
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
@@ -33,11 +33,11 @@ Roo Code allows you to create **custom modes** to tailor Roo's behavior to speci
 <br />
 
 :::tip Sticky Models for Efficient Workflow
-Each mode—including custom ones—features **Sticky Models**. This means Roo Code automatically remembers and selects the last model you used with a particular mode. This lets you assign different preferred models to different tasks without constant reconfiguration, as Roo switches between models when you change modes.
+Each mode—including custom ones—features **Sticky Models**. This means Zoo Code automatically remembers and selects the last model you used with a particular mode. This lets you assign different preferred models to different tasks without constant reconfiguration, as Zoo switches between models when you change modes.
 :::
 
 :::info Discover Community Modes
-Looking for ready-to-use custom modes? Visit the [Roo Code Marketplace](/features/marketplace) to browse and install community-contributed modes with a single click. The marketplace offers specialized modes for various tasks like React development, documentation writing, testing, and more—all created and shared by the Roo Code community.
+Looking for ready-to-use custom modes? Visit the [Zoo Code Marketplace](/features/marketplace) to browse and install community-contributed modes with a single click. The marketplace offers specialized modes for various tasks like React development, documentation writing, testing, and more—all created and shared by the Zoo Code community.
 :::
 
 ---
@@ -51,23 +51,23 @@ Looking for ready-to-use custom modes? Visit the [Roo Code Marketplace](/feature
 
 <img src="/img/custom-modes/custom-modes-3.png" alt="Overview of custom modes interface" width="500" />
 
-    *Roo Code's interface for creating and managing custom modes.*
+    *Zoo Code's interface for creating and managing custom modes.*
 
 ---
 
 ## What's Included in a Custom Mode?
 
-Custom modes are defined by several key properties. Understanding these concepts will help you tailor Roo's behavior effectively.
+Custom modes are defined by several key properties. Understanding these concepts will help you tailor Zoo's behavior effectively.
 
 | UI Field / YAML Property                 | Conceptual Description                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Slug (`slug`)                            | A **unique internal identifier** for the mode. It's used by Roo Code to reference the mode, especially for associating [mode-specific instruction files](#mode-specific-instructions-via-filesdirectories).                                                                                                                                                                                                   |
-| Name (`name`)                            | The **display name** for the mode as it appears in the Roo Code user interface. This should be human-readable and descriptive.                                                                                                                                                                                                                                                                               |
+| Slug (`slug`)                            | A **unique internal identifier** for the mode. It's used by Zoo Code to reference the mode, especially for associating [mode-specific instruction files](#mode-specific-instructions-via-filesdirectories).                                                                                                                                                                                                   |
+| Name (`name`)                            | The **display name** for the mode as it appears in the Zoo Code user interface. This should be human-readable and descriptive.                                                                                                                                                                                                                                                                               |
 | Description (`description`)              | A **short, user-friendly summary** of the mode's purpose displayed in the mode selector UI.<br />- This text appears below the mode's name in the redesigned mode selector, offering users a quick understanding of the mode's function.<br />- Keep this concise and focused on what the mode does for the user.                                                                                              |
-| Role Definition (`roleDefinition`)       | Defines the **core identity and expertise** of the mode. This text is placed at the beginning of the system prompt.<br />- Its primary function is to define Roo's personality and behavior when this mode is active.<br />- With the introduction of the `description` field, the `roleDefinition` should provide a detailed description of the mode's identity, while the `description` field handles the short summary for the UI.<br />- The `whenToUse` property now takes precedence for summarization in automated contexts like task orchestration. |
-| Available Tools (`groups`)               | Defines the **allowed toolsets and file access permissions** for the mode.<br />- In the UI, this corresponds to selecting which general categories of tools (like reading files, editing files, browsing, or executing commands) the mode can use.<br />- The UI shows which files can be edited in the 'Allowed files' section under each mode.<br />- File type restrictions for the "edit" group are typically managed via manual YAML/JSON configuration or by asking Roo to set them up, as detailed in the [Property Details for `groups`](#groups). |
-| When to Use (optional) (`whenToUse`)     | (Optional) Provides **guidance for Roo's automated decision-making**, particularly for mode selection and task orchestration.<br />- This text is used by Roo, particularly the [`🪃 Orchestrator`](/basic-usage/using-modes#orchestrator-mode-aka-boomerang-mode) mode, for [orchestrating tasks](/features/boomerang-tasks) (e.g., via the [`new_task`](/advanced-usage/available-tools/new-task) tool).<br />- It also helps Roo decide which mode is appropriate when [switching modes](/basic-usage/using-modes#switching-between-modes) (e.g., via the [`switch_mode`](/advanced-usage/available-tools/switch-mode) tool).<br />- This field is **not displayed in the mode selector UI** - that's handled by the `description` field. |
-| Custom Instructions (optional) (`customInstructions`) | **Specific behavioral guidelines** or rules for the mode.<br />- These instructions are added near the end of the system prompt to further refine Roo's behavior beyond the `roleDefinition`.<br />- This can be provided directly in the configuration or via separate instruction files.                                                                                                                               |
+| Role Definition (`roleDefinition`)       | Defines the **core identity and expertise** of the mode. This text is placed at the beginning of the system prompt.<br />- Its primary function is to define Zoo's personality and behavior when this mode is active.<br />- With the introduction of the `description` field, the `roleDefinition` should provide a detailed description of the mode's identity, while the `description` field handles the short summary for the UI.<br />- The `whenToUse` property now takes precedence for summarization in automated contexts like task orchestration. |
+| Available Tools (`groups`)               | Defines the **allowed toolsets and file access permissions** for the mode.<br />- In the UI, this corresponds to selecting which general categories of tools (like reading files, editing files, browsing, or executing commands) the mode can use.<br />- The UI shows which files can be edited in the 'Allowed files' section under each mode.<br />- File type restrictions for the "edit" group are typically managed via manual YAML/JSON configuration or by asking Zoo to set them up, as detailed in the [Property Details for `groups`](#groups). |
+| When to Use (optional) (`whenToUse`)     | (Optional) Provides **guidance for Zoo's automated decision-making**, particularly for mode selection and task orchestration.<br />- This text is used by Zoo, particularly the [`🪃 Orchestrator`](/basic-usage/using-modes#orchestrator-mode-aka-boomerang-mode) mode, for [orchestrating tasks](/features/boomerang-tasks) (e.g., via the [`new_task`](/advanced-usage/available-tools/new-task) tool).<br />- It also helps Zoo decide which mode is appropriate when [switching modes](/basic-usage/using-modes#switching-between-modes) (e.g., via the [`switch_mode`](/advanced-usage/available-tools/switch-mode) tool).<br />- This field is **not displayed in the mode selector UI** - that's handled by the `description` field. |
+| Custom Instructions (optional) (`customInstructions`) | **Specific behavioral guidelines** or rules for the mode.<br />- These instructions are added near the end of the system prompt to further refine Zoo's behavior beyond the `roleDefinition`.<br />- This can be provided directly in the configuration or via separate instruction files.                                                                                                                               |
 
 ---
 ## Import/Export Modes
@@ -101,7 +101,7 @@ The import/export functionality is managed from the **Modes** view.
 3.  Click the **Export Mode** button (the download icon).
 4.  Choose a location to save the `.yaml` file.
 
-Roo packages the mode's configuration and any rules found in the project's `.roo/rules-{slug}/` directory into the YAML file.
+Zoo packages the mode's configuration and any rules found in the project's `.roo/rules-{slug}/` directory into the YAML file.
 
 #### Importing a Mode
 1.  Click the **Import Mode** button (the upload icon) in the **Modes** view.
@@ -109,7 +109,7 @@ Roo packages the mode's configuration and any rules found in the project's `.roo
 3.  Choose the import level in the dialog that appears:
     ![Import Level Dialog](/img/custom-modes/custom-modes-6.png)
     -   **Project**: The mode is available only in the current workspace. It's added to the `.roomodes` file, and its rules are saved to the `.roo/rules-{slug}/` directory within the project.
-    -   **Global**: The mode is available in all your projects. It's added to your global settings, and its rules are stored in your system's global Roo configuration directory (e.g., `~/.roo/rules-{slug}/`).
+    -   **Global**: The mode is available in all your projects. It's added to your global settings, and its rules are stored in your system's global Zoo configuration directory (e.g., `~/.roo/rules-{slug}/`).
 
 **Note:** When exporting modes with rules, all file paths are normalized to use forward slashes for cross-platform compatibility. This ensures modes can be shared between team members using different operating systems.
 
@@ -165,19 +165,19 @@ Note: The automatic slug change handling during import ensures that rule file pa
 
 You can create and configure custom modes in several ways:
 
-To configure modes, open the Roo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />. From there, use "Edit Global Modes" to open settings/custom_modes.yaml, or "Edit Project Modes (.roomodes)" to open your workspace-level configuration.
+To configure modes, open the Zoo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />. From there, use "Edit Global Modes" to open settings/custom_modes.yaml, or "Edit Project Modes (.roomodes)" to open your workspace-level configuration.
 
-### 1. Ask Roo! (Recommended)
+### 1. Ask Zoo! (Recommended)
 
-You can quickly create a basic custom mode by asking Roo Code to do it for you. For example:
+You can quickly create a basic custom mode by asking Zoo Code to do it for you. For example:
 ```
 Create a new mode called "Documentation Writer". It should only be able to read files and write Markdown files.
 ```
-Roo Code will guide you through the process, prompting for necessary information for the properties described in the [What's Included in a Custom Mode?](#whats-included-in-a-custom-mode) table. Roo will create the mode using the preferred YAML format. For fine-tuning or making specific adjustments later, you can use the Modes page or manual configuration.
+Zoo Code will guide you through the process, prompting for necessary information for the properties described in the [What's Included in a Custom Mode?](#whats-included-in-a-custom-mode) table. Zoo will create the mode using the preferred YAML format. For fine-tuning or making specific adjustments later, you can use the Modes page or manual configuration.
 
 ### 2. Using the Modes Page
 
-1.  **Open the Modes page:** Open the Roo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
+1.  **Open the Modes page:** Open the Zoo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
 2.  **Create New Mode:** Click the <Codicon name="add" /> button to the right of the Modes heading.
 3.  **Fill in Fields:**
 
@@ -185,13 +185,13 @@ Roo Code will guide you through the process, prompting for necessary information
 
     *The custom mode creation interface showing fields for name, slug, description, save location, role definition, available tools, custom instructions.*
 
-    The interface provides fields for `Name`, `Slug`, `Description`, `Save Location`, `Role Definition`, `When to Use (optional)`, `Available Tools`, and `Custom Instructions`. After filling these, click the "Create Mode" button. Roo Code will save the new mode in YAML format.
+    The interface provides fields for `Name`, `Slug`, `Description`, `Save Location`, `Role Definition`, `When to Use (optional)`, `Available Tools`, and `Custom Instructions`. After filling these, click the "Create Mode" button. Zoo Code will save the new mode in YAML format.
 
-*Refer to the [What's Included in a Custom Mode?](#whats-included-in-a-custom-mode) table for conceptual explanations of each property. File type restrictions for the "edit" tool group can be added by asking Roo or through manual YAML/JSON configuration.*
+*Refer to the [What's Included in a Custom Mode?](#whats-included-in-a-custom-mode) table for conceptual explanations of each property. File type restrictions for the "edit" tool group can be added by asking Zoo or through manual YAML/JSON configuration.*
 
 ### 3. Manual Configuration (YAML & JSON)
 
-You can directly edit the configuration files to create or modify custom modes. This method offers the most control over all properties. Roo Code now supports both YAML (preferred) and JSON formats.
+You can directly edit the configuration files to create or modify custom modes. This method offers the most control over all properties. Zoo Code now supports both YAML (preferred) and JSON formats.
 
 *   **Global Modes:** Edit the `custom_modes.yaml` (preferred) or `custom_modes.json` file. From the Modes page, click "Edit Global Modes" to open `settings/custom_modes.yaml`.
 *   **Project Modes:** Edit the `.roomodes` file (which can be YAML or JSON) in your project root. From the Modes page, click "Edit Project Modes (.roomodes)" to open or create the workspace file.
@@ -253,7 +253,7 @@ customModes:
 *   *JSON Example:* `"slug": "docs-writer"`
 
 ##### `name`
-*   **Purpose:** The display name shown in the Roo Code UI.
+*   **Purpose:** The display name shown in the Zoo Code UI.
 *   **Format:** Can include spaces and proper capitalization.
 *   *YAML Example:* `name: 📝 Documentation Writer`
 *   *JSON Example:* `"name": "Documentation Writer"`
@@ -310,9 +310,9 @@ customModes:
     ```
 
 ##### `whenToUse`
-*   **Purpose:** (Optional) Provides guidance for Roo's automated decision-making, particularly for mode selection and task orchestration.
+*   **Purpose:** (Optional) Provides guidance for Zoo's automated decision-making, particularly for mode selection and task orchestration.
 *   **Format:** A string describing ideal scenarios or task types for this mode.
-*   **Usage:** This field is used by Roo for automated decisions and is **not displayed in the mode selector UI** - that's handled by the `description` field. If populated, Roo uses this description for orchestration and mode switching; otherwise, the first sentence of `roleDefinition` is used.
+*   **Usage:** This field is used by Zoo for automated decisions and is **not displayed in the mode selector UI** - that's handled by the `description` field. If populated, Zoo uses this description for orchestration and mode switching; otherwise, the first sentence of `roleDefinition` is used.
 *   *YAML Example:* `whenToUse: This mode is best for refactoring Python code.`
 *   *JSON Example:* `"whenToUse": "This mode is best for refactoring Python code."`
 
@@ -368,7 +368,7 @@ YAML is now the preferred format for defining custom modes due to several advant
 *   **Less Punctuation:** YAML generally requires less punctuation (like commas and braces) compared to JSON, reducing syntax errors.
 *   **Editor Support:** Most modern code editors provide excellent syntax highlighting and validation for YAML files, further enhancing readability and reducing errors.
 
-While JSON is still fully supported and won't be deprecated, new modes created via the UI or by asking Roo will default to YAML. Both `.roomodes` files and global configuration files can be either YAML or JSON format.
+While JSON is still fully supported and won't be deprecated, new modes created via the UI or by asking Zoo will default to YAML. Both `.roomodes` files and global configuration files can be either YAML or JSON format.
 
 #### Tips for Working with YAML
 
@@ -381,24 +381,24 @@ When editing YAML manually, keep these points in mind:
 
 ### Migration to YAML Format
 
-*   **Global Modes:** The automatic migration from `custom_modes.json` to `custom_modes.yaml` happens only for global modes when Roo Code starts up, under these conditions:
-    1.  Roo Code starts up.
+*   **Global Modes:** The automatic migration from `custom_modes.json` to `custom_modes.yaml` happens only for global modes when Zoo Code starts up, under these conditions:
+    1.  Zoo Code starts up.
     2.  A `custom_modes.json` file exists.
     3.  No `custom_modes.yaml` file exists yet.
     The migration process reads the existing JSON file, converts it to YAML format, creates a new `custom_modes.yaml` file, and preserves the original JSON file (e.g., by renaming it) for rollback purposes. If `custom_modes.yaml` already exists, it will be used, and no automatic migration of `custom_modes.json` will occur.
 
 *   **Project Modes (`.roomodes`):**
-    *   **No automatic startup migration:** Unlike global modes, project-specific `.roomodes` files are not automatically converted from JSON to YAML when Roo Code starts. Manual conversion is required for existing JSON `.roomodes` files.
-    *   **Format Detection:** Roo Code can read `.roomodes` files in either YAML or JSON format. Roo Code automatically detects the format of `.roomodes` files by attempting to parse them as YAML first.
-    *   **Conversion on UI Edit:** If you edit a project-specific mode through the Roo Code UI (e.g., via the Modes page), and the existing `.roomodes` file is in JSON format, Roo Code will save the changes in YAML format. This effectively converts the file to YAML. The original JSON content will be overwritten with YAML.
+    *   **No automatic startup migration:** Unlike global modes, project-specific `.roomodes` files are not automatically converted from JSON to YAML when Zoo Code starts. Manual conversion is required for existing JSON `.roomodes` files.
+    *   **Format Detection:** Zoo Code can read `.roomodes` files in either YAML or JSON format. Zoo Code automatically detects the format of `.roomodes` files by attempting to parse them as YAML first.
+    *   **Conversion on UI Edit:** If you edit a project-specific mode through the Zoo Code UI (e.g., via the Modes page), and the existing `.roomodes` file is in JSON format, Zoo Code will save the changes in YAML format. This effectively converts the file to YAML. The original JSON content will be overwritten with YAML.
     *   **Manual Conversion:** If you want to convert an existing `.roomodes` JSON file to YAML without making UI edits, you'll need to do this manually. You can:
         1.  Open your existing JSON `.roomodes` file.
-        2.  Convert its content to YAML (you can ask Roo to help with this, or use an online converter).
+        2.  Convert its content to YAML (you can ask Zoo to help with this, or use an online converter).
         3.  Replace the content of your `.roomodes` file with the new YAML content, or rename the old file (e.g., `.roomodes.json.bak`) and save the new content into a file named `.roomodes`.
         Ensure the resulting YAML is valid.
 
 :::tip
-For manual conversions of `.roomodes` files, you can use online JSON to YAML converters or ask Roo to help reformat a specific mode configuration from JSON to YAML. Always validate your YAML before saving.
+For manual conversions of `.roomodes` files, you can use online JSON to YAML converters or ask Zoo to help reformat a specific mode configuration from JSON to YAML. Always validate your YAML before saving.
 :::
 ---
 
@@ -440,7 +440,7 @@ In addition to the `customInstructions` property, you can provide mode-specific 
 *   Managing instructions easily with version control.
 *   Allowing non-technical team members to modify instructions without editing YAML/JSON.
 
-There are two ways Roo Code loads these instructions, with a clear preference for the newer directory-based method:
+There are two ways Zoo Code loads these instructions, with a clear preference for the newer directory-based method:
 
 **1. Preferred Method: Directory-Based Instructions (`.roo/rules-{mode-slug}/`)**
 
@@ -451,7 +451,7 @@ There are two ways Roo Code loads these instructions, with a clear preference fo
 
 **2. Fallback (Backward Compatibility): File-Based Instructions (`.roorules-{mode-slug}`)**
 
-*   **Structure:** If the `.roo/rules-{mode-slug}/` directory **does not exist or is empty**, Roo Code will look for a single file named `.roorules-{mode-slug}` in your workspace root (e.g., `.roorules-docs-writer`).
+*   **Structure:** If the `.roo/rules-{mode-slug}/` directory **does not exist or is empty**, Zoo Code will look for a single file named `.roorules-{mode-slug}` in your workspace root (e.g., `.roorules-docs-writer`).
 *   **Loading:** If found, the content of this single file will be loaded as instructions for the mode.
 
 **Precedence:**
@@ -484,13 +484,13 @@ You can override any default mode by including a mode with the same slug in your
 
 ## Overriding Default Modes
 
-You can override Roo Code's built-in modes (like `💻 Code`, `🪲 Debug`, `❓ Ask`, `🏗️ Architect`, `🪃 Orchestrator`) with customized versions. This is done by creating a custom mode with the same slug as a default mode (e.g., `code`, `debug`).
+You can override Zoo Code's built-in modes (like `💻 Code`, `🪲 Debug`, `❓ Ask`, `🏗️ Architect`, `🪃 Orchestrator`) with customized versions. This is done by creating a custom mode with the same slug as a default mode (e.g., `code`, `debug`).
 
 ### Overriding Modes Globally
 
 To customize a default mode across all your projects:
 
-1. **Open the Modes page:** Open the Roo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
+1. **Open the Modes page:** Open the Zoo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
 2. **Edit Global Modes:** Click "Edit Global Modes" to open `settings/custom_modes.yaml` (or `custom_modes.json`).
 3. **Add Your Override:**
 
@@ -531,7 +531,7 @@ This example replaces the default `💻 Code` mode with a version restricted to 
 
 To override a default mode for just one project:
 
-1. **Open the Modes page:** Open the Roo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
+1. **Open the Modes page:** Open the Zoo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
 2. **Edit Project Modes (.roomodes):** Click "Edit Project Modes (.roomodes)" to open or create the workspace file.
 3. **Add Your Override:**
 
@@ -587,13 +587,13 @@ When overriding default modes, test carefully. Consider backing up configuration
 Regular expressions (`fileRegex`) offer fine-grained control over file editing permissions.
 
 :::tip
-**Let Roo Build Your Regex Patterns**
+**Let Zoo Build Your Regex Patterns**
 
-Instead of writing complex regex manually, ask Roo:
+Instead of writing complex regex manually, ask Zoo:
 ```
 Create a regex pattern that matches JavaScript files but excludes test files
 ```
-Roo will generate the pattern. Remember to adapt it for YAML (usually single backslashes) or JSON (double backslashes).
+Zoo will generate the pattern. Remember to adapt it for YAML (usually single backslashes) or JSON (double backslashes).
 :::
 
 When you specify `fileRegex`, you're creating a pattern that file paths must match.
@@ -649,7 +649,7 @@ This information helps you understand why your operation was blocked and what fi
 When exporting built-in modes (like Code, Architect, Ask, Debug), any customizations you've made are included in the export. This allows you to share your personalized versions of built-in modes with others.
 
 ### Mode Deletion and Rules
-When deleting a mode through the UI, Roo Code will prompt you about deleting the associated rules folder, showing the exact path before deletion. This helps prevent accidental loss of custom instructions.
+When deleting a mode through the UI, Zoo Code will prompt you about deleting the associated rules folder, showing the exact path before deletion. This helps prevent accidental loss of custom instructions.
 
 ### Global Rules Directory
 In addition to mode-specific rules directories, there's also a generic `.roo/rules/` directory (without mode suffix) that can be used for shared rules across all modes.
@@ -660,4 +660,3 @@ In addition to mode-specific rules directories, there's also a generic `.roo/rul
 - **Mode not appearing:** After creating or importing a mode, you may need to reload the VS Code window for it to appear in the mode selector.
 - **Invalid regex patterns:** If your `fileRegex` pattern is invalid, you'll receive an error message. Test your patterns using online regex testers before applying them.
 - **Precedence confusion:** Remember that project modes completely override global modes with the same slug - no properties are merged.
-
