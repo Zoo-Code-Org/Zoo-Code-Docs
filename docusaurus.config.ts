@@ -30,10 +30,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.zoocode.dev',
+  url: 'https://zoo-code-org.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Zoo-Code-Docs/',
 
   // GitHub pages deployment config (if needed)
   organizationName: 'Zoo-Code-Org',
