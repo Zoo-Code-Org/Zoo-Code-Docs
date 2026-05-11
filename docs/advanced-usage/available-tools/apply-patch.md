@@ -6,7 +6,7 @@ keywords:
   - unified diff
   - multi-file edits
   - file operations
-  - Roo Code tools
+  - Zoo Code tools
   - diff patches
 ---
 

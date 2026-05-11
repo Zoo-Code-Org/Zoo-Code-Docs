@@ -33,7 +33,7 @@ const config: Config = {
   url: 'https://zoo-code-org.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Zoo-Code-Docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config (if needed)
   organizationName: 'Zoo-Code-Org',
@@ -330,7 +330,7 @@ const config: Config = {
   themeConfig: {
     // SEO metadata
     metadata: [
-      {name: 'keywords', content: 'Roo Code, AI coding assistant, VS Code extension, autonomous coding agent, AI pair programmer, code generation, documentation'},
+      {name: 'keywords', content: 'Zoo Code, AI coding assistant, VS Code extension, autonomous coding agent, AI pair programmer, code generation, documentation'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:site', content: '@roocode'},
       {name: 'twitter:creator', content: '@roocode'},
@@ -345,7 +345,7 @@ const config: Config = {
     image: '/img/social-share.png', // Default Open Graph image
     navbar: {
       logo: {
-        alt: 'Roo Code Logo',
+        alt: 'Zoo Code Logo',
         src: 'img/roo-code-logo-dark.svg',
         srcDark: 'img/roo-code-logo-white.svg',
       },
@@ -359,7 +359,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       logo: {
-        alt: 'Roo Code Logo',
+        alt: 'Zoo Code Logo',
         src: 'img/roo-code-logo-dark.svg',
         srcDark: 'img/roo-code-logo-white.svg',
         width: 120,

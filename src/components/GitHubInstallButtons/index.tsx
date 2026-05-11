@@ -106,30 +106,6 @@ export default function GitHubInstallButtons(): React.JSX.Element {
         {stars && <span>{stars}</span>}
       </a>
 
-      <a
-        href={SIGN_IN_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.secondaryButton}
-        title="Log into Roo Code Cloud"
-      >
-        <span>
-          Log in
-        </span>
-      </a>
-
-      <a
-        href={SIGN_UP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.installButton}
-        title="Sign up"
-      >
-        <span>
-          Sign up
-        </span>
-      </a>
-
       {/* Install Button */}
       <a
         href={VSCODE_MARKETPLACE_URL}

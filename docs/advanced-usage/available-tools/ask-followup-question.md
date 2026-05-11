@@ -1,10 +1,10 @@
 ---
-description: Enable interactive communication in Roo Code with the ask_followup_question tool for gathering clarification and user preferences.
+description: Enable interactive communication in Zoo Code with the ask_followup_question tool for gathering clarification and user preferences.
 keywords:
   - ask_followup_question
   - user interaction
   - interactive communication
-  - Roo Code tools
+  - Zoo Code tools
   - clarification
   - user feedback
 ---
@@ -26,16 +26,16 @@ The tool accepts these parameters:
 
 ## What It Does
 
-This tool creates a conversational interface between Roo and the user, allowing for gathering clarification, additional details, or user preferences when facing ambiguities or decision points. Each question can include suggested responses to streamline the interaction.
+This tool creates a conversational interface between Zoo and the user, allowing for gathering clarification, additional details, or user preferences when facing ambiguities or decision points. Each question can include suggested responses to streamline the interaction.
 
 ---
 
 ## When is it used?
 
 - When critical information is missing from the original request
-- When Roo needs to choose between multiple valid implementation approaches
+- When Zoo needs to choose between multiple valid implementation approaches
 - When technical details or preferences are required to proceed
-- When Roo encounters ambiguities that need resolution
+- When Zoo encounters ambiguities that need resolution
 - When additional context would significantly improve the solution quality
 
 ---
@@ -113,9 +113,9 @@ When the `ask_followup_question` tool is invoked, it follows this process:
 
 The question-answer cycle follows this sequence:
 
-1. **Information Gap Recognition**: Roo identifies missing information needed to proceed
-2. **Specific Question Creation**: Roo formulates a clear, targeted question
-3. **Suggestion Development**: Roo creates relevant suggested answers (optional but recommended)
+1. **Information Gap Recognition**: Zoo identifies missing information needed to proceed
+2. **Specific Question Creation**: Zoo formulates a clear, targeted question
+3. **Suggestion Development**: Zoo creates relevant suggested answers (optional but recommended)
 4. **Tool Invocation**: Assistant invokes the tool with question and optional suggestions
 5. **UI Presentation**: Question and suggestions are displayed to the user as interactive elements
 6. **User Response**: The user selects a suggestion or provides a custom answer
@@ -125,18 +125,18 @@ The question-answer cycle follows this sequence:
    - Maintains state consistency regardless of message chunking
 8. **Response Processing**: System wraps the response in `<answer>` tags and preserves images
 9. **Context Integration**: Response is added to the conversation history
-10. **Task Continuation**: Roo proceeds with the task using the new information
+10. **Task Continuation**: Zoo proceeds with the task using the new information
 
 ---
 
 ## Examples When Used
 
-- When developing a web application, Roo might ask about preferred styling frameworks (Bootstrap, Tailwind, custom CSS)
-- When creating an API, Roo might ask about authentication methods (JWT, OAuth, API keys)
-- When refactoring code, Roo might ask about prioritizing performance vs. readability
-- When setting up a database, Roo might ask about specific schema design preferences
-- When creating a custom feature, Roo might ask about specific behavior expectations
-- When troubleshooting errors, Roo might ask about specific environment details
+- When developing a web application, Zoo might ask about preferred styling frameworks (Bootstrap, Tailwind, custom CSS)
+- When creating an API, Zoo might ask about authentication methods (JWT, OAuth, API keys)
+- When refactoring code, Zoo might ask about prioritizing performance vs. readability
+- When setting up a database, Zoo might ask about specific schema design preferences
+- When creating a custom feature, Zoo might ask about specific behavior expectations
+- When troubleshooting errors, Zoo might ask about specific environment details
 
 ---
 
