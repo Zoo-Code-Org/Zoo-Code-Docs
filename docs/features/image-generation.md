@@ -137,4 +137,4 @@ Include these elements in your prompts:
 
 ## Status
 
-This feature is experimental and may change or be removed in future versions. Provide feedback through [GitHub Issues](https://github.com/RooCodeInc/Roo-Code/issues).
+This feature is experimental and may change or be removed in future versions. Provide feedback through [GitHub Issues](https://github.com/Zoo-Code-Org/Zoo-Code/issues).

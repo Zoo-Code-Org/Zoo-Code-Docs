@@ -836,7 +836,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "link",
       label: "Contributing (GitHub)",
-      href: "https://github.com/RooCodeInc/Roo-Code/blob/main/CONTRIBUTING.md",
+      href: "https://github.com/Zoo-Code-Org/Zoo-Code/blob/main/CONTRIBUTING.md",
     },
   ],
 };

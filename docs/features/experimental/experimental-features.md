@@ -39,6 +39,6 @@ The following experimental features are currently available:
 
 ## Providing Feedback
 
-If you encounter any issues with experimental features, or if you have suggestions for improvements, please report them on the [Zoo Code GitHub Issues page](https://github.com/RooCodeInc/Roo-Code/issues).
+If you encounter any issues with experimental features, or if you have suggestions for improvements, please report them on the [Zoo Code GitHub Issues page](https://github.com/Zoo-Code-Org/Zoo-Code/issues).
 
 Your feedback is valuable and helps us improve Zoo Code!
