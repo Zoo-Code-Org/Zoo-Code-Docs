@@ -97,12 +97,6 @@
       "cloud": false
     },
     {
-      "id": "providers/roo-code-router",
-      "title": "Roo Code Router",
-      "extension": true,
-      "cloud": true
-    },
-    {
       "id": "providers/sambanova",
       "title": "SambaNova",
       "extension": true,

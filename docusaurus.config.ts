@@ -99,7 +99,6 @@ const config: Config = {
           { label: "Features", path: "features" },
           { label: "Advanced Usage", path: "advanced-usage" },
           { label: "Providers", path: "providers" },
-          { label: "Roo Code Cloud", path: "roo-code-cloud" },
           { label: "Release Notes", path: "update-notes" }
         ],
         useAllContextsWithNoSearchContext: true,
@@ -285,25 +284,6 @@ const config: Config = {
             to: '/advanced-usage/roo-code-nightly',
             from: ['/advanced-usage/prerelease-build'],
           },
-          // Redirect /roo to Roo Code Cloud documentation
-          {
-            to: '/providers/roo-code-router',
-            from: ['/providers/roo'],
-          },
-          // Roo Code Router rename redirects
-          {
-            to: '/providers/roo-code-router',
-            from: ['/providers/roo-code-cloud'],
-          },
-          {
-            to: '/roo-code-router/overview',
-            from: ['/roo-code-provider', '/roo-code-provider/overview'],
-          },
-          // Redirect deleted billing-subscriptions page
-          {
-            to: '/credits/overview',
-            from: ['/roo-code-cloud/billing-subscriptions'],
-          },
           // Redirect removed Human Relay provider page
           {
             to: '/',
@@ -320,12 +300,6 @@ const config: Config = {
             to: '/',
             from: ['/features/fast-edits'],
           },
-          // Redirect removed Roomote Control page
-          {
-            to: '/roo-code-cloud/overview',
-            from: ['/roo-code-cloud/roomote-control'],
-          },
-
           // Redirect retired provider pages
           {
             to: '/providers',

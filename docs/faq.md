@@ -53,7 +53,7 @@ Zoo Code can help with a variety of coding tasks, including:
 The Zoo Code extension is free and [open-source](https://github.com/RooCodeInc/Roo-Code/).
 The Zoo Code Cloud platform is also free, but some functionality is paid.
 
-In both cases, Zoo Code relies on external LLM inference providers (like [Anthropic](providers/anthropic), [OpenAI](providers/openai), [OpenRouter](providers/openrouter), [Requesty](providers/requesty), etc.) for its AI capabilities. We also offer [Zoo Code Router](/roo-code-router/overview) as an alternative.
+In both cases, Zoo Code relies on external LLM inference providers (like [Anthropic](providers/anthropic), [OpenAI](providers/openai), [OpenRouter](providers/openrouter), [Requesty](providers/requesty), etc.) for its AI capabilities.
 These providers typically charge for API usage based on the number of tokens processed.  You will need to create an account and obtain an API key from your chosen provider. Learn more [about providers and how to set them up](/providers/) for details.
 
 ### What are the risks of using Zoo Code?
@@ -79,8 +79,6 @@ See the [full list here](/providers/).
 ### How do I get an API key?
 
 Each API provider has its own process for obtaining an API key.  See the [Setting Up Your First AI Provider](/getting-started/connecting-api-provider) for links to the relevant documentation for each provider.
-
-If you use the [Zoo Code Router](/roo-code-router/overview), you don't need an API key.
 
 ### Can I use Zoo Code with local models?
 Yes, Zoo Code supports running models locally using [Ollama](/providers/ollama) and [LM Studio](/providers/lmstudio).  See [Using Local Models](/advanced-usage/local-models) for instructions.

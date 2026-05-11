@@ -4,10 +4,9 @@ import modelProviders from "./docs/providers/index.json";
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     "index",
-    "sunset",
     {
       type: "category",
-      label: "Roo Code VSCode Extension",
+      label: "Zoo Code VSCode Extension",
       items: [
         "getting-started/installing",
         "getting-started/connecting-api-provider",
@@ -122,32 +121,6 @@ const sidebars: SidebarsConfig = {
           ],
         },
       ],
-    },
-    {
-      type: "category",
-      label: "Roo Code Cloud",
-      items: [
-        "roo-code-cloud/overview",
-        "roo-code-cloud/login",
-        "roo-code-cloud/cloud-agents",
-        "roo-code-cloud/environments",
-        "roo-code-cloud/task-sync",
-        "roo-code-cloud/task-sharing",
-        "roo-code-cloud/analytics",
-        "roo-code-cloud/github-integration",
-        "roo-code-cloud/slack-integration",
-        "roo-code-cloud/team-plan",
-      ],
-    },
-    {
-      type: "doc",
-      label: "Roo Code Router",
-      id: "roo-code-router/overview",
-    },
-    {
-      type: "doc",
-      label: "Roo Code Credits",
-      id: "credits/overview",
     },
     {
       type: "doc",
@@ -864,11 +837,6 @@ const sidebars: SidebarsConfig = {
       type: "link",
       label: "Contributing (GitHub)",
       href: "https://github.com/RooCodeInc/Roo-Code/blob/main/CONTRIBUTING.md",
-    },
-    {
-      type: "link",
-      label: "Roocabulary (GitHub)",
-      href: "https://github.com/cannuri/Roocabulary",
     },
   ],
 };
