@@ -47,7 +47,7 @@ async function getVSCodeDownloads() {
             criteria: [
               {
                 filterType: 7,
-                value: "RooVeterinaryInc.roo-cline",
+                value: "ZooCodeOrganization.zoo-code",
               },
             ],
           },

@@ -21,16 +21,16 @@ export const GITHUB_ISSUES_MAIN_URL = `${GITHUB_MAIN_REPO_URL}/issues`;
 export const GITHUB_FEATURES_URL = `${GITHUB_MAIN_REPO_URL}/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop`;
 
 // Download links
-export const VSCODE_MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline';
-export const OPEN_VSX_URL = 'https://open-vsx.org/extension/RooVeterinaryInc/roo-cline';
+export const VSCODE_MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=ZooCodeOrganization.zoo-code';
+export const OPEN_VSX_URL = 'https://open-vsx.org/extension/ZooCodeOrganization.zoo-code';
 
 // Company links
-export const CONTACT_EMAIL = 'mailto:support@roocode.com';
-export const CAREERS_URL = 'https://careers.roocode.com';
-export const WEBSITE_PRIVACY_URL = 'https://roocode.com/privacy';
+export const CONTACT_EMAIL = 'mailto:support@zoocode.dev';
+export const CAREERS_URL = 'https://careers.zoocode.dev';
+export const WEBSITE_PRIVACY_URL = 'https://zoocode.dev/privacy';
 export const EXTENSION_PRIVACY_URL = `${GITHUB_MAIN_REPO_URL}/blob/main/PRIVACY.md`;
 
 // Authentication links
-export const APP_URL = 'https://app.roocode.com';
+export const APP_URL = 'https://app.zoocode.dev';
 export const SIGN_IN_URL = `${APP_URL}/sign-in`;
 export const SIGN_UP_URL = `${APP_URL}/sign-up`;
