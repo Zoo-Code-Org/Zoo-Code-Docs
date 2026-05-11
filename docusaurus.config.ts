@@ -25,19 +25,20 @@ import {
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Roo Code Documentation',
+  title: 'Zoo Code Documentation',
   tagline: 'AI-powered autonomous coding agent for VS Code - Complete documentation, guides, and tutorials',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.roocode.com',
+  url: 'https://docs.zoocode.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config (if needed)
-  organizationName: 'RooCodeInc',
-  projectName: 'Roo-Code-Docs',
+  organizationName: 'Zoo-Code-Org',
+  projectName: 'Zoo-Code-Docs',
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
   markdown: {
