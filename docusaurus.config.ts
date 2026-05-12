@@ -33,7 +33,7 @@ const config: Config = {
   url: 'https://zoo-code-org.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/Zoo-Code-Docs/',
 
   // GitHub pages deployment config (if needed)
   organizationName: 'Zoo-Code-Org',
@@ -344,10 +344,11 @@ const config: Config = {
     },
     image: '/img/social-share.png', // Default Open Graph image
     navbar: {
+      title: 'Zoo Code',
       logo: {
         alt: 'Zoo Code Logo',
-        src: 'img/roo-code-logo-dark.svg',
-        srcDark: 'img/roo-code-logo-white.svg',
+        src: 'img/zoo-code-logo-dark.png',
+        srcDark: 'img/zoo-code-logo-white.png',
       },
       items: [
         {
@@ -360,8 +361,8 @@ const config: Config = {
       style: 'dark',
       logo: {
         alt: 'Zoo Code Logo',
-        src: 'img/roo-code-logo-dark.svg',
-        srcDark: 'img/roo-code-logo-white.svg',
+        src: 'img/zoo-code-logo-dark.png',
+        srcDark: 'img/zoo-code-logo-white.png',
         width: 120,
         height: 24,
       },

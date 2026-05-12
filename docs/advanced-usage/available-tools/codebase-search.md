@@ -5,7 +5,7 @@ keywords:
   - semantic search
   - AI embeddings
   - code search
-  - Roo Code tools
+  - Zoo Code tools
   - vector search
   - Qdrant
 ---

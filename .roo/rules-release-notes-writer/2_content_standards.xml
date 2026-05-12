@@ -23,7 +23,7 @@
 ---
 description: A concise summary of the release.
 keywords:
-  - roo code x.y.z
+  - Zoo Code x.y.z
   - new features
   - bug fixes
 ---
@@ -31,7 +31,7 @@ keywords:
       </element>
       
       <element name="title">
-        <format># Roo Code X.Y.Z Release Notes (YYYY-MM-DD)</format>
+        <format># Zoo Code X.Y.Z Release Notes (YYYY-MM-DD)</format>
         <requirements>
           - Include version number
           - Include release date in ISO 8601 format
@@ -49,10 +49,10 @@ keywords:
         <rules>
           - Insert only if frontmatter image path resolves to "/img/..." and is not "/img/social-share.jpg"
           - Use an HTML image tag per site rules with width="600"
-          - Set src from .roo/tmp/release-notes/frontmatter_image_v[version].txt and alt to "Roo Code v[VERSION] Release"
+          - Set src from .roo/tmp/release-notes/frontmatter_image_v[version].txt and alt to "Zoo Code v[VERSION] Release"
         </rules>
         <template>
-<img src="/img/vX.Y.Z/vX.Y.Z.png" alt="Roo Code vX.Y.Z Release" width="600" />
+<img src="/img/vX.Y.Z/vX.Y.Z.png" alt="Zoo Code vX.Y.Z Release" width="600" />
         </template>
       </element>
     </required_elements>
@@ -251,8 +251,8 @@ keywords:
       </element>
 
       <element name="title">
-        <format># Roo Code X.Y.Z Release Updates</format>
-        <format_combined># Roo Code X.Y.Z-X.Y.Z Release Updates</format_combined>
+        <format># Zoo Code X.Y.Z Release Updates</format>
+        <format_combined># Zoo Code X.Y.Z-X.Y.Z Release Updates</format_combined>
         <rules>
           - No emoji in title
           - Use "Release Updates" for both single and combined versions
@@ -352,8 +352,8 @@ See full release notes [vX.Y.Z](https://docs.roocode.com/update-notes/vX.Y.Z) | 
       </element>
 
       <element name="title">
-        <format>Roo Code X.Y.Z Release Updates | [key feature 1] | [key feature 2] | [key feature 3]</format>
-        <format_combined>Roo Code X.Y.Z-X.Y.Z Release Updates | [key feature 1] | [key feature 2] | [key feature 3]</format_combined>
+        <format>Zoo Code X.Y.Z Release Updates | [key feature 1] | [key feature 2] | [key feature 3]</format>
+        <format_combined>Zoo Code X.Y.Z-X.Y.Z Release Updates | [key feature 1] | [key feature 2] | [key feature 3]</format_combined>
         <rules>
           - Plain text line (no leading "#")
           - Derive key features from source intro sentence (not hardcoded examples)

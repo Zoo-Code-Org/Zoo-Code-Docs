@@ -2,7 +2,7 @@
 
 This file provides guidance to agents when working with code in this repository.
 
-- Docusaurus docs, not source code. This is documentation for the Roo Code VS Code extension at docs.roocode.com.
+- Docusaurus docs, not source code. This is documentation for the Zoo Code VS Code extension at docs.roocode.com.
 - Legacy [Rakefile](Rakefile) is from old Jekyll site. Ignore it; current build uses Docusaurus/npm scripts.
 - Tutorial videos defined in [docs/tutorial-videos.json](docs/tutorial-videos.json), dynamically loaded in [sidebars.ts](sidebars.ts:37-42). Titles truncated to 40 chars.
 - Release notes have thanking exclusions: don't thank daniel-lxs, cte, hannesrudolph, jr, roomote, app/roomote, dleffel, mrubens per [.roorules](.roorules:14).

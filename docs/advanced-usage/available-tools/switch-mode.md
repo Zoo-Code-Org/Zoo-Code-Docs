@@ -1,8 +1,8 @@
 ---
-description: Understand how switch_mode enables seamless transitions between Code, Architect, Ask, and Debug modes for specialized task handling in Roo Code.
+description: Understand how switch_mode enables seamless transitions between Code, Architect, Ask, and Debug modes for specialized task handling in Zoo Code.
 keywords:
   - switch_mode
-  - Roo Code tools
+  - Zoo Code tools
   - mode switching
   - operational modes
   - Code mode

@@ -1,11 +1,11 @@
 ---
-description: Load and execute skill instructions using the skill tool for specialized tasks in Roo Code.
+description: Load and execute skill instructions using the skill tool for specialized tasks in Zoo Code.
 keywords:
   - skill
   - skills
   - specialized tasks
   - instructions
-  - Roo Code tools
+  - Zoo Code tools
   - automation
   - workflows
 ---
@@ -77,7 +77,7 @@ When the `skill` tool is invoked, it follows this process:
 Skills are dynamically loaded based on the current mode and project configuration. Common skills include:
 
 - `create-mcp-server`: Guide for creating Model Context Protocol servers
-- `create-mode`: Guide for creating custom Roo Code modes
+- `create-mode`: Guide for creating custom Zoo Code modes
 - `find-skills`: Helps discover and install agent skills
 
 To see available skills, check the skills list in the system prompt or ask Roo "what skills are available?"

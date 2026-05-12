@@ -1,14 +1,14 @@
 ---
-description: Browse all Roo Code release notes and version updates. Find detailed changelogs, new features, bug fixes, and improvements for each version.
+description: Browse all Zoo Code release notes and version updates. Find detailed changelogs, new features, bug fixes, and improvements for each version.
 keywords:
-  - roo code updates
+  - Zoo Code updates
   - release notes
   - version history
   - changelog
   - new features
   - bug fixes
   - improvements
-  - roo code versions
+  - Zoo Code versions
 ---
 
 # Extension Release Notes

@@ -1,6 +1,6 @@
 <workflow_instructions>
   <mode_overview>
-    Automates creating release notes for new Roo Code versions. Fetches pull requests
+    Automates creating release notes for new Zoo Code versions. Fetches pull requests
     from GitHub, analyzes changes, generates user-focused notes, and handles Discord and Reddit
     formatting. Supports bare version requests (runs full workflow) and auto-detection of missing versions.
   </mode_overview>
@@ -534,7 +534,7 @@ Which features should I highlight with expanded sections in the release notes?
             - If there is no persisted path file OR it does not start with "/img/", skip inline insertion
           </behavior>
           <html_snippet><![CDATA[
-<img src="[FRONTMATTER_IMAGE_PATH]" alt="Roo Code v[VERSION] Release" width="600" />
+<img src="[FRONTMATTER_IMAGE_PATH]" alt="Zoo Code v[VERSION] Release" width="600" />
           ]]></html_snippet>
         </inline_hero_image>
       </step>
@@ -583,7 +583,7 @@ Which features should I highlight with expanded sections in the release notes?
         - Wrap entire output in markdown code block
       </transformations>
       <formatting_rules>
-        <rule>Title format: # Roo Code X.Y.Z Release Updates (no emoji)</rule>
+        <rule>Title format: # Zoo Code X.Y.Z Release Updates (no emoji)</rule>
         <rule>Preserve all section headings EXACTLY as in source docs</rule>
         <rule>Preserve section order EXACTLY as in source docs</rule>
         <rule>Copy all bullet points exactly (only change * to -)</rule>
@@ -607,7 +607,7 @@ Which features should I highlight with expanded sections in the release notes?
         <step>Apply minimal Discord transformations</step>
       </steps>
       <formatting_rules>
-        <rule>Title format: # Roo Code X.Y.Z-X.Y.Z Release Updates (no emoji)</rule>
+        <rule>Title format: # Zoo Code X.Y.Z-X.Y.Z Release Updates (no emoji)</rule>
         <rule>Preserve all section headings EXACTLY as in source docs</rule>
         <rule>Footer with links to each version: [vX.Y.Z](link) | [vX.Y.Z](link)</rule>
         <rule>Wrap entire output in ```markdown code block</rule>

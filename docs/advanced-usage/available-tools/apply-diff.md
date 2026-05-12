@@ -1,5 +1,5 @@
 ---
-description: Master the apply_diff tool for making surgical code changes using fuzzy matching and line hints in Roo Code with multi-file support.
+description: Master the apply_diff tool for making surgical code changes using fuzzy matching and line hints in Zoo Code with multi-file support.
 keywords:
   - apply_diff
   - file editing

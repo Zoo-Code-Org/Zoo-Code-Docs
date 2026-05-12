@@ -2,7 +2,7 @@
 description: Explore the read_file tool's capabilities for examining file contents, supporting line ranges, PDF/DOCX extraction, image reading, and experimental multi-file concurrent reading.
 keywords:
   - read_file
-  - Roo Code tools
+  - Zoo Code tools
   - file reading
   - concurrent reads
   - line numbers

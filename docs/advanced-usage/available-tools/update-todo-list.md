@@ -1,8 +1,8 @@
 ---
-description: Learn how update_todo_list creates dynamic TODO lists with status tracking, enabling step-by-step task management for complex workflows in Roo Code.
+description: Learn how update_todo_list creates dynamic TODO lists with status tracking, enabling step-by-step task management for complex workflows in Zoo Code.
 keywords:
   - update_todo_list
-  - Roo Code tools
+  - Zoo Code tools
   - task management
   - TODO lists
   - workflow tracking

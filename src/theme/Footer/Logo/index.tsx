@@ -15,7 +15,7 @@ function LogoImage({logo}: Props) {
   };
   return (
     <ThemedImage
-      className={clsx('footer__logo', logo.className)}
+      className={clsx('footer__logo', logo.className, styles.footerLogoImage)}
       alt={logo.alt}
       sources={sources}
       width={logo.width}
@@ -32,8 +32,12 @@ export default function FooterLogo({logo}: Props): ReactNode {
       className={styles.footerLogoLink}
       target={logo.target}>
       <LogoImage logo={logo} />
+      <span className={styles.footerLogoText}>Zoo Code</span>
     </Link>
   ) : (
-    <LogoImage logo={logo} />
+    <div className={styles.footerLogoWrap}>
+      <LogoImage logo={logo} />
+      <span className={styles.footerLogoText}>Zoo Code</span>
+    </div>
   );
 }
