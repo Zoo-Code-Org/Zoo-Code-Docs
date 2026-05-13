@@ -1,12 +1,10 @@
 import React from 'react';
-import { FaBluesky, FaDiscord, FaGithub, FaLinkedin, FaReddit, FaTiktok, FaXTwitter } from 'react-icons/fa6';
+import { FaDiscord, FaGithub, FaLinkedin, FaReddit, FaXTwitter } from 'react-icons/fa6';
 import {
   DISCORD_URL,
   REDDIT_URL,
   TWITTER_URL,
-  BLUESKY_URL,
   LINKEDIN_URL,
-  TIKTOK_URL,
   GITHUB_MAIN_REPO_URL,
 } from '../../constants';
 
@@ -36,16 +34,6 @@ const SocialIcons: React.FC = () => {
       href: LINKEDIN_URL,
       icon: FaLinkedin,
       label: 'LinkedIn'
-    },
-    {
-      href: TIKTOK_URL,
-      icon: FaTiktok,
-      label: 'TikTok'
-    },
-    {
-      href: BLUESKY_URL,
-      icon: FaBluesky,
-      label: 'Bluesky'
     },
   ];
 

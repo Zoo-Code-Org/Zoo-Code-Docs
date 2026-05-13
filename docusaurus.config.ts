@@ -5,9 +5,7 @@ import {
   DISCORD_URL,
   REDDIT_URL,
   TWITTER_URL,
-  BLUESKY_URL,
   LINKEDIN_URL,
-  TIKTOK_URL,
   GITHUB_MAIN_REPO_URL,
   GITHUB_ISSUES_MAIN_URL,
   GITHUB_FEATURES_URL,
@@ -380,20 +378,12 @@ const config: Config = {
               href: TWITTER_URL,
             },
             {
-              label: 'Bluesky',
-              href: BLUESKY_URL,
-            },
-            {
               label: 'GitHub',
               href: GITHUB_MAIN_REPO_URL,
             },
             {
               label: 'LinkedIn',
               href: LINKEDIN_URL,
-            },
-            {
-              label: 'TikTok',
-              href: TIKTOK_URL,
             },
           ],
         },
