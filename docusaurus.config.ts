@@ -14,9 +14,6 @@ import {
   VSCODE_MARKETPLACE_URL,
   OPEN_VSX_URL,
   CONTACT_EMAIL,
-  CAREERS_URL,
-  WEBSITE_PRIVACY_URL,
-  EXTENSION_PRIVACY_URL,
   GITHUB_REPO_URL,
   SIGN_IN_URL,
   SIGN_UP_URL
@@ -433,18 +430,6 @@ const config: Config = {
               label: 'Contact',
               href: CONTACT_EMAIL,
               target: '_self',
-            },
-            {
-              label: 'Careers',
-              href: CAREERS_URL,
-            },
-            {
-              label: 'Website Privacy Policy',
-              href: WEBSITE_PRIVACY_URL,
-            },
-            {
-              label: 'Extension Privacy Policy',
-              href: EXTENSION_PRIVACY_URL,
             },
           ],
         },

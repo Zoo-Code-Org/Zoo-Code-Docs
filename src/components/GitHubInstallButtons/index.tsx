@@ -17,7 +17,7 @@ function formatNumber(num: number): string {
 // GitHub Stars API
 async function getGitHubStars() {
   try {
-    const res = await fetch("https://api.github.com/repos/Zoo-Code-Org/Zoo-Code");
+    const res = await fetch("https://api.github.com/repos/RooCodeInc/Roo-Code");
     const data = await res.json();
     
     if (typeof data.stargazers_count !== "number") {
@@ -47,7 +47,7 @@ async function getVSCodeDownloads() {
             criteria: [
               {
                 filterType: 7,
-                value: "ZooCodeOrganization.zoo-code",
+                value: "RooVeterinaryInc.roo-cline",
               },
             ],
           },

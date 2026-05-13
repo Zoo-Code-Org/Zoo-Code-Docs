@@ -8,11 +8,11 @@ export const GITHUB_ISSUES_URL = `${GITHUB_REPO_URL}/issues`;
 export const GITHUB_NEW_ISSUE_URL = `${GITHUB_ISSUES_URL}/new`;
 
 // Community links
-export const DISCORD_URL = 'https://discord.gg/roocode';
-export const REDDIT_URL = 'https://www.reddit.com/r/RooCode/';
+export const DISCORD_URL = 'https://discord.gg/SfHYG44NUA';
+export const REDDIT_URL = 'https://www.reddit.com/r/ZooCode/';
 export const TWITTER_URL = 'https://x.com/roocode';
 export const BLUESKY_URL = 'https://bsky.app/profile/roocode.bsky.social';
-export const LINKEDIN_URL = 'https://www.linkedin.com/company/roo-code';
+export const LINKEDIN_URL = 'https://www.linkedin.com';
 export const TIKTOK_URL = 'https://www.tiktok.com/@roo.code';
 
 // GitHub links
@@ -26,11 +26,9 @@ export const OPEN_VSX_URL = 'https://open-vsx.org/extension/ZooCodeOrganization.
 
 // Company links
 export const CONTACT_EMAIL = 'mailto:support@zoocode.dev';
-export const CAREERS_URL = 'https://careers.zoocode.dev';
-export const WEBSITE_PRIVACY_URL = 'https://zoocode.dev/privacy';
 export const EXTENSION_PRIVACY_URL = `${GITHUB_MAIN_REPO_URL}/blob/main/PRIVACY.md`;
 
 // Authentication links
-export const APP_URL = 'https://app.zoocode.dev';
+export const APP_URL = 'https://www.zoocode.dev';
 export const SIGN_IN_URL = `${APP_URL}/sign-in`;
 export const SIGN_UP_URL = `${APP_URL}/sign-up`;

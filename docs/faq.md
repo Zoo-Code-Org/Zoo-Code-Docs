@@ -165,11 +165,11 @@ Codebase Indexing requires an OpenAI API key for generating embeddings and a Qdr
 *   Check your internet connection.
 *   Check the status of your chosen API provider.
 *   Try restarting VS Code.
-*   If the problem persists, report the issue on [GitHub](https://github.com/Zoo-Code-Org/Zoo-Code/issues) or [Discord](https://discord.gg/roocode).
+*   If the problem persists, report the issue on [GitHub](https://github.com/Zoo-Code-Org/Zoo-Code/issues) or [Discord](https://discord.gg/SfHYG44NUA).
 
 ### I'm seeing an error message. What does it mean?
 
-The error message should provide some information about the problem. If you're unsure how to resolve it, seek help in [Discord](https://discord.gg/roocode).
+The error message should provide some information about the problem. If you're unsure how to resolve it, seek help in [Discord](https://discord.gg/SfHYG44NUA).
 
 ### Zoo Code made changes I didn't want. How do I undo them?
 

@@ -4,6 +4,7 @@ import modelProviders from "./docs/providers/index.json";
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
     "index",
+    "roo-to-zoo-migration",
     {
       type: "category",
       label: "Zoo Code VSCode Extension",

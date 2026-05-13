@@ -52,8 +52,8 @@ The Error Details modal offers two buttons, each serving different needs:
 
 After copying error information:
 
-- **Email**: Send to [support@roocode.com](mailto:support@roocode.com)
-- **Discord**: Share in the [#support channel](https://discord.gg/roocode)
+- **Email**: Send to [support@zoocode.dev](mailto:support@zoocode.dev)
+- **Discord**: Share in the [#support channel](https://discord.gg/SfHYG44NUA)
 - **GitHub Issues**: File at [github.com/Zoo-Code-Org/Zoo-Code/issues](https://github.com/Zoo-Code-Org/Zoo-Code/issues)
 
 Include a brief description of what you were trying to do when the error occurred. The exported diagnostics handle the technical details.
