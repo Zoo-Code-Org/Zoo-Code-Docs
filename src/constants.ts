@@ -10,7 +10,7 @@ export const GITHUB_NEW_ISSUE_URL = `${GITHUB_ISSUES_URL}/new`;
 // Community links
 export const DISCORD_URL = 'https://discord.gg/SfHYG44NUA';
 export const REDDIT_URL = 'https://www.reddit.com/r/ZooCode/';
-export const TWITTER_URL = 'https://x.com/roocode';
+export const TWITTER_URL = 'https://x.com/ZooCodeDev';
 export const BLUESKY_URL = 'https://bsky.app/profile/roocode.bsky.social';
 export const LINKEDIN_URL = 'https://www.linkedin.com';
 export const TIKTOK_URL = 'https://www.tiktok.com/@roo.code';
