@@ -198,7 +198,7 @@ Which would you like to process?</question>
       <rule>Only ask if the user requests "compress"/"condense".</rule>
     </behavior>
     <formatting_checklist>
-      <item>Title: "# Roo Code X.Y.Z Release Updates" (no emoji)</item>
+      <item>Title: "# Zoo Code X.Y.Z Release Updates" (no emoji)</item>
       <item>Include "@everyone" tagline derived from source intro sentence</item>
       <item>Preserve section headings EXACTLY as they appear in source docs</item>
       <item>Preserve section order EXACTLY as in source docs</item>
@@ -234,7 +234,7 @@ Which would you like to process?</question>
       <rule>Preserve original section headings and structure from source docs exactly.</rule>
     </behavior>
     <formatting_checklist>
-      <item>Title (plain text): "Roo Code X.Y.Z Release Updates | [key feature 1] | [key feature 2]" (derived from source)</item>
+      <item>Title (plain text): "Zoo Code X.Y.Z Release Updates | [key feature 1] | [key feature 2]" (derived from source)</item>
       <item>Intro italic note present</item>
       <item>Preserve section headings EXACTLY as they appear in source docs</item>
       <item>Preserve section order EXACTLY as in source docs</item>
@@ -257,7 +257,7 @@ Which would you like to process?</question>
       <step>Present formatted output in markdown code block</step>
     </workflow>
     <formatting_checklist>
-      <item>Title: "# Roo Code X.Y.Z-X.Y.Z Release Updates" (no emoji, version range)</item>
+      <item>Title: "# Zoo Code X.Y.Z-X.Y.Z Release Updates" (no emoji, version range)</item>
       <item>Include "@everyone" tagline derived from source intro sentences</item>
       <item>Preserve all section headings EXACTLY as they appear in source docs</item>
       <item>Merge content from same-named sections across versions</item>

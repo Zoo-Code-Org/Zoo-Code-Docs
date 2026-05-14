@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Multi-File Edits'
-description: 'Speed up refactoring and multi-file changes with Roo Code''s Concurrent File Edits feature. Edit multiple files in a single operation with batch approval.'
+description: 'Speed up refactoring and multi-file changes with Zoo Code''s Concurrent File Edits feature. Edit multiple files in a single operation with batch approval.'
 keywords:
   - concurrent file edits
   - multi-file edits
@@ -24,7 +24,7 @@ Edit multiple files in a single operation, dramatically speeding up refactoring 
 
 <img src="/img/concurrent-file-edits/concurrent-file-edits-1.png" alt="Batch diff approval interface showing multiple file changes" width="800" />
 
-Concurrent File Edits allows Roo to modify multiple files in your workspace within a single request. Instead of approving each file edit individually, you review and approve all changes at once through a unified batch approval interface.
+Concurrent File Edits allows Zoo to modify multiple files in your workspace within a single request. Instead of approving each file edit individually, you review and approve all changes at once through a unified batch approval interface.
 
 ---
 
@@ -49,13 +49,13 @@ This reduces interruptions and speeds up complex tasks like:
 
 ## Availability
 
-Multi-file edits are now available by default in Roo Code. The feature has graduated from experimental status and no longer requires manual activation in settings.
+Multi-file edits are now available by default in Zoo Code. The feature has graduated from experimental status and no longer requires manual activation in settings.
 
 ---
 
 ## Using the Feature
 
-When enabled, Roo automatically uses concurrent edits when appropriate. You'll see a "Batch Diff Approval" interface showing:
+When enabled, Zoo automatically uses concurrent edits when appropriate. You'll see a "Batch Diff Approval" interface showing:
 
 - All files to be modified
 - Proposed changes for each file
@@ -63,8 +63,8 @@ When enabled, Roo automatically uses concurrent edits when appropriate. You'll s
 
 ### Example Workflow
 
-1. Ask Roo to "Update all API endpoints to use the new authentication method"
-2. Roo analyzes your codebase and identifies all affected files
+1. Ask Zoo to "Update all API endpoints to use the new authentication method"
+2. Zoo analyzes your codebase and identifies all affected files
 3. You receive a single batch approval request showing changes across:
    - `src/api/users.js`
    - `src/api/products.js`
@@ -105,7 +105,7 @@ This feature leverages the [`apply_diff`](/advanced-usage/available-tools/apply-
 - Ensure files aren't restricted by `.rooignore`
 
 ### Approval UI Not Appearing
-- Update to the latest version of Roo Code
+- Update to the latest version of Zoo Code
 - Check VS Code's output panel for errors
 - Try disabling and re-enabling the feature
 

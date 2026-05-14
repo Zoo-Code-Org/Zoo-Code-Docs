@@ -1,12 +1,12 @@
 ---
-description: Retrieve full command output that was truncated in execute_command using the read_command_output tool in Roo Code.
+description: Retrieve full command output that was truncated in execute_command using the read_command_output tool in Zoo Code.
 keywords:
   - read_command_output
   - command output
   - truncated output
   - CLI output
   - terminal output
-  - Roo Code tools
+  - Zoo Code tools
   - artifact retrieval
 ---
 

@@ -1,19 +1,19 @@
 ---
-description: Use GitHub Copilot and other VS Code language models in Roo Code through the experimental Language Model API integration.
+description: Use GitHub Copilot and other VS Code language models in Zoo Code through the experimental Language Model API integration.
 keywords:
   - VS Code LM API
   - Language Model API
   - GitHub Copilot
-  - Roo Code
+  - Zoo Code
   - VS Code extensions
   - AI models
   - experimental features
 sidebar_label: VS Code Language Model API
 ---
 
-# Using VS Code Language Model API With Roo Code
+# Using VS Code Language Model API With Zoo Code
 
-Roo Code includes *experimental* support for the [VS Code Language Model API](https://code.visualstudio.com/api/extension-guides/language-model). This API allows extensions to provide access to language models directly within VS Code.  This means you can potentially use models from:
+Zoo Code includes *experimental* support for the [VS Code Language Model API](https://code.visualstudio.com/api/extension-guides/language-model). This API allows extensions to provide access to language models directly within VS Code.  This means you can potentially use models from:
 
 *   **GitHub Copilot:** If you have a Copilot subscription and the extension installed.
 *   **Other VS Code Extensions:** Any extension that implements the Language Model API.
@@ -33,7 +33,7 @@ Roo Code includes *experimental* support for the [VS Code Language Model API](ht
 
 ## Configuration
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "VS Code LM API" from the "API Provider" dropdown.
 3.  **Select Model:**  The "Language Model" dropdown will (eventually) list available models. The format is `vendor/family`. For example, if you have Copilot, you might see options like `copilot - <model-name>`.
 
@@ -42,10 +42,10 @@ Roo Code includes *experimental* support for the [VS Code Language Model API](ht
 ## Limitations
 
 *   **Experimental API:**  The VS Code Language Model API is still under development.  Expect changes and potential instability.
-*   **Extension Dependent:**  This feature relies entirely on other extensions providing models.  Roo Code cannot directly control which models are available.
+*   **Extension Dependent:**  This feature relies entirely on other extensions providing models.  Zoo Code cannot directly control which models are available.
 *   **Limited Functionality:**  The VS Code Language Model API may not support all the features of other API providers (e.g., image input, streaming, detailed usage information).
-*   **No Direct Cost Control:**  You are subject to the pricing and terms of the extension providing the model.  Roo Code cannot directly track or limit costs.
-*   **GitHub Copilot Rate Limits:** When using the VS Code LM API with GitHub Copilot, be aware that GitHub may impose rate limits on Copilot usage. These limits are controlled by GitHub, not Roo Code.
+*   **No Direct Cost Control:**  You are subject to the pricing and terms of the extension providing the model.  Zoo Code cannot directly track or limit costs.
+*   **GitHub Copilot Rate Limits:** When using the VS Code LM API with GitHub Copilot, be aware that GitHub may impose rate limits on Copilot usage. These limits are controlled by GitHub, not Zoo Code.
 
 
 ---

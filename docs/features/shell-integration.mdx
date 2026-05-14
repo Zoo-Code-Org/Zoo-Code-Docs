@@ -1,5 +1,5 @@
 ---
-description: Learn how Roo Code integrates with your shell to execute commands. Troubleshooting guide for terminal issues and shell configuration.
+description: Learn how Zoo Code integrates with your shell to execute commands. Troubleshooting guide for terminal issues and shell configuration.
 keywords:
   - shell integration
   - terminal commands
@@ -11,7 +11,7 @@ import Codicon from '@site/src/components/Codicon';
 
 # Terminal Shell Integration
 
-Terminal Shell Integration is a key feature that enables Roo Code to execute commands in your terminal and intelligently process their output. This bidirectional communication between the AI and your development environment unlocks powerful automation capabilities.
+Terminal Shell Integration is a key feature that enables Zoo Code to execute commands in your terminal and intelligently process their output. This bidirectional communication between the AI and your development environment unlocks automation capabilities.
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
@@ -36,7 +36,7 @@ Terminal Shell Integration is a key feature that enables Roo Code to execute com
 
 ## What is Shell Integration?
 
-Shell integration is automatically enabled in Roo Code and connects directly to your terminal's command execution lifecycle without requiring any setup from you. This built-in feature allows Roo to:
+Shell integration is automatically enabled in Zoo Code and connects directly to your terminal's command execution lifecycle without requiring any setup from you. This built-in feature allows Zoo to:
 
 - Execute commands on your behalf through the [`execute_command`](/advanced-usage/available-tools/execute-command) tool
 - Read command output in real-time without manual copy-pasting
@@ -48,15 +48,15 @@ Shell integration is automatically enabled in Roo Code and connects directly to 
 
 <img src="/img/v3.15/v3.15.png" alt="Stop Command Button in Chat UI" width="600" />
 
-When you ask Roo to perform tasks like installing dependencies, starting a development server, or analyzing build errors, shell integration works behind the scenes to make these interactions smooth and effective.
+When you ask Zoo to perform tasks like installing dependencies, starting a development server, or analyzing build errors, shell integration works behind the scenes to make these interactions smooth and effective.
 
 ---
  
 
 ## Terminal Integration Settings
 
-Roo Code provides settings to fine-tune how it interacts with terminals. To access these settings:
-1. Click the <Codicon name="gear" /> icon in the top-right corner of the Roo Code sidebar.
+Zoo Code provides settings to fine-tune how it interacts with terminals. To access these settings:
+1. Click the <Codicon name="gear" /> icon in the top-right corner of the Zoo Code sidebar.
 2. In the settings pane that opens, select the "Terminal" group from the left-hand menu.
 
 ### Command Execution Timeout Settings
@@ -97,11 +97,11 @@ This example sets a 5-minute timeout but exempts build and test commands from th
 
 #### Terminal Output Limit
 <img src="/img/shell-integration/shell-integration-13.png" alt="Terminal output limit slider set to 500" width="600" />
-Truncates by lines. Roo keeps the beginning and end and drops the middle with an "[...N lines omitted...]" marker to stay under the limit. Mechanism: keeps approximately 20% of the head and 80% of the tail of the allowed line budget and inserts an omission marker, preserving a blank line before the tail for readability. Use when commands print many lines (e.g., long logs) and you mostly care about headers and final results. Avoid when important details are in the middle. Default: 500 lines.
+Truncates by lines. Zoo keeps the beginning and end and drops the middle with an "[...N lines omitted...]" marker to stay under the limit. Mechanism: keeps approximately 20% of the head and 80% of the tail of the allowed line budget and inserts an omission marker, preserving a blank line before the tail for readability. Use when commands print many lines (e.g., long logs) and you mostly care about headers and final results. Avoid when important details are in the middle. Default: 500 lines.
 
 #### Terminal Character Limit
 <img src="/img/shell-integration/shell-integration-15.png" alt="Terminal character limit setting" width="600" />
-Hard cap on total output size (characters). Roo keeps the beginning and end and omits the middle with an "[...N characters omitted...]" marker. Mechanism: takes precedence over the line limit; keeps ~20% of the head and ~80% of the tail of the character budget, overriding the line limit to prevent memory issues from very long lines. Use when commands print extremely long lines or massive blobs. Avoid when you need the exact full content.
+Hard cap on total output size (characters). Zoo keeps the beginning and end and omits the middle with an "[...N characters omitted...]" marker. Mechanism: takes precedence over the line limit; keeps ~20% of the head and ~80% of the tail of the character budget, overriding the line limit to prevent memory issues from very long lines. Use when commands print extremely long lines or massive blobs. Avoid when you need the exact full content.
 
 #### Compress progress bar output
 <img src="/img/shell-integration/shell-integration-14.png" alt="Compress progress bar output checkbox" width="600" />
@@ -126,11 +126,11 @@ Always restart all open terminals after changing any of these settings.
 <a id="disable-terminal-shell-integration"></a>
 #### Use Inline Terminal (recommended)
 <img src="/img/shell-integration/shell-integration-16.png" alt="Use Inline Terminal (recommended) switch" width="600" />
-Controls how Roo Code executes terminal commands.
+Controls how Zoo Code executes terminal commands.
 
 - ON (Use Inline Terminal): Runs commands with the Inline Terminal (in chat), bypassing shell profiles and VS Code shell integration for reliability and faster starts. Mechanism: uses a background “execa” provider and streams output directly (no VS Code OSC 633/133 markers).
 
-    <img src="/img/shell-integration/shell-integration-12.png" alt="Roo Code Inline Terminal when 'Use Inline Terminal (recommended)' is ON" width="600" />
+    <img src="/img/shell-integration/shell-integration-12.png" alt="Zoo Code Inline Terminal when 'Use Inline Terminal (recommended)' is ON" width="600" />
     *Inline Terminal active (Use Inline Terminal is ON).*
 
 - OFF (Use VS Code terminal): Uses the VS Code integrated terminal and your shell profile; may require shell integration and is more likely to hit “Shell Integration Unavailable” issues. Use this only when you specifically need terminal UI features or interactive profile behavior.
@@ -141,9 +141,9 @@ Controls how Roo Code executes terminal commands.
 - Tip: If terminal commands fail or stall, switch ON and retry.
 
 :::info Runtime Environment
-On macOS (and possibly other operating systems) the environment provided to VS Code, and consequently Roo Code, can differ depending on how VS Code is launched.
+On macOS (and possibly other operating systems) the environment provided to VS Code, and consequently Zoo Code, can differ depending on how VS Code is launched.
 
-If launched from the command line with the `code` command, VS Code and Roo Code inherit the environment from the shell that launched it.
+If launched from the command line with the `code` command, VS Code and Zoo Code inherit the environment from the shell that launched it.
 
 If launched from the Finder, Dock, or Spotlight, environment exported from `.zshrc` or `.zprofile` will likely be missing.
 
@@ -158,7 +158,7 @@ VS Code terminal only. Controls whether VS Code integrated terminals inherit env
 
 #### Terminal shell integration timeout
 <img src="/img/shell-integration/shell-integration-18.png" alt="Terminal shell integration timeout slider set to 15s" width="600" />
-How long Roo waits for VS Code shell integration to initialize and for the integration stream to start. If not ready within the timeout, a “no shell integration” event is emitted and execution will fall back to the Inline Terminal when retried. Use when your shell/profile has long startup times or you see “Shell Integration Unavailable” errors. Avoid increasing if you’re using the Inline Terminal (not applicable there). Default: 15s. Applies only when using the VS Code terminal.
+How long Zoo waits for VS Code shell integration to initialize and for the integration stream to start. If not ready within the timeout, a “no shell integration” event is emitted and execution will fall back to the Inline Terminal when retried. Use when your shell/profile has long startup times or you see “Shell Integration Unavailable” errors. Avoid increasing if you’re using the Inline Terminal (not applicable there). Default: 15s. Applies only when using the VS Code terminal.
 
 #### Terminal command delay
 <img src="/img/shell-integration/shell-integration-19.png" alt="Terminal command delay slider set to 0ms" width="600" />
@@ -174,11 +174,11 @@ ON: Omits Zsh’s end-of-line mark (%) so output is parsed correctly. Mechanism:
 
 #### Enable Oh My Zsh integration
 <img src="/img/shell-integration/shell-integration-22.png" alt="Enable Oh My Zsh integration checkbox" width="600" />
-For users of the popular Oh My Zsh framework for Zsh. Enable this if you use Oh My Zsh and experience general issues with terminal command execution or output rendering that aren't solved by other settings. This helps Roo Code align with Oh My Zsh's specific shell integration mechanisms by setting `ITERM_SHELL_INTEGRATION_INSTALLED=Yes`. Restarting the IDE might be necessary.
+For users of the popular Oh My Zsh framework for Zsh. Enable this if you use Oh My Zsh and experience general issues with terminal command execution or output rendering that aren't solved by other settings. This helps Zoo Code align with Oh My Zsh's specific shell integration mechanisms by setting `ITERM_SHELL_INTEGRATION_INSTALLED=Yes`. Restarting the IDE might be necessary.
 
 #### Enable Powerlevel10k integration
 <img src="/img/shell-integration/shell-integration-23.png" alt="Enable Powerlevel10k integration checkbox" width="600" />
-For users of the Powerlevel10k theme for Zsh. Enable this if your Powerlevel10k prompt (which can be quite complex) seems to interfere with Roo Code's ability to correctly detect command boundaries, parse output, or track the current working directory. This sets `POWERLEVEL9K_TERM_SHELL_INTEGRATION=true`.
+For users of the Powerlevel10k theme for Zsh. Enable this if your Powerlevel10k prompt (which can be quite complex) seems to interfere with Zoo Code's ability to correctly detect command boundaries, parse output, or track the current working directory. This sets `POWERLEVEL9K_TERM_SHELL_INTEGRATION=true`.
 
 #### Enable ZDOTDIR handling
 <img src="/img/shell-integration/shell-integration-24.png" alt="Enable ZDOTDIR handling checkbox" width="600" />
@@ -188,7 +188,7 @@ ON: Uses a temporary ZDOTDIR so VS Code shell integration works with zsh while p
 
 ## How Shell Integration Works
 
-Shell integration connects Roo to your terminal's command execution process in real-time:
+Shell integration connects Zoo to your terminal's command execution process in real-time:
 
 1. **Connection**: When you open a terminal, VS Code establishes a special connection with your shell.
 
@@ -199,9 +199,9 @@ Shell integration connects Roo to your terminal's command execution process in r
    - When the command finishes (and whether it succeeded or failed)
    - What directory you're currently in
 
-3. **Different Shells, Same Result**: Each shell type (Bash, Zsh, PowerShell, Fish) implements this slightly differently behind the scenes, but they all provide the same functionality to Roo.
+3. **Different Shells, Same Result**: Each shell type (Bash, Zsh, PowerShell, Fish) implements this slightly differently behind the scenes, but they all provide the same functionality to Zoo.
 
-4. **Information Gathering**: Roo can see what commands are running, where they're running, how long they take, whether they succeed, and their complete output - all without you having to copy and paste anything.
+4. **Information Gathering**: Zoo can see what commands are running, where they're running, how long they take, whether they succeed, and their complete output - all without you having to copy and paste anything.
 
 ---
 
@@ -261,7 +261,7 @@ If you use terminal customization tools:
 typeset -g POWERLEVEL9K_TERM_SHELL_INTEGRATION=true
 ```
 
-**Alternative**: Enable the Powerlevel10k Integration setting in Roo Code.
+**Alternative**: Enable the Powerlevel10k Integration setting in Zoo Code.
 
 #### Verifying Shell Integration Status
 
@@ -452,19 +452,19 @@ This setup works reliably on Windows systems using Cygwin, Fish, and the Starshi
 
 #### Ctrl+C Behavior
 
-**Issue**: If text is already typed in the terminal when Roo tries to run a command, Roo will press Ctrl+C first to clear the line, which can interrupt running processes.
+**Issue**: If text is already typed in the terminal when Zoo tries to run a command, Zoo will press Ctrl+C first to clear the line, which can interrupt running processes.
 
-**Workaround**: Make sure your terminal prompt is empty (no partial commands typed) before asking Roo to execute terminal commands.
+**Workaround**: Make sure your terminal prompt is empty (no partial commands typed) before asking Zoo to execute terminal commands.
 
 #### Multi-line Command Issues
 
-**Issue**: Commands that span multiple lines can confuse Roo and may show output from previous commands mixed in with current output.
+**Issue**: Commands that span multiple lines can confuse Zoo and may show output from previous commands mixed in with current output.
 
 **Workaround**: Instead of multi-line commands, use command chaining with `&amp;&amp;` to keep everything on one line (e.g., `echo a &amp;&amp; echo b` instead of typing each command on a separate line).
 
 #### PowerShell-Specific Issues
 
-1. **Premature Completion**: PowerShell sometimes tells Roo a command is finished before all the output has been shown.
+1. **Premature Completion**: PowerShell sometimes tells Zoo a command is finished before all the output has been shown.
 2. **Repeated Commands**: PowerShell may refuse to run the same command twice in a row.
 
 **Workaround**: Enable the "PowerShell counter workaround" setting and set a terminal command delay of 150ms in the settings to give commands more time to complete.
@@ -477,9 +477,9 @@ This setup works reliably on Windows systems using Cygwin, Fish, and the Starshi
 
 #### Python Virtual Environment (venv) Issues
 
-**Issue**: Disabling shell integration will disable venv; venv is VS Code–managed, Roo does not know anything about it because disabling shell integration uses a completely different mechanism for running commands (execa).
+**Issue**: Disabling shell integration will disable venv; venv is VS Code–managed, Zoo does not know anything about it because disabling shell integration uses a completely different mechanism for running commands (execa).
 
-**Workaround**: If you need to use Python virtual environments with Roo Code, you might be able to:
+**Workaround**: If you need to use Python virtual environments with Zoo Code, you might be able to:
 
 ```bash
 killall code # closes all VS Code windows!
@@ -487,7 +487,7 @@ killall code # closes all VS Code windows!
 code
 ```
 
-This way the environment is configured before code launches so Roo should inherit it.
+This way the environment is configured before code launches so Zoo should inherit it.
 
 #### Checking Debug Logs
 When shell integration issues occur, check the debug logs:
@@ -525,20 +525,19 @@ The [VS Code Terminal Integration Test Extension](https://github.com/KJ7LNW/vsce
 
 ## FAQ
 
-- Why does Roo press Ctrl+C first?
+- Why does Zoo press Ctrl+C first?
   - To clear any partially typed command so it can run reliably without interrupting your process.
 
 - Can I run multi-line commands?
   - Prefer chaining with && to avoid mixed output (e.g., `echo a && echo b`).
 
 - How do I use Python venv with Inline Terminal?
-  - Close VS Code, activate the venv in a shell, then launch VS Code so Roo inherits it.
+  - Close VS Code, activate the venv in a shell, then launch VS Code so Zoo inherits it.
 
 <a id="command-execution-fallback"></a>
 - What does “Command Execution Fallback” mean?
-  - Roo ran the command without full shell integration. How it works: if VS Code terminal integration can’t connect, Roo runs the command in a background process.
+  - Zoo ran the command without full shell integration. How it works: if VS Code terminal integration can’t connect, Zoo runs the command in a background process.
   - What you’ll see: a chat notice that real-time streaming and exit‑code detection may be limited.
   - Fix: turn ON [Use Inline Terminal (recommended)](#use-inline-terminal-recommended) or follow the Troubleshooting steps above to restore VS Code shell integration.
   <img src="/img/v3.15.0/v3.15.0.png" alt="Command execution fallback notification example" width="600" />
-
 

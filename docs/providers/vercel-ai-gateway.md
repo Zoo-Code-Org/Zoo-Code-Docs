@@ -1,7 +1,7 @@
 ---
-description: Configure the Vercel AI Gateway in Roo Code to robustly access 100+ language models from various providers through a centralized interface.
+description: Configure the Vercel AI Gateway in Zoo Code to robustly access 100+ language models from various providers through a centralized interface.
 keywords:
-  - roo code
+  - zoo code
   - vercel ai gateway
   - ai provider
   - language models
@@ -13,7 +13,7 @@ keywords:
 sidebar_label: Vercel AI Gateway
 ---
 
-# Using Vercel AI Gateway With Roo Code
+# Using Vercel AI Gateway With Zoo Code
 
 The AI Gateway provides a unified API to access hundreds of models through a single endpoint. It gives you the ability to set budgets, monitor usage, load-balance requests, and manage fallbacks.
 
@@ -36,15 +36,15 @@ An API key is required for authentication.
 
 ## Available Models
 
-Roo Code automatically fetches all available models from Vercel AI Gateway's API (hundreds of models from various providers).
+Zoo Code automatically fetches all available models from Vercel AI Gateway's API (hundreds of models from various providers).
 
 For the complete, up-to-date model catalog with capabilities, see [Vercel's AI Gateway models page](https://vercel.com/ai-gateway/models).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "Vercel AI Gateway" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your Vercel AI Gateway API key into the "Vercel AI Gateway API Key" field.
 4.  **Select Model:** Choose your desired model from the "Model" dropdown.

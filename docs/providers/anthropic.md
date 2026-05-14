@@ -1,11 +1,11 @@
 ---
 sidebar_label: Anthropic
-description: Configure Anthropic's Claude AI models in Roo Code. Access Claude Opus, Sonnet, and Haiku models with prompt caching and large context windows.
+description: Configure Anthropic's Claude AI models in Zoo Code. Access Claude Opus, Sonnet, and Haiku models with prompt caching and large context windows.
 keywords:
   - anthropic
   - claude
   - claude ai
-  - roo code
+  - zoo code
   - api provider
   - claude opus
   - claude sonnet
@@ -14,7 +14,7 @@ keywords:
   - ai models
 ---
 
-# Using Anthropic With Roo Code
+# Using Anthropic With Zoo Code
 
 Anthropic is an AI safety and research company that builds reliable, interpretable, and steerable AI systems.  Their Claude models are known for their strong reasoning abilities, helpfulness, and honesty.
 
@@ -26,22 +26,22 @@ Anthropic is an AI safety and research company that builds reliable, interpretab
 
 1.  **Sign Up/Sign In:** Go to the [Anthropic Console](https://console.anthropic.com/). Create an account or sign in.
 2.  **Navigate to API Keys:**  Go to the [API keys](https://console.anthropic.com/settings/keys) section.
-3.  **Create a Key:** Click "Create Key". Give your key a descriptive name (e.g., "Roo Code").
+3.  **Create a Key:** Click "Create Key". Give your key a descriptive name (e.g., "Zoo Code").
 4.  **Copy the Key:**  **Important:** Copy the API key *immediately*.  You will not be able to see it again.  Store it securely.
 
 ---
 
 ## Available Models
 
-Roo Code supports all Claude models available through Anthropic's API.
+Zoo Code supports all Claude models available through Anthropic's API.
 
 For the complete, up-to-date model list and capabilities, see [Anthropic's model documentation](https://docs.anthropic.com/en/docs/about-claude/models).
 
 ---
 
-## Configuration in Roo Code
+## Configuration in Zoo Code
 
-1.  **Open Roo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Roo Code panel.
+1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "Anthropic" from the "API Provider" dropdown.
 3.  **Enter API Key:** Paste your Anthropic API key into the "Anthropic API Key" field.
 4.  **Select Model:** Choose your desired Claude model from the "Model" dropdown.

@@ -1,12 +1,12 @@
 ---
-description: Generate or edit images using AI models through the generate_image tool in Roo Code.
+description: Generate or edit images using AI models through the generate_image tool in Zoo Code.
 keywords:
   - generate_image
   - AI images
   - image generation
   - image editing
   - OpenRouter
-  - Roo Code tools
+  - Zoo Code tools
   - experimental
 ---
 

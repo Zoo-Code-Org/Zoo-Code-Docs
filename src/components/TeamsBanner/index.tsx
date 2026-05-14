@@ -22,9 +22,9 @@ export function TeamsBanner(): React.ReactElement | null {
   }
 
   return (
-    <div className={styles.teamsBanner} role="banner" aria-label="Roo Code Teams announcement">
+    <div className={styles.teamsBanner} role="banner" aria-label="Zoo Code Teams announcement">
       <div className={styles.teamsBannerContent}>
-        <span className={styles.teamsBannerHeadline}>Ship Faster with Roo Code Teams.</span>
+        <span className={styles.teamsBannerHeadline}>Ship Faster with Zoo Code Teams.</span>
         <a
           className={styles.teamsBannerLink}
           href="https://app.roocode.com/l/teams?utm_source=docs&utm_medium=banner&utm_campaign=teams_promo"

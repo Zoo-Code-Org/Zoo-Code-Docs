@@ -1,8 +1,8 @@
 ---
-description: Learn how the list_files tool helps Roo Code explore project structures, list directories, and navigate codebases with recursive and filtered listing capabilities.
+description: Learn how the list_files tool helps Zoo Code explore project structures, list directories, and navigate codebases with recursive and filtered listing capabilities.
 keywords:
   - list_files
-  - Roo Code tools
+  - Zoo Code tools
   - directory listing
   - file exploration
   - project structure

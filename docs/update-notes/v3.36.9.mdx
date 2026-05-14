@@ -1,7 +1,7 @@
 ---
-description: Roo Code 3.36.9 defaults more providers to native tools, improves reliability for tool calls and MCP schemas, and makes error details easier to debug.
+description: Zoo Code 3.36.9 defaults more providers to native tools, improves reliability for tool calls and MCP schemas, and makes error details easier to debug.
 keywords:
-  - roo code 3.36.9
+  - zoo code 3.36.9
   - native tools
   - mcp
   - bug fixes
@@ -9,15 +9,15 @@ keywords:
 image: /img/v3.36.9/v3.36.9.png
 ---
 
-# Roo Code 3.36.9 Release Notes (2025-12-16)
+# Zoo Code 3.36.9 Release Notes (2025-12-16)
 
 This release defaults more providers to native tools, improves tool-call reliability across providers, and makes errors easier to debug.
 
-<img src="/img/v3.36.9/v3.36.9.png" alt="Roo Code v3.36.9 Release" width="600" />
+<img src="/img/v3.36.9/v3.36.9.png" alt="Zoo Code v3.36.9 Release" width="600" />
 
 ## Native tools by default (more providers)
 
-Roo now defaults to the **Native** tool protocol for more providers—so tool use is more consistent out of the box on:
+Zoo now defaults to the **Native** tool protocol for more providers—so tool use is more consistent out of the box on:
 
 * OpenAI
 * Azure OpenAI
@@ -34,7 +34,7 @@ If you’re already using **OpenRouter**, you’ve been getting native tool call
 
 ## QOL Improvements
 
-* **More complete streaming failure details**: Improves the streaming failure UI so you can view/copy full error details directly in Roo instead of relying on the developer console ([#10131](https://github.com/RooCodeInc/Roo-Code/pull/10131))
+* **More complete streaming failure details**: Improves the streaming failure UI so you can view/copy full error details directly in Zoo instead of relying on the developer console ([#10131](https://github.com/RooCodeInc/Roo-Code/pull/10131))
 * **Richer error details dialog**: Adds extra context (extension version, provider/model, timestamp, etc.) to the error details dialog to make debugging and reporting issues faster ([#10050](https://github.com/RooCodeInc/Roo-Code/pull/10050))
 * **Fewer read_file failures on large files**: Improves large-file reading by incrementally reading up to a token budget and returning cleaner truncation when needed ([#10052](https://github.com/RooCodeInc/Roo-Code/pull/10052))
 

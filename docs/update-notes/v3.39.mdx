@@ -1,20 +1,20 @@
 ---
-description: Roo Code 3.39 includes task-level provider profile persistence, improved multimodal workflows, new provider/model options, and reliability fixes across tool calling.
+description: Zoo Code 3.39 includes task-level provider profile persistence, improved multimodal workflows, new provider/model options, and reliability fixes across tool calling.
 keywords:
-  - roo code 3.39
+  - zoo code 3.39
   - new features
   - bug fixes
 ---
 
-# Roo Code 3.39 Release Notes (Combined)
+# Zoo Code 3.39 Release Notes (Combined)
 
-Roo Code 3.39 includes task-level provider profile persistence, improved multimodal workflows, new provider/model options, and reliability fixes across tool calling.
+Zoo Code 3.39 includes task-level provider profile persistence, improved multimodal workflows, new provider/model options, and reliability fixes across tool calling.
 
 ## Features
 
-* **Task-level API configuration profiles**: Roo can persist the selected provider profile per task so follow-up sessions keep using the same provider/model settings.
+* **Task-level API configuration profiles**: Zoo Code can persist the selected provider profile per task so follow-up sessions keep using the same provider/model settings.
 * **Image file @mentions**: You can mention images in your workspace to give the model visual context directly from chat.
-* **Headless Roo Code (CLI + VS Code shim)**: Run Roo Code in a headless environment with a basic CLI, plus an installer and an option to use the CLI for evals.
+* **Headless Zoo Code (CLI + VS Code shim)**: Run Zoo Code in a headless environment with a basic CLI, plus an installer and an option to use the CLI for evals.
 * **Debug proxy routing**: Adds debug-mode proxy routing to help troubleshoot API calls.
 
 ## QOL Improvements
@@ -46,11 +46,11 @@ Roo Code 3.39 includes task-level provider profile persistence, improved multimo
 * Improves ExtensionHost internal organization around mode changes.
 * Adds options to build and install the CLI release locally for testing.
 * Reorganizes the CLI file structure for better maintainability.
-* Adds an interactive TUI mode to the Roo CLI.
+* Adds an interactive TUI mode to the Zoo Code CLI.
 
 ### 3.39.2 (2026-01-09)
 
-* Adds an **Enable debug mode** toggle in Roo Code settings (About Roo Code) so you can turn debug logging on/off from the extension UI.
+* Adds an **Enable debug mode** toggle in Zoo Code settings (About Zoo Code) so you can turn debug logging on/off from the extension UI.
 * Improves the error message shown when a provider terminates a streaming response early, making it clearer the interruption came from the provider.
 * Fixes an issue where Cerebras could fail tool calling when a chat included both built-in tools and MCP tools.
 * Fixes tool calling for OpenAI-compatible providers.
@@ -60,7 +60,7 @@ Roo Code 3.39 includes task-level provider profile persistence, improved multimo
 * Fixes an issue where approving a tool run while adding feedback could produce duplicate tool results.
 * Improves Gemini tool calling reliability by preserving thought signatures correctly.
 * Improves file-edit reliability for Gemini and Vertex models.
-* Updates Roo Code CLI defaults by switching the default model to `anthropic/claude-opus-4.5`.
+* Updates Zoo Code CLI defaults by switching the default model to `anthropic/claude-opus-4.5`.
 * Updates Roo Code Cloud’s Terms of Service (effective 2026-01-09).
 
 ### 3.39.1 (2026-01-08)

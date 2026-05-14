@@ -1,5 +1,5 @@
 ---
-description: Master keyboard navigation in Roo Code with customizable shortcuts, command execution, and prompt history navigation for efficient coding workflows.
+description: Master keyboard navigation in Zoo Code with customizable shortcuts, command execution, and prompt history navigation for efficient coding workflows.
 keywords:
   - keyboard shortcuts
   - keyboard navigation
@@ -12,20 +12,20 @@ sidebar_label: Keyboard Navigation
 
 # Keyboard Navigation
 
-The Roo Code interface supports keyboard navigation and shortcuts to streamline your workflow and reduce dependence on mouse interactions.
+The Zoo Code interface supports keyboard navigation and shortcuts to streamline your workflow and reduce dependence on mouse interactions.
 
 ---
 
 ## Available Keyboard Commands
 
-Roo Code offers keyboard commands to enhance your workflow. This page focuses on the `roo-cline.acceptInput` command, but here's a quick reference to all keyboard commands:
+Zoo Code offers keyboard commands to enhance your workflow. This page focuses on the `roo-cline.acceptInput` command, but here's a quick reference to all keyboard commands:
 
 | Command | Description | Default Shortcut |
 |---------|-------------|-----------------|
 | `roo-cline.acceptInput` | Submit text or accept the primary suggestion | None (configurable) |
-| `roo-cline.focusInput` | Focus the Roo input box | None (configurable) |
-| `roo-cline.openInNewTab` | Open Roo Code in a new editor tab | None (via Command Palette) |
-| Add to Context | Add selected code to Roo's context | macOS: Cmd+K Cmd+A; Windows/Linux: Ctrl+K Ctrl+A |
+| `roo-cline.focusInput` | Focus the Zoo input box | None (configurable) |
+| `roo-cline.openInNewTab` | Open Zoo Code in a new editor tab | None (via Command Palette) |
+| Add to Context | Add selected code to Zoo's context | macOS: Cmd+K Cmd+A; Windows/Linux: Ctrl+K Ctrl+A |
 | Arrow Up/Down | Navigate through prompt history | Built-in |
 
 ### Key Benefits of Keyboard Commands
@@ -76,7 +76,7 @@ The `roo-cline.acceptInput` command is a general-purpose input submission comman
 ```
 
 Scoped examples:
-- Sidebar Roo view only:
+- Sidebar view only:
 ```json
 {
   "key": "ctrl+enter",
@@ -84,7 +84,7 @@ Scoped examples:
   "when": "view == roo-cline.SidebarProvider"
 }
 ```
-- Editor Roo tab only:
+- Editor tab only:
 ```json
 {
   "key": "ctrl+enter",
@@ -106,7 +106,7 @@ Choose a key combination that doesn't conflict with existing VS Code shortcuts:
 
 - Default: macOS: Cmd+K Cmd+A; Windows/Linux: Ctrl+K Ctrl+A
 - Requires: when condition `editorTextFocus && editorHasSelection`
-- Focus does not change automatically. To continue typing immediately, use "Roo: Focus Input" (`roo-cline.focusInput`) or click into the Roo panel.
+- Focus does not change automatically. To continue typing immediately, use the `roo-cline.focusInput` command or click into the Zoo panel.
 
 :::note Redo Shortcut Restored
 The standard Redo shortcut (macOS: Cmd+Y; Windows/Linux: Ctrl+Y) remains unchanged and is available for its usual function in VS Code.
@@ -116,7 +116,7 @@ The standard Redo shortcut (macOS: Cmd+Y; Windows/Linux: Ctrl+Y) remains unchang
 
 #### Quick Development Workflows
 
-- **Text Submission**: Send messages to Roo without moving your hands from the keyboard
+- **Text Submission**: Send messages to Zoo without moving your hands from the keyboard
 - **Action Confirmations**: Accept operations like saving files, running commands, or applying diffs
 - **Multi-Step Processes**: Move quickly through steps that require confirmation or input
 - **Consecutive Tasks**: Chain multiple tasks together with minimal interruption
@@ -125,7 +125,7 @@ The standard Redo shortcut (macOS: Cmd+Y; Windows/Linux: Ctrl+Y) remains unchang
 
 - **Vim/Neovim Workflows**: If you're coming from a Vim/Neovim background, maintain your keyboard-focused workflow
 - **IDE Integration**: Use alongside other VS Code keyboard shortcuts for a seamless experience
-- **Code Reviews**: Quickly accept suggestions when reviewing code with Roo
+- **Code Reviews**: Quickly accept suggestions when reviewing code with Zoo
 - **Documentation Writing**: Submit text and accept formatting suggestions when generating documentation
 
 #### Accessibility Use Cases
@@ -146,30 +146,30 @@ The `roo-cline.acceptInput` command was designed with accessibility in mind:
 
 ### Keyboard-Centric Workflows
 
-Here are some complete workflow examples showing how to effectively use keyboard shortcuts with Roo:
+Here are some complete workflow examples showing how to effectively use keyboard shortcuts with Zoo:
 
 #### Development Workflow Example
 
 1. Open VS Code and navigate to your project
-2. Open Roo via the sidebar
+2. Open Zoo via the sidebar
 3. Type your request: "Create a REST API endpoint for user registration"
-4. When Roo asks for framework preferences, use your `roo-cline.acceptInput` shortcut to select the first suggestion
+4. When Zoo asks for framework preferences, use your `roo-cline.acceptInput` shortcut to select the first suggestion
 5. Continue using the shortcut to accept code generation suggestions
-6. When Roo offers to save the file, use the shortcut again to confirm
+6. When Zoo offers to save the file, use the shortcut again to confirm
 7. Use VS Code's built-in shortcuts to navigate through the created files
 
 #### Code Review Workflow
 
 1. Select code you want to review and use VS Code's "Copy" command
-2. Ask Roo to review it: "Review this code for security issues"
-3. As Roo asks clarifying questions about the code context, use your shortcut to accept suggestions
-4. When Roo provides improvement recommendations, use the shortcut again to accept implementation suggestions
+2. Ask Zoo to review it: "Review this code for security issues"
+3. As Zoo asks clarifying questions about the code context, use your shortcut to accept suggestions
+4. When Zoo provides improvement recommendations, use the shortcut again to accept implementation suggestions
 
 ### Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
-| Shortcut doesn't work | Ensure Roo is focused (click in the Roo panel first) |
+| Shortcut doesn't work | Ensure Zoo is focused (click in the Zoo panel first) |
 | Wrong suggestion selected | The command always selects the first (primary) button; use mouse if you need a different option |
 | Conflicts with existing shortcuts | Try a different key combination in VS Code keyboard settings |
 | No visual feedback when used | This is normal - the command silently activates the function without visual confirmation |
@@ -180,7 +180,7 @@ Here are some complete workflow examples showing how to effectively use keyboard
 The `roo-cline.acceptInput` command is implemented as follows:
 
 - Command registered as `roo-cline.acceptInput` with display title "Roo: Accept Input/Suggestion" in the command palette
-- When triggered, it sends an "acceptInput" message to the active Roo webview
+- When triggered, it sends an "acceptInput" message to the active Zoo webview
 - The webview determines the appropriate action based on the current UI state:
   - Clicks the primary action button if action buttons are visible and enabled
   - Sends the message if the text area is enabled and contains text/images
@@ -188,7 +188,7 @@ The `roo-cline.acceptInput` command is implemented as follows:
 
 ### Limitations
 
-- Works only when the Roo interface is active
+- Works only when the Zoo interface is active
 - Has no effect if no inputs or suggestions are currently available
 - Prioritizes the primary (first) button when multiple options are shown
 

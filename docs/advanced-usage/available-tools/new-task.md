@@ -2,7 +2,7 @@
 description: Discover how the new_task tool enables complex workflow management by creating subtasks with different modes, maintaining parent-child relationships for organized development.
 keywords:
   - new_task
-  - Roo Code tools
+  - Zoo Code tools
   - subtasks
   - workflow management
   - task hierarchy

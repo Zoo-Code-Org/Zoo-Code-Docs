@@ -1,7 +1,7 @@
 ---
 description: Enhanced Kimi K2 models with 256K+ context windows, OpenAI service tiers for flexible pricing, and DeepInfra as a new provider with 100+ models.
 keywords:
-  - roo code 3.26.7
+  - zoo code 3.26.7
   - kimi k2 models
   - openai service tiers
   - deepinfra provider
@@ -9,12 +9,12 @@ keywords:
 image: /img/v3.26.7/v3.26.7.png
 ---
 
-# Roo Code 3.26.7 Release Notes (2025-09-05)
+# Zoo Code 3.26.7 Release Notes (2025-09-05)
 
 This release brings enhanced Kimi K2 models with massive context windows, OpenAI service tier selection, and DeepInfra as a new provider offering 100+ models.
 
-<img src="/img/v3.26.7/v3.26.7.png" alt="Roo Code v3.26.7 Release" width="600" />
-## Kimi K2-0905: Moonshot's Latest Open Source Model is Live in Roo Code
+<img src="/img/v3.26.7/v3.26.7.png" alt="Zoo Code v3.26.7 Release" width="600" />
+## Kimi K2-0905: Moonshot's Latest Open Source Model is Live in Zoo Code
 
 We've upgraded to the latest Kimi K2-0905 models across multiple providers (thanks CellenLee!) ([#7663](https://github.com/RooCodeInc/Roo-Code/pull/7663), [#7693](https://github.com/RooCodeInc/Roo-Code/pull/7693)):
 
@@ -56,7 +56,7 @@ DeepInfra is an excellent choice for developers looking for variety and value in
 
 ## Bug Fixes
 
-* **MCP Tool Validation**: Roo now validates MCP tool existence before execution and shows helpful error messages with available tools (thanks R-omk!) ([#7632](https://github.com/RooCodeInc/Roo-Code/pull/7632))
+* **MCP Tool Validation**: Zoo now validates MCP tool existence before execution and shows helpful error messages with available tools (thanks R-omk!) ([#7632](https://github.com/RooCodeInc/Roo-Code/pull/7632))
 * **OpenAI API Key Errors**: Clear error messages now display when API keys contain invalid characters instead of cryptic ByteString errors (thanks A0nameless0man!) ([#7586](https://github.com/RooCodeInc/Roo-Code/pull/7586))
 * **Follow-up Questions**: Fixed countdown timer incorrectly reappearing in task history for already answered follow-up questions (thanks XuyiK!) ([#7686](https://github.com/RooCodeInc/Roo-Code/pull/7686))
 * **Moonshot Token Limit**: Resolved issue where Moonshot models were incorrectly limited to 1024 tokens, now properly respects configured limits (thanks wangxiaolong100, greyishsong!) ([#7673](https://github.com/RooCodeInc/Roo-Code/pull/7673))

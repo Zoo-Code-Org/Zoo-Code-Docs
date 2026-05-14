@@ -1,7 +1,7 @@
 ---
-description: Combined notes for Roo Code 3.33, including Gemini 3 Pro Preview support, native tool calling for OpenAI-compatible providers, and various native tool reliability fixes.
+description: Combined notes for Zoo Code 3.33, including Gemini 3 Pro Preview support, native tool calling for OpenAI-compatible providers, and various native tool reliability fixes.
 keywords:
-  - roo code 3.33
+  - zoo code 3.33
   - release notes
   - gemini 3 pro
   - native tool protocol
@@ -9,18 +9,18 @@ keywords:
   - bug fixes
 ---
 
-# Roo Code 3.33 Release Notes (2025-11-18)
+# Zoo Code 3.33 Release Notes (2025-11-18)
 
-Roo Code 3.33 introduces support for Gemini 3 Pro Preview and native tool calling for OpenAI-compatible providers, along with improved Gemini defaults and numerous native tool protocol fixes.
+Zoo Code 3.33 introduces support for Gemini 3 Pro Preview and native tool calling for OpenAI-compatible providers, along with improved Gemini defaults and numerous native tool protocol fixes.
 
 ## Major Features
 
 ### Gemini 3 Pro Preview
 
-Roo Code now supports Google’s Gemini 3 Pro Preview model through direct Gemini, Vertex AI, and aggregator providers like OpenRouter and Requesty ([#9357](https://github.com/RooCodeInc/Roo-Code/pull/9357), [#9327](https://github.com/RooCodeInc/Roo-Code/pull/9327)):
+Zoo Code now supports Google’s Gemini 3 Pro Preview model through direct Gemini, Vertex AI, and aggregator providers like OpenRouter and Requesty ([#9357](https://github.com/RooCodeInc/Roo-Code/pull/9357), [#9327](https://github.com/RooCodeInc/Roo-Code/pull/9327)):
 
 - **1M-token, reasoning-capable model**: Handles very large conversations while providing higher-quality multi-step reasoning on complex coding and refactoring tasks.
-- **Strong eval performance**: Achieves a 100% score on internal Roo Code evals and 76.2% on SWE-bench Verified, giving more consistent solutions on real-world coding tasks.
+- **Strong eval performance**: Achieves a 100% score on internal Zoo Code evals and 76.2% on SWE-bench Verified, giving more consistent solutions on real-world coding tasks.
 - **Reliable tool usage**: Executes complex multi-step tool workflows without getting stuck or losing track, especially in long, tool-heavy tasks.
 - **Better out-of-the-box defaults**: Uses `gemini-2.5-pro` by default where supported, sets a more natural temperature of 1, cleans up the Gemini model list, and includes reasoning / “thought” tokens in cost reporting so usage numbers better match provider billing.
 - **Image Preview Support**: Added support for image previews with Google Gemini 3 Pro image generation models ([#9440](https://github.com/RooCodeInc/Roo-Code/pull/9440)).

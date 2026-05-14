@@ -1,18 +1,18 @@
 ---
 description: This release improves message queuing and task cancellation, fixes MCP image tool outputs, and updates several providers.
 keywords:
-  - roo code 3.46.2
+  - zoo code 3.46.2
   - new features
   - bug fixes
 ---
 
-# Roo Code 3.46.2 Release Notes (2026-02-03)
+# Zoo Code 3.46.2 Release Notes (2026-02-03)
 
 This release improves message queuing and task cancellation, fixes MCP image tool outputs, and updates several providers.
 
 ## Bug Fixes
 
-* **MCP tool results can include images**: Fixes an issue where MCP tools that return images (for example, Figma screenshots) could show up as “(No response)”. See [Using MCP in Roo](/features/mcp/using-mcp-in-roo) for details. (thanks Sniper199999!) ([#10874](https://github.com/RooCodeInc/Roo-Code/pull/10874))
+* **MCP tool results can include images**: Fixes an issue where MCP tools that return images (for example, Figma screenshots) could show up as “(No response)”. See [Using MCP in Zoo](/features/mcp/using-mcp-in-roo) for details. (thanks Sniper199999!) ([#10874](https://github.com/RooCodeInc/Roo-Code/pull/10874))
 * **More reliable condensing with Bedrock via LiteLLM**: Fixes an issue where conversation condensing could fail when the history contained tool-use/tool-result blocks. ([#10975](https://github.com/RooCodeInc/Roo-Code/pull/10975))
 * **Messages aren’t dropped during command execution**: Fixes an issue where messages sent while a command was still running could be lost; they’re now queued and delivered when the command finishes. ([#11140](https://github.com/RooCodeInc/Roo-Code/pull/11140))
 * **OpenRouter model list refresh respects your Base URL**: Fixes an issue where refreshing the OpenRouter model list ignored a configured Base URL and always called openrouter.ai. See [OpenRouter](/providers/openrouter) for details. (thanks sebastianlang84!) ([#11154](https://github.com/RooCodeInc/Roo-Code/pull/11154))

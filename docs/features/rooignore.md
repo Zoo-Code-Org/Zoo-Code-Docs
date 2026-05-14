@@ -1,5 +1,5 @@
 ---
-description: Learn how to use .rooignore files to control Roo Code's file access, protect sensitive information, and manage which files the AI can read or modify.
+description: Learn how to use .rooignore files to control Zoo Code's file access, protect sensitive information, and manage which files the AI can read or modify.
 keywords:
   - rooignore
   - file access control
@@ -12,17 +12,17 @@ sidebar_label: .rooignore
 
 # Using .rooignore to Control File Access
 
-The `.rooignore` file is a key feature for managing Roo Code's interaction with your project files. It allows you to specify files and directories that Roo should not access or modify, similar to how `.gitignore` works for Git.
+The `.rooignore` file is a key feature for managing Zoo Code's interaction with your project files. It allows you to specify files and directories that Zoo should not access or modify, similar to how `.gitignore` works for Git.
 
 ---
 
 ## What is `.rooignore`?
 
 *   **Purpose**: To protect sensitive information, prevent accidental changes to build artifacts or large assets, and generally define Roo's operational scope within your workspace.
-*   **How to Use**: Create a file named `.rooignore` in the root directory of your VS Code workspace. List patterns in this file to tell Roo which files and directories to ignore.
-*   **Scope**: `.rooignore` affects both Roo's tools and context mentions (like `@directory` attachments).
+*   **How to Use**: Create a file named `.rooignore` in the root directory of your VS Code workspace. List patterns in this file to tell Zoo which files and directories to ignore.
+*   **Scope**: `.rooignore` affects both Zoo's tools and context mentions (like `@directory` attachments).
 
-Roo actively monitors the `.rooignore` file. Any changes you make are reloaded automatically, ensuring Roo always uses the most current rules. The `.rooignore` file itself is always implicitly ignored, so Roo cannot change its own access rules.
+Zoo actively monitors the `.rooignore` file. Any changes you make are reloaded automatically, ensuring Zoo always uses the most current rules. The `.rooignore` file itself is always implicitly ignored, so Zoo cannot change its own access rules.
 
 ---
 
@@ -33,7 +33,7 @@ The syntax for `.rooignore` is identical to `.gitignore`. Here are common exampl
 *   `node_modules/`: Ignores the entire `node_modules` directory.
 *   `*.log`: Ignores all files ending in `.log`.
 *   `config/secrets.json`: Ignores a specific file.
-*   `!important.log`: An exception; Roo will *not* ignore this specific file, even if a broader pattern like `*.log` exists.
+*   `!important.log`: An exception; Zoo will *not* ignore this specific file, even if a broader pattern like `*.log` exists.
 *   `build/`: Ignores the `build` directory.
 *   `docs/**/*.md`: Ignores all Markdown files in the `docs` directory and its subdirectories.
 
@@ -41,9 +41,9 @@ For a comprehensive guide on syntax, refer to the [official Git documentation on
 
 ---
 
-## How Roo Tools Interact with `.rooignore`
+## How Zoo Tools Interact with `.rooignore`
 
-`.rooignore` rules are enforced across various Roo tools:
+`.rooignore` rules are enforced across various Zoo tools:
 
 ### Strict Enforcement (Reads & Writes)
 
@@ -55,8 +55,8 @@ These tools directly check `.rooignore` before any file operation. If a file is 
 
 ### File Discovery and Listing
 
-*   **[`list_files`](/advanced-usage/available-tools/list-files) Tool & `@directory` Attachments**: When Roo lists files or when you use `@directory` attachments, ignored files are omitted or marked with a 🔒 symbol (see "User Experience" below). Both use identical filtering logic.
-*   **Environment Details**: Information about your workspace (like open tabs and project structure) provided to Roo is filtered to exclude or mark ignored items.
+*   **[`list_files`](/advanced-usage/available-tools/list-files) Tool & `@directory` Attachments**: When Zoo lists files or when you use `@directory` attachments, ignored files are omitted or marked with a 🔒 symbol (see "User Experience" below). Both use identical filtering logic.
+*   **Environment Details**: Information about your workspace (like open tabs and project structure) provided to Zoo is filtered to exclude or mark ignored items.
 
 ### Context Mentions
 
@@ -73,7 +73,7 @@ These tools directly check `.rooignore` before any file operation. If a file is 
 
 *   **Workspace-Centric**: `.rooignore` rules apply **only to files and directories within the current VS Code workspace root**. Files outside this scope are not affected.
 *   **[`execute_command`](/advanced-usage/available-tools/execute-command) Specificity**: Protection for `execute_command` is limited to a predefined list of file-reading commands. Custom scripts or uncommon utilities might not be caught.
-*   **Not a Full Sandbox**: `.rooignore` is a powerful tool for controlling Roo's file access via its tools, but it does not create a system-level sandbox.
+*   **Not a Full Sandbox**: `.rooignore` is a powerful tool for controlling Zoo's file access via its tools, but it does not create a system-level sandbox.
 
 ---
 
@@ -81,7 +81,7 @@ These tools directly check `.rooignore` before any file operation. If a file is 
 
 *   **Visual Cue (🔒)**: In file listings and `@directory` attachments, files ignored by `.rooignore` may be marked with a lock symbol (🔒), depending on the `showRooIgnoredFiles` setting (defaults to `true`).
 *   **Ignore Messages**: Single file mentions return "(File is ignored by .rooignore)" instead of content.
-*   **Error Messages**: If a tool operation is blocked, Roo receives an error: `"Access to [file_path] is blocked by the .rooignore file settings. You must try to continue in the task without using this file, or ask the user to update the .rooignore file."`
-*   **Chat Notifications**: You will typically see a notification in the Roo chat interface when an action is blocked due to `.rooignore`.
+*   **Error Messages**: If a tool operation is blocked, Zoo receives an error: `"Access to [file_path] is blocked by the .rooignore file settings. You must try to continue in the task without using this file, or ask the user to update the .rooignore file."`
+*   **Chat Notifications**: You will typically see a notification in the Zoo chat interface when an action is blocked due to `.rooignore`.
 
-This guide helps you understand the `.rooignore` feature, its capabilities, and its current limitations, so you can effectively manage Roo's interaction with your codebase.
+This guide helps you understand the `.rooignore` feature, its capabilities, and its current limitations, so you can effectively manage Zoo's interaction with your codebase.

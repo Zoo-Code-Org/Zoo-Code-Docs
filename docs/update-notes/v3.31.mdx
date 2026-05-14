@@ -1,7 +1,7 @@
 ---
-description: Combined notes for Roo Code 3.31, highlighting task UX refinements, better diagnostics, and key stability fixes.
+description: Combined notes for Zoo Code 3.31, highlighting task UX refinements, better diagnostics, and key stability fixes.
 keywords:
-  - roo code 3.31
+  - zoo code 3.31
   - release notes
   - combined updates
   - bug fixes
@@ -9,11 +9,11 @@ keywords:
 image: /img/v3.31.0/v3.31.0.png
 ---
 
-# Roo Code 3.31 Release Notes (2025-11-08)
+# Zoo Code 3.31 Release Notes (2025-11-08)
 
-Roo Code 3.31 focuses on a smoother task and to-do experience, clearer diagnostics, safer routing for custom endpoints, and more resilient long-running generations.
+Zoo Code 3.31 focuses on a smoother task and to-do experience, clearer diagnostics, safer routing for custom endpoints, and more resilient long-running generations.
 
-<img src="/img/v3.31.0/v3.31.0.png" alt="Roo Code v3.31 Release" width="600" />
+<img src="/img/v3.31.0/v3.31.0.png" alt="Zoo Code v3.31 Release" width="600" />
 
 ## Integrated task header and to-do list
 
@@ -25,7 +25,7 @@ The task header and to-do list now work together so you can see progress at a gl
 
 ## QOL Improvements
 
-- **Less caffeinated welcome animation** ([#9104](https://github.com/RooCodeInc/Roo-Code/pull/9104)): Smooths the Roo hover animation so it is less distracting during long sessions while keeping the interface responsive.
+- **Less caffeinated welcome animation** ([#9104](https://github.com/RooCodeInc/Roo-Code/pull/9104)): Smooths the Zoo hover animation so it is less distracting during long sessions while keeping the interface responsive.
 - **Auto-approval is now handled by Task** ([#9157](https://github.com/RooCodeInc/Roo-Code/pull/9157)): Centralizes approval logic for commands, tools, MCP, and subtasks, reducing blocked prompts and making safeguards clearer.
 - **Consistent rounded buttons across the UI** ([#9150](https://github.com/RooCodeInc/Roo-Code/pull/9150)): New Button component with variants/sizes delivers a cleaner, more predictable interface.
 - **Batched settings updates** ([#9165](https://github.com/RooCodeInc/Roo-Code/pull/9165)): Applies multiple setting changes in one go, making saves faster and reducing UI flicker across Settings, Auto Approve, Command Execution, and MCP toggles.
@@ -42,7 +42,7 @@ The task header and to-do list now work together so you can see progress at a gl
 - **Auto‑approval honors MCP server state** ([#9199](https://github.com/RooCodeInc/Roo-Code/pull/9199)): Restores expected tool auto‑approval behavior (thanks bozoweed!).
 - **Issue Fixer reliability via REST + ProjectsV2** ([#9207](https://github.com/RooCodeInc/Roo-Code/pull/9207)): Resolves sync errors and restores dependable triage.
 - **OpenAI (native) encrypted reasoning handling** ([#9231](https://github.com/RooCodeInc/Roo-Code/pull/9231)): Includes encrypted reasoning only when a reasoning effort is set and enforces medium‑only verbosity for gpt‑5‑chat‑latest to prevent invalid parameter errors (thanks politsin!).
-- **Roo Anthropic input token normalization** ([#9224](https://github.com/RooCodeInc/Roo-Code/pull/9224)): Prevents double‑counting cached tokens so usage metrics, cost estimates, and context calculations are accurate across providers.
+- **Zoo Anthropic input token normalization** ([#9224](https://github.com/RooCodeInc/Roo-Code/pull/9224)): Prevents double‑counting cached tokens so usage metrics, cost estimates, and context calculations are accurate across providers.
 
 ## Misc Improvements
 

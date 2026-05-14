@@ -1,11 +1,11 @@
 ---
-description: Replace a uniquely-identified occurrence of text in files using the edit_file search-and-replace tool in Roo Code.
+description: Replace a uniquely-identified occurrence of text in files using the edit_file search-and-replace tool in Zoo Code.
 keywords:
   - edit_file
   - search and replace
   - file editing
   - text replacement
-  - Roo Code tools
+  - Zoo Code tools
   - code modifications
 ---
 

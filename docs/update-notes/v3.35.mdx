@@ -1,18 +1,18 @@
 ---
-description: Roo Code 3.35 introduces resilient subtasks that persist across reloads and massive native tool calling expansion across 15+ providers.
+description: Zoo Code 3.35 introduces resilient subtasks that persist across reloads and massive native tool calling expansion across 15+ providers.
 keywords:
-  - roo code 3.35
+  - zoo code 3.35
   - subtasks
   - native tool calling
   - provider updates
 image: /img/v3.35.0/v3.35.0.png
 ---
 
-# Roo Code 3.35 Release Notes (Combined)
+# Zoo Code 3.35 Release Notes (Combined)
 
 This release introduces metadata-driven subtasks that never lose their parent connection, plus native tool calling support for 15+ providers.
 
-<img src="/img/v3.35.0/v3.35.0.png" alt="Roo Code v3.35 Release" width="600" />
+<img src="/img/v3.35.0/v3.35.0.png" alt="Zoo Code v3.35 Release" width="600" />
 
 ## Metadata-Driven Subtasks
 
@@ -54,7 +54,7 @@ Native tool calling support has been expanded to 15+ providers:
 * **Parallel Tool Calls Fix**: Preserve tool_use blocks in summary during context condensation, fixing 400 errors with Anthropic's parallel tool calls feature (thanks SilentFlower!) ([#9714](https://github.com/RooCodeInc/Roo-Code/pull/9714))
 * **Navigation Button Wrapping**: Prevent navigation buttons from wrapping on smaller screens ([#9721](https://github.com/RooCodeInc/Roo-Code/pull/9721))
 * **Task Delegation Tool Flush**: Fixes 400 errors that occurred when using native tool protocol with parallel tool calls (e.g., `update_todo_list` + `new_task`). Pending tool results are now properly flushed before task delegation ([#9726](https://github.com/RooCodeInc/Roo-Code/pull/9726))
-* **Malformed Tool Call Fix**: Fixed a regression where malformed native tool calls would cause Roo Code to hang indefinitely. Tool calls now proceed to validation which catches and reports the missing parameters properly ([#9758](https://github.com/RooCodeInc/Roo-Code/pull/9758))
+* **Malformed Tool Call Fix**: Fixed a regression where malformed native tool calls would cause Zoo Code to hang indefinitely. Tool calls now proceed to validation which catches and reports the missing parameters properly ([#9758](https://github.com/RooCodeInc/Roo-Code/pull/9758))
 
 ## Misc Improvements
 

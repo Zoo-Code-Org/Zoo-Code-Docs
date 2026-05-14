@@ -1,11 +1,11 @@
 ---
-description: Discover how use_mcp_tool integrates external MCP servers to extend Roo Code with specialized tools, domain-specific functionality, and external services.
+description: Discover how use_mcp_tool integrates external MCP servers to extend Zoo Code with specialized tools, domain-specific functionality, and external services.
 keywords:
   - use_mcp_tool
   - MCP tools
   - Model Context Protocol
   - external tools
-  - Roo Code integration
+  - Zoo Code integration
   - MCP servers
   - domain tools
   - tool extension
@@ -74,7 +74,7 @@ This tool allows Roo to access specialized functionality provided by external MC
 
 MCP servers can be configured globally or at the project level:
 
-- **Global Configuration**: Managed through the Roo Code extension settings in VS Code. These apply across all projects unless overridden.
+- **Global Configuration**: Managed through the Zoo Code extension settings in VS Code. These apply across all projects unless overridden.
 - **Project-level Configuration**: Defined in a `.roo/mcp.json` file within your project's root directory.
  - This allows project-specific server setups.
  - Project-level servers take precedence over global servers if they share the same name.

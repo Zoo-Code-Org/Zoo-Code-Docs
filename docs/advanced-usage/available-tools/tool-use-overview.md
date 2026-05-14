@@ -1,7 +1,7 @@
 ---
-description: Comprehensive guide to Roo Code's tool system, including tool groups, calling mechanisms, mode integration, and best practices for AI-powered development.
+description: Comprehensive guide to Zoo Code's tool system, including tool groups, calling mechanisms, mode integration, and best practices for AI-powered development.
 keywords:
-  - Roo Code tools
+  - Zoo Code tools
   - tool system
   - tool groups
   - AI development
@@ -14,7 +14,7 @@ keywords:
 
 # Tool Use Overview
 
-Roo Code implements a sophisticated tool system that allows AI models to interact with your development environment in a controlled and secure manner. This document explains how tools work, when they're called, and how they're managed.
+Zoo Code implements a sophisticated tool system that allows AI models to interact with your development environment in a controlled and secure manner. This document explains how tools work, when they're called, and how they're managed.
 
 ---
 

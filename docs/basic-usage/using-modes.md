@@ -1,7 +1,7 @@
 ---
-description: Learn how to use Roo Code's specialized modes for different tasks. Switch between Code, Ask, Architect, Debug, and Orchestrator modes for optimal AI assistance.
+description: Learn how to use Zoo Code's specialized modes for different tasks. Switch between Code, Ask, Architect, Debug, and Orchestrator modes for optimal AI assistance.
 keywords:
-  - Roo Code modes
+  - Zoo Code modes
   - Code mode
   - Ask mode
   - Architect mode
@@ -13,12 +13,12 @@ keywords:
 
 # Using Modes
 
-Modes in Roo Code are specialized personas that tailor the assistant's behavior to your current task. Each mode offers different capabilities, expertise, and access levels to help you accomplish specific goals.
+Modes in Zoo Code are specialized personas that tailor the assistant's behavior to your current task. Each mode offers different capabilities, expertise, and access levels to help you accomplish specific goals.
 
 :::info Sticky Models & Mode Persistence
-Each mode remembers your last-used model. When switching modes, Roo automatically selects that model—no manual selection needed. Assign different models to different modes (e.g., Gemini 2.5 Preview for `🏗️ Architect` mode, Claude Sonnet 3.7 for `💻 Code` mode) and Roo will switch models automatically when you change modes.
+Each mode remembers your last-used model. When switching modes, Zoo automatically selects that model—no manual selection needed. Assign different models to different modes (e.g., Gemini 2.5 Preview for `🏗️ Architect` mode, Claude Sonnet 3.7 for `💻 Code` mode) and Zoo will switch models automatically when you change modes.
 
-Additionally, your selected mode persists between sessions—Roo remembers which mode you were using when you return.
+Additionally, your selected mode persists between sessions—Zoo remembers which mode you were using when you return.
 :::
 
 ---
@@ -52,9 +52,9 @@ Four ways to switch modes:
     | Windows | Ctrl + . |
     | Linux | Ctrl + . |
 
-4. **Accept suggestions:** Click on mode switch suggestions that Roo offers when appropriate
+4. **Accept suggestions:** Click on mode switch suggestions that Zoo offers when appropriate
    
-    <img src="/img/using-modes/using-modes-2.png" alt="Accepting a mode switch suggestion from Roo" width="400" />
+    <img src="/img/using-modes/using-modes-2.png" alt="Accepting a mode switch suggestion from Zoo" width="400" />
 
 ---
 
@@ -114,7 +114,7 @@ Four ways to switch modes:
 
 ## Customizing Modes
 
-Tailor Roo Code's behavior by customizing existing modes or creating new specialized assistants. Define tool access, file permissions, and behavior instructions to enforce team standards or create purpose-specific assistants. See [Custom Modes documentation](/features/custom-modes) for setup instructions.
+Tailor Zoo Code's behavior by customizing existing modes or creating new specialized assistants. Define tool access, file permissions, and behavior instructions to enforce team standards or create purpose-specific assistants. See [Custom Modes documentation](/features/custom-modes) for setup instructions.
 
 ### Understanding Tool Groups
 

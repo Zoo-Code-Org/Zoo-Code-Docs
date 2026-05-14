@@ -1,40 +1,40 @@
 ---
-description: Roo Code 3.37 introduces custom tool calling, expands provider support, and improves tool-call reliability.
+description: Zoo Code 3.37 introduces custom tool calling, expands provider support, and improves tool-call reliability.
 keywords:
-  - roo code 3.37
+  - zoo code 3.37
   - new features
   - bug fixes
 image: /img/v3.37.0/v3.37.0.png
 ---
 
-# Roo Code 3.37 Release Notes (2025-12-22)
+# Zoo Code 3.37 Release Notes (2025-12-22)
 
-Roo Code 3.37 introduces experimental custom tools, adds new provider capabilities, and improves tool-call reliability.
+Zoo Code 3.37 introduces experimental custom tools, adds new provider capabilities, and improves tool-call reliability.
 
-<img src="/img/v3.37.0/v3.37.0.png" alt="Roo Code v3.37.0 Release" width="600" />
+<img src="/img/v3.37.0/v3.37.0.png" alt="Zoo Code v3.37.0 Release" width="600" />
 
 ## New models
 
 ## Z.ai GLM-4.7 (thinking mode)
 
-GLM-4.7 is now available directly through the Z.ai provider in Roo Code, as well as via the Roo Code Cloud provider (and other provider routes that surface Z.ai). It’s a strong coding model for agentic workflows, with improved multilingual coding, terminal tasks, tool use, and complex reasoning compared to GLM-4.6 ([#10282](https://github.com/RooCodeInc/Roo-Code/pull/10282)).
+GLM-4.7 is now available directly through the Z.ai provider in Zoo Code, as well as via the Zoo Code Cloud provider (and other provider routes that surface Z.ai). It’s a strong coding model for agentic workflows, with improved multilingual coding, terminal tasks, tool use, and complex reasoning compared to GLM-4.6 ([#10282](https://github.com/RooCodeInc/Roo-Code/pull/10282)).
 
 <img src="/img/v3.37/v3.37-2.png" alt="GLM-4.7 benchmark performance" width="600" />
 
 ## MiniMax M2.1 improvements
 
-MiniMax M2.1 is now available directly through the MiniMax provider in Roo Code, as well as via the Roo Code Cloud provider (and other provider routes that surface MiniMax). It’s a strong pick for agentic coding workflows, with better tool use, instruction following, and long-horizon planning for multi-step tasks—and it’s fast ([#10284](https://github.com/RooCodeInc/Roo-Code/pull/10284)).
+MiniMax M2.1 is now available directly through the MiniMax provider in Zoo Code, as well as via the Zoo Code Cloud provider (and other provider routes that surface MiniMax). It’s a strong pick for agentic coding workflows, with better tool use, instruction following, and long-horizon planning for multi-step tasks—and it’s fast ([#10284](https://github.com/RooCodeInc/Roo-Code/pull/10284)).
 
 <img src="/img/v3.37/v3.37-1.png" alt="MiniMax M2.1 Benchmark Performance" width="600" />
 
 ## Experimental custom tools
 
-You can now define and use **custom tools** so Roo can call your project- or team-specific actions like built-in tools. This makes it easier to standardize workflows across a team by shipping tool schemas alongside your project, instead of repeatedly re-prompting the same steps ([#10083](https://github.com/RooCodeInc/Roo-Code/pull/10083)).
+You can now define and use **custom tools** so Zoo can call your project- or team-specific actions like built-in tools. This makes it easier to standardize workflows across a team by shipping tool schemas alongside your project, instead of repeatedly re-prompting the same steps ([#10083](https://github.com/RooCodeInc/Roo-Code/pull/10083)).
 
 ## Bug Fixes
 
-* Fixes an issue where Roo could appear stuck after a tool call with some OpenAI-compatible providers when streaming ended at the tool-calls boundary (thanks torxeon!) ([#10280](https://github.com/RooCodeInc/Roo-Code/pull/10280))
-* Fixes an issue where Roo could appear stuck after a tool call with some OpenAI-compatible providers by ensuring final tool-call completion events are emitted ([#10293](https://github.com/RooCodeInc/Roo-Code/pull/10293))
+* Fixes an issue where Zoo could appear stuck after a tool call with some OpenAI-compatible providers when streaming ended at the tool-calls boundary (thanks torxeon!) ([#10280](https://github.com/RooCodeInc/Roo-Code/pull/10280))
+* Fixes an issue where Zoo could appear stuck after a tool call with some OpenAI-compatible providers by ensuring final tool-call completion events are emitted ([#10293](https://github.com/RooCodeInc/Roo-Code/pull/10293))
 * Fixes an issue where MCP tools could break under strict schema mode when optional parameters were treated as required ([#10220](https://github.com/RooCodeInc/Roo-Code/pull/10220))
 * Fixes an issue where the built-in `read_file` tool could fail on some models due to invalid schema normalization for optional array parameters ([#10276](https://github.com/RooCodeInc/Roo-Code/pull/10276))
 * Fixes an issue where `search_replace` / `search_and_replace` could miss matches on CRLF files, improving cross-platform search-and-replace reliability ([#10288](https://github.com/RooCodeInc/Roo-Code/pull/10288))
@@ -50,12 +50,12 @@ You can now define and use **custom tools** so Roo can call your project- or tea
 ## Misc Improvements
 
 * **Cleaner eval logs**: Deduplicates repetitive message log entries so eval traces are easier to read ([#10286](https://github.com/RooCodeInc/Roo-Code/pull/10286))
-* **Provider-centric signup**: Makes Roo easier to get started with by defaulting the welcome/sign-up flow to the Roo provider (while keeping other providers available), so you can reach a working setup faster with fewer choices up front ([#10306](https://github.com/RooCodeInc/Roo-Code/pull/10306))
+* **Provider-centric signup**: Makes Zoo easier to get started with by defaulting the welcome/sign-up flow to the Zoo provider (while keeping other providers available), so you can reach a working setup faster with fewer choices up front ([#10306](https://github.com/RooCodeInc/Roo-Code/pull/10306))
 
 ## QOL Improvements
 
 * New tasks now default to native tool calling on models that support it, reducing the need for manual tool protocol selection ([#10281](https://github.com/RooCodeInc/Roo-Code/pull/10281))
-* Improves tool-calling reliability for Roo Code Cloud by preventing tool-result metadata (like `environment_details`) from interrupting tool call sequences ([#10301](https://github.com/RooCodeInc/Roo-Code/pull/10301))
+* Improves tool-calling reliability for Zoo Code Cloud by preventing tool-result metadata (like `environment_details`) from interrupting tool call sequences ([#10301](https://github.com/RooCodeInc/Roo-Code/pull/10301))
 * Improves tool-calling reliability across OpenAI-compatible providers by merging trailing tool-result text into the last tool message, reducing cases where tool call sequences get interrupted ([#10299](https://github.com/RooCodeInc/Roo-Code/pull/10299))
 
 ## Provider Updates

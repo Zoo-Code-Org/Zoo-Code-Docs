@@ -1,21 +1,21 @@
 ---
 description: This release improves Intelligent Context Condensation, updates providers, and fixes export and settings issues.
 keywords:
-  - roo code 3.43.0
+  - zoo code 3.43.0
   - new features
   - bug fixes
 image: /img/v3.43.0/v3.43.0.png
 ---
 
-# Roo Code 3.43.0 Release Notes (2026-01-23)
+# Zoo Code 3.43.0 Release Notes (2026-01-23)
 
 This release updates Intelligent Context Condensation, removes deprecated settings, and fixes export and settings issues.
 
-<img src="/img/v3.43.0/v3.43.0.png" alt="Roo Code v3.43.0 Release" width="600" />
+<img src="/img/v3.43.0/v3.43.0.png" alt="Zoo Code v3.43.0 Release" width="600" />
 
 ## Intelligent Context Condensation v2
 
-Intelligent Context Condensation runs when the conversation is near the model’s context limit. It summarizes earlier messages instead of dropping them. After a condense, Roo continues from a single summary, not a mix of summary plus a long tail of older messages. If your task starts with a slash command, Roo preserves those slash-command-driven directives across condenses. Roo is less likely to break tool-heavy chats during a condense, which reduces failed requests and missing tool results.
+Intelligent Context Condensation runs when the conversation is near the model’s context limit. It summarizes earlier messages instead of dropping them. After a condense, Zoo continues from a single summary, not a mix of summary plus a long tail of older messages. If your task starts with a slash command, Zoo preserves those slash-command-driven directives across condenses. Zoo is less likely to break tool-heavy chats during a condense, which reduces failed requests and missing tool results.
 
 Settings changes: the Condense prompt editor is now under **Context Management** and Reset clears your override. Condensing uses the active conversation model/provider. There is no separate model/provider selector for condensing.
 

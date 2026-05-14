@@ -1,4 +1,7 @@
 .footerLogoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   opacity: 0.5;
   transition: opacity var(--ifm-transition-fast)
     var(--ifm-transition-timing-default);
@@ -6,4 +9,24 @@
 
 .footerLogoLink:hover {
   opacity: 1;
+}
+
+.footerLogoWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.footerLogoImage {
+  display: block;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.footerLogoText {
+  color: hsl(var(--foreground));
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
 }

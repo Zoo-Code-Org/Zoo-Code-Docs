@@ -5,18 +5,13 @@ import {
   DISCORD_URL,
   REDDIT_URL,
   TWITTER_URL,
-  BLUESKY_URL,
   LINKEDIN_URL,
-  TIKTOK_URL,
   GITHUB_MAIN_REPO_URL,
   GITHUB_ISSUES_MAIN_URL,
   GITHUB_FEATURES_URL,
   VSCODE_MARKETPLACE_URL,
   OPEN_VSX_URL,
   CONTACT_EMAIL,
-  CAREERS_URL,
-  WEBSITE_PRIVACY_URL,
-  EXTENSION_PRIVACY_URL,
   GITHUB_REPO_URL,
   SIGN_IN_URL,
   SIGN_UP_URL
@@ -25,19 +20,20 @@ import {
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Roo Code Documentation',
+  title: 'Zoo Code Documentation',
   tagline: 'AI-powered autonomous coding agent for VS Code - Complete documentation, guides, and tutorials',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.roocode.com',
+  url: 'https://docs.zoocode.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config (if needed)
-  organizationName: 'RooCodeInc',
-  projectName: 'Roo-Code-Docs',
+  organizationName: 'Zoo-Code-Org',
+  projectName: 'Zoo-Code-Docs',
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
   markdown: {
@@ -98,7 +94,6 @@ const config: Config = {
           { label: "Features", path: "features" },
           { label: "Advanced Usage", path: "advanced-usage" },
           { label: "Providers", path: "providers" },
-          { label: "Roo Code Cloud", path: "roo-code-cloud" },
           { label: "Release Notes", path: "update-notes" }
         ],
         useAllContextsWithNoSearchContext: true,
@@ -284,25 +279,6 @@ const config: Config = {
             to: '/advanced-usage/roo-code-nightly',
             from: ['/advanced-usage/prerelease-build'],
           },
-          // Redirect /roo to Roo Code Cloud documentation
-          {
-            to: '/providers/roo-code-router',
-            from: ['/providers/roo'],
-          },
-          // Roo Code Router rename redirects
-          {
-            to: '/providers/roo-code-router',
-            from: ['/providers/roo-code-cloud'],
-          },
-          {
-            to: '/roo-code-router/overview',
-            from: ['/roo-code-provider', '/roo-code-provider/overview'],
-          },
-          // Redirect deleted billing-subscriptions page
-          {
-            to: '/credits/overview',
-            from: ['/roo-code-cloud/billing-subscriptions'],
-          },
           // Redirect removed Human Relay provider page
           {
             to: '/',
@@ -319,12 +295,6 @@ const config: Config = {
             to: '/',
             from: ['/features/fast-edits'],
           },
-          // Redirect removed Roomote Control page
-          {
-            to: '/roo-code-cloud/overview',
-            from: ['/roo-code-cloud/roomote-control'],
-          },
-
           // Redirect retired provider pages
           {
             to: '/providers',
@@ -355,7 +325,7 @@ const config: Config = {
   themeConfig: {
     // SEO metadata
     metadata: [
-      {name: 'keywords', content: 'Roo Code, AI coding assistant, VS Code extension, autonomous coding agent, AI pair programmer, code generation, documentation'},
+      {name: 'keywords', content: 'Zoo Code, AI coding assistant, VS Code extension, autonomous coding agent, AI pair programmer, code generation, documentation'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:site', content: '@roocode'},
       {name: 'twitter:creator', content: '@roocode'},
@@ -369,10 +339,11 @@ const config: Config = {
     },
     image: '/img/social-share.png', // Default Open Graph image
     navbar: {
+      title: 'Zoo Code',
       logo: {
-        alt: 'Roo Code Logo',
-        src: 'img/roo-code-logo-dark.svg',
-        srcDark: 'img/roo-code-logo-white.svg',
+        alt: 'Zoo Code Logo',
+        src: 'img/zoo-code-logo-dark.png',
+        srcDark: 'img/zoo-code-logo-white.png',
       },
       items: [
         {
@@ -384,9 +355,9 @@ const config: Config = {
     footer: {
       style: 'dark',
       logo: {
-        alt: 'Roo Code Logo',
-        src: 'img/roo-code-logo-dark.svg',
-        srcDark: 'img/roo-code-logo-white.svg',
+        alt: 'Zoo Code Logo',
+        src: 'img/zoo-code-logo-dark.png',
+        srcDark: 'img/zoo-code-logo-white.png',
         width: 120,
         height: 24,
       },
@@ -407,20 +378,12 @@ const config: Config = {
               href: TWITTER_URL,
             },
             {
-              label: 'Bluesky',
-              href: BLUESKY_URL,
-            },
-            {
               label: 'GitHub',
               href: GITHUB_MAIN_REPO_URL,
             },
             {
               label: 'LinkedIn',
               href: LINKEDIN_URL,
-            },
-            {
-              label: 'TikTok',
-              href: TIKTOK_URL,
             },
           ],
         },
@@ -457,18 +420,6 @@ const config: Config = {
               label: 'Contact',
               href: CONTACT_EMAIL,
               target: '_self',
-            },
-            {
-              label: 'Careers',
-              href: CAREERS_URL,
-            },
-            {
-              label: 'Website Privacy Policy',
-              href: WEBSITE_PRIVACY_URL,
-            },
-            {
-              label: 'Extension Privacy Policy',
-              href: EXTENSION_PRIVACY_URL,
             },
           ],
         },

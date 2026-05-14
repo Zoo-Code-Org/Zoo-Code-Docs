@@ -1,10 +1,10 @@
 ---
 sidebar_label: Ollama
-description: Set up Ollama with Roo Code to run open source language models locally for privacy, offline access, and cost-effective AI coding.
+description: Set up Ollama with Zoo Code to run open source language models locally for privacy, offline access, and cost-effective AI coding.
 keywords:
   - Ollama
   - local models
-  - Roo Code
+  - Zoo Code
   - open source AI
   - CodeLlama
   - Qwen
@@ -14,9 +14,9 @@ keywords:
 ---
 import KangarooIcon from '@site/src/components/KangarooIcon';
 
-# Using Ollama With Roo Code
+# Using Ollama With Zoo Code
 
-Roo Code supports running models locally using Ollama. This provides privacy, offline access, and potentially lower costs, but requires more setup and a powerful computer.
+Zoo Code supports running models locally using Ollama. This provides privacy, offline access, and potentially lower costs, but requires more setup and a powerful computer.
 
 **Website:** [https://ollama.com/](https://ollama.com/)
 
@@ -45,7 +45,7 @@ Roo Code supports running models locally using Ollama. This provides privacy, of
 3. **Configure the Model:** Configure your model's context window in Ollama and save a copy.
 
    :::info Default Context Behavior
-   **Roo Code automatically defers to the Modelfile's `num_ctx` setting by default.** When you use a model with Ollama, Roo Code reads the model's configured context window and uses it automatically. You don't need to configure context size in Roo Code settings - it respects what's defined in your Ollama model.
+   **Zoo Code automatically defers to the Modelfile's `num_ctx` setting by default.** When you use a model with Ollama, Zoo Code reads the model's configured context window and uses it automatically. You don't need to configure context size in Zoo Code settings - it respects what's defined in your Ollama model.
    :::
 
    **Option A: Interactive Configuration**
@@ -95,18 +95,18 @@ Roo Code supports running models locally using Ollama. This provides privacy, of
    :::tip Override Context Window
    If you need to override the model's default context window:
    - **Permanently:** Save a new model version with your desired `num_ctx` using either method above
-   - **Roo Code behavior:** Roo automatically uses whatever `num_ctx` is configured in your Ollama model
+   - **Zoo Code behavior:** Zoo automatically uses whatever `num_ctx` is configured in your Ollama model
    - **Memory considerations:** Reducing `num_ctx` helps prevent out-of-memory errors on limited hardware
    :::
 
-4.  **Configure Roo Code:**
-    *   Open the Roo Code sidebar (<KangarooIcon /> icon).
+4.  **Configure Zoo Code:**
+    *   Open the Zoo Code sidebar (<KangarooIcon /> icon).
     *   Click the settings gear icon (<Codicon name="gear" />).
     *   Select "ollama" as the API Provider.
     *   Enter the model tag or saved name from the previous step (e.g., `your_model_name`).
     *   (Optional) Configure the base URL if you're running Ollama on a different machine. The default is `http://localhost:11434`.
     *   (Optional) Enter an API Key if your Ollama server requires authentication.
-    *   (Advanced) Roo uses Ollama's native API by default for the "ollama" provider. An OpenAI-compatible `/v1` handler also exists but isn't required for typical setups.
+    *   (Advanced) Zoo uses Ollama's native API by default for the "ollama" provider. An OpenAI-compatible `/v1` handler also exists but isn't required for typical setups.
 
 ---
 
@@ -114,8 +114,8 @@ Roo Code supports running models locally using Ollama. This provides privacy, of
 
 *   **Resource Requirements:** Running large language models locally can be resource-intensive.  Make sure your computer meets the minimum requirements for the model you choose.
 *   **Model Selection:** Experiment with different models to find the one that best suits your needs.
-*   **Offline Use:** Once you've downloaded a model, you can use Roo Code offline with that model.
-*   **Token Tracking:** Roo Code tracks token usage for models run via Ollama, helping you monitor consumption.
+*   **Offline Use:** Once you've downloaded a model, you can use Zoo Code offline with that model.
+*   **Token Tracking:** Zoo Code tracks token usage for models run via Ollama, helping you monitor consumption.
 *   **Ollama Documentation:** Refer to the [Ollama documentation](https://ollama.com/docs) for more information on installing, configuring, and using Ollama.
 
 ---
@@ -125,19 +125,19 @@ Roo Code supports running models locally using Ollama. This provides privacy, of
 ### Out of Memory (OOM) on First Request
 
 **Symptoms**
-- First request from Roo fails with an out-of-memory error
+- First request from Zoo fails with an out-of-memory error
 - GPU/CPU memory usage spikes when the model first loads
 - Works after you manually start the model in Ollama
 
 **Cause**
-If no model instance is running, Ollama spins one up on demand. During that cold start it may allocate a larger context window than expected. The larger context window increases memory usage and can exceed available VRAM or RAM. This is an Ollama startup behavior, not a Roo Code bug.
+If no model instance is running, Ollama spins one up on demand. During that cold start it may allocate a larger context window than expected. The larger context window increases memory usage and can exceed available VRAM or RAM. This is an Ollama startup behavior, not a Zoo Code bug.
 
 **Fixes**
 1. **Preload the model**
    ```bash
    ollama run &lt;model-name&gt;
    ```
-   Keep it running, then issue the request from Roo.
+   Keep it running, then issue the request from Zoo.
 
 2. **Pin the context window (`num_ctx`)**
    - Option A — interactive session, then save:
@@ -161,7 +161,7 @@ If no model instance is running, Ollama spins one up on demand. During that cold
      ```
 
 3. **Ensure the model's context window is pinned**
-   Save your Ollama model with an appropriate `num_ctx` (via `/set` + `/save`, or preferably a Modelfile). **Roo Code automatically detects and uses the model's configured `num_ctx`** - there is no manual context size setting in Roo Code for the Ollama provider.
+   Save your Ollama model with an appropriate `num_ctx` (via `/set` + `/save`, or preferably a Modelfile). **Zoo Code automatically detects and uses the model's configured `num_ctx`** - there is no manual context size setting in Zoo Code for the Ollama provider.
 
 4. **Use smaller variants**
    If GPU memory is limited, use a smaller quant (e.g., q4 instead of q5) or a smaller parameter size (e.g., 7B/13B instead of 32B).
@@ -173,8 +173,8 @@ If no model instance is running, Ollama spins one up on demand. During that cold
    ```
 
 **Quick checklist**
-- Model is running before Roo request
+- Model is running before Zoo request
 - `num_ctx` pinned (Modelfile or `/set` + `/save`)
-- Model saved with appropriate `num_ctx` (Roo uses this automatically)
+- Model saved with appropriate `num_ctx` (Zoo uses this automatically)
 - Model fits available VRAM/RAM
 - No leftover Ollama processes

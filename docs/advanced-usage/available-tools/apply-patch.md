@@ -1,12 +1,12 @@
 ---
-description: Apply unified diff patches to multiple files in a single operation using the apply_patch tool in Roo Code.
+description: Apply unified diff patches to multiple files in a single operation using the apply_patch tool in Zoo Code.
 keywords:
   - apply_patch
   - patch
   - unified diff
   - multi-file edits
   - file operations
-  - Roo Code tools
+  - Zoo Code tools
   - diff patches
 ---
 

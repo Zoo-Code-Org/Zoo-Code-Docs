@@ -1,16 +1,16 @@
 ---
 description: This release introduces custom slash commands, Gemini web tools, image support for read_file, message queueing, and many quality-of-life improvements.
 keywords:
-  - roo code 3.25.0
+  - zoo code 3.25.0
   - custom slash commands
   - gemini tools
   - image support
   - message queueing
 ---
 
-# Roo Code 3.25.0 Release Notes (2025-07-29)
+# Zoo Code 3.25.0 Release Notes (2025-07-29)
 
-This release brings powerful new capabilities to Roo Code, including custom slash commands for workflow automation, enhanced Gemini models with web access, comprehensive image support, and seamless message queueing for uninterrupted conversations.
+This release brings powerful new capabilities to Zoo Code, including custom slash commands for workflow automation, enhanced Gemini models with web access, comprehensive image support, and seamless message queueing for uninterrupted conversations.
 
 ## Custom Slash Commands
 
@@ -29,9 +29,9 @@ Turn complex workflows into simple commands like `/deploy` or `/review` for fast
 
 ## Message Queueing
 
-Continue typing while Roo processes your requests with the new message queueing system ([#6167](https://github.com/RooCodeInc/Roo-Code/pull/6167)):
+Continue typing while Zoo processes your requests with the new message queueing system ([#6167](https://github.com/RooCodeInc/Roo-Code/pull/6167)):
 
-- **Non-Blocking Input**: Type and send messages even while Roo is processing previous requests
+- **Non-Blocking Input**: Type and send messages even while Zoo is processing previous requests
 - **Sequential Processing**: Messages are queued and processed in the order they were sent
 - **Visual Feedback**: See queued messages clearly displayed in the interface
 - **Maintained Context**: Each message maintains proper context from the conversation
@@ -69,7 +69,7 @@ Perfect for researching new libraries, verifying solutions, or getting current A
 Small changes that make a big difference in your daily workflow:
 
 * **Markdown Table Rendering**: Tables now display with proper formatting instead of raw markdown for better readability ([#6252](https://github.com/RooCodeInc/Roo-Code/pull/6252))
-  <img src="/img/v3.25.0/v3.25.0-2.png" alt="Markdown table rendering in Roo Code" width="600" />
+  <img src="/img/v3.25.0/v3.25.0-2.png" alt="Markdown table rendering in Zoo Code" width="600" />
 * **Mode Selector Popover Redesign**: Improved layout with search functionality when you have many modes installed ([#6140](https://github.com/RooCodeInc/Roo-Code/pull/6140))
   <img src="/img/v3.25.0/v3.25.0.png" alt="Mode Selector Popover with Search" width="600" />
 * **API Selector Popover Redesign**: Updated to match the new mode selector design with improved layout ([#6148](https://github.com/RooCodeInc/Roo-Code/pull/6148))
@@ -100,7 +100,7 @@ Critical fixes that improve stability and compatibility:
 
 ## Misc. Improvements
 
-* **Background Editing (Experimental)**: Work uninterrupted while Roo edits files in the background—no more losing focus from automatic diff views ([#6214](https://github.com/RooCodeInc/Roo-Code/pull/6214)). Files change silently while you keep coding, with diagnostics and error checking still active. See [Background Editing](/features/experimental/background-editing) for details.
+* **Background Editing (Experimental)**: Work uninterrupted while Zoo edits files in the background—no more losing focus from automatic diff views ([#6214](https://github.com/RooCodeInc/Roo-Code/pull/6214)). Files change silently while you keep coding, with diagnostics and error checking still active. See [Background Editing](/features/experimental/background-editing) for details.
 * **Security Update**: Updated form-data dependency to address security vulnerability ([#6332](https://github.com/RooCodeInc/Roo-Code/pull/6332))
 * **Contributor Updates**: Refreshed contributor acknowledgments across all localizations ([#6302](https://github.com/RooCodeInc/Roo-Code/pull/6302))
 * **Release Engineering**: Converted release engineer role to slash command for easier releases ([#6333](https://github.com/RooCodeInc/Roo-Code/pull/6333))

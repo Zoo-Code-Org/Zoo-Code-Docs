@@ -1,5 +1,5 @@
 ---
-description: Learn how to adjust model temperature in Roo Code to optimize AI responses for different tasks, from precise code generation to creative brainstorming.
+description: Learn how to adjust model temperature in Zoo Code to optimize AI responses for different tasks, from precise code generation to creative brainstorming.
 keywords:
   - model temperature
   - AI settings
@@ -34,15 +34,15 @@ Temperature controls output randomness, not code quality or accuracy directly. K
 
 ---
 
-## Default Values in Roo Code
+## Default Values in Zoo Code
 
-Roo Code uses a default temperature of 0.0 for most models, optimizing for maximum determinism and precision in code generation. This applies to OpenAI models, Anthropic models (non-thinking variants), LM Studio models, and most other providers.
+Zoo Code uses a default temperature of 0.0 for most models, optimizing for maximum determinism and precision in code generation. This applies to OpenAI models, Anthropic models (non-thinking variants), LM Studio models, and most other providers.
 
 Some models use higher default temperatures - DeepSeek R1 models and certain reasoning-focused models default to 0.3, providing a balance between determinism and creative exploration.
 
 Models with thinking capabilities (where the AI shows its reasoning process) require a fixed temperature of 1.0 which cannot be changed, as this setting ensures optimal performance of the thinking mechanism. This applies to any model with the ":thinking" flag enabled.
 
-Some specialized models don't support temperature adjustments at all, in which case Roo Code respects these limitations automatically.
+Some specialized models don't support temperature adjustments at all, in which case Zoo Code respects these limitations automatically.
 
 ---
 
@@ -61,14 +61,14 @@ These are starting points – it's important to [experiment with different setti
 
 ## How to Adjust Temperature
 
-1.  **Open the Roo Code Panel:** Click the Roo Code icon (<KangarooIcon />) in the VS Code Activity Bar
+1.  **Open the Zoo Code Panel:** Click the Zoo Code icon (<KangarooIcon />) in the VS Code Activity Bar
 2.  **Open Settings:** Click the <Codicon name="gear" /> icon in the top right corner
 3.  **Find Temperature Control:** Navigate to the Providers section
 4.  **Enable Custom Temperature:** Check the "Use custom temperature" box
 5.  **Set Your Value:** Adjust the slider to your preferred value
 
-    <img src="/img/model-temperature/model-temperature.png" alt="Temperature setting in Roo Code settings panel" width="550" />
-    *Temperature slider in Roo Code settings panel*
+    <img src="/img/model-temperature/model-temperature.png" alt="Temperature setting in Zoo Code settings panel" width="550" />
+    *Temperature slider in Zoo Code settings panel*
 
 ---
 
@@ -89,7 +89,7 @@ This approach optimizes model behavior for specific tasks without manual adjustm
 
 ## Technical Implementation
 
-Roo Code implements temperature handling with these considerations:
+Zoo Code implements temperature handling with these considerations:
 
 *   User-defined settings take priority over defaults
 *   Provider-specific behaviors are respected
@@ -105,7 +105,7 @@ Experimenting with different temperature settings is the most effective way to d
 
 ### Effective Temperature Testing
 
-1. **Start with defaults** - Begin with Roo Code's preset values (0.0 for most tasks) as your baseline
+1. **Start with defaults** - Begin with Zoo Code's preset values (0.0 for most tasks) as your baseline
 2. **Make incremental adjustments** - Change values in small steps (±0.1) to observe subtle differences
 3. **Test consistently** - Use the same prompt across different temperature settings for valid comparisons
 4. **Document results** - Note which values produce the best outcomes for specific types of tasks
@@ -117,6 +117,6 @@ Remember that different models may respond differently to the same temperature v
 
 ## Related Features
 
-- Works with all [API providers](/providers/openai) supported by Roo Code
+- Works with all [API providers](/providers/openai) supported by Zoo Code
 - Complements [custom instructions](/features/custom-instructions) for fine-tuning responses
 - Works alongside [custom modes](/features/custom-modes) you create

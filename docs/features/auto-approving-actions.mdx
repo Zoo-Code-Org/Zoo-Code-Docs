@@ -1,8 +1,8 @@
 ---
-description: Learn how to configure auto-approval settings in Roo Code to speed up repetitive tasks while maintaining control over sensitive operations.
+description: Learn how to configure auto-approval settings in Zoo Code to speed up repetitive tasks while maintaining control over sensitive operations.
 keywords:
   - auto-approval
-  - Roo Code automation
+  - Zoo Code automation
   - workflow optimization
   - auto-approve settings
   - safe operations
@@ -10,7 +10,7 @@ keywords:
 
 # Auto-Approving Actions
 
-> ⚠️ **SECURITY WARNING:** Auto-approve settings bypass confirmation prompts, giving Roo direct access to your system. This can result in **data loss, file corruption, or worse**. Command line access is particularly dangerous, as it can potentially execute harmful operations that could damage your system or compromise security. Only enable auto-approval for actions you fully trust.
+> ⚠️ **SECURITY WARNING:** Auto-approve settings bypass confirmation prompts, giving Zoo direct access to your system. This can result in **data loss, file corruption, or worse**. Command line access is particularly dangerous, as it can potentially execute harmful operations that could damage your system or compromise security. Only enable auto-approval for actions you fully trust.
 
 Auto-approve settings speed up your workflow by eliminating repetitive confirmation prompts, but they significantly increase security risks.
 
@@ -81,12 +81,12 @@ The dropdown shows a grid of permission tiles. Controls:
 
 | Permission | What it does | Risk level |
 |------------|--------------|------------|
-| **Read files and directories** | Lets Roo access files without asking | Medium |
-| **Edit files** | Lets Roo modify files without asking | **High** |
+| **Read files and directories** | Lets Zoo access files without asking | Medium |
+| **Edit files** | Lets Zoo modify files without asking | **High** |
 | **Execute approved commands** | Runs whitelisted terminal commands automatically | **High** |
 | **Use the browser** | Allows headless browser interaction | Medium |
-| **Use MCP servers** | Lets Roo use configured MCP services | Medium-High |
-| **Switch modes** | Changes between Roo modes automatically | Low |
+| **Use MCP servers** | Lets Zoo use configured MCP services | Medium-High |
+| **Switch modes** | Changes between Zoo modes automatically | Low |
 | **Create & complete subtasks** | Manages subtasks without confirmation | Low |
 | **Answer follow-up questions** | Selects default answer for follow-up questions| Low |
 
@@ -113,7 +113,7 @@ When to toggle:
 
 The settings panel provides detailed control with important security context:
 
-> **Allow Roo to automatically perform operations without requiring approval. Enable these settings only if you fully trust the AI and understand the associated security risks.**
+> **Allow Zoo to automatically perform operations without requiring approval. Enable these settings only if you fully trust the AI and understand the associated security risks.**
 
 To access these settings:
 
@@ -127,7 +127,7 @@ The settings panel mirrors the same permissions with additional context and safe
 - Outside‑workspace reads/writes require the corresponding outside‑workspace flags in addition to the base permission.
 - Auto‑approve for MCP tools requires both the global "Always approve MCP tools" and each tool's "Always allow". Resource access honors only the global setting.
 - Mode switching is only auto‑approved when the mode-switch permission is enabled (covers switching to another mode and creating new modes).
-- After auto‑writes, Roo waits using the global write‑delay control under Settings → Context Management → Diagnostics.
+- After auto‑writes, Zoo waits using the global write‑delay control under Settings → Context Management → Diagnostics.
 
 ### Read Operations
 
@@ -137,22 +137,22 @@ The settings panel mirrors the same permissions with additional context and safe
 
 **Setting:** "Always approve read-only operations"
 
-**Description:** "When enabled, Roo will automatically view directory contents and read files without requiring you to click the Approve button."
+**Description:** "When enabled, Zoo will automatically view directory contents and read files without requiring you to click the Approve button."
 
 **Additional option:**
-- **Include files outside workspace:** Allow Roo to read files outside the current workspace directory
+- **Include files outside workspace:** Allow Zoo to read files outside the current workspace directory
 
 **Risk level:** Medium
 
-While this setting only allows reading files (not modifying them), it could potentially expose sensitive data. Still recommended as a starting point for most users, but be mindful of what files Roo can access.
+While this setting only allows reading files (not modifying them), it could potentially expose sensitive data. Still recommended as a starting point for most users, but be mindful of what files Zoo can access.
 
 #### Workspace Boundary Protection
 
-By default, Roo can only read files within your current workspace directory. The "Include files outside workspace" option extends read access beyond the workspace boundary. Consider the security implications:
+By default, Zoo can only read files within your current workspace directory. The "Include files outside workspace" option extends read access beyond the workspace boundary. Consider the security implications:
 
-- **Default (unchecked)**: Roo can only read files in your project directory
-- **Enabled**: Roo can read any file on your system that you have access to
-- **Recommendation**: Keep disabled unless you specifically need Roo to access external files
+- **Default (unchecked)**: Zoo can only read files in your project directory
+- **Enabled**: Zoo can read any file on your system that you have access to
+- **Recommendation**: Keep disabled unless you specifically need Zoo to access external files
 :::
 
 ### Write Operations
@@ -167,12 +167,12 @@ By default, Roo can only read files within your current workspace directory. The
 **Write delay control:** Configured under Settings → Context Management → Diagnostics. See [Diagnostics Integration](/features/diagnostics-integration).
 
 **Additional options:**
-- **Include files outside workspace:** Allow Roo to modify files outside the current workspace directory
-- **Include protected files:** Allow Roo to modify files protected by `.roo/` and `.rooignore` directory
+- **Include files outside workspace:** Allow Zoo to modify files outside the current workspace directory
+- **Include protected files:** Allow Zoo to modify files protected by `.roo/` and `.rooignore` directory
 
 **Risk level:** High
 
-This setting allows Roo to modify your files without confirmation. The delay timer is crucial:
+This setting allows Zoo to modify your files without confirmation. The delay timer is crucial:
 - Higher values (2000ms+): Recommended for complex projects where diagnostics take longer
 - Default (1000ms): Suitable for most projects with active diagnostics
 - 0ms: No delay - use when speed is critical
@@ -182,9 +182,9 @@ This setting allows Roo to modify your files without confirmation. The delay tim
 
 The write operations setting includes two important security controls:
 
-1. **Workspace Boundary Protection**: By default, Roo can only modify files within your current workspace. Enable "Include files outside workspace" with extreme caution.
+1. **Workspace Boundary Protection**: By default, Zoo can only modify files within your current workspace. Enable "Include files outside workspace" with extreme caution.
 
-2. **Protected Files**: Roo blocks modification of:
+2. **Protected Files**: Zoo blocks modification of:
    - Files in the `.roo/` directory
    - The `.rooignore` file
    
@@ -193,14 +193,14 @@ The write operations setting includes two important security controls:
 
 <img src="/img/auto-approving-actions/auto-approving-actions-5.png" alt="VSCode Problems pane showing diagnostic information" width="600" />
 
-*VSCode Problems pane that Roo checks during the write delay*
+*VSCode Problems pane that Zoo checks during the write delay*
 
-When you enable auto-approval for writing files, Roo uses the global write-delay configured under Settings → Context Management → Diagnostics. The delay timer works with VSCode's Problems pane:
+When you enable auto-approval for writing files, Zoo uses the global write-delay configured under Settings → Context Management → Diagnostics. The delay timer works with VSCode's Problems pane:
 
-1. Roo makes a change to your file
+1. Zoo makes a change to your file
 2. VSCode's diagnostic tools analyze the change
 3. The Problems pane updates with any errors or warnings
-4. Roo notices these issues before continuing
+4. Zoo notices these issues before continuing
 
 This works like a human developer pausing to check for errors after changing code. You can adjust the delay time based on:
 
@@ -226,7 +226,7 @@ This setting requires a two-step permission process for security:
 
 **Important:** Both permissions must be active for a tool to auto-approve. This dual-permission system ensures you maintain granular control over which MCP tools can execute without confirmation. Resource retrieval (`access_mcp_resource`) honors only the global setting.
 
-**Permission Storage:** Your MCP tool permissions are saved and will be remembered next time you use Roo Code.
+**Permission Storage:** Your MCP tool permissions are saved and will be remembered next time you use Zoo Code.
 
 Example workflow:
 - Enable "Always approve MCP tools" in settings
@@ -246,7 +246,7 @@ Example workflow:
 
 **Risk level:** Low
 
-Allows Roo to change between different modes (Code, Architect, etc.) without asking for permission. This primarily affects the AI's behavior rather than system access. Auto-approval also covers switching between modes and creating new modes when this permission is enabled.
+Allows Zoo to change between different modes (Code, Architect, etc.) without asking for permission. This primarily affects the AI's behavior rather than system access. Auto-approval also covers switching between modes and creating new modes when this permission is enabled.
 :::
 
 ### Subtasks
@@ -259,7 +259,7 @@ Allows Roo to change between different modes (Code, Architect, etc.) without ask
 
 **Risk level:** Low
 
-Enables Roo to create and complete subtasks automatically. This relates to workflow organization rather than system access.
+Enables Zoo to create and complete subtasks automatically. This relates to workflow organization rather than system access.
 :::
 
 ### Command Execution
@@ -317,7 +317,7 @@ Security tip: Be specific with prefixes. Instead of allowing all `python` comman
 
 **Setting:** `Always default answer for follow-up questions`
 
-**Description:** Automatically selects the first AI-suggested answer for a follow-up question after a configurable timeout. This speeds up your workflow by letting Roo proceed without manual intervention.
+**Description:** Automatically selects the first AI-suggested answer for a follow-up question after a configurable timeout. This speeds up your workflow by letting Zoo proceed without manual intervention.
 
 **Timeout slider:** Use the slider to set the wait time from 1 to 300 seconds (Default: 60 seconds)
 
@@ -333,7 +333,7 @@ Security tip: Be specific with prefixes. Instead of allowing all `python` comman
 **Risk level:** Low
 
 **Use cases:**
-- Overnight runs where you want Roo to continue working
+- Overnight runs where you want Zoo to continue working
 - Repetitive tasks where the default suggestions are usually correct
 - Testing workflows where interaction isn't critical
 :::

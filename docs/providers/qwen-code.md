@@ -5,7 +5,7 @@ keywords:
   - qwen code
   - qwen cli
   - qwen3 coder
-  - roo code
+  - zoo code
   - api provider
   - oauth
   - alibaba
@@ -19,7 +19,7 @@ Access Alibaba's Qwen3 Coder models through OAuth authentication with automatic 
 :::info Setup Required
 1. **Install Qwen Client**: Download from the official website
 2. **Authenticate**: Run the client and sign in to create OAuth credentials
-3. **Configure in Roo Code**: Select "Qwen Code CLI API" as your provider
+3. **Configure in Zoo Code**: Select "Qwen Code CLI API" as your provider
    - Default path `~/.qwen/oauth_creds.json` works automatically
    - Or specify a custom credentials path if needed
 :::
@@ -32,7 +32,7 @@ Access Alibaba's Qwen3 Coder models through OAuth authentication with automatic 
 
 Qwen3 Coder models feature massive 1M context windows and 65K max output tokens.
 
-For the complete, up-to-date model list, see the Qwen Code provider's model catalog when you configure the provider in Roo Code.
+For the complete, up-to-date model list, see the Qwen Code provider's model catalog when you configure the provider in Zoo Code.
 
 ---
 
