@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { RxGithubLogo } from "react-icons/rx";
 import { VscVscode } from "react-icons/vsc";
-import { GITHUB_MAIN_REPO_URL, SIGN_IN_URL, SIGN_UP_URL, VSCODE_MARKETPLACE_URL } from '@site/src/constants';
+import { GITHUB_MAIN_REPO_SLUG, GITHUB_MAIN_REPO_URL, VSCODE_MARKETPLACE_URL } from '@site/src/constants';
 import styles from './styles.module.css';
 
 // Number formatting function
 function formatNumber(num: number): string {
+  if (num < 1000) {
+    return num.toLocaleString();
+  }
+
   if (num >= 1000000) {
     const truncated = Math.floor((num / 1000000) * 10) / 10;
     return truncated.toFixed(1) + "M";
   }
+
   const truncated = Math.floor((num / 1000) * 10) / 10;
   return truncated.toFixed(1) + "k";
 }
@@ -17,7 +22,7 @@ function formatNumber(num: number): string {
 // GitHub Stars API
 async function getGitHubStars() {
   try {
-    const res = await fetch("https://api.github.com/repos/RooCodeInc/Roo-Code");
+    const res = await fetch(`https://api.github.com/repos/${GITHUB_MAIN_REPO_SLUG}`);
     const data = await res.json();
     
     if (typeof data.stargazers_count !== "number") {
@@ -78,7 +83,7 @@ async function getVSCodeDownloads() {
 }
 
 export default function GitHubInstallButtons(): React.JSX.Element {
-  const [stars, setStars] = useState<string | null>("15.4k");
+  const [stars, setStars] = useState<string | null>(null);
   const [downloads, setDownloads] = useState<string | null>("574.1k");
 
   useEffect(() => {

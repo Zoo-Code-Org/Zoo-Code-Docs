@@ -3,7 +3,8 @@
  */
 
 // GitHub repository information
-export const GITHUB_REPO_URL = 'https://github.com/Zoo-Code-Org/Zoo-Code-Docs';
+export const GITHUB_REPO_SLUG = 'Zoo-Code-Org/Zoo-Code-Docs';
+export const GITHUB_REPO_URL = `https://github.com/${GITHUB_REPO_SLUG}`;
 export const GITHUB_ISSUES_URL = `${GITHUB_REPO_URL}/issues`;
 export const GITHUB_NEW_ISSUE_URL = `${GITHUB_ISSUES_URL}/new`;
 
@@ -14,7 +15,8 @@ export const TWITTER_URL = 'https://x.com/ZooCodeDev';
 export const LINKEDIN_URL = 'https://www.linkedin.com';
 
 // GitHub links
-export const GITHUB_MAIN_REPO_URL = 'https://github.com/Zoo-Code-Org/Zoo-Code';
+export const GITHUB_MAIN_REPO_SLUG = 'Zoo-Code-Org/Zoo-Code';
+export const GITHUB_MAIN_REPO_URL = `https://github.com/${GITHUB_MAIN_REPO_SLUG}`;
 export const GITHUB_ISSUES_MAIN_URL = `${GITHUB_MAIN_REPO_URL}/issues`;
 export const GITHUB_FEATURES_URL = `${GITHUB_MAIN_REPO_URL}/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop`;
 
