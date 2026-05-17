@@ -5,7 +5,6 @@ import {
   GITHUB_MAIN_REPO_SLUG,
   GITHUB_MAIN_REPO_URL,
   VSCODE_MARKETPLACE_EXTENSION_ID,
-  VSCODE_MARKETPLACE_INSTALLS_FALLBACK,
   VSCODE_MARKETPLACE_URL,
 } from '@site/src/constants';
 import styles from './styles.module.css';
@@ -90,7 +89,7 @@ async function getVSCodeDownloads() {
 
 export default function GitHubInstallButtons(): React.JSX.Element {
   const [stars, setStars] = useState<string | null>(null);
-  const [downloads, setDownloads] = useState<string | null>(formatNumber(VSCODE_MARKETPLACE_INSTALLS_FALLBACK));
+  const [downloads, setDownloads] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch live data
@@ -99,7 +98,7 @@ export default function GitHubInstallButtons(): React.JSX.Element {
     });
     
     getVSCodeDownloads().then(count => {
-      if (count) setDownloads(formatNumber(Math.max(count, VSCODE_MARKETPLACE_INSTALLS_FALLBACK)));
+      if (count) setDownloads(formatNumber(count));
     });
   }, []);
 
