@@ -47,7 +47,7 @@ export default function ProviderTable(): React.JSX.Element {
         <tr>
           <th align="left" style={{ "minWidth": "100%" }}>Provider</th>
           <th align="center" style={{ "minWidth": "14rem", "textAlign": "center" }}>VS Code Extension</th>
-          <th align="center" style={{ "minWidth": "14rem", "textAlign": "center" }}>Zoo Code Cloud</th>
+          <th align="center" style={{ "minWidth": "14rem", "textAlign": "center" }}>Cloud Agents</th>
         </tr>
       </thead>
       <tbody>
