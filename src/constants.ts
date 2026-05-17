@@ -21,6 +21,8 @@ export const GITHUB_ISSUES_MAIN_URL = `${GITHUB_MAIN_REPO_URL}/issues`;
 export const GITHUB_FEATURES_URL = `${GITHUB_MAIN_REPO_URL}/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop`;
 
 // Download links
+export const VSCODE_MARKETPLACE_EXTENSION_ID = 'ZooCodeOrganization.zoo-code';
+export const VSCODE_MARKETPLACE_INSTALLS_FALLBACK = 1814;
 export const VSCODE_MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=ZooCodeOrganization.zoo-code';
 export const OPEN_VSX_URL = 'https://open-vsx.org/extension/ZooCodeOrganization.zoo-code';
 
