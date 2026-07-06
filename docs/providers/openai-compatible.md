@@ -17,7 +17,7 @@ keywords:
 Zoo Code supports a wide range of AI model providers that offer APIs compatible with the OpenAI API standard. This means you can use models from providers *other than* OpenAI, while still using a familiar API interface.  This includes providers like:
 
 *   **Local models** running through tools like Ollama and LM Studio (covered in separate sections).
-*   **Cloud providers** like Perplexity, Together AI, Anyscale, and others.
+*   **Cloud providers** like Perplexity, Together AI, Anyscale, Modelis, and others.
 *   **Any other provider** offering an OpenAI-compatible API endpoint.
 
 This document focuses on setting up providers *other than* the official OpenAI API (which has its own [dedicated configuration page](/providers/openai)).
