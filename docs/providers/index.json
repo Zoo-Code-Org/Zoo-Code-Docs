@@ -43,6 +43,12 @@
       "cloud": false
     },
     {
+      "id": "providers/kenari",
+      "title": "Kenari",
+      "extension": true,
+      "cloud": false
+    },
+    {
       "id": "providers/lmstudio",
       "title": "LM Studio",
       "extension": true,
