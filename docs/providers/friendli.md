@@ -16,7 +16,7 @@ keywords:
 
 # Using Friendli With Zoo Code
 
-Friendli Model APIs provide instant access to a curated set of models, powered by proprietary inference stack named [Friendli Engine](https://friendli.ai/why-friendliai) for high-performance, cost-efficient inference.
+Friendli Model APIs provide instant access to a curated set of models, powered by a proprietary inference stack called [Friendli Engine](https://friendli.ai/why-friendliai) for high-performance, cost-efficient inference.
 
 **Website:** [https://friendli.ai/](https://friendli.ai/)
 
