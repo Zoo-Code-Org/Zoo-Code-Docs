@@ -262,7 +262,6 @@ If you need a specific tool or capability that isn't available through existing 
     *   "Build an MCP server to interact with the GitHub Gist API."
 
 2.  **Zoo's Process (Simplified):** Once you make the request, Zoo will:
-    *   Load the `create-mcp-server` skill with instructions for server creation.
     *   Scaffold a basic server project (usually TypeScript) in the default MCP directory (e.g., `~/Documents/Cline/MCP` on macOS) unless you specify otherwise.
     *   Write the code to implement the requested tool, including handling necessary API calls.
     *   **Handle Secrets:** If the tool requires API keys or other credentials, Zoo will ask you for them using the [`ask_followup_question`](/advanced-usage/available-tools/ask-followup-question) tool to ensure they are configured securely as environment variables for the server.
@@ -327,7 +326,6 @@ When enabled, Zoo Code will automatically approve this specific tool without pro
 Zoo Code does not come with any pre-installed MCP servers. You'll need to find and install them separately.
 
 * **Community Repositories:** Check for community-maintained lists of MCP servers on GitHub
-* **Ask Zoo:** You can ask Zoo Code to help you find or create MCP servers
 * **Build Your Own:** Create custom MCP servers using the SDK to extend Zoo Code with your own tools
 
 For full SDK documentation, visit the [MCP GitHub repository](https://github.com/modelcontextprotocol/).
