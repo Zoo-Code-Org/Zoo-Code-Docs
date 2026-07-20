@@ -31,7 +31,7 @@ Zoo Code supports accessing models through the Moonshot AI API, featuring the Ki
 
 ## Base URL Selection
 
-Moonshot provides two API endpoints depending on your region. Select the appropriate one in the **Moonshot Base URL** dropdown in Zoo Code settings:
+Moonshot provides two API endpoints depending on your region. Select the appropriate one in the **Moonshot Entrypoint** dropdown in Zoo Code settings:
 
 | Endpoint          | Base URL                     | Use Case                |
 | ----------------- | ---------------------------- | ----------------------- |
@@ -48,6 +48,7 @@ Zoo Code supports the following Moonshot models. The model list is fetched dynam
 
 | Model                      | Context | Max Output | Multimodal           | Key Features                                          |
 | -------------------------- | ------- | ---------- | -------------------- | ----------------------------------------------------- |
+| `kimi-k2-0711-preview`     | 128K    | 32K        | Text only            | MoE model, 1T total parameters, prompt caching        |
 | `kimi-k2-0905-preview`     | 256K    | 16K        | Text only            | Default model. Agentic coding, prompt caching         |
 | `kimi-k2-thinking`         | 256K    | 16K        | Text only            | Reasoning model with deep thinking support            |
 | `kimi-k2-turbo-preview`    | 256K    | 32K        | Text only            | High-speed variant (up to 100 tokens/s)               |
@@ -64,7 +65,7 @@ The models available in Zoo Code are fetched live from the Moonshot API:
 2.  Click the **Refresh Models** button to fetch the current model list.
 3.  The model dropdown will populate with all available models from your selected endpoint.
 
-**Note:** An API key is required to fetch the model list. The Refresh Models button will show an error if no key is configured.
+**Note:** An API key is required to fetch the model list. The Refresh Models button is disabled until an API key is entered.
 
 For the complete, up-to-date model list and pricing, see [Moonshot's API documentation](https://platform.moonshot.ai/docs).
 
@@ -74,7 +75,7 @@ For the complete, up-to-date model list and pricing, see [Moonshot's API documen
 
 1.  **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2.  **Select Provider:** Choose "Moonshot" from the "API Provider" dropdown.
-3.  **Select Base URL:** Choose the appropriate endpoint (`api.moonshot.ai` or `api.moonshot.cn`) from the "Moonshot Base URL" dropdown.
+3.  **Select Base URL:** Choose the appropriate endpoint (`api.moonshot.ai` or `api.moonshot.cn`) from the "Moonshot Entrypoint" dropdown.
 4.  **Enter API Key:** Paste your Moonshot API key into the "Moonshot API Key" field.
 5.  **Refresh Models:** Click the **Refresh Models** button to fetch the available models.
 6.  **Select Model:** Choose your desired model from the "Model" dropdown.
