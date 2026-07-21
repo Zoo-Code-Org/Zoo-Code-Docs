@@ -47,4 +47,5 @@ For the complete, up-to-date model list, see [DeepSeek's API documentation](http
 ---
 
 ## Tips and Notes
+*   **Image Input:** `deepseek-v4-pro` and `deepseek-v4-flash` support image (vision) inputs, so you can attach images in chat when using these models. The legacy `deepseek-chat` and `deepseek-reasoner` aliases do not support images.
 *   **Pricing:** Refer to the [DeepSeek Pricing](https://api-docs.deepseek.com/quick_start/pricing/) page for details on model costs.
