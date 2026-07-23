@@ -67,6 +67,12 @@
       "cloud": false
     },
     {
+      "id": "providers/kimi-code",
+      "title": "Kimi Code",
+      "extension": true,
+      "cloud": false
+    },
+    {
       "id": "providers/moonshot",
       "title": "Moonshot",
       "extension": true,
