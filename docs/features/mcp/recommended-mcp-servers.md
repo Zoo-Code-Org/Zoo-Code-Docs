@@ -125,6 +125,5 @@ If you prefer to commit the configuration to your repository, create a file call
 
 * Browse the list of tools shipped with Context7 in the server pane.
 * Configure **Always allow** for the tools you use most to streamline your workflow.
-* Want to expose your own APIs? Check out the [MCP server creation guide](/features/mcp/using-mcp-in-roo#enabling-or-disabling-mcp-server-creation).
 
 Looking for other servers? Watch this page – we'll add more recommendations soon! 
