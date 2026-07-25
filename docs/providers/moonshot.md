@@ -1,6 +1,6 @@
 ---
 sidebar_label: Moonshot
-description: Configure Moonshot AI's language models in Zoo Code. Access Kimi K2 series models through Moonshot's API with dynamic model picker and multi-region support.
+description: Configure Moonshot AI's language models in Zoo Code. Access Kimi K2 and K3 series models through Moonshot's API with dynamic model picker and multi-region support.
 keywords:
   - moonshot
   - moonshot ai
@@ -10,11 +10,12 @@ keywords:
   - kimi-k2.5
   - kimi-k2.6
   - kimi-k2.7-code
+  - kimi-k3
 ---
 
 # Using Moonshot With Zoo Code
 
-Zoo Code supports accessing models through the Moonshot AI API, featuring the Kimi K2 series of language models with dynamic model discovery and multi-region endpoint support.
+Zoo Code supports accessing models through the Moonshot AI API, featuring the Kimi K2 and K3 series of language models with dynamic model discovery and multi-region endpoint support.
 
 **Website:** [https://platform.moonshot.ai/](https://platform.moonshot.ai/) (Global) | [https://platform.moonshot.cn/](https://platform.moonshot.cn/) (China)
 
@@ -56,6 +57,7 @@ Zoo Code supports the following Moonshot models. The model list is fetched dynam
 | `kimi-k2.6`                | 256K    | 16K        | Text + Image + Video | Improved coding, self-correction                      |
 | `kimi-k2.7-code`           | 256K    | 16K        | Text + Image + Video | Best for coding tasks, long-context programming       |
 | `kimi-k2.7-code-highspeed` | 256K    | 16K        | Text + Image + Video | High-speed coding (~180 tokens/s, up to 260 tokens/s) |
+| `kimi-k3`                  | 1M      | 32K        | Text + Image + Video | Always-on reasoning. Native vision. Flagship model.   |
 
 ### Refreshing the Model List
 
