@@ -152,6 +152,14 @@ Use this option only if you are certain you want to remove all Zoo Code data or 
 
 Zoo Code provides several useful commands accessible via the VS Code Command Palette (`Ctrl/Cmd + Shift + P`). These commands offer alternative ways to manage your settings and storage.
 
+### Create a Diagnostics Report
+
+**Command:** `zoo-code.createDiagnosticsReport`
+
+Use this command when troubleshooting a blank or white webview, missing history, or failed task or subtask navigation. It opens a redacted JSON report and copies it to your clipboard. The report includes structural diagnostics about the app and extension versions, theme, task state, and persistence, but excludes conversation content, secrets, identity information, file paths, and raw logs.
+
+Zoo Code never uploads the report. Review it before sharing it with anyone.
+
 ### Set Custom Storage Path
 
 **Command:** `roo-cline.setCustomStoragePath`
