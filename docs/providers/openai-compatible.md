@@ -105,10 +105,37 @@ For a deeper overview of how tools work in Zoo Code in general, see the [Tool Us
 
 ---
 
+## Azure OpenAI
+
+Azure OpenAI uses a deployment-specific URL format. Configure the OpenAI Compatible provider with these values:
+
+| Field | Value |
+| --- | --- |
+| Base URL | `https://<resource>.openai.azure.com/openai` |
+| API Key | Key 1 or Key 2 from Azure AI Studio |
+| Azure deployment name | Your deployment name, such as `my-gpt4o-deployment` |
+| Use Azure | Checked, or automatically detected from an `azure.com` URL |
+| Azure API Version | Leave unchecked to use `2024-08-01-preview`, or enter a specific version |
+
+The resource endpoint shown in Azure AI Studio ends at `.openai.azure.com/`. Zoo Code automatically adds the required `/openai` path when it is missing, so both the resource endpoint and the full Base URL above work.
+
+The deployment name is user-defined and can differ from the underlying model name. For example, if you deploy `gpt-4o` under the name `brotherhood`, enter `brotherhood`, not `gpt-4o`.
+
+The **Use Azure** option selects Azure's deployment-based API format. Zoo Code detects Azure automatically for `azure.com` URLs; enable this option manually when Azure OpenAI is behind a reverse proxy or another hostname.
+
+Requests use this path:
+
+```text
+https://<resource>.openai.azure.com/openai/deployments/<deployment-name>/chat/completions?api-version=<version>
+```
+
+---
+
 ## Troubleshooting
 
 *   **"Invalid API Key":** Double-check that you've entered the API key correctly.
 *   **"Model Not Found":** Make sure you're using a valid model ID for your chosen provider.
+*   **"404 Resource not found" with Azure OpenAI:** Make sure the Base URL points to your Azure resource and the Azure deployment name matches the name configured in Azure AI Studio, not the underlying model name. Zoo Code adds `/openai` to resource endpoints automatically.
 *   **Connection Errors:** Verify the Base URL is correct and that your provider's API is accessible.
 *   **Tool-calling errors:** Zoo Code requires native tool calling. If your model does not support it, you need to switch to a model that does. Check your provider's documentation for tool-calling compatibility.
 *   **Unexpected Results:** If you're getting unexpected results, try a different model.
