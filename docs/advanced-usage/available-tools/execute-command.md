@@ -29,6 +29,8 @@ The tool accepts these parameters:
 
 This tool executes terminal commands directly on the user's system, enabling a wide range of operations from file manipulations to running development servers. Commands run in managed terminal instances with real-time output capture, integrated with VS Code's terminal system for optimal performance and security.
 
+Foreground commands remain attached to their tool call until they complete, so Zoo Code receives the final output and exit status before starting the next reasoning step. Commands continue in the background only when the tool call includes an explicit timeout.
+
 ---
 
 ## When is it used?
