@@ -1,6 +1,6 @@
 ---
 sidebar_label: DeepSeek
-description: Configure DeepSeek's chat and reasoning models in Zoo Code. Access deepseek-chat and deepseek-reasoner for coding and complex reasoning tasks.
+description: Configure DeepSeek models in Zoo Code, including DeepSeek V4 Pro 0813 for coding, reasoning, and long-context agentic tasks.
 keywords:
   - deepseek
   - deepseek chat
@@ -10,11 +10,12 @@ keywords:
   - reasoning ai
   - coding ai
   - deepseek r1
+  - deepseek v4 pro 0813
 ---
 
 # Using DeepSeek With Zoo Code
 
-Zoo Code supports accessing models through the DeepSeek API, including `deepseek-chat` and `deepseek-reasoner`.
+Zoo Code supports DeepSeek V4 models through the DeepSeek API and compatible hosted providers.
 
 **Website:** [https://platform.deepseek.com/](https://platform.deepseek.com/)
 
@@ -32,6 +33,15 @@ Zoo Code supports accessing models through the DeepSeek API, including `deepseek
 ## Available Models
 
 Zoo Code supports all models available through the DeepSeek API.
+
+DeepSeek V4 Pro 0813 is available through these Zoo Code providers using each provider's published model ID:
+
+| Provider | Model ID |
+| --- | --- |
+| DeepSeek | `deepseek-v4-pro` |
+| Fireworks AI | `accounts/fireworks/models/deepseek-v4-pro` |
+| OpenCode Go | `deepseek-v4-pro` |
+| Baseten | `deepseek-ai/DeepSeek-V4-Pro` |
 
 For the complete, up-to-date model list, see [DeepSeek's API documentation](https://api-docs.deepseek.com/quick_start/pricing).
 
