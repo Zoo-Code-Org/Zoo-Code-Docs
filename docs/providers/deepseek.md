@@ -57,4 +57,4 @@ For the complete, up-to-date model list, see [DeepSeek's API documentation](http
 ---
 
 ## Tips and Notes
-*   **Pricing:** Refer to the [DeepSeek Pricing](https://api-docs.deepseek.com/quick_start/pricing/) page for details on model costs.
+*   **Pricing:** Refer to the [DeepSeek Pricing](https://api-docs.deepseek.com/quick_start/pricing/) page for current model costs. DeepSeek warns that it plans a significant overall price increase, so hardcoded provider rates may require a follow-up update.
