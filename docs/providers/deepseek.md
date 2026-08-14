@@ -15,7 +15,7 @@ keywords:
 
 # Using DeepSeek With Zoo Code
 
-Zoo Code supports DeepSeek V4 models through the DeepSeek API and compatible hosted providers. DeepSeek and OpenCode Go route the stable `deepseek-v4-pro` alias to the first-party DeepSeek V4 Pro 0813 checkpoint. Fireworks AI and Baseten serve the published V4 Pro preview weights through their own inference infrastructure.
+Zoo Code supports DeepSeek V4 models through the DeepSeek API and compatible hosted providers. DeepSeek and OpenCode Go route the stable `deepseek-v4-pro` alias to the DeepSeek V4 Pro 0813 checkpoint. Fireworks AI and Baseten offer separate IDs for the published V4 Pro preview weights and the 0813 checkpoint.
 
 **Website:** [https://platform.deepseek.com/](https://platform.deepseek.com/)
 
@@ -39,9 +39,11 @@ DeepSeek V4 Pro is available through these Zoo Code providers using each provide
 | Provider | Model ID | Version served |
 | --- | --- | --- |
 | DeepSeek | `deepseek-v4-pro` | 0813 checkpoint |
-| OpenCode Go | `deepseek-v4-pro` | 0813 checkpoint via DeepSeek API |
+| OpenCode Go | `deepseek-v4-pro` | 0813 checkpoint |
 | Fireworks AI | `accounts/fireworks/models/deepseek-v4-pro` | Published V4 Pro preview weights |
+| Fireworks AI | `accounts/fireworks/models/deepseek-v4-pro-0813` | 0813 checkpoint |
 | Baseten | `deepseek-ai/DeepSeek-V4-Pro` | Published V4 Pro preview weights |
+| Baseten | `deepseek-ai/DeepSeek-V4-Pro-0813` | 0813 checkpoint |
 
 For the complete, up-to-date model list, see [DeepSeek's API documentation](https://api-docs.deepseek.com/quick_start/pricing).
 
@@ -57,4 +59,5 @@ For the complete, up-to-date model list, see [DeepSeek's API documentation](http
 ---
 
 ## Tips and Notes
-*   **Pricing:** Refer to the [DeepSeek Pricing](https://api-docs.deepseek.com/quick_start/pricing/) page for current model costs. DeepSeek warns that it plans a significant overall price increase, so hardcoded provider rates may require a follow-up update.
+*   **First-party pricing:** At 16:00 UTC on August 16, 2026, DeepSeek introduces peak and off-peak pricing. Peak hours are 01:00-04:00 and 06:00-10:00 UTC; all other hours are half-price. Peak V4 Pro rates per million tokens are $1.32 for cache misses, $0.044 for cache hits, and $3.96 for output. Peak V4 Flash rates are $0.44, $0.014, and $1.32 respectively. Zoo Code uses peak rates for static cost estimates.
+*   **Hosted-provider pricing:** OpenCode Go keeps its published V4 Pro rates of $0.435 input, $0.003625 cached input, and $0.87 output, while V4 Flash remains $0.14, $0.0028, and $0.28. Baseten charges $1.32 input, $0.132 cached input, and $3.96 output for its dated 0813 model; its preview model remains $1.74, $0.145, and $3.48. Fireworks charges $1.32, $0.044, and $3.96 for 0813, while its preview model remains $1.74, $0.145, and $3.48. Provider prices are independent, so refer to each provider's pricing page for future changes.
