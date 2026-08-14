@@ -41,7 +41,16 @@ Z AI (Zhipu AI) provides advanced language models with the GLM family. The provi
 
 ## Available Models
 
-Zoo Code automatically fetches all available models from Z AI's API based on your selected region.
+Zoo Code provides a model catalog for each Z AI entrypoint. GLM-5.3 is currently available through the International Coding and China Coding entrypoints for GLM Coding Plan subscribers.
+
+### GLM-5.3
+
+GLM-5.3 supports a 1,000,000-token context window, up to 131,072 output tokens, prompt caching, tool calling, and always-on reasoning with Low, High, and Max effort levels. Max is the default.
+
+Z AI has not yet published GLM-5.3 availability or per-token pricing for its standard pay-as-you-go API. Zoo Code therefore lists `glm-5.3` only when you select a Coding entrypoint. Until official GLM-5.3 pricing is available, Zoo Code estimates usage with the existing GLM-5.2 rates:
+
+- International: $1.40 input, $0.26 cached input, and $4.40 output per million tokens
+- China mainland: $0.68 input, $0.13 cached input, and $2.28 output per million tokens
 
 For the complete, up-to-date model list and specifications, see the official provider documentation:
 - **International:** [Z AI model documentation](https://z.ai/model-api)
@@ -54,15 +63,19 @@ For the complete, up-to-date model list and specifications, see the official pro
 1. **Open Zoo Code Settings:** Click the gear icon (<Codicon name="gear" />) in the Zoo Code panel.
 2. **Select Provider:** Choose "Z AI" from the "API Provider" dropdown.
 3. **Select Region:** Choose your region:
-   - "International" (default) for global access
-   - "China" for mainland China access
+   - "International Coding" (default) for the international GLM Coding Plan
+   - "China Coding" for the mainland GLM Coding Plan
+   - "International API" for the international pay-as-you-go API
+   - "China API" for the mainland pay-as-you-go API
 4. **Enter API Key:** Paste your Z AI API key into the "Z AI API Key" field.
 5. **Select Model:** Choose your desired model from the "Model" dropdown. Available models depend on your selected region.
 
 ### Defaults & Behavior
 - **Automatic Base URL:** Selected region determines the API endpoint automatically:
-  - International → `https://api.z.ai/api/paas/v4`
-  - China → `https://open.bigmodel.cn/api/paas/v4`
+  - International Coding → `https://api.z.ai/api/coding/paas/v4`
+  - China Coding → `https://open.bigmodel.cn/api/coding/paas/v4`
+  - International API → `https://api.z.ai/api/paas/v4`
+  - China API → `https://open.bigmodel.cn/api/paas/v4`
 - **Dynamic Models:** Changing the region automatically updates the model catalog and target endpoint.
 - **No Manual Base URL Needed:** You typically do not need to configure a custom base URL.
 
@@ -70,9 +83,7 @@ For the complete, up-to-date model list and specifications, see the official pro
 
 ## Tips and Notes
 
-* **Region Selection:** The region setting determines both the API endpoint and available models:
-  - International: Uses `https://api.z.ai/api/paas/v4`
-  - China: Uses `https://open.bigmodel.cn/api/paas/v4`
+* **Entrypoint Selection:** The entrypoint determines the region, API endpoint, and available models. GLM-5.3 currently requires one of the Coding entrypoints.
 * **Automatic Base URL:** Base URL is selected from your region; manual override is not required in typical setups.
 * **OpenAI Compatibility:** Z AI uses an OpenAI-compatible API, providing streaming responses and usage reporting.
 * **Model Selection:** Models are automatically filtered based on your selected region to ensure compatibility.
