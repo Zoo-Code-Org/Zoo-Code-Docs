@@ -28,7 +28,9 @@ OpenCode Go is a subscription provider for a curated set of open coding models. 
 
 ## Available Models
 
-The catalog includes **Qwen3.8 Max**, with multimodal input, a 1M-token context window, 128K maximum output, prompt caching, and preserved reasoning.
+The catalog includes **Qwen3.8 Max**, with multimodal input, a 1M-token context window, 128K maximum output, prompt caching, and streamed reasoning output.
+
+Zoo Code displays the model's streamed reasoning output. OpenCode Go does not currently provide a usable signed-thinking continuity field, so that reasoning is not replayed across requests.
 
 The model list is fetched dynamically and may change. See the [OpenCode Go documentation](https://opencode.ai/docs/go/) for current availability, usage limits, and pricing.
 
