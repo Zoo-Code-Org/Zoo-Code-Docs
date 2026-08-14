@@ -1,9 +1,8 @@
 ---
 sidebar_label: OpenCode Go
-description: Use OpenCode Go with Zoo Code for curated open coding models through a low-cost subscription.
+description: Use OpenCode Go with Zoo Code for curated open coding models, including Qwen3.8 Max, through a low-cost subscription.
 keywords:
   - opencode go
-  - glm-5.3
   - qwen3.8 max
   - coding models
   - zoo code
@@ -29,10 +28,7 @@ OpenCode Go is a subscription provider for a curated set of open coding models. 
 
 ## Available Models
 
-The catalog includes GLM-5.3 and Qwen3.8 Max:
-
-- **GLM-5.3**: 1M-token context window, 128K maximum output, and always-on reasoning with Low, High, and Max effort levels.
-- **Qwen3.8 Max**: Multimodal input, 1M-token context window, 128K maximum output, prompt caching, and preserved reasoning.
+The catalog includes **Qwen3.8 Max**, with multimodal input, a 1M-token context window, 128K maximum output, prompt caching, and preserved reasoning.
 
 The model list is fetched dynamically and may change. See the [OpenCode Go documentation](https://opencode.ai/docs/go/) for current availability, usage limits, and pricing.
 
