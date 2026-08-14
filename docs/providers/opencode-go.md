@@ -40,7 +40,7 @@ GLM-5.3 is available in Zoo Code through OpenCode Go with model ID `glm-5.3`. Th
 OpenCode Go includes GLM-5.3 in its subscription usage allowance. See the [OpenCode Go documentation](https://opencode.ai/docs/go/#usage-limits) for current plan prices and limits.
 
 :::note
-Z AI's standard pay-as-you-go API has not published GLM-5.3 availability or token pricing yet. Select **Opencode Go** in Zoo Code to use the currently supported route.
+Z AI's standard pay-as-you-go API has not published GLM-5.3 availability or token pricing yet. GLM-5.3 is currently available in Zoo Code through OpenCode Go or the Z AI provider's Coding entrypoints, where Zoo Code provisionally uses GLM-5.2 pricing for cost estimates.
 :::
 
 ---
