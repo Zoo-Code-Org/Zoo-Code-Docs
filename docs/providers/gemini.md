@@ -32,7 +32,7 @@ Zoo Code supports Google's Gemini family of models through the Google AI Gemini 
 
 ## Available Models
 
-Zoo Code's model catalog includes Gemini 3.7 Flash (`gemini-3.7-flash`), Google's generally available workhorse model for agentic coding and complex tasks. It supports text, image, video, audio, and PDF input, with a 1,048,576-token context window, up to 65,536 output tokens, and configurable `minimal`, `low`, `medium`, or `high` reasoning effort without a reasoning budget.
+Zoo Code's model catalog includes Gemini 3.7 Flash (`gemini-3.7-flash`), Google's generally available workhorse model for agentic coding and complex tasks. It supports text, image, video, audio, and PDF input, with a 1,048,576-token context window, up to 65,536 output tokens, and configurable `low`, `medium`, or `high` reasoning effort without a reasoning budget.
 
 For Google's complete, up-to-date model list and capabilities, see [the Gemini models documentation](https://ai.google.dev/gemini-api/docs/models).
 
