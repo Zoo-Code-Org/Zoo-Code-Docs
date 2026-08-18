@@ -49,6 +49,44 @@ MCP server configurations can be managed at two levels:
 
 **Precedence**: If a server name exists in both global and project configurations, the **project-level configuration takes precedence**.
 
+### Limiting MCP Access by Mode
+
+Custom modes can restrict which configured MCP servers are available while that mode is active. This is useful when a mode should only access the external services it needs.
+
+To configure a restriction in the Zoo Code UI:
+
+1. Open the Zoo Code panel, click the Mode menu under the chatbox, then click the <Codicon name="settings-gear" />.
+2. Create or edit a custom mode.
+3. Enable the **MCP** tool group under **Available Tools**.
+4. Select **Restrict to specific MCP servers**.
+5. Choose the servers the mode can access.
+
+You can also set the allowlist manually with `allowedMcpServers` in `custom_modes.yaml` or `.roomodes`:
+
+```yaml
+customModes:
+  - slug: research
+    name: Research
+    roleDefinition: You research technical questions using approved sources.
+    groups:
+      - read
+      - mcp
+    allowedMcpServers:
+      - github
+      - documentation
+```
+
+The names in `allowedMcpServers` must match the server names in your global or project-level MCP configuration.
+
+| Configuration | MCP access for the mode |
+| --- | --- |
+| `allowedMcpServers` omitted | All configured MCP servers |
+| `allowedMcpServers: []` | No MCP servers |
+| One or more server names listed | Only the listed servers |
+| `mcp` omitted from `groups` | No MCP tools or resources |
+
+Zoo Code removes disallowed servers from the mode's available tools and rejects attempts to call them. For more custom mode configuration options, see [Custom Modes](/features/custom-modes).
+
 ### Editing MCP Settings Files
 
 You can edit both global and project-level MCP configuration files directly from the Zoo Code MCP settings view:
