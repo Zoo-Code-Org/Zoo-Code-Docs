@@ -309,6 +309,31 @@ customModes:
     ]
     ```
 
+##### `allowedMcpServers`
+*   **Purpose:** (Optional) Restricts the mode to specific configured MCP servers.
+*   **Requirement:** Include `"mcp"` in `groups` for the mode to use MCP tools or resources.
+*   **Behavior:**
+    *   Omit this property to make all configured MCP servers available to the mode.
+    *   Use an empty array (`[]`) to prevent the mode from accessing any MCP server.
+    *   List server names to allow only those servers. Each name must match a server in your global or project-level MCP configuration.
+*   **Enforcement:** Zoo Code excludes disallowed servers from the mode's available tools and rejects calls to them.
+*   *YAML Example:*
+    ```yaml
+    groups:
+      - read
+      - mcp
+    allowedMcpServers:
+      - github
+      - documentation
+    ```
+*   *JSON Example:*
+    ```json
+    "groups": ["read", "mcp"],
+    "allowedMcpServers": ["github", "documentation"]
+    ```
+*   **UI Configuration:** On the Modes page, enable the **MCP** tool group, select **Restrict to specific MCP servers**, and choose the servers the mode can access.
+*   **See also:** [Limiting MCP Access by Mode](/features/mcp/using-mcp-in-roo#limiting-mcp-access-by-mode).
+
 ##### `whenToUse`
 *   **Purpose:** (Optional) Provides guidance for Zoo's automated decision-making, particularly for mode selection and task orchestration.
 *   **Format:** A string describing ideal scenarios or task types for this mode.
