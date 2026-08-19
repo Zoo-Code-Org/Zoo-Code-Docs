@@ -34,6 +34,8 @@ The chat interface consists of the following main elements:
 
 7. **Mode Selector:** The mode selector is a dropdown located to the left of the chat input field. It is used for selecting which mode Zoo should use for your tasks. Its settings gear opens the Modes tab, not general settings.
 
+The mode, API configuration, auto-approval, and shared dropdown selectors use your active IDE colors for their borders, hover states, and keyboard focus rings. The todo-delete confirmation also follows the active light or dark appearance.
+
 <img src="/img/the-chat-interface/the-chat-interface-1.png" alt="Chat interface components labeled with numbered callouts" width="900" />
 
 *Numbered interface elements showing the key components of the Zoo Code chat interface.*
