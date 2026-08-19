@@ -59,6 +59,10 @@ For more productivity tips, check out our [Tips & Tricks](/tips-and-tricks) guid
 * **Copying Text:** You can copy text from the chat history by selecting it and using the standard copy command (Ctrl/Cmd + C).  Some elements, like code blocks, have a dedicated "Copy" button.
 * **Expanding and Collapsing**: Click on a message to expand or collapse it.
 
+### Mermaid Diagrams
+
+Zoo Code renders Mermaid diagrams directly in chat. Diagram backgrounds, labels, lines, and exported PNGs follow your active IDE color theme, including light and high-contrast themes. If you change themes while a conversation is open, existing diagrams update automatically.
+
 ---
 
 ## Status Indicators
