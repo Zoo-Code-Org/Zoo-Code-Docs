@@ -40,5 +40,5 @@ Zoo Code includes a dedicated [NanoGPT](https://nano-gpt.com/) provider. It load
 
 - **Model capabilities:** Zoo Code uses NanoGPT's model catalog to show models that support tool calling and to populate context, output, vision, reasoning, and pricing metadata.
 - **Routing preferences:** A routing preference affects API requests without changing the model saved in your Zoo Code configuration.
-- **Muse Spark 1.2 Contributor:** Zoo Code keeps native tools enabled for `meta/muse-spark-1.2-contributor`, but sends one tool call at a time to avoid malformed parallel tool-call responses from the upstream model.
+- **Muse Spark 1.2 Contributor:** Zoo Code keeps mixed tool-result and environment context in one contiguous tool message for `meta/muse-spark-1.2-contributor`. This improves multi-turn tool reliability without disabling parallel tool calls.
 - **Current model details:** See [NanoGPT's model catalog](https://nano-gpt.com/models) for availability and pricing.
