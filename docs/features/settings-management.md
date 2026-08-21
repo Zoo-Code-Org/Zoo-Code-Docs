@@ -173,6 +173,10 @@ Opens a dialog to set a custom storage directory for Zoo Code data. By default, 
 
 **Note:** This setting can also be configured in VS Code settings as `roo-cline.customStoragePath`. See the [VS Code Settings Reference](#vs-code-settings-reference) section below for details.
 
+#### Task History Reliability
+
+Zoo Code preserves the last saved task history if the storage file is temporarily unavailable or cannot be parsed while reopening a task. Reopening also keeps finalized task messages intact instead of treating hydration cleanup as a reason to rewrite the stored conversation. If a task cannot load from a custom, network, or cloud-synced storage location, restore access or recover a valid copy of the history file from backup before reopening the task; Zoo Code does not replace the existing history with an empty conversation.
+
 ### Import Settings from File
 
 **Command:** `roo-cline.importSettings`
