@@ -22,7 +22,7 @@ No more waiting. Type your follow-up thoughts, corrections, or additional reques
 
 ## Overview
 
-Message queueing lets you type and send messages while Zoo is still working. Just type your message and hit Enter - it gets queued and will be processed as soon as Zoo is ready for your next input. When a queued message is processed, Zoo implicitly approves whatever would normally require your confirmation (tool calls, file writes, running commands)—even if auto-approval is disabled. This is useful for quick corrections or additions when you want to keep work moving without manual prompts.
+Message queueing lets you type and send messages while Zoo is still working. Just type your message and hit Enter - it gets queued and will be processed as soon as Zoo is ready for your next input. Queued messages remain user instructions: they do not approve pending tool calls, file writes, commands, or task completion prompts.
 
 ---
 
@@ -33,7 +33,7 @@ While Zoo is working:
 1. **Type your message** as normal
 2. **Press Enter** or click Send
 3. **Message gets queued** and appears with "Queued Messages:" label
-4. **Zoo processes the queued message** as soon as it's ready for your next input and implicitly approves the next pending action (e.g., a tool call, file write, or command)—even if auto-approval is disabled
+4. **Zoo processes the queued message** as soon as it's ready for your next input. If Zoo is waiting for approval, the message is treated as feedback instead of approving the pending action.
 
 <img src="/img/message-queueing/message-queueing.png" alt="Message queueing interface showing active processing and three queued messages" width="800" />
 
@@ -45,10 +45,8 @@ While Zoo is working:
 
 The input field stays active so you can type anytime - just hit Enter to queue your message.
 
-:::warning Queued Messages Implicitly Approve
-Queued messages act as approval for the next action. When a queued message is processed, Zoo proceeds with whatever would normally require confirmation (tool calls, file writes, running commands)—even if auto-approval is disabled.
-Editing or deleting a queued message requires clicking it before it's processed. In fast workflows this window can be extremely short; if you need a manual review step, avoid queueing until you're ready to approve.
-Note: This behavior is distinct from [Auto-Approving Actions](/features/auto-approving-actions) and is not controlled by its settings.
+:::info Queued Messages Preserve Approval Controls
+Queued messages never count as approval. If a message reaches Zoo while an action is awaiting confirmation, Zoo stops that pending action and receives the queued message as feedback. Approve actions explicitly with the approval controls or configure [Auto-Approving Actions](/features/auto-approving-actions).
 :::
 
 
@@ -63,10 +61,10 @@ A: There is no hard limit on the number of messages you can queue. The queue siz
 A: No, messages are always processed in the order they were sent (FIFO).
 
 **Q: Do queued messages require approval?**
-A: No. When processed, a queued message implicitly approves the next pending action (tool calls, file writes, running commands), even if auto-approval is disabled. If you need a manual review step, do not queue the message; wait for the approval prompt and confirm manually.
+A: No. Queued messages are instructions, not actions. They do not bypass approval controls; approve a pending action explicitly or use [Auto-Approving Actions](/features/auto-approving-actions).
 
-**Q: Why are my queued messages triggering auto-approval?**
-A: This isn’t the Auto-Approving Actions setting. Queueing a message tells Zoo to proceed without pausing for confirmations, so the queued message implicitly approves the next action. To avoid this, don’t queue when you need a manual review—wait for the approval prompt and confirm manually. See [Auto-Approving Actions](/features/auto-approving-actions) for settings-based approvals.
+**Q: What happens if an approval prompt appears before my queued message is processed?**
+A: Zoo treats the queued message as feedback and does not run the pending action. The message remains part of the current task so Zoo can respond to the new instruction.
 
 **Q: What happens if Zoo encounters an error?**
 A: Queued messages remain in the queue. You can choose to cancel them or let processing continue.
