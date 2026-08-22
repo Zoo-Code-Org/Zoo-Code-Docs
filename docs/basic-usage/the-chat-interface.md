@@ -34,6 +34,16 @@ The chat interface consists of the following main elements:
 
 7. **Mode Selector:** The mode selector is a dropdown located to the left of the chat input field. It is used for selecting which mode Zoo should use for your tasks. Its settings gear opens the Modes tab, not general settings.
 
+The chat composer, mode and API selectors, auto-approval controls, and todo-delete confirmation follow your active IDE appearance. Their borders, hover states, keyboard focus rings, and error text remain distinguishable in VS Code light, dark, and high-contrast themes.
+
+<img src="/img/the-chat-interface/chat-composer-light.png" alt="Zoo Code chat composer using the VS Code light theme" width="600" />
+
+*The chat composer uses the current VS Code theme for its text, controls, boundaries, and focus treatment.*
+
+<img src="/img/the-chat-interface/ui-settings-light.png" alt="Zoo Code UI settings using the VS Code light theme" width="600" />
+
+*UI settings use the same theme-aware controls and contrast treatment.*
+
 <img src="/img/the-chat-interface/the-chat-interface-1.png" alt="Chat interface components labeled with numbered callouts" width="900" />
 
 *Numbered interface elements showing the key components of the Zoo Code chat interface.*
