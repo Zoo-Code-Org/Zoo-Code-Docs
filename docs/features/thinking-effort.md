@@ -17,7 +17,7 @@ Zoo Code sends a **thinking effort** value with each request to models that supp
 The effort resolves at two levels:
 
 - **Profile default** — the "Model Reasoning Effort" value in the provider settings. Stored per API configuration profile and sent with every request.
-- **Task-local override** — set from the chat during a task. It applies from the next request and is never written to settings. When the task ends, the profile default applies again.
+- **Task-local override** — set from the chat during a task. It applies from the next request and is never written to settings. The override is stored with the task, so reopening the task from history restores it; a new task starts from the profile default.
 
 ---
 
@@ -33,7 +33,7 @@ The composer bottom bar shows a thinking effort selector (brain icon) when the s
 
 - Selecting a level sets the task-local override. The change takes effect from the next API request, not mid-stream.
 - If no task is open, the selection is kept and applied to the next task you start, when that task's model supports the level.
-- The selection is never persisted to settings.
+- The selection is stored with the task (and restored when the task is reopened from history) but is never persisted to settings.
 
 ### Task header chip
 

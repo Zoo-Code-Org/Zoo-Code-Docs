@@ -26,7 +26,7 @@ The tool accepts these parameters:
 
 ## What It Does
 
-This tool sets the task-local thinking effort override for the running task. The override applies to the next API request and stays in effect for the rest of the task until it is changed again. It is never written to the provider settings.
+This tool sets the task-local thinking effort override for the running task. The override applies to the next API request and stays in effect for the rest of the task until it is changed again. It is never written to the provider settings. The override is stored with the task, so reopening the task from history restores it.
 
 The tool does not require user approval. The model decides when to call it, and the user can still change the effort at any time with the composer thinking effort selector.
 
@@ -45,7 +45,7 @@ The tool does not require user approval. The model decides when to call it, and 
 - Model-initiated, with a required reason shown in the chat
 - No approval gate; the user retains control through the composer toggle
 - Applies from the next request, never mid-stream
-- Task-local: it does not modify the provider settings or other tasks
+- Task-local: it does not modify the provider settings or other tasks; the override is stored with the task and restored when the task is reopened from history
 - Guardrails keep the effort bounded within a single task
 
 ---
