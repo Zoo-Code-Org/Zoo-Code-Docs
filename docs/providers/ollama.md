@@ -110,6 +110,18 @@ Zoo Code supports running models locally using Ollama. This provides privacy, of
 
 ---
 
+## Reasoning Effort
+
+Models that support reasoning effort expose a **Model Reasoning Effort** dropdown in the Ollama provider settings. The selected level is sent with each request through Ollama's `think` parameter:
+
+- **None** turns the parameter off.
+- Low, Medium, and High map 1:1 to the Ollama parameter.
+- Extra High and Max map to High.
+
+Selecting a level in the composer thinking effort selector overrides the profile default for the running task. See [Thinking Effort](/features/thinking-effort) for the task-local behavior.
+
+---
+
 ## Tips and Notes
 
 *   **Resource Requirements:** Running large language models locally can be resource-intensive.  Make sure your computer meets the minimum requirements for the model you choose.

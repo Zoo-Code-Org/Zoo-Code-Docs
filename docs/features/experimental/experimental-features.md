@@ -33,6 +33,7 @@ The following experimental features are currently available:
 - [Custom Tools](/features/experimental/custom-tools) - Define TypeScript/JavaScript tools that Zoo can call like built-in tools
 - [Background Editing](/features/experimental/background-editing) - Work uninterrupted while Zoo edits files in the background
 - [Image Generation](/features/image-generation) - Generate images from text prompts and save them to your workspace
+- [Dynamic Thinking Effort](/features/thinking-effort) - Let the model adjust its own thinking effort mid-task with the `set_thinking_effort` tool. The chat UI surfaces (composer toggle, header chip, in-chat display) are gated by model capability and do not require this setting
 - [Run Slash Command](/advanced-usage/available-tools/run-slash-command) - Execute predefined slash commands for templated instructions and workflow automation
 
 ---

@@ -34,6 +34,8 @@ The chat interface consists of the following main elements:
 
 7. **Mode Selector:** The mode selector is a dropdown located to the left of the chat input field. It is used for selecting which mode Zoo should use for your tasks. Its settings gear opens the Modes tab, not general settings.
 
+8. **Thinking Effort Selector:** The thinking effort selector (brain icon) appears in the composer bottom bar when the selected model supports per-request thinking effort. It sets the effort for the next request without touching your settings. See [Thinking Effort](/features/thinking-effort).
+
 The chat composer, mode and API selectors, auto-approval controls, and todo-delete confirmation follow your active IDE appearance. Their borders, hover states, keyboard focus rings, and error text remain distinguishable in VS Code light, dark, and high-contrast themes.
 
 <img src="/img/the-chat-interface/chat-composer-light.png" alt="Zoo Code chat composer using the VS Code light theme" width="600" />

@@ -28,6 +28,7 @@ Discover the powerful features that make Zoo Code your ultimate AI-powered codin
 - [**Enhance Prompt**](/features/enhance-prompt) - Automatically improve your prompts for better results
 - [**Suggested Responses**](/features/suggested-responses) - Context-aware follow-up suggestions
 - [**Model Temperature**](/features/model-temperature) - Fine-tune AI creativity and consistency
+- [**Thinking Effort**](/features/thinking-effort) - Control how hard a capable model thinks, per task and per request
 
 ### Workflow Management
 - [**Task Todo List**](/features/task-todo-list) - Track progress on complex multi-step tasks
