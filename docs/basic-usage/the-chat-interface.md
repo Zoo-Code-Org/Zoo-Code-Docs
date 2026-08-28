@@ -40,13 +40,13 @@ The chat composer, mode and API selectors, auto-approval controls, and todo-dele
 
 *The chat composer uses the current VS Code theme for its text, controls, boundaries, and focus treatment.*
 
+<img src="/img/the-chat-interface/chat-composer-focus-dark.png" alt="Zoo Code chat composer with keyboard focus using the VS Code dark theme" width="600" />
+
+*Keyboard focus remains visible when the composer follows a dark IDE theme.*
+
 <img src="/img/the-chat-interface/ui-settings-light.png" alt="Zoo Code UI settings using the VS Code light theme" width="600" />
 
 *UI settings use the same theme-aware controls and contrast treatment.*
-
-<img src="/img/the-chat-interface/the-chat-interface-1.png" alt="Chat interface components labeled with numbered callouts" width="900" />
-
-*Numbered interface elements showing the key components of the Zoo Code chat interface.*
 
 ---
 
