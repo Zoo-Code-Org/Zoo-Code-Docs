@@ -69,6 +69,10 @@ For more productivity tips, check out our [Tips & Tricks](/tips-and-tricks) guid
 * **Copying Text:** You can copy text from the chat history by selecting it and using the standard copy command (Ctrl/Cmd + C).  Some elements, like code blocks, have a dedicated "Copy" button.
 * **Expanding and Collapsing**: Click on a message to expand or collapse it.
 
+### Change Cards
+
+When a step changes files, a change card appears in the chat listing each file with its additions and removals. The card offers **Rollback step** (restore every file the step touched) and a per-file rollback button, each confirmed before anything is written. Cards are powered by per-write checkpoints and the per-task change journal — see [File-Write Safety](/features/file-write-safety).
+
 ### Mermaid Diagrams
 
 Zoo Code renders Mermaid diagrams directly in chat. Diagram backgrounds, labels, lines, and exported PNGs follow your active IDE color theme, including light and high-contrast themes. If you change themes while a conversation is open, existing diagrams update automatically.
