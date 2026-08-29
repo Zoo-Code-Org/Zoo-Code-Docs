@@ -146,6 +146,8 @@ The settings panel mirrors the same permissions with additional context and safe
 
 While this setting only allows reading files (not modifying them), it could potentially expose sensitive data. Still recommended as a starting point for most users, but be mindful of what files Zoo can access.
 
+If you only want Zoo to read a few specific files, leave this setting off and name those files in the read allowlist instead. See [Allowlists](#allowlists).
+
 #### Workspace Boundary Protection
 
 By default, Zoo can only read files within your current workspace directory. The "Include files outside workspace" option extends read access beyond the workspace boundary. Consider the security implications:
@@ -153,6 +155,96 @@ By default, Zoo can only read files within your current workspace directory. The
 - **Default (unchecked)**: Zoo can only read files in your project directory
 - **Enabled**: Zoo can read any file on your system that you have access to
 - **Recommendation**: Keep disabled unless you specifically need Zoo to access external files
+:::
+
+### Allowlists
+
+:::info Allowlists (Risk: Low)
+**Settings:** "Read allowlist patterns" and "Write allowlist patterns"
+
+**Description:** Grant access to individual files, without auto-approving a whole category of actions.
+
+The permissions above are all-or-nothing: "Read" covers every file Zoo can reach, and "Write" lets it edit any of them. An allowlist is the narrow alternative. Name a file, and Zoo may act on that file without asking while everything else still requires approval — useful for a scratchpad the agent keeps its notes in (which does not degrade upon context condensation).
+
+Both allowlists work even when the matching permission above is switched off, so they can be used on their own.
+
+Each list is edited as text, one pattern per line, so a list can be pasted in or copied out in one go. The order of the lines matters: see [Excluding files](#excluding-files).
+
+**Risk level:** Low
+
+Each entry is a path you wrote yourself, so the access granted stays as narrow as the pattern. Beware of broad patterns such as `**`, which grant as much as the blanket permission would.
+
+#### Pattern syntax
+
+Patterns use `.gitignore`-inspired syntax, extended to also handle paths outside the workspace: a leading `./` refers to the workspace, and a leading `/` refers to the actual filesystem root. Relative paths are resolved against the workspace root:
+
+| Pattern | Matches |
+|---------|---------|
+| `notes.md` | a file with that name in any directory in the workspace |
+| `*.md` | any Markdown file in the workspace |
+| `docs/notes.md` | that path relative to the workspace root |
+| `docs/scratch/**` | everything below that directory |
+| `./notes.md` | that file at the workspace root only |
+| `../shared/notes.md` | that path next to the workspace |
+| `/tmp/notes.md` | that absolute path, outside the workspace |
+| `~/notes.md` | that path in your home directory |
+| `!docs/secret.md` | excludes a file matched by an earlier pattern |
+
+Two spellings differ from `.gitignore`, because these patterns can name files anywhere on your machine rather than only inside one repository:
+
+- **`/notes.md` is an absolute path**, starting at the filesystem root. In a `.gitignore` file the same pattern would mean "at the root of the repository".
+- **`./notes.md` anchors to the workspace root**, the role `.gitignore` gives to `/notes.md`.
+
+A leading `~/` expands to your home directory, so `~/notes.md` names that file in it, wherever your home directory happens to be.
+
+`/` is the only directory separator, also on Windows. A backslash escapes the next character rather than separating directories, so a literal `#` at the start of a pattern is written `\#notes.md`, and a trailing space is kept only when escaped as `notes.md\ `. On Windows a backslash you type in a path is still read as a separator; everywhere else `my\file` is one file whose name contains a backslash.
+
+Upper and lower case are distinguished, except on Windows, whose filesystem does not distinguish them either. `notes.md` therefore does not grant access to `NOTES.md`, which on Linux and macOS can be a different file. (This follows `git`'s `.gitignore`.)
+
+#### Patterns name files, not directories
+
+A pattern always grants access to the *files* it matches, and matching a directory grants nothing by itself:
+
+- `docs/` is rejected outright, since it can only name a directory.
+- `docs` grants a file called `docs`, not the contents of a `docs/` directory. Write `docs/**` for the contents.
+
+A bare pattern with no slash still matches at any depth, as in `.gitignore`: `notes.md` grants that filename in every directory of the workspace, and `*` grants every file in it. That is about the *file* path, not about directories, so an exclusion continues to work below it.
+
+#### Excluding files
+
+Like in `.gitignore`, a pattern starting with `!` excludes what an earlier line matched, so a directory can be opened up while keeping something inside it protected:
+
+```
+docs/**
+!docs/private/secret.md
+```
+
+Order decides the outcome, exactly as in a `.gitignore` file: the last line that matches a file wins. Reversing the two lines above would grant access to `docs/private/secret.md` again.
+
+An exclusion works at any depth below the pattern it cancels. Unlike `.gitignore`, where a file cannot be re-included once one of its parent directories is excluded, here every line is matched against the file's own path, so the nesting of the excluded file makes no difference.
+
+An exclusion only applies within the list it appears in. Putting `!docs/secret.md` in the read allowlist does not restrict what the write allowlist grants, and vice versa; to keep a file out of both, exclude it in both.
+
+#### When no folder is open
+
+Workspace-relative patterns need a workspace to be relative to. If no folder is open in your editor, they are ignored rather than matched loosely, since `notes.md` would otherwise match a file of that name in *any* directory on the machine. Absolute patterns such as `/tmp/notes.md` and `~/notes.md` keep working.
+
+#### What each allowlist covers
+
+- **Write allowlist:** creating and editing the named files. Write access implies read access, so a file listed here can also be read without appearing in the read allowlist.
+- **Read allowlist:** reading the named files. Directory listings and searches are *not* covered, because they report on files no pattern named; those always follow the "Read" permission above.
+
+When Zoo reads or edits several files in one request, a single approval answers for all of them, so every file in that request must be allowlisted for it to be approved automatically. A request that reports further files without naming them is never approved automatically, since no pattern can vouch for a file it has not seen.
+
+Allowlists apply only while "Auto-Approve" itself is enabled. With the master switch off, every action is still confirmed one by one, however the lists are configured.
+
+#### Interaction with protected and ignored files
+
+Allowlists do not override the protection of files such as `.roo/` configuration and `.rooignore` itself. A broad pattern such as `*.md` therefore still leaves files like `AGENTS.md` requiring approval, unless "Include protected files" is enabled under *Write Operations*.
+
+Nor do they override `.rooignore`. A file excluded there stays out of reach whether or not an allowlist names it: the allowlist decides whether Zoo has to ask you, not whether it may touch the file at all.
+
+Allowlists do, however, cover files outside the workspace: an entry such as `~/notes.md` names its own location, so the outside-workspace options are not needed for it.
 :::
 
 ### Write Operations
@@ -178,6 +270,8 @@ This setting allows Zoo to modify your files without confirmation. The delay tim
 - 0ms: No delay - use when speed is critical
 - Lower values: Use only when in a controlled environment
 
+If you only want Zoo to edit a few specific files, leave this setting off and name those files in the write allowlist instead. See [Allowlists](#allowlists).
+
 #### Security Boundaries
 
 The write operations setting includes two important security controls:
@@ -187,7 +281,7 @@ The write operations setting includes two important security controls:
 2. **Protected Files**: Zoo blocks modification of:
    - Files in the `.roo/` directory
    - The `.rooignore` file
-   
+
    The "Include protected files" option bypasses this protection - use only when you specifically need to modify these files.
 #### Write Delay & Problems Pane Integration
 
