@@ -25,6 +25,7 @@ The tool accepts these parameters:
 - `mode` (required): The slug of the mode to start the new task in (e.g., "code", "ask", "architect")
 - `message` (required): The initial user message or instructions for this new task
 - `todos` (optional): Initial todo list in markdown checklist format
+- `thinking_effort` (optional): The thinking effort to start the subtask at. Must be a level the target model supports. Omit it to inherit the parent task's effective effort. When the approval block appears, an effort selector next to the prompt is pre-filled with this value and can be changed before approval. See [Thinking Effort](/features/thinking-effort)
 
 ---
 

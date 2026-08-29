@@ -48,6 +48,22 @@ You'll find these settings in the Zoo Code settings panel (click the <Codicon na
 
 ---
 
+## Declaring Supported Reasoning Effort Levels
+
+OpenAI-compatible servers do not advertise which thinking effort levels a model accepts, so the thinking effort controls are hidden by default. Declare the levels your model accepts on the profile:
+
+1.  Open your **OpenAI Compatible** profile in the Zoo Code settings panel.
+2.  Tick **Enable Reasoning Effort**.
+3.  Under **Supported Reasoning Effort Levels**, tick the levels your model accepts (None, Minimal, Low, Medium, High, Extra High, Max).
+4.  Select the default level in the **Model Reasoning Effort** dropdown.
+5.  Click **Save**.
+
+After saving, the composer thinking effort selector, the task header effort chip, and the in-chat effort display render for this profile, and the declared levels appear in the menu. A declaration with no levels selected keeps the controls off.
+
+**Scope:** the declaration unlocks the controls and stores the profile default. The selected level is not yet sent to the server with each request. The [Ollama](/providers/ollama) provider already sends the selected level through its native `think` parameter. See [Thinking Effort](/features/thinking-effort) for the task-local behavior.
+
+---
+
 ## Native Tool Calling
 
 Zoo Code uses **native tool calling** exclusively. This is the only supported tool protocol -- there is no XML-based fallback.

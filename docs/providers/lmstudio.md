@@ -51,3 +51,4 @@ Zoo Code supports running models locally using LM Studio.  LM Studio provides a 
 *   **Troubleshooting:** If you see a "Please check the LM Studio developer logs to debug what went wrong" error, you may need to adjust the context length settings in LM Studio.
 *   **Token Tracking:** Zoo Code tracks token usage for models run via LM Studio, helping you monitor consumption.
 *   **Reasoning Support:** For models that support it, Zoo Code can parse "think" tags or similar reasoning indicators in LM Studio responses, offering more insight into the model's process.
+*   **Thinking Effort Levels:** The LM Studio provider page does not expose the "Supported Reasoning Effort Levels" declaration. To declare the levels your model accepts and use the thinking effort controls, point Zoo Code at LM Studio's OpenAI-compatible endpoint with the [OpenAI Compatible](/providers/openai-compatible) provider. See [Thinking Effort](/features/thinking-effort).
