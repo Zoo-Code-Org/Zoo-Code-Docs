@@ -89,3 +89,10 @@ When the `edit_file` tool is invoked, it follows this process:
 - [`apply_diff`](/advanced-usage/available-tools/apply-diff): Use for precise, context-aware edits with fuzzy matching
 
 These are different implementations of search-and-replace with varying capabilities.
+
+---
+
+## Write safety
+
+This tool publishes through the guarded write path: the write is checked against the file's observed version, and a rejected write (for example, the file changed after it was read) returns a re-read-then-retry error the agent can act on. See [File-Write Safety](/features/file-write-safety).
+
