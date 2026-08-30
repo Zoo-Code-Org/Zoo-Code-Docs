@@ -110,3 +110,7 @@ URL Context and Google Search Grounding options only appear when a Gemini model 
 
 *   **Permissions:** Ensure your Google Cloud account has the necessary permissions to access Vertex AI and the specific models you want to use.
 *   **Pricing:** Refer to the [Vertex AI pricing](https://cloud.google.com/vertex-ai/pricing) page for details. 
+
+### Gemini 3.7 reports "Requests ending with a model turn are not supported"
+
+Gemini 3.7 validates conversation turns more strictly than earlier Gemini models. Zoo Code versions before the fix could omit a tool response when the tool returned empty output, leaving the request ending on the model's tool call. Update Zoo Code to a version containing the fix; the tool response is then preserved and the conversation can continue normally.
