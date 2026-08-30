@@ -45,7 +45,7 @@ Zoo Code supports running models locally using Ollama. This provides privacy, of
 3. **Configure the Model:** Configure your model's context window in Ollama and save a copy.
 
    :::info Default Context Behavior
-   **Zoo Code automatically defers to the Modelfile's `num_ctx` setting by default.** When you use a model with Ollama, Zoo Code reads the model's configured context window and uses it automatically. You don't need to configure context size in Zoo Code settings - it respects what's defined in your Ollama model.
+   **Zoo Code automatically defers to the Modelfile's `num_ctx` setting by default.** When you use a model with Ollama, Zoo Code reads the model's configured context window and uses it for context management, including when deciding when to condense long tasks. You don't need to configure context size in Zoo Code settings - it respects what's defined in your Ollama model.
    :::
 
    **Option A: Interactive Configuration**
