@@ -67,7 +67,7 @@ For example, Sail Research uses `metadata.completion_window` to select a complet
 
 Zoo Code validates the JSON before saving the provider profile and adds the fields to streaming, non-streaming, and single-completion requests. The top-level value must be an object.
 
-Extra Body cannot override fields managed by Zoo Code, including the model, messages, streaming mode, tools, reasoning settings, temperature, and token limits. Use the corresponding Zoo Code setting for those fields. Do not put API keys or other secrets in Extra Body because provider profiles can be exported.
+Extra Body cannot override fields managed by Zoo Code, including the model, messages, streaming mode, tools, reasoning settings, response format, temperature, and token limits. Configure those values through Zoo Code's normal controls where available. Do not put API keys or other secrets in Extra Body because provider profiles can be exported.
 
 ---
 
