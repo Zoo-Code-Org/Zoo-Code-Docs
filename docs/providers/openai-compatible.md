@@ -62,6 +62,8 @@ At a high level:
 
 For native tool calling to work, the model you select **must** support OpenAI-compatible tool calling. If a model does not support native tool calling, it cannot be used with Zoo Code.
 
+GPT-6 Astra is not supported through this provider when tools are enabled. OpenAI allows Astra tool calling only through the Responses API, while Zoo Code's general OpenAI Compatible provider uses Chat Completions. Use the native [OpenAI provider](/providers/openai), or the dedicated [LiteLLM provider](/providers/litellm) with a documented Responses-backed route.
+
 ### Example: simple native tool flow
 
 Here's a simplified example of how a file-reading tool might be exposed when using an OpenAI-native endpoint:

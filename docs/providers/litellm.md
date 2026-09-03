@@ -57,6 +57,12 @@ To use LiteLLM with Zoo Code, you first need to set up and run a LiteLLM server.
        litellm_params:
          model: openai/gpt-model-id
          api_key: os.environ/OPENAI_API_KEY
+
+     # GPT-6 Astra requires Responses for Zoo Code's tool calls
+     - model_name: gpt-6-astra
+       litellm_params:
+         model: openai/responses/gpt-6-astra
+         api_key: os.environ/OPENAI_API_KEY
      
      # Configure Azure OpenAI
      - model_name: azure-model
@@ -106,6 +112,14 @@ Once your LiteLLM server is running, you have two options for configuring it in 
     *   Use the refresh button to update the model list if you've added new models to your LiteLLM server.
     *   If no model is selected, Zoo Code will use a default model. Ensure you have configured at least one model on your LiteLLM server.
 
+### GPT-6 Astra
+
+LiteLLM added `gpt-6-astra` metadata and pricing on September 3, 2026. Use a LiteLLM release that includes that support and configure the underlying route as `openai/responses/gpt-6-astra`, as shown above. Zoo Code sends a supported reasoning effort with tool requests, which activates LiteLLM's documented Chat Completions-to-Responses bridge. This is required because OpenAI does not support Astra tool calling through Chat Completions.
+
+Zoo Code omits temperature, uses `max_completion_tokens`, and limits reasoning effort to `low`, `medium`, `high`, `xhigh`, or `max` when LiteLLM reports the exact underlying route `openai/responses/gpt-6-astra`. The model still requires OpenAI account access; configuring LiteLLM does not bypass OpenAI's staged rollout.
+
+See [LiteLLM's OpenAI provider documentation](https://docs.litellm.ai/docs/providers/openai) for the Responses bridge and [OpenAI's Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra) for the upstream capability contract.
+
 ### Option 2: Using OpenAI Compatible Provider
 
 Alternatively, you can configure LiteLLM using the "OpenAI Compatible" provider:
@@ -132,6 +146,7 @@ When you configure the LiteLLM provider, Zoo Code interacts with your LiteLLM se
     *   `supportsImages`: Determined from `model_info.supports_vision` provided by LiteLLM.
     *   `supportsPromptCache`: Determined from `model_info.supports_prompt_caching` provided by LiteLLM.
     *   `inputPrice` / `outputPrice`: Calculated from `model_info.input_cost_per_token` and `model_info.output_cost_per_token` from LiteLLM.
+    *   GPT-6 Astra aliases receive its reasoning and sampling rules only when `litellm_params.model` is the verified `openai/responses/gpt-6-astra` route.
     *   `supportsComputerUse`: This flag is set to `true` if the underlying model identifier matches one of the Anthropic models predefined in Zoo Code as suitable for "computer use" (see `COMPUTER_USE_MODELS` in technical details).
 
 Zoo Code uses default values for some of these properties if they are not explicitly provided by your LiteLLM server's `/model/info` endpoint for a given model. The defaults are:
