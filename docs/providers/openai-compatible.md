@@ -38,6 +38,7 @@ You'll find these settings in the Zoo Code settings panel (click the <Codicon na
 *   **Base URL:** Enter the base URL provided by your chosen provider.  **This is crucial.**
 *   **API Key:** Enter your API key.
 *   **Model:** Choose a model.
+*   **Extra Body:** Optionally add provider-specific JSON fields to each request body.
 *   **Model Configuration:** This lets you customize advanced configuration for the model
     - Max Output Tokens
     - Context Window
@@ -45,6 +46,28 @@ You'll find these settings in the Zoo Code settings panel (click the <Codicon na
     - Computer Use
     - Input Price
     - Output Price
+
+---
+
+## Provider-Specific Request Fields
+
+Some OpenAI-compatible providers support request-body fields that are not part of Zoo Code's standard model settings. Enter these fields as a JSON object in **Extra Body**.
+
+For example, Sail Research uses `metadata.completion_window` to select a completion tier:
+
+<img src="/img/openai-compatible/extra-body.png" alt="OpenAI Compatible Extra Body setting containing Sail Research completion window metadata" width="480" />
+
+```json
+{
+  "metadata": {
+    "completion_window": "balanced"
+  }
+}
+```
+
+Zoo Code validates the JSON before saving the provider profile and adds the fields to streaming, non-streaming, and single-completion requests. The top-level value must be an object.
+
+Extra Body cannot override fields managed by Zoo Code, including the model, messages, streaming mode, tools, reasoning settings, response format, temperature, and token limits. Configure those values through Zoo Code's normal controls where available. Do not put API keys or other secrets in Extra Body because provider profiles can be exported.
 
 ---
 
