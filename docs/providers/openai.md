@@ -44,6 +44,8 @@ GPT-6 Astra supports text and image input, a 1,050,000-token context window, up 
 
 For current capabilities and rollout status, see [OpenAI's GPT-6 Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra) and [API changelog](https://developers.openai.com/api/docs/changelog).
 
+OpenRouter and NanoGPT also list `openai/gpt-6-astra` and `openai/gpt-6-astra-pro` in their live model catalogs, while Vercel AI Gateway lists `openai/gpt-6-astra` and `openai/gpt-6-astra-fast`. Zoo Code discovers these models dynamically and applies Astra's required reasoning and sampling constraints. OpenCode Go does not currently list Astra, and Zoo Code's Amazon Bedrock provider does not yet use the OpenAI-compatible Responses transport required by Bedrock's Astra offering.
+
 ---
 
 ## Configuration in Zoo Code
