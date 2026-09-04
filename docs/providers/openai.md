@@ -38,7 +38,7 @@ Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API ke
 
 Zoo Code's model picker lists models whose capabilities and pricing have been verified for the native integration. It does not automatically list every model returned by OpenAI.
 
-GPT-6 Astra uses the model ID `gpt-6-astra`. OpenAI announced it on September 3, 2026, with an initial rollout to enterprises in the Trusted Access Program. Broader API and ChatGPT plan access is rolling out separately, so an account can see the model in Zoo Code before OpenAI enables that account to use it.
+GPT-6 Astra uses the model ID `gpt-6-astra`. OpenAI released it in the API and made it available in ChatGPT Work and Codex for Pro, Enterprise, and Business Premium users. You can use the API model here or connect an eligible ChatGPT subscription through the [ChatGPT Plus/Pro provider](/providers/openai-chatgpt-plus-pro).
 
 GPT-6 Astra supports text and image input, a 1,050,000-token context window, up to 922,000 input tokens, and up to 128,000 output tokens. It produces text output. Zoo Code uses OpenAI's Responses API because Astra tool calling is not supported through Chat Completions.
 
