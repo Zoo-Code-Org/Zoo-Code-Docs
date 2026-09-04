@@ -40,6 +40,13 @@ keywords:
 5. Back in Zoo Code settings, pick a model from the dropdown.
 6. Save.
 
+## GPT-6 Astra
+
+GPT-6 Astra is available through this provider for eligible ChatGPT Pro, Enterprise, and Business Premium accounts. Select `gpt-6-astra` after signing in; availability remains controlled by OpenAI for the signed-in account.
+
+Zoo Code uses Codex's Responses Lite request format for Astra, including subscription-based prompt caching and tool calls. The Codex model exposes an 872,000-token maximum context window, image input, and `low`, `medium`, `high`, `xhigh`, and `max` reasoning levels. Zoo Code defaults Astra to `low` reasoning and does not send unsupported disabled or `none` reasoning values.
+
+For the upstream rollout and model contract, see [OpenAI's Codex model catalog](https://github.com/openai/codex/blob/main/codex-rs/models-manager/models.json) and [GPT-6 Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra).
 
 ## Tips and Notes
 
