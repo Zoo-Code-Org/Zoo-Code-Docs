@@ -220,6 +220,15 @@ $0.14
 
 With both disabled, these sections are omitted, reducing token usage when you don't need this context.
 
+#### Model reasoning effort
+
+- Location: Settings → Providers, after selecting a reasoning-capable model
+- Default behavior:
+  - Zoo Code uses the model's advertised reasoning effort when you have not selected one.
+  - If the model does not support disabling reasoning and does not advertise a default, Zoo Code uses the first supported effort.
+  - Selecting **None** explicitly keeps reasoning disabled for models that support a non-reasoning mode.
+- Switching models resets reasoning controls so the newly selected model can apply its own supported options and default.
+
 #### Collapse thinking messages by default
 
 - Location: Settings → UI
