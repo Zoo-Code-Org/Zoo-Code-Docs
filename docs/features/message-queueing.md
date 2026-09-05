@@ -22,7 +22,7 @@ No more waiting. Type your follow-up thoughts, corrections, or additional reques
 
 ## Overview
 
-Message queueing lets you type and send messages while Zoo is still working. Just type your message and hit Enter - it gets queued and will be processed as soon as Zoo is ready for your next input. Queued messages remain user instructions: they do not approve pending tool calls, file writes, commands, or task completion prompts.
+Message queueing lets you type and send messages while Zoo is still working. Just type your message and hit Enter - it gets queued and will be processed as soon as Zoo is ready for your next input. Queued messages remain user instructions. They interrupt pending subtask lifecycle and task completion prompts so Zoo can process your feedback before moving on.
 
 ---
 
@@ -33,7 +33,7 @@ While Zoo is working:
 1. **Type your message** as normal
 2. **Press Enter** or click Send
 3. **Message gets queued** and appears with "Queued Messages:" label
-4. **Zoo processes the queued message** as soon as it's ready for your next input. If Zoo is waiting for approval, the message is treated as feedback instead of approving the pending action.
+4. **Zoo processes the queued message** as soon as it's ready for your next input. If Zoo is about to start or finish a subtask, or accept a completion result, the message is treated as feedback before that lifecycle action continues.
 
 <img src="/img/message-queueing/message-queueing.png" alt="Message queueing interface showing active processing and three queued messages" width="800" />
 
@@ -45,8 +45,8 @@ While Zoo is working:
 
 The input field stays active so you can type anytime - just hit Enter to queue your message.
 
-:::info Queued Messages Preserve Approval Controls
-Queued messages never count as approval. If a message reaches Zoo while an action is awaiting confirmation, Zoo stops that pending action and receives the queued message as feedback. Approve actions explicitly with the approval controls or configure [Auto-Approving Actions](/features/auto-approving-actions).
+:::info Queued Messages and Approval Controls
+Queued messages interrupt subtask start, subtask finish, and task completion prompts so Zoo receives your latest instruction before changing task state. For ordinary tool and command prompts, queued input can still accompany the next action as approval feedback. Use the visible approval controls when you need to review an ordinary action before it runs, or configure [Auto-Approving Actions](/features/auto-approving-actions).
 :::
 
 
@@ -61,10 +61,10 @@ A: There is no hard limit on the number of messages you can queue. The queue siz
 A: No, messages are always processed in the order they were sent (FIFO).
 
 **Q: Do queued messages require approval?**
-A: No. Queued messages are instructions, not actions. They do not bypass approval controls; approve a pending action explicitly or use [Auto-Approving Actions](/features/auto-approving-actions).
+A: Queued messages are instructions, not standalone actions. They interrupt subtask lifecycle and completion prompts, but can accompany ordinary tool or command approvals as feedback. If you need to review an ordinary action first, wait for its approval prompt instead of queueing the message.
 
-**Q: What happens if an approval prompt appears before my queued message is processed?**
-A: Zoo treats the queued message as feedback and does not run the pending action. The message remains part of the current task so Zoo can respond to the new instruction.
+**Q: What happens if a subtask finishes before my queued message is processed?**
+A: Zoo treats the queued message as feedback and keeps control in the subtask. The subtask processes your instruction before it can finish and return control to its parent.
 
 **Q: What happens if Zoo encounters an error?**
 A: Queued messages remain in the queue. You can choose to cancel them or let processing continue.
