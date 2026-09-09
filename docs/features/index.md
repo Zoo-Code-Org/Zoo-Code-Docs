@@ -32,6 +32,7 @@ Discover the powerful features that make Zoo Code your ultimate AI-powered codin
 ### Workflow Management
 - [**Task Todo List**](/features/task-todo-list) - Track progress on complex multi-step tasks
 - [**Checkpoints**](/features/checkpoints) - Save and restore conversation states
+- [**File-Write Safety**](/features/file-write-safety) - Version-guarded writes, per-write checkpoints, change cards, and rollback
 - [**Boomerang Tasks**](/features/boomerang-tasks) - Reusable task templates
 - [**Custom Modes**](/features/custom-modes) - Create specialized AI assistants for specific workflows
 

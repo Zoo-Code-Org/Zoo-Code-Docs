@@ -27,6 +27,7 @@ const sidebars: SidebarsConfig = {
             "features/auto-approving-actions",
             "features/boomerang-tasks",
             "features/checkpoints",
+            "features/file-write-safety",
             "features/code-actions",
             "features/codebase-indexing",
             "features/custom-instructions",
