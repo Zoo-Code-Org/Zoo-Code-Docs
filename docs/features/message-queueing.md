@@ -66,6 +66,9 @@ A: Queued messages are instructions, not standalone actions. They interrupt subt
 **Q: What happens if a subtask finishes before my queued message is processed?**
 A: Zoo treats the queued message as feedback and keeps control in the subtask. The subtask processes your instruction before it can finish and return control to its parent.
 
+**Q: What happens when an extension sends a message through the Zoo Code API while a task is working?**
+A: `RooCodeAPI.sendMessage()` trims the text and validates image data before queueing the message. If no text or valid image remains, the returned promise rejects so the calling extension can handle the discarded input.
+
 **Q: What happens if Zoo encounters an error?**
 A: Queued messages remain in the queue. You can choose to cancel them or let processing continue.
 
