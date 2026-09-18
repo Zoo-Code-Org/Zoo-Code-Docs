@@ -92,6 +92,19 @@ The dropdown shows a grid of permission tiles. Controls:
 
 ---
 
+### Destructive Command Guard
+
+The **Enable destructive command guard** setting is available under the **Execute** permission in Auto-Approve Settings. When the Execute permission and this setting are enabled, Zoo evaluates terminal commands with Destructive Command Guard (DCG) before running them automatically.
+
+- Commands allowed by DCG run automatically.
+- Commands blocked by DCG show the matched reason or rule and require an explicit one-time decision.
+- Choosing **Deny** does not run the command; choosing **Approve** runs that command once.
+- While DCG is enabled, Zoo's allowed and denied command-prefix lists do not apply.
+
+Zoo verifies the DCG download when you enable the setting. If DCG is unavailable for your platform or cannot be installed, Zoo leaves the setting disabled and shows an error.
+
+---
+
 ## Global Enabled Switch
 
 <img src="/img/auto-approving-actions/auto-approving-actions-21.png" alt="Auto-Approve dropdown; Enabled at bottom-right and All/None chips at bottom-left" width="600" />
