@@ -42,6 +42,8 @@ GPT-6 Sol (`gpt-6-sol`) and GPT-6 Luna (`gpt-6-luna`) are OpenAI's cost-efficien
 
 For the complete, up-to-date model list and capabilities, see [OpenAI's models documentation](https://platform.openai.com/docs/models) and the [GPT-6 Sol](https://developers.openai.com/api/docs/models/gpt-6-sol) and [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna) model pages.
 
+OpenRouter, Vercel AI Gateway, and NanoGPT also list `gpt-6-sol` and `gpt-6-luna` in their live model catalogs at OpenAI's standard rates, and Zoo Code discovers them dynamically through those providers. OpenCode Go does not currently list the GPT-6 models.
+
 ---
 
 ## Configuration in Zoo Code
