@@ -15,7 +15,7 @@ keywords:
 
 # Using OpenAI With Zoo Code
 
-Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 family with advanced features like reasoning effort control and verbosity settings.
+Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-6 and GPT-5 families with advanced features like reasoning effort control and verbosity settings.
 
 :::info Want to use a ChatGPT Plus/Pro subscription instead?
 Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API key): [OpenAI – ChatGPT Plus/Pro](/providers/openai-chatgpt-plus-pro).
@@ -38,7 +38,11 @@ Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API ke
 
 Zoo Code supports all models available through OpenAI's API.
 
-For the complete, up-to-date model list and capabilities, see [OpenAI's models documentation](https://platform.openai.com/docs/models).
+GPT-6 Sol (`gpt-6-sol`) and GPT-6 Luna (`gpt-6-luna`) are OpenAI's cost-efficient GPT-6 models, announced on September 22, 2026 at roughly half the API price of their GPT-5.6 counterparts. Both support text and image input, a 1,050,000-token context window, up to 128,000 output tokens, and reasoning effort levels from `none` through `max`. Prompts above 272,000 input tokens use long-context pricing, cached input reads are discounted by 90%, and Flex and Batch are priced at 50% of standard rates.
+
+For the complete, up-to-date model list and capabilities, see [OpenAI's models documentation](https://platform.openai.com/docs/models) and the [GPT-6 Sol](https://developers.openai.com/api/docs/models/gpt-6-sol) and [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna) model pages.
+
+OpenRouter, Vercel AI Gateway, and NanoGPT also list `gpt-6-sol` and `gpt-6-luna` in their live model catalogs at OpenAI's standard rates, and Zoo Code discovers them dynamically through those providers. OpenCode Go does not currently list the GPT-6 models.
 
 ---
 
@@ -58,7 +62,15 @@ For the complete, up-to-date model list and capabilities, see [OpenAI's models d
 
 ### Reasoning Effort Control
 
-For models that support reasoning (GPT-5, o1, o3, o4 families), you can control how deeply the model thinks:
+For models that support reasoning (GPT-6, GPT-5, o1, o3, o4 families), you can control how deeply the model thinks:
+
+**GPT-6 Sol/Luna Models:**
+- `none` - Fastest responses without explicit reasoning
+- `low` - Quick responses with light reasoning
+- `medium` (default) - Balanced reasoning and response time
+- `high` - Deep reasoning for complex problems
+- `xhigh` - Extended reasoning for demanding problems
+- `max` - Maximum reasoning depth
 
 **GPT-5 Models:**
 - `minimal` - Fastest responses with basic reasoning
