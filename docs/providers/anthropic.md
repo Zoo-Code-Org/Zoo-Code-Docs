@@ -52,6 +52,6 @@ For the complete, up-to-date model list and capabilities, see [Anthropic's model
 ## Tips and Notes
 
 *   **Prompt Caching:** Claude models support [prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching), which can significantly reduce costs and latency for repeated prompts.
-*   **Context Window:** Claude models have large context windows (200,000 tokens), allowing you to include a significant amount of code and context in your prompts.
+*   **Context Window:** Claude models have large context windows, allowing you to include a significant amount of code and context in your prompts. The latest Claude models (such as Claude Sonnet 5.5) support a 1 million token context window.
 *   **Pricing:** Refer to the [Anthropic Pricing](https://www.anthropic.com/pricing) page for the latest pricing information.
 *   **Rate Limits:** Anthropic has strict rate limits based on [usage tiers](https://docs.anthropic.com/en/api/rate-limits#requirements-to-advance-tier). If you're repeatedly hitting rate limits, consider contacting Anthropic sales or accessing Claude through a different provider like [OpenRouter](/providers/openrouter) or [Requesty](/providers/requesty).
