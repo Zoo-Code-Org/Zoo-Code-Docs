@@ -15,7 +15,7 @@ keywords:
 
 # Using OpenAI With Zoo Code
 
-Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 family with advanced features like reasoning effort control and verbosity settings.
+Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 and GPT-6 families with advanced features like reasoning effort control and verbosity settings.
 
 :::info Want to use a ChatGPT Plus/Pro subscription instead?
 Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API key): [OpenAI – ChatGPT Plus/Pro](/providers/openai-chatgpt-plus-pro).
@@ -58,7 +58,16 @@ For the complete, up-to-date model list and capabilities, see [OpenAI's models d
 
 ### Reasoning Effort Control
 
-For models that support reasoning (GPT-5, o1, o3, o4 families), you can control how deeply the model thinks:
+For models that support reasoning (GPT-5, GPT-6, o1, o3, o4 families), you can control how deeply the model thinks:
+
+**GPT-6 Models:**
+- `low` - Quick responses with light reasoning
+- `medium` (default) - Balanced reasoning and response time
+- `high` - Deep reasoning for complex problems
+- `xhigh` - Extra-deep reasoning for the hardest problems
+- `max` - Maximum reasoning effort
+
+Most GPT-6 models (such as GPT-6 Sol and GPT-6 Luna) also support `none` for non-reasoning operation. Some models, like GPT-6.1 Sol and GPT-6 Astra, require an explicit reasoning effort and do not support `none` or `minimal` - Zoo Code handles this automatically.
 
 **GPT-5 Models:**
 - `minimal` - Fastest responses with basic reasoning
