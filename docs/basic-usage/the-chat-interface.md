@@ -26,6 +26,12 @@ The chat interface consists of the following main elements:
 
 3. **Action Buttons:** These buttons appear above the input field and allow you to approve or reject Zoo Code's proposed actions.  The available buttons change depending on the context.
 
+   When you have sent follow-up messages in a task, the user-and-up-arrow button in this row jumps to your previous message. Click it repeatedly to move backward through the messages you sent.
+
+   <img src="/img/the-chat-interface/previous-user-message-button-light.png" alt="Previous user message button in the VS Code light theme" width="288" />
+
+   <img src="/img/the-chat-interface/previous-user-message-button-dark.png" alt="Previous user message button in the VS Code dark theme" width="288" />
+
 4. **Send Button:** This looks like a small plane and it's located to the far right of the input field. This sends messages to Zoo after you've typed them.
 
 5. **Plus Button:** The plus button is located at the top in the header. It switches to the Chat tab and focuses the input. To reset the session, start a new task or clear the current task.
