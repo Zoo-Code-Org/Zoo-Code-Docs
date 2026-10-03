@@ -1,0 +1,102 @@
+name: Zoo Stable Release Docs
+
+# Fired by Zoo-Code-Org/Zoo-Code via a `zoo-stable-release` repository_dispatch
+# after a stable extension publish succeeds. Generates the deterministic
+# release docs (update-notes page, index, sidebar, package.json version),
+# validates the site, and pushes the result to main, which triggers the normal
+# docs.zoocode.dev deployment of the main branch.
+#
+# This workflow is deliberately limited to deterministic release bookkeeping.
+# Evergreen docs and enriched release-note prose are NOT rewritten here; those
+# changes continue to land through reviewed PRs.
+
+on:
+  repository_dispatch:
+    types: [zoo-stable-release]
+
+# Keyed on the release tag so rapid duplicate dispatches for the same release
+# queue instead of racing. The generator is idempotent, so a queued re-run
+# with the same payload produces no additional commit.
+concurrency:
+  group: zoo-stable-release-${{ github.event.client_payload.tag || github.run_id }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write # push the generated release-docs commit to main (same-repo GITHUB_TOKEN)
+
+jobs:
+  release-docs:
+    name: Generate and publish release docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate dispatch payload
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          TAG: ${{ github.event.client_payload.tag }}
+          SOURCE_SHA: ${{ github.event.client_payload.source_sha }}
+          RELEASE_URL: ${{ github.event.client_payload.release_url }}
+        run: |
+          test -n "$VERSION" && test -n "$TAG" && test -n "$SOURCE_SHA" && test -n "$RELEASE_URL"
+          test "$TAG" = "v${VERSION}"
+          echo "Release docs request: ${TAG} (${SOURCE_SHA}) -> ${RELEASE_URL}"
+
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate release docs
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          TAG: ${{ github.event.client_payload.tag }}
+          SOURCE_SHA: ${{ github.event.client_payload.source_sha }}
+          RELEASE_URL: ${{ github.event.client_payload.release_url }}
+          CHANGES: ${{ github.event.client_payload.changes }}
+        run: |
+          changes_file=$(mktemp)
+          printf "%s" "$CHANGES" > "$changes_file"
+          pnpm docs:release \
+            -- --version "$VERSION" \
+               --tag "$TAG" \
+               --source-sha "$SOURCE_SHA" \
+               --release-url "$RELEASE_URL" \
+               --changes-file "$changes_file"
+
+      - name: Typecheck, lint, and build
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+        run: |
+          pnpm run check-types
+          pnpm run lint
+          pnpm run lint:unused
+          pnpm run build
+
+      - name: Commit and push release docs to main
+        env:
+          TAG: ${{ github.event.client_payload.tag }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/update-notes sidebars.ts package.json
+          if git diff --cached --quiet; then
+            echo "Release docs for ${TAG} are already up to date; nothing to commit."
+            exit 0
+          fi
+          git commit -m "docs: add ${TAG} release notes"
+          # Rebase onto any concurrently landed main commits, then push. The
+          # push to main is what publishes to docs.zoocode.dev.
+          # If branch protection rejects direct pushes to main, switch this
+          # step to open an auto-merge PR instead.
+          git pull --rebase origin main
+          git push origin HEAD:main
