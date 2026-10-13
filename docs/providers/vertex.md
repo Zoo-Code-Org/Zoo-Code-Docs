@@ -37,6 +37,8 @@ Zoo Code supports accessing models through Google Cloud Platform's Vertex AI, a 
 
 Zoo Code supports all models available through Google Cloud Vertex AI, including Anthropic Claude, Google Gemini, and MAAS (Model as a Service) offerings.
 
+Gemini 3.7 Flash is available as `gemini-3.7-flash`. It is generally available on the global endpoint with a 1,048,576-token context window, up to 65,536 output tokens, multimodal input, and configurable reasoning effort.
+
 For the complete, up-to-date model list and IDs, see [Vertex AI's models documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models).
 
 ---
@@ -61,7 +63,7 @@ For the complete, up-to-date model list and IDs, see [Vertex AI's models documen
     *   Or provide the file path in **Google Cloud Key File Path** field
 
 4.  **Enter Project ID:** Enter your Google Cloud Project ID.
-5.  **Select Region:** Choose the region where your Vertex AI resources are located (e.g., `us-east5`).
+5.  **Select Region:** Choose the region where your Vertex AI resources are located (e.g., `us-east5`). For Gemini 3.7 Flash, select `global`.
 6.  **Select Model:** Choose your desired model from the "Model" dropdown.
 
 ---
@@ -110,3 +112,4 @@ URL Context and Google Search Grounding options only appear when a Gemini model 
 
 *   **Permissions:** Ensure your Google Cloud account has the necessary permissions to access Vertex AI and the specific models you want to use.
 *   **Pricing:** Refer to the [Vertex AI pricing](https://cloud.google.com/vertex-ai/pricing) page for details. 
+*   **Gemini 3.7 Flash introductory pricing:** Google lists Gemini 3.7 Flash at $0.75 per million input tokens and $3.75 per million output tokens through December 31, 2026. Standard pricing begins January 1, 2027.

@@ -32,9 +32,9 @@ Zoo Code supports Google's Gemini family of models through the Google AI Gemini 
 
 ## Available Models
 
-Zoo Code supports all Gemini models available through Google's API and automatically tracks Google's latest stable releases.
+Zoo Code's model catalog includes Gemini 3.7 Flash (`gemini-3.7-flash`), Google's generally available workhorse model for agentic coding and complex tasks. It supports text, image, video, audio, and PDF input, with a 1,048,576-token context window, up to 65,536 output tokens, and configurable `low`, `medium`, or `high` reasoning effort without a reasoning budget.
 
-For the complete, up-to-date model list and capabilities, see [Google's Gemini models documentation](https://ai.google.dev/models/gemini).
+For Google's complete, up-to-date model list and capabilities, see [the Gemini models documentation](https://ai.google.dev/gemini-api/docs/models).
 
 ---
 
@@ -108,6 +108,7 @@ Search for the latest Node.js security vulnerabilities and then analyze my packa
 ## Tips and Notes
 
 *   **Pricing:**  Gemini API usage is priced based on input and output tokens. URL context and search grounding may incur additional costs. Some experimental models are available for free. Refer to the [Gemini pricing page](https://ai.google.dev/pricing) for detailed information.
+*   **Gemini 3.7 Flash introductory pricing:** Google lists Gemini 3.7 Flash at $0.75 per million input tokens and $3.75 per million output tokens through December 31, 2026. Standard pricing begins January 1, 2027.
 *   **Model Selection:** Choose models based on your needs:
     - **Flash models:** Faster and more cost-effective for most tasks
     - **Pro models:** Better for complex reasoning and analysis
