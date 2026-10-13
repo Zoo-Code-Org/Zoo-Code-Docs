@@ -79,6 +79,12 @@
       "cloud": false
     },
     {
+      "id": "providers/nanogpt",
+      "title": "NanoGPT",
+      "extension": true,
+      "cloud": false
+    },
+    {
       "id": "providers/ollama",
       "title": "Ollama",
       "extension": true,
