@@ -123,7 +123,7 @@ In the <Codicon name="notebook" /> Prompts tab, you can explicitly associate a s
 
 Each task remembers which profile it started with. This "sticky" behavior means:
 
-- **Reopening from history**: When you resume a task from history, it uses the same profile it had originally—even if you've since changed the global selection.
+- **Reopening from history**: When you resume a task from history, it honors your current global profile selection. If you've switched profiles since the task was last saved (for example, to a provider with a larger context window), the resumed task uses the newly selected profile and remembers it going forward.
 - **Multi-workspace consistency**: If you switch profiles in another workspace window, existing tasks in the first window keep their original profile.
 - **Orchestrator subtasks**: Child tasks created by the orchestrator inherit the parent's profile and retain it for their lifetime.
 
