@@ -36,6 +36,17 @@ Zoo Code supports all Gemini models available through Google's API and automatic
 
 For the complete, up-to-date model list and capabilities, see [Google's Gemini models documentation](https://ai.google.dev/models/gemini).
 
+### Gemini 4 Argon
+
+[Gemini 4 Argon](https://cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon) (`gemini-4-argon`) is Google's flagship reasoning model and the first model in the Gemini 4 family.
+
+*   **Context window:** 1,048,576 tokens, shared across input, thinking, and output tokens.
+*   **Max output:** 65,536 tokens per streaming request (long decodes up to 1,048,576 tokens are handled via continuation).
+*   **Thinking levels:** Low, Medium (default), and High.
+*   **Caching:** Implicit caching applies automatically to prompt prefixes of 6,144 tokens or more; explicit context caching is not supported.
+*   **Availability:** Paid tier only (not available on the Free tier or the Google AI Pro plan).
+*   **Pricing (per 1M tokens):** Input $2.00, output (including thinking tokens) $10.00, cached input $0.10 — promo pricing through November 30, 2026. From December 1, 2026: input $4.00, output $20.00, cached input $0.20. See the [Gemini API pricing page](https://ai.google.dev/gemini-api/docs/pricing) for details.
+
 ---
 
 ## Configuration in Zoo Code
