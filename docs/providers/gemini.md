@@ -46,6 +46,7 @@ For the complete, up-to-date model list and capabilities, see [Google's Gemini m
 *   **Caching:** Implicit caching applies automatically to prompt prefixes of 6,144 tokens or more; explicit context caching is not supported.
 *   **Availability:** Paid tier only (not available on the Free tier or the Google AI Pro plan).
 *   **Pricing (per 1M tokens):** Input $2.00, output (including thinking tokens) $10.00, cached input $0.10 — promo pricing through November 30, 2026. From December 1, 2026: input $4.00, output $20.00, cached input $0.20. See the [Gemini API pricing page](https://ai.google.dev/gemini-api/docs/pricing) for details.
+*   **Other providers:** Gemini 4 Argon is also available through OpenRouter (`google/gemini-4-argon`), Vercel AI Gateway (`google/gemini-4-argon`), and Requesty (`vertex/gemini-4-argon`). Zoo Code fetches the model catalogs of these providers automatically.
 
 ---
 
