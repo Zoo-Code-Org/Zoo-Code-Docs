@@ -50,6 +50,10 @@ You have two main options for configuring AWS credentials:
 
 Zoo Code supports all foundation models available through Amazon Bedrock.
 
+The Anthropic Claude selection includes Claude Sonnet 5, Claude Opus 5, Claude Opus 5.5, and Claude Haiku 5.5. Each provides a 1M-token context window. Claude Haiku 5.5 and Claude Opus 5.5 support prompt caching with 512-token cache checkpoints. Prompt caching cuts the cost of repeated prompt prefixes, so select these models from the dropdown instead of typing a model ID by hand. A manually entered model ID is not treated as a known model and loses prompt caching support.
+
+Claude Haiku 5.5 runs through cross-region or global inference. Enable "Use cross-region inference" or global inference when you select it.
+
 For the complete, up-to-date model list with IDs and capabilities, see [AWS Bedrock's supported models documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).
 
 **Important:** Use the *model ID* when configuring Zoo Code, not the model name.
