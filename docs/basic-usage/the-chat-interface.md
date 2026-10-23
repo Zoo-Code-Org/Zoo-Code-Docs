@@ -24,7 +24,7 @@ The chat interface consists of the following main elements:
 
 2. **Input Field:** This is where you type your tasks and questions for Zoo Code.  You can use plain English to communicate.
 
-3. **Action Buttons:** These buttons appear above the input field and allow you to approve or reject Zoo Code's proposed actions.  The available buttons change depending on the context.
+3. **Action Buttons:** These buttons appear above the input field and allow you to approve or reject Zoo Code's proposed actions. The available buttons change depending on the context. If you scroll through earlier messages while an action is waiting, its approval controls remain available alongside the scroll-to-bottom control.
 
 4. **Send Button:** This looks like a small plane and it's located to the far right of the input field. This sends messages to Zoo after you've typed them.
 
