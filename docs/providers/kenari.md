@@ -29,7 +29,7 @@ Zoo Code supports accessing models through [Kenari](https://kenari.id), an Indon
 
 ## Available Models
 
-Zoo Code automatically fetches the available models from Kenari's public `/v1/models` endpoint, so the list stays current with no extension update.
+When you select Kenari as your provider, Zoo Code fetches the available models from Kenari's public `/v1/models` endpoint so the list stays current without an extension update. Other provider selections do not contact Kenari. Like any direct network request, Kenari receives standard connection metadata such as your IP address; no workspace content is included in this model-catalog request.
 
 Prices are listed in Rupiah in the [Kenari catalog](https://kenari.id/docs) rather than inside Zoo Code, because Kenari bills in IDR while the extension shows prices in USD.
 
