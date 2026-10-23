@@ -1,6 +1,6 @@
 ---
 sidebar_label: DeepSeek
-description: Configure DeepSeek's chat and reasoning models in Zoo Code. Access deepseek-chat and deepseek-reasoner for coding and complex reasoning tasks.
+description: Configure DeepSeek models in Zoo Code for coding, reasoning, and image understanding.
 keywords:
   - deepseek
   - deepseek chat
@@ -14,7 +14,7 @@ keywords:
 
 # Using DeepSeek With Zoo Code
 
-Zoo Code supports accessing models through the DeepSeek API, including `deepseek-chat` and `deepseek-reasoner`.
+Zoo Code supports accessing models through the DeepSeek API, including the multimodal `deepseek-flash` model.
 
 **Website:** [https://platform.deepseek.com/](https://platform.deepseek.com/)
 
@@ -32,6 +32,8 @@ Zoo Code supports accessing models through the DeepSeek API, including `deepseek
 ## Available Models
 
 Zoo Code supports all models available through the DeepSeek API.
+
+Use `deepseek-flash` to attach images for screenshot, diagram, or other visual analysis. DeepSeek also accepts the retired `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` names as temporary aliases for the latest Flash model. `deepseek-v4-pro` does not support image input.
 
 For the complete, up-to-date model list, see [DeepSeek's API documentation](https://api-docs.deepseek.com/quick_start/pricing).
 
