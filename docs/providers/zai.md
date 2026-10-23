@@ -43,6 +43,8 @@ Z AI (Zhipu AI) provides advanced language models with the GLM family. The provi
 
 Zoo Code automatically fetches all available models from Z AI's API based on your selected region.
 
+GLM-5.3-Flash is available through the international API and the international and China Coding Plans, but not through the China API. It provides a 1M-token context window, up to 128K output tokens, image input, and Low/High/Max reasoning effort at a lower cost than GLM-5.3.
+
 For the complete, up-to-date model list and specifications, see the official provider documentation:
 - **International:** [Z AI model documentation](https://z.ai/model-api)
 - **China Mainland:** [BigModel documentation](https://open.bigmodel.cn/)
