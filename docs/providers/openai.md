@@ -15,7 +15,7 @@ keywords:
 
 # Using OpenAI With Zoo Code
 
-Zoo Code supports accessing models directly through the official OpenAI API, including the latest GPT-5 family with advanced features like reasoning effort control and verbosity settings.
+Zoo Code supports a curated set of models through the official OpenAI API, including GPT-6 Astra and GPT-5 models with model-specific reasoning controls.
 
 :::info Want to use a ChatGPT Plus/Pro subscription instead?
 Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API key): [OpenAI – ChatGPT Plus/Pro](/providers/openai-chatgpt-plus-pro).
@@ -36,9 +36,15 @@ Use the **OpenAI – ChatGPT Plus/Pro** provider to sign in via OAuth (no API ke
 
 ## Available Models
 
-Zoo Code supports all models available through OpenAI's API.
+Zoo Code's model picker lists models whose capabilities and pricing have been verified for the native integration. It does not automatically list every model returned by OpenAI.
 
-For the complete, up-to-date model list and capabilities, see [OpenAI's models documentation](https://platform.openai.com/docs/models).
+GPT-6 Astra uses the model ID `gpt-6-astra`. OpenAI released it in the API and made it available in ChatGPT Work and Codex for Pro, Enterprise, and Business Premium users. You can use the API model here or connect an eligible ChatGPT subscription through the [ChatGPT Plus/Pro provider](/providers/openai-chatgpt-plus-pro).
+
+GPT-6 Astra supports text and image input, a 1,050,000-token context window, up to 922,000 input tokens, and up to 128,000 output tokens. It produces text output. Zoo Code uses OpenAI's Responses API because Astra tool calling is not supported through Chat Completions.
+
+For current capabilities and rollout status, see [OpenAI's GPT-6 Astra model page](https://developers.openai.com/api/docs/models/gpt-6-astra) and [API changelog](https://developers.openai.com/api/docs/changelog).
+
+OpenRouter and NanoGPT also list `openai/gpt-6-astra` and `openai/gpt-6-astra-pro` in their live model catalogs, while Vercel AI Gateway lists `openai/gpt-6-astra` and `openai/gpt-6-astra-fast`. Zoo Code discovers these models dynamically and applies Astra's required reasoning and sampling constraints. OpenCode Go does not currently list Astra, and Zoo Code's Amazon Bedrock provider does not yet use the OpenAI-compatible Responses transport required by Bedrock's Astra offering.
 
 ---
 
@@ -58,13 +64,19 @@ For the complete, up-to-date model list and capabilities, see [OpenAI's models d
 
 ### Reasoning Effort Control
 
-For models that support reasoning (GPT-5, o1, o3, o4 families), you can control how deeply the model thinks:
+For models that support reasoning, Zoo Code shows only the levels accepted by the selected model.
+
+**GPT-6 Astra:**
+- `low`
+- `medium` (Zoo Code default)
+- `high`
+- `xhigh`
+- `max`
+
+GPT-6 Astra does not accept `none` or `minimal`. Zoo Code falls back to its `medium` default if an imported profile contains an unsupported effort.
 
 **GPT-5 Models:**
-- `minimal` - Fastest responses with basic reasoning
-- `low` - Quick responses with light reasoning
-- `medium` (default) - Balanced reasoning and response time
-- `high` - Deep reasoning for complex problems
+- Supported levels vary by model and can include `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`.
 
 **o1/o3/o4 Models:**
 - `low` - Minimal thinking time
@@ -75,7 +87,7 @@ Some models have preset reasoning levels that cannot be changed.
 
 ### Verbosity Control
 
-Available for GPT-5 models and select others, verbosity controls the detail level of responses:
+Available for models that explicitly advertise support in Zoo Code, verbosity controls the detail level of responses:
 
 - `low` - Concise, direct responses
 - `medium` (default) - Balanced detail
@@ -83,20 +95,16 @@ Available for GPT-5 models and select others, verbosity controls the detail leve
 
 ### Temperature Settings
 
-Temperature controls output randomness (0.0 to 2.0):
+Temperature controls output randomness where the selected model supports it. GPT-6 Astra does not accept custom `temperature` or `top_p` values, so Zoo Code omits them. The same is true for several reasoning models.
 
-- **GPT-5 models:** Default 1.0 for balanced creativity
-- **Other models:** Default 0.0 for deterministic output
-- **Note:** Not available for o1/o3 reasoning models
+### Conversation Continuity
 
-### Conversation Continuity (GPT-5)
-
-GPT-5 models maintain conversation context efficiently through response IDs, reducing token usage while preserving context. This happens automatically - no configuration needed.
+The native provider uses the Responses API and preserves compatible response and reasoning items across tool turns. GPT-6 Astra also supports prompt caching. Cache writes are billed separately, cached reads use a lower rate, and requests above 272,000 input tokens use long-context pricing for the entire request. See [OpenAI's prompt caching guide](https://developers.openai.com/api/docs/guides/prompt-caching).
 
 ---
 
 ## Tips and Notes
 
-*   **Pricing:** Refer to the [OpenAI Pricing](https://openai.com/pricing) page for current model costs and discounts, including prompt caching.
+*   **Pricing:** Refer to [OpenAI API pricing](https://developers.openai.com/api/docs/pricing) for current standard, Flex, Fast, Batch, cache, and long-context rates.
 *   **Azure OpenAI Service:** If you'd like to use the Azure OpenAI service, please see our section on [OpenAI-compatible](/providers/openai-compatible) providers.
 *   **Context Optimization:** For GPT-5-Codex, leverage prompt caching by maintaining consistent context across requests to reduce costs significantly.

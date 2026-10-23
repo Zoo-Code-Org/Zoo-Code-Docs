@@ -36,11 +36,11 @@ Temperature controls output randomness, not code quality or accuracy directly. K
 
 ## Default Values in Zoo Code
 
-Zoo Code uses a default temperature of 0.0 for most models, optimizing for maximum determinism and precision in code generation. This applies to OpenAI models, Anthropic models (non-thinking variants), LM Studio models, and most other providers.
+Zoo Code uses a default temperature of 0.0 for many models, optimizing for maximum determinism and precision in code generation. The exact default and whether temperature is accepted depend on the provider and selected model.
 
 Some models use higher default temperatures - DeepSeek R1 models and certain reasoning-focused models default to 0.3, providing a balance between determinism and creative exploration.
 
-Models with thinking capabilities (where the AI shows its reasoning process) require a fixed temperature of 1.0 which cannot be changed, as this setting ensures optimal performance of the thinking mechanism. This applies to any model with the ":thinking" flag enabled.
+Some thinking modes require a fixed temperature, while other reasoning models reject temperature entirely. For example, GPT-6 Astra does not accept custom `temperature` or `top_p` values.
 
 Some specialized models don't support temperature adjustments at all, in which case Zoo Code respects these limitations automatically.
 
@@ -93,9 +93,7 @@ Zoo Code implements temperature handling with these considerations:
 
 *   User-defined settings take priority over defaults
 *   Provider-specific behaviors are respected
-*   Model-specific limitations are enforced:
-    *   Thinking-enabled models require a fixed temperature of 1.0
-    *   Some models don't support temperature adjustments
+*   Model-specific limitations are enforced, including fixed-temperature modes and models that do not support temperature adjustments.
 
 ---
 
@@ -111,7 +109,7 @@ Experimenting with different temperature settings is the most effective way to d
 4. **Document results** - Note which values produce the best outcomes for specific types of tasks
 5. **Create profiles** - Save effective settings as [API configuration profiles](/features/api-configuration-profiles) for quick access
 
-Remember that different models may respond differently to the same temperature values, and thinking-enabled models always use a fixed temperature of 1.0 regardless of your settings.
+Remember that different models may respond differently to the same temperature values, and some reasoning models do not expose a temperature control at all.
 
 ---
 
