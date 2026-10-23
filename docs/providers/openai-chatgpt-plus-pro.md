@@ -40,6 +40,12 @@ keywords:
 5. Back in Zoo Code settings, pick a model from the dropdown.
 6. Save.
 
+## GPT-6 Sol and Luna
+
+GPT-6 Sol (`gpt-6-sol`) and GPT-6 Luna (`gpt-6-luna`) are available through this provider for ChatGPT Plus, Pro, Business, Enterprise, and Edu accounts. Select either model after signing in; availability remains controlled by OpenAI for the signed-in account.
+
+Both models support image input and reasoning effort levels from `none` through `max` (Zoo Code defaults to `medium`). For the upstream rollout and model contracts, see OpenAI's [GPT-6 Sol](https://developers.openai.com/api/docs/models/gpt-6-sol) and [GPT-6 Luna](https://developers.openai.com/api/docs/models/gpt-6-luna) model pages.
+
 
 ## Tips and Notes
 
