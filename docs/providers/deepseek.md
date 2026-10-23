@@ -1,6 +1,6 @@
 ---
 sidebar_label: DeepSeek
-description: Configure DeepSeek's chat and reasoning models in Zoo Code. Access deepseek-chat and deepseek-reasoner for coding and complex reasoning tasks.
+description: Configure DeepSeek's text, vision, and reasoning models in Zoo Code, including DeepSeek V4 Flash Vision Exp for multimodal tasks.
 keywords:
   - deepseek
   - deepseek chat
@@ -10,11 +10,13 @@ keywords:
   - reasoning ai
   - coding ai
   - deepseek r1
+  - deepseek v4 flash vision exp
+  - vision ai
 ---
 
 # Using DeepSeek With Zoo Code
 
-Zoo Code supports accessing models through the DeepSeek API, including `deepseek-chat` and `deepseek-reasoner`.
+Zoo Code supports accessing text, reasoning, and vision models through the DeepSeek API.
 
 **Website:** [https://platform.deepseek.com/](https://platform.deepseek.com/)
 
@@ -33,7 +35,9 @@ Zoo Code supports accessing models through the DeepSeek API, including `deepseek
 
 Zoo Code supports all models available through the DeepSeek API.
 
-For the complete, up-to-date model list, see [DeepSeek's API documentation](https://api-docs.deepseek.com/quick_start/pricing).
+`deepseek-v4-flash-vision-exp` is an experimental multimodal model with a 1M-token context window and up to 384K output tokens. It accepts text and images, supports tool calling, and offers thinking and non-thinking modes. Images are billed as input tokens, with each image using at most 384 tokens.
+
+For the complete, up-to-date model list and rates, see [DeepSeek's models and pricing documentation](https://api-docs.deepseek.com/quick_start/pricing). For supported image formats and limits, see the [DeepSeek vision guide](https://api-docs.deepseek.com/guides/vision).
 
 ---
 
@@ -48,3 +52,4 @@ For the complete, up-to-date model list, see [DeepSeek's API documentation](http
 
 ## Tips and Notes
 *   **Pricing:** Refer to the [DeepSeek Pricing](https://api-docs.deepseek.com/quick_start/pricing/) page for details on model costs.
+*   **Experimental model:** DeepSeek may change the behavior or availability of `deepseek-v4-flash-vision-exp` while it remains experimental.

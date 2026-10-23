@@ -1,6 +1,6 @@
 ---
 sidebar_label: Fireworks AI
-description: Use Fireworks AI with Zoo Code to access state-of-the-art open-source and proprietary AI models like Kimi, Qwen, and DeepSeek on a high-performance platform with large context windows up to 256K tokens.
+description: Use Fireworks AI with Zoo Code to access open models like Kimi, Qwen, and DeepSeek, including long-context multimodal models.
 keywords:
   - fireworks ai
   - fireworks
@@ -39,9 +39,9 @@ Fireworks AI is a high-performance platform for running AI models, offering fast
 
 ## Available Models
 
-Zoo Code supports all models available through Fireworks AI's platform.
+Zoo Code includes explicit metadata for supported Fireworks models. This includes `accounts/fireworks/models/deepseek-v4-flash-vision-exp`, an experimental multimodal model with image input, function calling, and a context window of about 1M tokens.
 
-For the complete, up-to-date model list and specifications, see [Fireworks AI's models page](https://fireworks.ai/models).
+For the complete, up-to-date model list and specifications, see [Fireworks AI's models page](https://fireworks.ai/models). See the [DeepSeek V4 Flash Vision Exp model page](https://fireworks.ai/models/deepseek-ai/deepseek-v4-flash-vision-exp) for its current availability and pricing.
 
 ---
 
