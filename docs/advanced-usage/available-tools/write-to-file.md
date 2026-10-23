@@ -198,3 +198,10 @@ export function debounce(func, delay) {
 <line_count>18</line_count>
 </write_to_file>
 ```
+
+---
+
+## Write safety
+
+This tool publishes through the guarded write path: the write is checked against the file's observed version, and a rejected write (for example, the file changed after it was read) returns a re-read-then-retry error the agent can act on. See [File-Write Safety](/features/file-write-safety).
+

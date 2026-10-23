@@ -108,3 +108,10 @@ The patch format uses custom headers followed by unified diff blocks:
 - [`apply_diff`](/advanced-usage/available-tools/apply-diff): Use for single-file search-and-replace with fuzzy matching
 - `apply_patch`: Use for multi-file operations with unified diff format
 - [`write_to_file`](/advanced-usage/available-tools/write-to-file): Use for creating entire new files
+
+---
+
+## Write safety
+
+This tool publishes through the guarded write path: the write is checked against the file's observed version, and a rejected write (for example, the file changed after it was read) returns a re-read-then-retry error the agent can act on. See [File-Write Safety](/features/file-write-safety).
+
