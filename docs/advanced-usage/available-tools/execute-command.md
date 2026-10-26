@@ -48,6 +48,7 @@ This tool executes terminal commands directly on the user's system, enabling a w
 - Integrates with VS Code shell API for reliable terminal execution
 - Reuses terminal instances when possible through a registry system
 - Captures command output line by line with real-time feedback
+- Only prompts about command output when a command is still running after a short delay, so quick commands complete without interruption
 - Supports long-running commands that continue in the background
 - Allows specification of custom working directories
 - Maintains terminal history and state across command executions
@@ -95,6 +96,7 @@ When the `execute_command` tool is invoked, it follows this process:
    - Throttles output handling (100ms intervals)
    - Monitors for command completion or errors
    - Detects "hot" processes like compilers for special handling
+   - Asks for user input only when a command is still running after a few seconds; short foreground commands stream their output and finish without prompting
 
 4. **Result Processing**:
    - Strips ANSI/VS Code escape sequences for clean output
