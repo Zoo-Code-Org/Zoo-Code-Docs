@@ -97,6 +97,12 @@
       "cloud": false
     },
     {
+      "id": "providers/opencode-go",
+      "title": "OpenCode Go",
+      "extension": true,
+      "cloud": false
+    },
+    {
       "id": "providers/openrouter",
       "title": "OpenRouter",
       "extension": true,
