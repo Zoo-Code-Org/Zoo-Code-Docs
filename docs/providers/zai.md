@@ -47,6 +47,19 @@ For the complete, up-to-date model list and specifications, see the official pro
 - **International:** [Z AI model documentation](https://z.ai/model-api)
 - **China Mainland:** [BigModel documentation](https://open.bigmodel.cn/)
 
+### GLM-5.3
+
+GLM-5.3 is available through the international Z AI API and the international and China Coding Plan endpoints. It supports a 1 million token context window, up to 128K output tokens, prompt caching, and `low`, `high`, or `max` reasoning effort.
+
+Zoo Code follows the model's required request behavior automatically:
+
+- Thinking is always enabled because GLM-5.3 does not accept `thinking.type: "disabled"`.
+- Preserved thinking is enabled with `thinking.clear_thinking: false`, and prior `reasoning_content` is passed back unchanged across turns.
+- Reasoning effort defaults to `max`; users can also select `high` or `low`.
+- Temperature defaults to `1`. Zoo Code omits `top_p`, allowing Z AI to apply its default of `0.95`.
+
+See the [Z AI Chat Completion API documentation](https://docs.z.ai/api-reference/llm/chat-completion) for the provider's complete request schema.
+
 ---
 
 ## Configuration in Zoo Code
