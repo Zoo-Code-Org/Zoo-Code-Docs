@@ -128,6 +128,27 @@ For a deeper overview of how tools work in Zoo Code in general, see the [Tool Us
 
 ---
 
+## Responses API
+
+By default, the OpenAI Compatible provider sends requests to the Chat Completions endpoint (`/chat/completions`). Enable **Use Responses API** in the provider settings to send requests to the Responses endpoint (`/responses`) instead.
+
+Enable this when your endpoint only supports reasoning together with tool use on the Responses API. For example, Azure OpenAI deployments of reasoning models such as GPT-6.1 Terra reject `reasoning_effort` combined with function tools on `/chat/completions` with an error like:
+
+```text
+400 Function tools with reasoning_effort are not supported for <deployment> in /v1/chat/completions.
+To use function tools, use /v1/responses or set reasoning_effort to 'none'.
+```
+
+With **Use Responses API** enabled:
+
+*   Requests go to `<Base URL>/responses`, so a custom Base URL (including a corporate API gateway) and a custom Model ID (including an Azure deployment name) keep working.
+*   The configured reasoning effort is sent as `reasoning: { effort: ... }` (the Responses API shape) instead of `reasoning_effort`, so reasoning and native tool calling work together.
+*   Reasoning stays enabled — you do not need to set the effort to `none`.
+
+Leave the option off for endpoints that only implement Chat Completions; the default behavior is unchanged.
+
+---
+
 ## Azure OpenAI
 
 Azure OpenAI uses a deployment-specific URL format. Configure the OpenAI Compatible provider with these values:
@@ -161,6 +182,7 @@ https://<resource>.openai.azure.com/openai/deployments/<deployment-name>/chat/co
 *   **"404 Resource not found" with Azure OpenAI:** Make sure the Base URL points to your Azure resource and the Azure deployment name matches the name configured in Azure AI Studio, not the underlying model name. Zoo Code adds `/openai` to resource endpoints automatically.
 *   **Connection Errors:** Verify the Base URL is correct and that your provider's API is accessible.
 *   **Tool-calling errors:** Zoo Code requires native tool calling. If your model does not support it, you need to switch to a model that does. Check your provider's documentation for tool-calling compatibility.
+*   **"Function tools with reasoning_effort are not supported" (400):** Your endpoint requires the Responses API to combine reasoning with tool use (common for Azure OpenAI reasoning-model deployments behind a gateway). Enable **Use Responses API** in the provider settings — see [Responses API](#responses-api).
 *   **Unexpected Results:** If you're getting unexpected results, try a different model.
 
 By using an OpenAI-compatible provider, you can leverage the flexibility of Zoo Code with a wider range of AI models. Remember to always consult your provider's documentation for the most accurate and up-to-date information.
