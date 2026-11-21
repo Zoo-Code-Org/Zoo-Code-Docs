@@ -34,6 +34,8 @@ The chat interface consists of the following main elements:
 
 7. **Mode Selector:** The mode selector is a dropdown located to the left of the chat input field. It is used for selecting which mode Zoo should use for your tasks. Its settings gear opens the Modes tab, not general settings.
 
+8. **Reasoning Effort Selector:** This selector sits next to the mode selector under the chat input field. It appears only when the selected provider and model support reasoning effort levels. It opens a pop-up menu for switching the reasoning effort of API requests. See [Switching reasoning effort](#switching-reasoning-effort).
+
 The chat composer, mode and API selectors, auto-approval controls, and todo-delete confirmation follow your active IDE appearance. Their borders, hover states, keyboard focus rings, and error text remain distinguishable in VS Code light, dark, and high-contrast themes.
 
 <img src="/img/the-chat-interface/chat-composer-light.png" alt="Zoo Code chat composer using the VS Code light theme" width="600" />
@@ -47,6 +49,42 @@ The chat composer, mode and API selectors, auto-approval controls, and todo-dele
 <img src="/img/the-chat-interface/ui-settings-light.png" alt="Zoo Code UI settings using the VS Code light theme" width="600" />
 
 *UI settings use the same theme-aware controls and contrast treatment.*
+
+---
+
+## Switching Reasoning Effort
+
+The reasoning effort selector sits under the chat input field, next to the mode selector. It shows the effort your requests use right now. Click it to open a pop-up menu and pick a different effort for the tasks at hand. For example, pick **Off** or **Low** for a simple parameter rename, and pick **High** for a complex change that does not need plan mode.
+
+<img src="/img/the-chat-interface/reasoning-effort-selector-dark.png" alt="Reasoning effort selector in the chat composer showing the active effort" width="600" />
+
+*The selector shows the active reasoning effort. It appears only when the selected model supports reasoning effort levels.*
+
+The menu offers a **Default** entry and exactly the efforts your model supports. Models differ: some models accept **None**, some accept **Minimal** or extra-high levels, and some do not. Entries that the model does not support never appear in the menu.
+
+<img src="/img/the-chat-interface/reasoning-effort-selector-menu-dark.png" alt="Reasoning effort pop-up menu with Default, Low, Medium, and High entries" width="600" />
+
+*The menu offers Default plus the efforts the selected model supports.*
+
+### How the override works
+
+The chat selector is an override on top of your provider settings. It does not rewrite the reasoning effort you saved in your API profile. **Default** clears the override and restores your provider settings.
+
+- **Default:** Zoo Code uses the effort from your provider settings, or the model default when no effort is set.
+- **A picked effort:** Zoo Code sends this effort with new requests. An orange dot on the selector marks an active override.
+- Switching to another model clears the override, so a new model never receives an effort it may not support.
+
+<img src="/img/the-chat-interface/reasoning-effort-selector-override-dark.png" alt="Reasoning effort selector with an active High override marked by an orange dot" width="600" />
+
+*An orange dot marks an active override on top of the provider settings.*
+
+<img src="/img/the-chat-interface/reasoning-effort-selector-override-menu-dark.png" alt="Reasoning effort pop-up menu with the High override checked" width="600" />
+
+*The menu marks the active override with a check mark. Pick Default to clear it.*
+
+The override is saved with the API profile. It survives a restart, and each profile keeps its own override. A change applies to the next request in the current task; you do not need to restart the task.
+
+The selector is hidden when the model does not support reasoning effort levels, for example models that use a reasoning budget or no reasoning at all. Your existing request shapes stay the same for those models.
 
 ---
 
