@@ -24,6 +24,14 @@ This document focuses on setting up providers *other than* the official OpenAI A
 
 ---
 
+## Responses API
+
+Some OpenAI-compatible endpoints accept requests only through the [Responses API](https://platform.openai.com/docs/api-reference/responses) (`/responses`) instead of Chat Completions (`/chat/completions`), or require the Responses API to combine reasoning effort with tool use. Azure OpenAI deployments of GPT-6.1 Terra are a common example.
+
+OpenAI Compatible provider profiles have a **Use Responses API** toggle for this. When enabled, Zoo Code sends requests to `/responses` for that profile and handles the Responses event stream, reasoning items, and tool calls. Leave it off for standard Chat Completions endpoints.
+
+---
+
 ## General Configuration
 
 The key to using an OpenAI-compatible provider is to configure two main settings:

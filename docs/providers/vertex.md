@@ -50,6 +50,14 @@ For the complete, up-to-date model list and IDs, see [Vertex AI's models documen
 *   **Locations:** `global`, `us`, and `eu`.
 *   **Pricing (Standard tier, Global, per 1M tokens):** Input $2.00, output (including thinking tokens) $10.00, cached input $0.10 — promo pricing through November 30, 2026. From December 1, 2026: input $4.00, output $20.00, cached input $0.20. Non-global locations are 10% higher. See the [Vertex AI pricing page](https://cloud.google.com/vertex-ai/generative-ai/pricing) for details.
 
+### Gemini 3.8 Flash, 4 Carbon, and 4 Hydrogen
+
+Added in Zoo Code 3.98.2. Gemini 3.8 Flash, Gemini 4 Carbon, and Gemini 4 Hydrogen are available through Vertex AI; Gemini 4 Neon is not listed there. All three share a 1,048,576-token context window and support image input, implicit prompt caching, and thinking levels instead of thinking budgets or custom temperature.
+
+*   **Gemini 3.8 Flash** (`gemini-3.8-flash`): Thinking levels Low, Medium (default), and High.
+*   **Gemini 4 Carbon** (`gemini-4-carbon`): Thinking levels Low, Medium (default), and High.
+*   **Gemini 4 Hydrogen** (`gemini-4-hydrogen`): Thinking levels Low, Medium, High (default), and XHigh.
+
 ---
 
 ## Configuration in Zoo Code

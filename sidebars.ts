@@ -151,6 +151,11 @@ const sidebars: SidebarsConfig = {
             "update-notes/index",
             {
               type: "category",
+              label: "3.98",
+              items: [{ type: "doc", id: "update-notes/v3.98.2", label: "3.98.2" }],
+            },
+            {
+              type: "category",
               label: "3.50",
               items: [{ type: "doc", id: "update-notes/v3.50.0", label: "3.50.0" }],
             },

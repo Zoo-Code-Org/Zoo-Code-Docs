@@ -47,6 +47,17 @@ For the complete, up-to-date model list and capabilities, see [Google's Gemini m
 *   **Availability:** Paid tier only (not available on the Free tier or the Google AI Pro plan).
 *   **Pricing (per 1M tokens):** Input $2.00, output (including thinking tokens) $10.00, cached input $0.10 — promo pricing through November 30, 2026. From December 1, 2026: input $4.00, output $20.00, cached input $0.20. See the [Gemini API pricing page](https://ai.google.dev/gemini-api/docs/pricing) for details.
 
+### Gemini 3.8 Flash and Gemini 4 Carbon, Hydrogen, and Neon
+
+Added in Zoo Code 3.98.2. All four models share a 1,048,576-token context window, support image input and implicit prompt caching, and use thinking levels instead of thinking budgets or custom temperature.
+
+*   **Gemini 3.8 Flash** (`gemini-3.8-flash`): Fast Flash-class model. Thinking levels Low, Medium (default), and High. Promo pricing through December 31, 2026: input $0.75, output $3.75, cached input $0.075 per 1M tokens. From January 1, 2027: input $1.50, output $7.50, cached input $0.15.
+*   **Gemini 4 Carbon** (`gemini-4-carbon`): Thinking levels Low, Medium (default), and High. Promo pricing through November 30, 2026: input $2.00, output $10.00, cached input $0.10 per 1M tokens. From December 1, 2026: input $4.00, output $20.00, cached input $0.20.
+*   **Gemini 4 Hydrogen** (`gemini-4-hydrogen`): Thinking levels Low, Medium, High (default), and XHigh. Input $1.50, output $7.50, cached input $0.075 per 1M tokens.
+*   **Gemini 4 Neon** (`gemini-4-neon`): Thinking levels Low, Medium, High (default), and XHigh. Input $3.00, output $15.00, cached input $0.15 per 1M tokens.
+
+See the [Gemini API pricing page](https://ai.google.dev/gemini-api/docs/pricing) for details.
+
 ---
 
 ## Configuration in Zoo Code
