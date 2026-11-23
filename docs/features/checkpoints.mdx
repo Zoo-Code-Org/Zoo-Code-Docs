@@ -54,6 +54,7 @@ Access checkpoint settings in Zoo Code settings under the "Checkpoints" section:
 1. Open Settings by clicking the gear icon <Codicon name="gear" /> → Checkpoints
 2. Configure checkpoint behavior:
    - Check or uncheck the "Enable automatic checkpoints" checkbox
+   - Check or uncheck "Checkpoint after each file write" (on by default) — takes a snapshot after every successful file write by the agent, which powers the per-step change cards and rollback. See [File-Write Safety](/features/file-write-safety)
    - Adjust the "Checkpoint initialization timeout" (10-60 seconds, default: 30s)
 
    <img src="/img/checkpoints/checkpoints.png" alt="Checkpoint settings in Zoo Code configuration" width="500" />
