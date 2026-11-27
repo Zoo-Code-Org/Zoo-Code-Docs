@@ -238,6 +238,16 @@ Streamable HTTP configuration example:
 }
 ```
 
+  #### OAuth Sign-In for Remote Servers
+
+  A streamable HTTP server can require OAuth sign-in. Zoo Code shows a notification with an **Authenticate** button, opens your browser for sign-in, and then reconnects the server with the new token.
+
+  How sign-in behaves:
+
+  * The authorization URL always points at a working local callback port. Sign-in completes without an extension reload.
+  * The MCP panel shows the server as **Connected** as soon as the connection succeeds. The tool and resource lists load after that, so a slow server does not keep the panel in the connecting state.
+  * If the server rejects a saved token, Zoo Code reconnects with a delay, up to three times. Each attempt waits 1, 2, or 4 seconds. If every attempt fails, the server shows a clear error and stops retrying. Reconnect the server to try again.
+
   #### SSE Transport (Legacy)
 
   Used for older remote servers accessed over HTTP/HTTPS. **For new remote server implementations, [Streamable HTTP Transport](#streamable-http-transport) is recommended.**
@@ -421,6 +431,8 @@ Common issues and solutions:
 * **Permission Errors:** Ensure proper API keys and credentials are configured in your `mcp_settings.json` (for global settings) or `.roo/mcp.json` (for project settings).
 * **Tool Not Available:** Confirm the server is properly implementing the tool and it's not disabled in settings
 * **Slow Performance:** Try adjusting the network timeout value for the specific MCP server
+* **Server Stuck in Connecting:** Restart the server from the MCP panel. If the server requires OAuth, finish the sign-in notification. The panel shows **Connected** before the tool lists finish loading, so a yellow entry means the connection itself has not succeeded yet.
+* **Repeated OAuth Sign-In Failures:** If the server rejects the saved token, Zoo Code retries up to three times with a delay and then shows an error on the server. Reconnect the server to start a new sign-in. See [OAuth Sign-In for Remote Servers](#oauth-sign-in-for-remote-servers).
 
 ---
 
