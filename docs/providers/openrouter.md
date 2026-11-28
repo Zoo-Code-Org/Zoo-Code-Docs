@@ -48,6 +48,7 @@ For the complete, up-to-date model list with pricing and capabilities, see [Open
 
 ## Tips and Notes
 
+* **Content filters and refusals:** A model or an upstream provider can stop a response with a content filter or a refusal. Zoo Code shows the stop reason instead of treating the response as empty or complete, keeps the token usage of the stopped response, and asks you before it sends the same request again. If the filter keeps stopping the request, change the prompt or pick a different model.
 * **Model Selection:** OpenRouter offers a wide range of models. Experiment to find the best one for your needs.
 * **Pricing:**  OpenRouter charges based on the underlying model's pricing.  See the [OpenRouter Models page](https://openrouter.ai/models) for details.
 *   **Prompt Caching:**
